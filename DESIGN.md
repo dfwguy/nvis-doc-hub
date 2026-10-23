@@ -239,6 +239,19 @@ A labelled, broad search assembly with a leading SVG icon and an integrated prim
 
 Search-result titles wrap within a shrinkable text span while their arrow remains beside the first line. The initial search prompt uses the shared empty-state panel and its full inset.
 
+Live suggestions progressively enhance the same input on the catalog, project,
+and search pages. After two characters and a 180ms pause, up to five ranked
+sections appear in a field-aligned charcoal popup. Project and selected metadata
+filters apply. Each option uses a 15px medium green title, 12px muted context,
+and a two-line 13px excerpt, with an 18px total inset from the popup edge and a
+44px minimum target. The popup uses the panel radius, a control-colored border,
+no shadow, and contained scrolling capped at 420px and the visible viewport. It
+opens above the field when space below is limited. Hover and keyboard selection
+use Active Neutral. Loading, no-match, and unavailable states keep the Open full
+search action available. Arrow keys select without moving input focus; Enter opens
+a selected section, and Escape or Tab dismisses. Ordinary form submission remains
+available with JavaScript disabled. The project label names its scoped search.
+
 ### Navigation
 
 Quiet labelled destinations and an authored document tree. Main links have a 38px minimum height and 4px vertical separation. Current links use Active Neutral, Body Text, and medium weight; hover uses `nav-hover`. Project links and tree links retain the same current-location language with narrower hierarchy. At the 1100px breakpoint the existing navigation is reused inside a semantic menu disclosure with 44px main link targets. The reader's contents disclosure appears through 700px; its desktop alternative uses quiet text and NVIDIA Green hover/current states.

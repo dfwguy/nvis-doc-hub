@@ -189,13 +189,25 @@ class Store:
         return (bytes(row["data"]), row["mime"]) if row else None
 
     def search(
-        self, query: str, project: str | None, topic: str | None, kind: str | None, limit: int, offset: int
+        self,
+        query: str,
+        project: str | None,
+        topic: str | None,
+        kind: str | None,
+        limit: int,
+        offset: int,
+        *,
+        prefix: bool = False,
     ) -> list[dict[str, Any]]:
         """Rank matching authored sections with literal FTS terms and metadata filters."""
-        words = re.findall(r"\w+", query, flags=re.UNICODE)[:32]
+        words = re.findall(r"\w+", query, flags=re.UNICODE)
+        if not prefix:
+            words = words[:32]
         if not words:
             return []
         match = " AND ".join('"' + word + '"' for word in words)
+        if prefix:
+            match += "*"
         parameters: list[Any] = [match]
         conditions = ["search_index MATCH ?"]
         if project:

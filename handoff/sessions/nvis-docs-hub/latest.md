@@ -4,6 +4,12 @@ Timestamp: 2026-10-22 22:34:59 UTC.
 
 Topic: Functional local implementation, authentic publications, tests and browser verification.
 
+Latest feature, 23 October: live search suggestions are implemented and verified
+on `development`. Start typing two characters on the catalog, project page, or
+search page; results link to matching sections and support click/keyboard/touch.
+44 Python tests plus 35 existing and 28 new browser checks pass. Read
+[live-search verification](../../../evidence/live-search-verification.md).
+
 23 October follow-up: the local server was restarted. Local Git version control
 now has `main` and `development`; the initial application baseline is `29061f2`.
 The user confirmed missing `nvis-ova` group push access and deferred GitLab remote

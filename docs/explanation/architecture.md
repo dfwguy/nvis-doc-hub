@@ -10,6 +10,12 @@ registrations, successful publications, assets, navigation, and refresh status.
 The FastAPI/Jinja website, CLI, and official SDK MCP stdio server call this service.
 They therefore read the same revision and search index.
 
+Live browser suggestions use a read-only endpoint over that same index. Only
+suggestions prefix-match the final query term, returning five ranked sections at
+most. A separate progressive-enhancement script debounces requests, discards stale
+responses, and adds pointer/keyboard navigation to the existing search forms.
+Ordinary full search and MCP retain their existing exact-term matching.
+
 Acquisition reads either an HTTPS GitLab archive, an authentic revision-labelled
 snapshot, or a local development directory. Parsing finishes before the service
 atomically replaces a project's publication. A failed refresh records an error

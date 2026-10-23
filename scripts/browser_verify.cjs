@@ -70,7 +70,7 @@ fs.mkdirSync(output, { recursive: true });
         assert.equal(await page.locator('.mobile-menu[open]').count(), 0);
         record('mobile-navigation', 'Opens, exposes labelled project navigation, Escape restores focus.');
       }
-      await page.getByRole('searchbox', { name: 'Search all documentation' }).fill('slurm');
+      await page.getByRole('combobox', { name: 'Search all documentation' }).fill('slurm');
       await page.getByRole('button', { name: 'Search', exact: false }).click();
       await page.waitForURL('**/search?q=slurm');
       await page.locator('.search-result').first().waitFor();

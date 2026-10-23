@@ -119,6 +119,62 @@ def test_sections_search_filters_and_plain_snippets_share_content(tmp_path: Path
     assert hub.search('"') == []
 
 
+def test_suggestions_prefix_only_the_last_term_and_preserve_exact_search(
+    tmp_path: Path, source: Path
+) -> None:
+    write(
+        source,
+        "docs/suggestions.md",
+        "# Component procedures\n\n## Exact completed term\n\nPhoton expansion procedure.\n\n"
+        "## Longer completed term\n\nPhotonic expansion procedure.",
+    )
+    hub = published(tmp_path, source)
+
+    results = hub.suggest("photon exp")
+
+    assert len(results) == 1
+    assert results[0]["heading"] == "Exact completed term"
+    assert results[0]["url"] == "/projects/atlas/docs/docs/suggestions.md#exact-completed-term"
+    assert hub.suggest("photo exp") == []
+    assert hub.search("photon exp") == []
+    assert hub.store.search("photon exp", None, None, None, 5, 0) == []
+    assert hub.store.search("photon exp", None, None, None, 5, 0, prefix=True)[0]["anchor"] == (
+        "exact-completed-term"
+    )
+
+
+def test_suggestions_keep_unicode_terms_literal_and_encode_heading_urls(tmp_path: Path, source: Path) -> None:
+    write(
+        source,
+        "docs/international.md",
+        "# International procedures\n\n## Résilience 東京\n\nRésumé résilience fiable.",
+    )
+    hub = published(tmp_path, source)
+
+    results = hub.suggest('"Résumé" rés*')
+
+    assert len(results) == 1
+    assert results[0]["heading"] == "Résilience 東京"
+    assert results[0]["url"] == (
+        "/projects/atlas/docs/docs/international.md#r%C3%A9silience-%E6%9D%B1%E4%BA%AC"
+    )
+    assert hub.suggest("résumé OR rés") == []
+
+
+def test_suggestions_return_the_five_highest_ranked_sections(tmp_path: Path, source: Path) -> None:
+    sections = "\n\n".join(
+        f"## Procedure {index}\n\nLoadmarker procedure for rack {index}." for index in range(8)
+    )
+    write(source, "docs/capacity.md", "# Capacity procedures\n\n" + sections)
+    hub = published(tmp_path, source)
+
+    results = hub.suggest("loadmar")
+
+    assert len(results) == 5
+    assert [item["url"] for item in results] == [item["url"] for item in hub.search("loadmarker")[:5]]
+    assert all("#procedure-" in item["url"] for item in results)
+
+
 def test_changed_deleted_refresh_and_restart_are_atomic(tmp_path: Path, source: Path) -> None:
     hub = published(tmp_path, source)
     before = hub.get_project("atlas")

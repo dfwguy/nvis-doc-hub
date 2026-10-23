@@ -15,6 +15,12 @@ a project or metadata filter, and open a result at its matching heading. The
 reader includes source path, revision, and publication time. Missing topic or
 document-type metadata stays unclassified.
 
+With JavaScript enabled, typing at least two characters opens live suggestions
+for matching sections, including partial final words. Click a suggestion or use
+Up/Down and Enter to open it. Escape closes suggestions. Enter without a selected
+suggestion opens ordinary full search. Project and metadata filters apply to both
+paths; full search remains available without JavaScript.
+
 In a second terminal, inspect publication status:
 
 ```bash

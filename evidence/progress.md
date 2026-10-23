@@ -1,5 +1,12 @@
 # Implementation progress
 
+23 October: live search is implemented on `development`. All three search surfaces
+show clickable prefix-matched sections with project/filter scope, keyboard and
+touch support, asynchronous request cancellation, and full-search fallback.
+44 Python tests, 35 existing browser checks, and 28 new live-search checks pass;
+independent code/visual review found no material issues. See
+`live-search-verification.md`. Remote GitLab publishing remains deferred.
+
 Latest user requirement: dark NVIDIA theme. All app surfaces/native controls now use dark mode, retaining NVIS - OVA identity and the sidebar-bottom documentation label. Final dark captures, contrast measurements and browser checks are recorded in the existing evidence files.
 
 Presentation polish: corrected the initial Global Search panel inset, wrapped

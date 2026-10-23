@@ -54,7 +54,7 @@ Final integrated run:
 .venv/bin/mypy src/nvis_hub
 ```
 
-30 tests pass; lint, formatting and type checks pass. One upstream Starlette
+44 tests pass; lint, formatting and type checks pass. One upstream Starlette
 TestClient deprecation warning remains. Tests exercise imports/scopes, metadata,
 hosted nested links/assets, safe content and paths, snapshot integrity, title and
 section ranking, filters, changes/deletions, failed-refresh retention, re-registration
@@ -101,10 +101,16 @@ For a fresh browser-tools installation:
 npm install --prefix .browser-tools playwright
 .browser-tools/node_modules/.bin/playwright install chromium
 NODE_PATH="$PWD/.browser-tools/node_modules" node scripts/browser_verify.cjs
+NODE_PATH="$PWD/.browser-tools/node_modules" node scripts/live_search_verify.cjs
 ```
 
 The app does not require Node to run. Browser check details and runtime hover
 colors are in [browser-verification.json](browser-verification.json).
+
+Live search adds 28 browser checks for prefix suggestions, keyboard/click/touch,
+filter scope, request races, failure recovery, viewport constraints, and fallback.
+See [live-search verification](live-search-verification.md) for the exact coverage
+and reviewed captures.
 
 Tasteskill's browser inspector reports no findings for catalog, filtered search
 and reader at all three widths. Source lint has two justified warnings: monospace

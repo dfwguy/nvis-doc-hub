@@ -2,6 +2,7 @@
 
 from pathlib import Path
 
+import pytest
 from fastapi.testclient import TestClient
 
 from nvis_hub.models import Registration
@@ -78,6 +79,89 @@ def test_filters_and_source_status_are_real(tmp_path: Path) -> None:
     assert "Local source" in status.text
     assert "nvis-hub" in status.text
     assert client.get("/api/search?q=switch").json()[0]["project_slug"] == "bringup"
+
+
+def test_suggestions_return_clickable_section_context_without_changing_search(tmp_path: Path) -> None:
+    client = published_client(tmp_path)
+
+    response = client.get("/api/search/suggestions", params={"q": "swi"})
+
+    assert response.status_code == 200
+    results = response.json()
+    assert len(results) == 1
+    result = results[0]
+    assert set(result) == {"project_slug", "project_title", "title", "heading", "snippet", "url"}
+    assert result["project_slug"] == "bringup"
+    assert result["project_title"] == "Cluster bringup"
+    assert result["title"] == "Network setup"
+    assert result["heading"] == "Network check"
+    assert result["url"] == "/projects/bringup/docs/docs/guides/setup.md#network-check"
+    assert "Verify the switch." in result["snippet"]
+    assert "<" not in result["snippet"]
+    assert client.get(result["url"]).status_code == 200
+    assert client.get("/api/search", params={"q": "swi"}).json() == []
+    assert client.get("/api/search", params={"q": "switch"}).json()[0]["heading"] == "Network check"
+
+
+def test_suggestions_apply_project_topic_and_kind_filters(tmp_path: Path) -> None:
+    client = published_client(tmp_path)
+    hub = client.app.state.hub
+    hub.register(
+        Registration(
+            slug="other",
+            title="Other project",
+            description="Another publication.",
+            repo_url="https://gitlab.example.com/team/other",
+            source_mode="local",
+            local_path=str(tmp_path / "source"),
+            docs_paths=["docs"],
+        )
+    )
+    hub.refresh("other")
+    unfiltered = client.get("/api/search/suggestions", params={"q": "swi"})
+    assert unfiltered.status_code == 200
+    assert len(unfiltered.json()) == 2
+
+    filters = {"q": "swi", "project": "bringup", "topic": "networking", "kind": "how-to"}
+    results = client.get("/api/search/suggestions", params=filters).json()
+
+    assert len(results) == 1
+    assert results[0]["project_slug"] == "bringup"
+    for key, value in [("project", "missing"), ("topic", "rack"), ("kind", "tutorial")]:
+        assert client.get("/api/search/suggestions", params={**filters, key: value}).json() == []
+
+
+@pytest.mark.parametrize("query", ["", " ", "a", " a ", '""', "***", "() : -"])
+def test_suggestions_ignore_short_or_punctuation_only_queries(tmp_path: Path, query: str) -> None:
+    client = published_client(tmp_path)
+
+    response = client.get("/api/search/suggestions", params={"q": query})
+
+    assert response.status_code == 200
+    assert response.json() == []
+
+
+def test_suggestions_validate_raw_query_length_before_trimming(tmp_path: Path) -> None:
+    client = published_client(tmp_path)
+
+    for query in ["s" * 201, " " * 201, "swi" + " " * 198]:
+        response = client.get("/api/search/suggestions", params={"q": query})
+        assert response.status_code == 400
+    boundary = client.get("/api/search/suggestions", params={"q": " " * 197 + "swi"})
+    assert boundary.status_code == 200
+    assert boundary.json()[0]["heading"] == "Network check"
+
+
+def test_suggestions_prefix_the_final_term_even_after_many_completed_terms(tmp_path: Path) -> None:
+    client = published_client(tmp_path)
+
+    response = client.get("/api/search/suggestions", params={"q": "check " * 32 + "zz"})
+
+    assert response.status_code == 200
+    assert response.json() == []
+    matching = client.get("/api/search/suggestions", params={"q": "check " * 32 + "swi"})
+    assert matching.status_code == 200
+    assert matching.json()[0]["heading"] == "Network check"
 
 
 def test_reader_tables_and_contents_have_narrow_layout_affordances(tmp_path: Path) -> None:

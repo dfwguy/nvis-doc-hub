@@ -41,7 +41,7 @@
 
 {% macro search_form(q='', compact=false, project='') -%}
 <form action="/search" method="get" role="search" class="{{ 'compact-search' if compact else 'global-search' }}">
-<label for="{{ 'header-query' if compact else 'query' }}">{{ 'Search documentation' if compact else 'Search all documentation' }}</label>
+<label for="{{ 'header-query' if compact else 'query' }}">{{ 'Search project documentation' if project else ('Search documentation' if compact else 'Search all documentation') }}</label>
 <div class="search-field">{{ icon('search', 20) }}<input type="search" id="{{ 'header-query' if compact else 'query' }}" name="q" value="{{ q }}" placeholder="Search runbooks, guides, and reference…" maxlength="200" autocomplete="off" {% if not compact %}data-search-input{% endif %}>
 {% if project %}<input type="hidden" name="project" value="{{ project }}">{% endif %}
 <button type="submit">Search {{ icon('arrow', 16) }}</button></div>

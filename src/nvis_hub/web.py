@@ -239,4 +239,12 @@ def create_app(db_path: Path | str | None = None) -> FastAPI:
             raise HTTPException(400, "Use a search query of 200 characters or fewer.")
         return hub.search(q, project=project, topic=topic, kind=kind)
 
+    @app.get("/api/search/suggestions")
+    def api_search_suggestions(
+        q: str = "", project: str | None = None, topic: str | None = None, kind: str | None = None
+    ) -> list[dict[str, Any]]:
+        if len(q) > 200:
+            raise HTTPException(400, "Use a search query of 200 characters or fewer.")
+        return hub.suggest(q, project=project, topic=topic, kind=kind)
+
     return app

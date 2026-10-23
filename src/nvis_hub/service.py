@@ -106,6 +106,23 @@ class Hub:
         """Return ranked, filtered hosted sections with plain excerpts and provenance."""
         return self.store.search(query, project, topic, kind, limit, offset)
 
+    def suggest(
+        self,
+        query: str,
+        project: str | None = None,
+        topic: str | None = None,
+        kind: str | None = None,
+    ) -> list[dict[str, Any]]:
+        """Suggest up to five sections using a literal prefix for the final query term."""
+        query = query.strip()
+        if len(query) < 2:
+            return []
+        fields = ("project_slug", "project_title", "title", "heading", "snippet", "url")
+        return [
+            {key: result[key] for key in fields}
+            for result in self.store.search(query, project, topic, kind, 5, 0, prefix=True)
+        ]
+
     def facets(self) -> dict[str, list[str]]:
         """List only classifications actually present in published documents."""
         docs = [doc for project in self.list_projects() for doc in self.store.documents(project["slug"])]

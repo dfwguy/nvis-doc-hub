@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-23T15:20:48.448Z",
+  "row": {
+    "foreground": "rgb(118, 185, 0)",
+    "context": "rgb(153, 153, 153)",
+    "background": "rgb(38, 38, 38)"
+  },
+  "primary": {
+    "foreground": "rgb(255, 255, 255)",
+    "background": "rgb(0, 72, 49)"
+  },
+  "contrast": {
+    "suggestionTitle": 6.28,
+    "suggestionContext": 5.31,
+    "primaryHover": 10.65
+  }
+}

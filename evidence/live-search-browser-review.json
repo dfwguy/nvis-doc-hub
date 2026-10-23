@@ -1,0 +1,846 @@
+{
+  "phase": "full verification",
+  "at": "2026-10-23T15:15:09.896Z",
+  "target": "http://127.0.0.1:8000",
+  "initialRed": {
+    "phase": "initial red",
+    "at": "2026-10-23T15:08:15.393Z",
+    "target": "http://127.0.0.1:8000",
+    "tests": [
+      {
+        "name": "Real typing slur opens anchored clickable suggestions",
+        "status": "failed",
+        "error": "locator.waitFor: Timeout 1800ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('option').first() to be visible\u001b[22m\n"
+      }
+    ]
+  },
+  "tests": [
+    {
+      "name": "Real typing partial word opens accessible native section links",
+      "status": "passed",
+      "detail": [
+        {
+          "tag": "A",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account",
+          "id": "search-suggestions-0-option-0",
+          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH export SLURM_CONF=/cm/shared/apps/slurm/etc/slurm/slurm.conf sinfo It fails: Invalid user for SlurmUser slurm. The config names a SlurmUser that must \u2026"
+        },
+        {
+          "tag": "A",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo",
+          "id": "search-suggestions-0-option-1",
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/slurm/25.05/bin:$PATH\\nexport SLURM_CONF=/cm/shared/apps/slurm/etc/slurm/slurm.conf\\n' > /etc/profile.d/slurm.sh chmod 0644 /etc/profile.d/slurm.sh Symlink \u2026"
+        },
+        {
+          "tag": "A",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path",
+          "id": "search-suggestions-0-option-2",
+          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as the SLURM_CONF export. profile.d loads only in login shells, so cron, sudo, and non-interactive scripts would otherwise have no config. /etc \u2026"
+        },
+        {
+          "tag": "A",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells",
+          "id": "search-suggestions-0-option-3",
+          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05/bin:$PATH\\nexport SLURM_CONF=/cm/shared/apps/slurm/etc/slurm/slurm.conf\\n' > /etc/profile.d/slurm.sh chmod 0644 /etc \u2026"
+        },
+        {
+          "tag": "A",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works",
+          "id": "search-suggestions-0-option-4",
+          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacct need four things: Requirement Purpose Slurm binaries and libslurmfull.so Implement the Slurm protocol slurm \u2026"
+        }
+      ]
+    },
+    {
+      "name": "Pointer click opens the actual indexed section anchor",
+      "status": "passed",
+      "detail": {
+        "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account",
+        "hash": "step-4-create-the-slurm-service-account"
+      }
+    },
+    {
+      "name": "Arrow keys select without moving input focus and Enter follows selection",
+      "status": "passed",
+      "detail": {
+        "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
+      }
+    },
+    {
+      "name": "Unselected Enter preserves ordinary full search",
+      "status": "passed"
+    },
+    {
+      "name": "Escape, Tab, clear, outside click and blur dismiss stale choices",
+      "status": "passed"
+    },
+    {
+      "name": "One character stays quiet and typing is debounced",
+      "status": "passed",
+      "detail": {
+        "requests": [
+          "slurm"
+        ]
+      }
+    },
+    {
+      "name": "Full-search footer preserves query and available active filters",
+      "status": "passed",
+      "detail": {
+        "href": "/search?q=slur&project=cluster-bringup",
+        "returned": 5,
+        "topicAndKindFixture": "Published sources have no topic/type facets; all-filter backend fixtures cover these constraints."
+      }
+    },
+    {
+      "name": "Changing active filters clears old choices and uses updated scope",
+      "status": "passed"
+    },
+    {
+      "name": "Project index suggestions and full-search footer keep project scope",
+      "status": "passed"
+    },
+    {
+      "name": "No-match feedback stays readable with full search available",
+      "status": "passed",
+      "detail": {
+        "message": "No matching documentation. Try another term."
+      }
+    },
+    {
+      "name": "Loading clears stale options, announces progress, and recovers to real results",
+      "status": "passed"
+    },
+    {
+      "name": "Transport failure preserves full search and next typing recovers",
+      "status": "passed"
+    },
+    {
+      "name": "A late old response cannot replace newer results even if transport ignores abort",
+      "status": "passed",
+      "detail": {
+        "newerQuery": "configur",
+        "urls": [
+          "http://127.0.0.1:8000/projects/documentation-pipeline/docs/docs/reference/configuration.md#configuration-and-command-reference",
+          "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/app_server_tuning/how-to/benchmark-cluster.md#sweeping-several-configurations",
+          "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/configure-enroot.md#how-to-configure-enroot-for-ngc-and-pyxis-jobs",
+          "http://127.0.0.1:8000/projects/documentation-pipeline/docs/docs/how-to/update.md#configure-a-runner",
+          "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/app_server_tuning/how-to/compare-md-settings.md#cost"
+        ],
+        "delayedOldResponseMs": 650
+      }
+    },
+    {
+      "name": "IME composition waits for commit and composing Enter keeps the page",
+      "status": "passed"
+    },
+    {
+      "name": "desktop catalog popup layout",
+      "status": "passed",
+      "detail": {
+        "width": 1107,
+        "height": 420,
+        "options": 5,
+        "lastOptionHref": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+      }
+    },
+    {
+      "name": "desktop search popup layout",
+      "status": "passed",
+      "detail": {
+        "width": 960,
+        "height": 420,
+        "options": 5,
+        "lastOptionHref": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+      }
+    },
+    {
+      "name": "desktop project popup layout",
+      "status": "passed",
+      "detail": {
+        "width": 1107,
+        "height": 420,
+        "options": 5,
+        "lastOptionHref": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+      }
+    },
+    {
+      "name": "tablet catalog popup layout",
+      "status": "passed",
+      "detail": {
+        "width": 675,
+        "height": 420,
+        "options": 5,
+        "lastOptionHref": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+      }
+    },
+    {
+      "name": "tablet search popup layout",
+      "status": "passed",
+      "detail": {
+        "width": 675,
+        "height": 420,
+        "options": 5,
+        "lastOptionHref": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+      }
+    },
+    {
+      "name": "tablet project popup layout",
+      "status": "passed",
+      "detail": {
+        "width": 675,
+        "height": 420,
+        "options": 5,
+        "lastOptionHref": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+      }
+    },
+    {
+      "name": "phone catalog popup layout",
+      "status": "passed",
+      "detail": {
+        "width": 335,
+        "height": 420,
+        "options": 5,
+        "lastOptionHref": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+      }
+    },
+    {
+      "name": "phone search popup layout",
+      "status": "passed",
+      "detail": {
+        "width": 335,
+        "height": 420,
+        "options": 5,
+        "lastOptionHref": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+      }
+    },
+    {
+      "name": "phone project popup layout",
+      "status": "passed",
+      "detail": {
+        "width": 335,
+        "height": 369,
+        "options": 5,
+        "lastOptionHref": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+      }
+    },
+    {
+      "name": "Short viewport flips popup above field and caps scrolling",
+      "status": "passed"
+    },
+    {
+      "name": "Phone visible viewport resize preserves bounded popup and reachable footer",
+      "status": "passed"
+    },
+    {
+      "name": "Touch selects a native result on a phone",
+      "status": "passed",
+      "detail": {
+        "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
+      }
+    },
+    {
+      "name": "JavaScript-free form and filters preserve full search fallback",
+      "status": "passed"
+    },
+    {
+      "name": "No browser script errors during live search interactions",
+      "status": "passed"
+    }
+  ],
+  "captures": [
+    ".impeccable/review/live-search-keyboard-selected.png",
+    ".impeccable/review/live-search-no-match.png",
+    ".impeccable/review/live-search-loading.png",
+    ".impeccable/review/live-search-request-error.png",
+    ".impeccable/review/live-search-desktop-catalog.png",
+    ".impeccable/review/live-search-desktop-search.png",
+    ".impeccable/review/live-search-desktop-project.png",
+    ".impeccable/review/live-search-tablet-catalog.png",
+    ".impeccable/review/live-search-tablet-search.png",
+    ".impeccable/review/live-search-tablet-project.png",
+    ".impeccable/review/live-search-phone-catalog.png",
+    ".impeccable/review/live-search-phone-search.png",
+    ".impeccable/review/live-search-phone-project.png",
+    ".impeccable/review/live-search-short-viewport-above.png",
+    ".impeccable/review/live-search-phone-short-viewport.png",
+    ".impeccable/review/live-search-phone-short-viewport-footer.png"
+  ],
+  "pageErrors": [],
+  "layout": [
+    {
+      "name": "desktop-catalog",
+      "x": 269,
+      "top": 279.5,
+      "bottom": 699.5,
+      "width": 1107,
+      "height": 420,
+      "fieldX": 269,
+      "fieldWidth": 1107,
+      "fieldTop": 215.5,
+      "fieldBottom": 271.5,
+      "viewportWidth": 1440,
+      "viewportHeight": 1000,
+      "viewportTop": 0,
+      "scrollWidth": 1425,
+      "background": "rgb(26, 26, 26)",
+      "border": "rgb(102, 102, 102)",
+      "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+      "options": [
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacc",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+        }
+      ]
+    },
+    {
+      "name": "desktop-search",
+      "x": 342.5,
+      "top": 248.5,
+      "bottom": 668.5,
+      "width": 960,
+      "height": 420,
+      "fieldX": 342.5,
+      "fieldWidth": 960,
+      "fieldTop": 184.5,
+      "fieldBottom": 240.5,
+      "viewportWidth": 1440,
+      "viewportHeight": 1000,
+      "viewportTop": 0,
+      "scrollWidth": 1425,
+      "background": "rgb(26, 26, 26)",
+      "border": "rgb(102, 102, 102)",
+      "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+      "options": [
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacc",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+        }
+      ]
+    },
+    {
+      "name": "desktop-project",
+      "x": 269,
+      "top": 392.5,
+      "bottom": 812.5,
+      "width": 1107,
+      "height": 420,
+      "fieldX": 269,
+      "fieldWidth": 1107,
+      "fieldTop": 328.5,
+      "fieldBottom": 384.5,
+      "viewportWidth": 1440,
+      "viewportHeight": 1000,
+      "viewportTop": 0,
+      "scrollWidth": 1425,
+      "background": "rgb(26, 26, 26)",
+      "border": "rgb(102, 102, 102)",
+      "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+      "options": [
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacc",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+        }
+      ]
+    },
+    {
+      "name": "tablet-catalog",
+      "x": 39,
+      "top": 275.5,
+      "bottom": 695.5,
+      "width": 675,
+      "height": 420,
+      "fieldX": 39,
+      "fieldWidth": 675,
+      "fieldTop": 211.5,
+      "fieldBottom": 267.5,
+      "viewportWidth": 768,
+      "viewportHeight": 1024,
+      "viewportTop": 0,
+      "scrollWidth": 753,
+      "background": "rgb(26, 26, 26)",
+      "border": "rgb(102, 102, 102)",
+      "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+      "options": [
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacc",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+        }
+      ]
+    },
+    {
+      "name": "tablet-search",
+      "x": 39,
+      "top": 244.5,
+      "bottom": 664.5,
+      "width": 675,
+      "height": 420,
+      "fieldX": 39,
+      "fieldWidth": 675,
+      "fieldTop": 180.5,
+      "fieldBottom": 236.5,
+      "viewportWidth": 768,
+      "viewportHeight": 1024,
+      "viewportTop": 0,
+      "scrollWidth": 753,
+      "background": "rgb(26, 26, 26)",
+      "border": "rgb(102, 102, 102)",
+      "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+      "options": [
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacc",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+        }
+      ]
+    },
+    {
+      "name": "tablet-project",
+      "x": 39,
+      "top": 388.5,
+      "bottom": 808.5,
+      "width": 675,
+      "height": 420,
+      "fieldX": 39,
+      "fieldWidth": 675,
+      "fieldTop": 324.5,
+      "fieldBottom": 380.5,
+      "viewportWidth": 768,
+      "viewportHeight": 1024,
+      "viewportTop": 0,
+      "scrollWidth": 753,
+      "background": "rgb(26, 26, 26)",
+      "border": "rgb(102, 102, 102)",
+      "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+      "options": [
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacc",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+        }
+      ]
+    },
+    {
+      "name": "phone-catalog",
+      "x": 20,
+      "top": 258.75,
+      "bottom": 678.75,
+      "width": 335,
+      "height": 420,
+      "fieldX": 20,
+      "fieldWidth": 335,
+      "fieldTop": 196.75,
+      "fieldBottom": 250.75,
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "viewportTop": 0,
+      "scrollWidth": 375,
+      "background": "rgb(26, 26, 26)",
+      "border": "rgb(102, 102, 102)",
+      "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+      "options": [
+        {
+          "height": 129,
+          "leftInset": 12,
+          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
+        },
+        {
+          "height": 150,
+          "leftInset": 12,
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
+        },
+        {
+          "height": 129,
+          "leftInset": 12,
+          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
+        },
+        {
+          "height": 129,
+          "leftInset": 12,
+          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacc",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+        }
+      ]
+    },
+    {
+      "name": "phone-search",
+      "x": 20,
+      "top": 229.25,
+      "bottom": 649.25,
+      "width": 335,
+      "height": 420,
+      "fieldX": 20,
+      "fieldWidth": 335,
+      "fieldTop": 167.25,
+      "fieldBottom": 221.25,
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "viewportTop": 0,
+      "scrollWidth": 375,
+      "background": "rgb(26, 26, 26)",
+      "border": "rgb(102, 102, 102)",
+      "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+      "options": [
+        {
+          "height": 129,
+          "leftInset": 12,
+          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
+        },
+        {
+          "height": 150,
+          "leftInset": 12,
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
+        },
+        {
+          "height": 129,
+          "leftInset": 12,
+          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
+        },
+        {
+          "height": 129,
+          "leftInset": 12,
+          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacc",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+        }
+      ]
+    },
+    {
+      "name": "phone-project",
+      "x": 20,
+      "top": 470.75,
+      "bottom": 839.75,
+      "width": 335,
+      "height": 369,
+      "fieldX": 20,
+      "fieldWidth": 335,
+      "fieldTop": 408.75,
+      "fieldBottom": 462.75,
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "viewportTop": 0,
+      "scrollWidth": 375,
+      "background": "rgb(26, 26, 26)",
+      "border": "rgb(102, 102, 102)",
+      "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+      "options": [
+        {
+          "height": 129,
+          "leftInset": 12,
+          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
+        },
+        {
+          "height": 150,
+          "leftInset": 12,
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
+        },
+        {
+          "height": 129,
+          "leftInset": 12,
+          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
+        },
+        {
+          "height": 129,
+          "leftInset": 12,
+          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacc",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+        }
+      ]
+    },
+    {
+      "name": "short-viewport-above",
+      "x": 269,
+      "top": 4.5,
+      "bottom": 320.5,
+      "width": 1107,
+      "height": 316,
+      "fieldX": 269,
+      "fieldWidth": 1107,
+      "fieldTop": 328.5,
+      "fieldBottom": 384.5,
+      "viewportWidth": 1440,
+      "viewportHeight": 500,
+      "viewportTop": 0,
+      "scrollWidth": 1425,
+      "background": "rgb(26, 26, 26)",
+      "border": "rgb(102, 102, 102)",
+      "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+      "options": [
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacc",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+        }
+      ]
+    },
+    {
+      "name": "phone-keyboard-sized-viewport",
+      "x": 20,
+      "top": 4.75,
+      "bottom": 188.75,
+      "width": 335,
+      "height": 184,
+      "fieldX": 20,
+      "fieldWidth": 335,
+      "fieldTop": 196.75,
+      "fieldBottom": 250.75,
+      "viewportWidth": 390,
+      "viewportHeight": 420,
+      "viewportTop": 0,
+      "scrollWidth": 375,
+      "background": "rgb(26, 26, 26)",
+      "border": "rgb(102, 102, 102)",
+      "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+      "options": [
+        {
+          "height": 129,
+          "leftInset": 12,
+          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
+        },
+        {
+          "height": 150,
+          "leftInset": 12,
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
+        },
+        {
+          "height": 129,
+          "leftInset": 12,
+          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
+        },
+        {
+          "height": 129,
+          "leftInset": 12,
+          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
+        },
+        {
+          "height": 111,
+          "leftInset": 12,
+          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacc",
+          "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works"
+        }
+      ]
+    }
+  ],
+  "browser": "151.0.7922.34",
+  "passed": 28,
+  "failed": 0,
+  "manualVisualReview": {
+    "status": "passed",
+    "inspected": "All nine route/viewport captures plus keyboard selection, loading, no-match, request error, short viewport above, and reachable phone footer.",
+    "findings": [],
+    "supplementalCapture": ".impeccable/review/live-search-no-match-complete.png",
+    "limitations": [
+      "Real publications currently have no topic/type facet values; active project scope is browser tested, while topic/type combinations require backend fixture coverage.",
+      "Phone touch and viewport reduction are browser emulation; an actual OS keyboard and screen reader were not exercised."
+    ]
+  }
+}
