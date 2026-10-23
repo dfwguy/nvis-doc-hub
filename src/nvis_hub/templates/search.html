@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% from 'components.html' import icon with context %}
+{% block content %}
+<div class="search-page"><div class="page-heading"><div><h1>Search documentation</h1><p>Find an answer in the source material.</p></div></div>
+<form action="/search" method="get" role="search" class="results-form">
+<label class="sr-only" for="query">Search documentation</label><div class="search-field">{{ icon('search', 20) }}<input id="query" type="search" name="q" value="{{ q }}" placeholder="Search runbooks, guides, and reference…" maxlength="200" data-search-input><button type="submit">Search {{ icon('arrow',16) }}</button></div>
+<details class="search-filters" open data-active-filters="{{ 'true' if filters.project or filters.topic or filters.kind else 'false' }}"><summary>Filters{% if filters.project or filters.topic or filters.kind %}<span class="filter-active">Applied</span>{% endif %}</summary><div class="filter-fields">
+<div><label for="project-filter">Project</label><select id="project-filter" name="project"><option value="">All projects</option>{% for item in projects %}<option value="{{ item.slug }}" {% if filters.project == item.slug %}selected{% endif %}>{{ item.title }}</option>{% endfor %}</select></div>
+<div><label for="topic-filter">Topic</label><select id="topic-filter" name="topic"><option value="">All topics</option>{% for item in facets.topics %}<option value="{{ item }}" {% if filters.topic == item %}selected{% endif %}>{{ item }}</option>{% endfor %}</select></div>
+<div><label for="kind-filter">Document type</label><select id="kind-filter" name="kind"><option value="">All types</option>{% for item in facets.kinds %}<option value="{{ item }}" {% if filters.kind == item %}selected{% endif %}>{{ item }}</option>{% endfor %}</select></div>
+<button class="button secondary" type="submit">Apply filters</button></div></details>
+</form>
+{% if too_long %}<div class="empty-state"><h2>Shorten your search</h2><p>Use 200 characters or fewer, then search again.</p></div>
+{% elif results %}
+<div class="result-summary"><p>Matching sections for <strong>“{{ q }}”</strong></p><span>{{ offset + 1 }}–{{ offset + results|length }}{{ '+' if has_next else '' }} results</span></div>
+<ol class="search-results" start="{{ offset + 1 }}">{% for item in results %}<li class="search-result"><div class="result-context"><a href="/projects/{{ item.project_slug }}">{{ item.project_title }}</a><span>/</span><span>{{ item.kind or 'Documentation' }}</span></div>
+<h2><a href="{{ item.url }}"><span>{{ item.heading or item.title }}</span>{{ icon('arrow', 18) }}</a></h2>
+{% if item.heading and item.heading != item.title %}<div class="result-document">{{ item.title }}</div>{% endif %}<p class="result-snippet">{{ item.snippet }}</p><div class="result-path"><span>{{ item.path }}</span><code>{{ item.revision[:8] }}</code></div></li>{% endfor %}</ol>
+{% if has_next or offset %}<nav class="pagination" aria-label="Search results pages">{% if offset %}<a class="button secondary" href="{{ prev_url }}">Previous results</a>{% endif %}{% if has_next %}<a class="button secondary" href="{{ next_url }}">Next results {{ icon('arrow',16) }}</a>{% endif %}</nav>{% endif %}
+{% elif q %}<div class="empty-state"><h2>No matching documentation</h2><p>Try fewer words, a command name, or a broader phrase. You can also clear the filters or browse a project.</p><a href="/search?q={{ q|urlencode }}" class="button secondary">Clear filters</a><a href="/" class="text-link">Browse projects {{ icon('arrow',16) }}</a></div>
+{% else %}<div class="empty-state search-start"><h2>What are you working on?</h2><p>Search for a procedure, a tool, or part of a command. Each result opens at the matching section of the published documentation.</p><div class="search-examples"><span>Try</span><a href="/search?q=slurm">slurm</a><a href="/search?q=configuration">configuration</a><a href="/search?q=credentials">credentials</a></div></div>{% endif %}
+</div>
+{% endblock %}

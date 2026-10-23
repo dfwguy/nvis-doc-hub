@@ -1,0 +1,62 @@
+{
+  "at": "2026-10-22T22:47:09.714Z",
+  "state": {
+    "theme": "dark",
+    "body": {
+      "color": "rgb(238, 238, 238)",
+      "background": "rgb(17, 17, 17)",
+      "text": "Skip to content\n\n\n\nNVIS - OVADocumentation hub\n\n\n\nAll documentation\n\n\nGlobal search\n\n\nSource status\n\n\nProjects\nCluster Bringup\n\nDocumentation Pipeline\n\n\n\n\n\nUsing the hub\n\nConnect an agentNVIS - OVA Documentation\n\n\n\nNVIS - OVA/Documentation hub\n\n\nNVIS - OVADocumentation hub\n\n\nMenu\n\n\nAll documentation\n\n\nGlobal search\n\n\nSource status\n\n\nProjects\nCluster Bringup\n\nDocumentation Pipeline\n\n\nUsing the hub\nMaintained in GitLab \n\n\n\n\n\n\nDocumentationRunbooks and reference, across NVIS - OVA.About the hub \n\n\n\nSearch all documentation\n\n\n\n\nSearch \n\n\n\n\n\nBrowse projects2 projects · 92 pages\n\n\n\nCluster Bringup \n\n85 pages\nGuides for setting up, accessing, and operating NVIS - OVA infrastructure.\n\n\nCluster Bringup\n\n\n\nDocumentation index\n\n\n\nnvis-ova-scripts\n\n\nSource snapshot\nf74950acBrowse documentation \n\n\n\nDocumentation Pipeline \n\n7 pages\nBuild and publish repository documentation with NVIDIA repo_docs, Copier configuration, and GitLab Pages.\n\n\nDocumentation pipeline\n\n\n\nWhy the pipeline has two layers\n\n\n\nUpdate the existing cluster-bringup integration\n\n\nSource snapshot\n0796f021Browse documentation \n\n\n\n\n\nFind the right starting pointFollow a project’s documentation, or search directly for a procedure, command, or configuration.\n\n\nSearch across projectsResults link to the matching section.\n\n\n\nCheck a publicationSee its source, revision, and last refresh.\n\n\n\n\n\nNVIS - OVA DocumentationAuthored in repositories. Read here."
+    },
+    "sheet": {
+      "color": "rgb(238, 238, 238)",
+      "background": "rgb(17, 17, 17)",
+      "text": "DocumentationRunbooks and reference, across NVIS - OVA.About the hub \n\n\n\nSearch all documentation\n\n\n\n\nSearch \n\n\n\n\n\nBrowse projects2 projects · 92 pages\n\n\n\nCluster Bringup \n\n85 pages\nGuides for setting up, accessing, and operating NVIS - OVA infrastructure.\n\n\nCluster Bringup\n\n\n\nDocumentation index\n\n\n\nnvis-ova-scripts\n\n\nSource snapshot\nf74950acBrowse documentation \n\n\n\nDocumentation Pipeline \n\n7 pages\nBuild and publish repository documentation with NVIDIA repo_docs, Copier configuration, and GitLab Pages.\n\n\nDocumentation pipeline\n\n\n\nWhy the pipeline has two layers\n\n\n\nUpdate the existing cluster-bringup integration\n\n\nSource snapshot\n0796f021Browse documentation \n\n\n\n\n\nFind the right starting pointFollow a project’s documentation, or search directly for a procedure, command, or configuration.\n\n\nSearch across projectsResults link to the matching section.\n\n\n\nCheck a publicationSee its source, revision, and last refresh."
+    },
+    "card": {
+      "color": "rgb(238, 238, 238)",
+      "background": "rgb(26, 26, 26)",
+      "text": "Cluster Bringup \n\n85 pages\nGuides for setting up, accessing, and operating NVIS - OVA infrastructure.\n\n\nCluster Bringup\n\n\n\nDocumentation index\n\n\n\nnvis-ova-scripts\n\n\nSource snapshot\nf74950acBrowse documentation"
+    },
+    "title": {
+      "color": "rgb(255, 255, 255)",
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "Documentation"
+    },
+    "muted": {
+      "color": "rgb(153, 153, 153)",
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "Guides for setting up, accessing, and operating NVIS - OVA infrastructure."
+    },
+    "input": {
+      "color": "rgb(238, 238, 238)",
+      "background": "rgb(26, 26, 26)",
+      "text": "Search"
+    },
+    "button": {
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(118, 185, 0)",
+      "text": "Search"
+    },
+    "link": {
+      "color": "rgb(118, 185, 0)",
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "Browse documentation"
+    },
+    "brand": {
+      "color": "rgb(238, 238, 238)",
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "NVIS - OVA"
+    },
+    "footer": {
+      "color": "rgb(153, 153, 153)",
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "NVIS - OVA Documentation"
+    }
+  },
+  "contrast": {
+    "body": 16.275267230207366,
+    "muted": 6.108865559643775,
+    "primary": 8.709895109112436,
+    "link": 7.218565107372482
+  }
+}

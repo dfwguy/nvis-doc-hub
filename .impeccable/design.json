@@ -1,0 +1,524 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T22:47:34.124116+00:00",
+  "title": "Design System: NVIS - OVA Documentation Hub",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "NVIDIA Green",
+        "canonical": "#76b900",
+        "tonalRamp": [
+          "oklch(15.00% 0.19425 130.80)",
+          "oklch(26.43% 0.19425 130.80)",
+          "oklch(37.86% 0.19425 130.80)",
+          "oklch(49.29% 0.19425 130.80)",
+          "oklch(60.71% 0.19425 130.80)",
+          "oklch(72.14% 0.19425 130.80)",
+          "oklch(83.57% 0.19425 130.80)",
+          "oklch(95.00% 0.19425 130.80)"
+        ]
+      },
+      "brand": {
+        "role": "primary",
+        "displayName": "NVIDIA Green",
+        "canonical": "#76b900",
+        "tonalRamp": [
+          "oklch(15.00% 0.19425 130.80)",
+          "oklch(26.43% 0.19425 130.80)",
+          "oklch(37.86% 0.19425 130.80)",
+          "oklch(49.29% 0.19425 130.80)",
+          "oklch(60.71% 0.19425 130.80)",
+          "oklch(72.14% 0.19425 130.80)",
+          "oklch(83.57% 0.19425 130.80)",
+          "oklch(95.00% 0.19425 130.80)"
+        ]
+      },
+      "primary": {
+        "role": "primary",
+        "displayName": "NVIDIA Action Green",
+        "canonical": "#76b900",
+        "tonalRamp": [
+          "oklch(15.00% 0.19425 130.80)",
+          "oklch(26.43% 0.19425 130.80)",
+          "oklch(37.86% 0.19425 130.80)",
+          "oklch(49.29% 0.19425 130.80)",
+          "oklch(60.71% 0.19425 130.80)",
+          "oklch(72.14% 0.19425 130.80)",
+          "oklch(83.57% 0.19425 130.80)",
+          "oklch(95.00% 0.19425 130.80)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Deep Green Action Hover",
+        "canonical": "#004831",
+        "tonalRamp": [
+          "oklch(15.00% 0.07582 163.95)",
+          "oklch(26.43% 0.07582 163.95)",
+          "oklch(37.86% 0.07582 163.95)",
+          "oklch(49.29% 0.07582 163.95)",
+          "oklch(60.71% 0.07582 163.95)",
+          "oklch(72.14% 0.07582 163.95)",
+          "oklch(83.57% 0.07582 163.95)",
+          "oklch(95.00% 0.07582 163.95)"
+        ]
+      },
+      "search-primary-hover": {
+        "role": "primary",
+        "displayName": "Deep Green Search Hover",
+        "canonical": "#004831",
+        "tonalRamp": [
+          "oklch(15.00% 0.07582 163.95)",
+          "oklch(26.43% 0.07582 163.95)",
+          "oklch(37.86% 0.07582 163.95)",
+          "oklch(49.29% 0.07582 163.95)",
+          "oklch(60.71% 0.07582 163.95)",
+          "oklch(72.14% 0.07582 163.95)",
+          "oklch(83.57% 0.07582 163.95)",
+          "oklch(95.00% 0.07582 163.95)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Dark Frame",
+        "canonical": "#111",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Dark Reading Sheet",
+        "canonical": "#111",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "raised": {
+        "role": "neutral",
+        "displayName": "Raised Charcoal",
+        "canonical": "#1a1a1a",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "active": {
+        "role": "neutral",
+        "displayName": "Active Neutral",
+        "canonical": "#262626",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Fine Edge",
+        "canonical": "#333",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Quiet Rule",
+        "canonical": "#2a2a2a",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "control": {
+        "role": "neutral",
+        "displayName": "Control Edge",
+        "canonical": "#666",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "search-border": {
+        "role": "neutral",
+        "displayName": "Search Edge",
+        "canonical": "#666",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Body Text",
+        "canonical": "#eee",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Grey",
+        "canonical": "#999",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "faint": {
+        "role": "neutral",
+        "displayName": "Metadata Grey",
+        "canonical": "#999",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "nav-text": {
+        "role": "neutral",
+        "displayName": "Navigation Grey",
+        "canonical": "#ddd",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "nav-hover": {
+        "role": "neutral",
+        "displayName": "Navigation Hover",
+        "canonical": "#262626",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "code-surface": {
+        "role": "neutral",
+        "displayName": "Code Charcoal",
+        "canonical": "#1a1a1a",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "heading": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#fff",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "primary-text": {
+        "role": "neutral",
+        "displayName": "Black Action Text",
+        "canonical": "#000",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      },
+      "code-text": {
+        "role": "neutral",
+        "displayName": "Code Text",
+        "canonical": "#ddd",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Page Title",
+        "purpose": "Tooling page titles."
+      },
+      "reader-headline": {
+        "displayName": "Document Title",
+        "purpose": "Authored document heading, capped at 30ch."
+      },
+      "reader-section": {
+        "displayName": "Document Section",
+        "purpose": "Second-level authored headings."
+      },
+      "title": {
+        "displayName": "Project Title",
+        "purpose": "Descriptive catalog entry heading."
+      },
+      "body": {
+        "displayName": "Interface Body",
+        "purpose": "Compact tooling copy."
+      },
+      "reader-body": {
+        "displayName": "Reader Body",
+        "purpose": "Long-form authored documentation."
+      },
+      "label": {
+        "displayName": "Action Label",
+        "purpose": "Medium-weight actions and field labels."
+      },
+      "metadata": {
+        "displayName": "Source Metadata",
+        "purpose": "Paths, publication context, and counts."
+      },
+      "code": {
+        "displayName": "Code Block",
+        "purpose": "Commands and code, with preserved whitespace."
+      }
+    },
+    "shadows": [
+      {
+        "name": "mobile-navigation",
+        "value": "0 8px 24px #00000066",
+        "purpose": "Floating mobile navigation only."
+      },
+      {
+        "name": "search-focus-ring",
+        "value": "0 0 0 1px var(--accent)",
+        "purpose": "Search focus-within indicator; not elevation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "hover-color",
+        "value": "color 150ms ease-out,background-color 150ms ease-out",
+        "purpose": "Hovered links and buttons; reduced-motion preference disables transitions."
+      },
+      {
+        "name": "document-scroll",
+        "value": "smooth",
+        "purpose": "Anchor scrolling; reduced-motion preference switches to auto."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "table-cue-max",
+        "value": "620px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "700px"
+      },
+      {
+        "name": "navigation-collapse-max",
+        "value": "1100px"
+      },
+      {
+        "name": "desktop-min",
+        "value": "1101px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1250px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary setup or navigation action.",
+      "html": "<div class=\"ds-demo\"><button type=\"button\" class=\"ds-button\">Set up a source</button></div>",
+      "css": ".ds-demo{color-scheme:dark;background:var(--ground);font:400 14px/1.5 var(--font);color:var(--text)}.ds-demo a{color:inherit;text-decoration:none;text-underline-offset:3px}.ds-demo a:hover{color:var(--accent);transition:color 150ms ease-out,background-color 150ms ease-out}.ds-demo svg{flex:none;vertical-align:middle}.ds-demo a:focus-visible,.ds-demo button:focus-visible,.ds-demo input:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}.ds-demo code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.ds-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 15px;min-height:38px;background:var(--primary);color:#000;border:1px solid var(--primary);border-radius:6px;font-size:13px;font-weight:500}.ds-button:hover{background:#004831;color:white}.ds-button{font-family:var(--font);text-decoration:none;cursor:pointer}.ds-button:hover{transition:color 150ms ease-out,background-color 150ms ease-out}.ds-button:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}.ds-button:disabled{cursor:wait;color:#999;background:#262626}@media(max-width:700px){.ds-button{min-height:44px}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary supporting action.",
+      "html": "<div class=\"ds-demo\"><button type=\"button\" class=\"ds-button ds-secondary\">Clear filters</button></div>",
+      "css": ".ds-demo{color-scheme:dark;background:var(--ground);font:400 14px/1.5 var(--font);color:var(--text)}.ds-demo a{color:inherit;text-decoration:none;text-underline-offset:3px}.ds-demo a:hover{color:var(--accent);transition:color 150ms ease-out,background-color 150ms ease-out}.ds-demo svg{flex:none;vertical-align:middle}.ds-demo a:focus-visible,.ds-demo button:focus-visible,.ds-demo input:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}.ds-demo code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.ds-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 15px;min-height:38px;background:var(--primary);color:#000;border:1px solid var(--primary);border-radius:6px;font-size:13px;font-weight:500}.ds-button:hover{background:#004831;color:white}.ds-button.ds-secondary{background:var(--raised);border-color:var(--control);color:var(--text)}.ds-button.ds-secondary:hover{background:var(--active)}.ds-button{font-family:var(--font);text-decoration:none;cursor:pointer}.ds-button:hover{transition:color 150ms ease-out,background-color 150ms ease-out}.ds-button:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}.ds-button:disabled{cursor:wait;color:#999;background:#262626}@media(max-width:700px){.ds-button{min-height:44px}}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Labelled global documentation search with integrated submit.",
+      "html": "<div class=\"ds-demo\"><form class=\"ds-global-search\" role=\"search\"><label for=\"ds-query\">Search all documentation</label><div class=\"ds-search-field\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><path d=\"m16 16 4.5 4.5\"/></svg><input id=\"ds-query\" type=\"search\" name=\"q\" maxlength=\"200\" placeholder=\"Search runbooks, guides, and reference\u2026\"><button type=\"submit\">Search <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-5-5 5 5-5 5\"/></svg></button></div></form></div>",
+      "css": ".ds-demo{color-scheme:dark;background:var(--ground);font:400 14px/1.5 var(--font);color:var(--text)}.ds-demo a{color:inherit;text-decoration:none;text-underline-offset:3px}.ds-demo a:hover{color:var(--accent);transition:color 150ms ease-out,background-color 150ms ease-out}.ds-demo svg{flex:none;vertical-align:middle}.ds-demo a:focus-visible,.ds-demo button:focus-visible,.ds-demo input:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}.ds-demo code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.ds-global-search>label{display:block;font-size:14px;font-weight:500;margin-bottom:10px}.ds-search-field{min-width:0;display:flex;align-items:center;gap:12px;border:1px solid #666;border-radius:8px;padding:7px 8px 7px 17px;background:var(--raised);min-height:56px}.ds-search-field:focus-within{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}.ds-search-field>svg{color:#999}.ds-search-field input{background:transparent;outline:none;border:0;flex:1;min-width:0;font-size:15px;line-height:24px;height:34px;color:var(--text);padding:0}.ds-search-field input:focus-visible{outline:none}.ds-search-field input::placeholder{color:var(--faint);opacity:1}.ds-search-field button{display:flex;align-items:center;gap:13px;background:var(--primary);color:#000;padding:10px 17px;border-radius:5px;font-size:13px;font-weight:500;min-height:40px}.ds-search-field button:hover{background:#004831;color:#fff}.ds-search-field button:disabled{background:#262626;color:#999}.ds-search-field button{border:0;cursor:pointer;font-family:var(--font)}.ds-search-field button:hover{transition:color 150ms ease-out,background-color 150ms ease-out}@media(max-width:700px){.ds-search-field{padding:5px 6px 5px 12px;gap:10px;min-height:54px}.ds-search-field input{font-size:14px;height:40px}.ds-search-field button{padding:10px 12px;min-height:42px}.ds-search-field button svg{display:none}.ds-global-search>label{font-size:13px}}.ds-search-field input{font-family:var(--font)}"
+    },
+    {
+      "name": "Current Navigation",
+      "kind": "nav",
+      "refersTo": "navigation-active",
+      "description": "Semantic current destination in the shared navigation.",
+      "html": "<div class=\"ds-demo\"><nav class=\"ds-main-navigation\" aria-label=\"Hub navigation\"><a href=\"#documentation\" aria-current=\"page\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\" rx=\"1\"/></svg>All documentation</a><a href=\"#search\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><path d=\"m16 16 4.5 4.5\"/></svg>Global search</a></nav></div>",
+      "css": ".ds-demo{color-scheme:dark;background:var(--ground);font:400 14px/1.5 var(--font);color:var(--text)}.ds-demo a{color:inherit;text-decoration:none;text-underline-offset:3px}.ds-demo a:hover{color:var(--accent);transition:color 150ms ease-out,background-color 150ms ease-out}.ds-demo svg{flex:none;vertical-align:middle}.ds-demo a:focus-visible,.ds-demo button:focus-visible,.ds-demo input:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}.ds-demo code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.ds-main-navigation{display:grid;gap:4px}.ds-main-navigation>a,.ds-sidebar-footer>a{display:flex;gap:11px;align-items:center;padding:9px 10px;border-radius:6px;min-height:38px;color:#ddd}.ds-main-navigation>a[aria-current=page],.ds-project-nav-link[aria-current]{background:var(--active);color:var(--text);font-weight:500}.ds-main-navigation>a:hover,.ds-project-nav-link:hover,.ds-tree-link:hover,.ds-sidebar-footer>a:hover{background:#262626;color:var(--text)}@media(max-width:1100px){.ds-main-navigation>a{min-height:44px}}"
+    },
+    {
+      "name": "Project Panel",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "Descriptive project entry with hosted-page preview and source provenance; sample values reflect the reviewed snapshot.",
+      "html": "<div class=\"ds-demo\"><article class=\"ds-project-card\"><div class=\"ds-project-card-heading\"><h3><a href=\"#cluster-bringup\">Cluster Bringup <svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-5-5 5 5-5 5\"/></svg></a></h3><span class=\"ds-page-count\">85 pages</span></div><p class=\"ds-project-description\">Guides for setting up, accessing, and operating NVIS - OVA infrastructure.</p><div class=\"ds-project-preview\"><a href=\"#documentation-index\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 5v15m0-15C8 2 4 3 2 4v15c4-2 7-1 10 1 3-2 6-3 10-1V4c-4-2-7-1-10 1Z\"/></svg><span>Documentation index</span><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m9 5 7 7-7 7\"/></svg></a></div><div class=\"ds-project-card-footer\"><span class=\"ds-source-mode\">Source snapshot</span><code>f74950ac</code><a href=\"#cluster-bringup\">Browse documentation <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-5-5 5 5-5 5\"/></svg></a></div></article></div>",
+      "css": ".ds-demo{color-scheme:dark;background:var(--ground);font:400 14px/1.5 var(--font);color:var(--text)}.ds-demo a{color:inherit;text-decoration:none;text-underline-offset:3px}.ds-demo a:hover{color:var(--accent);transition:color 150ms ease-out,background-color 150ms ease-out}.ds-demo svg{flex:none;vertical-align:middle}.ds-demo a:focus-visible,.ds-demo button:focus-visible,.ds-demo input:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}.ds-demo code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.ds-project-card{background:var(--raised)}.ds-project-card h3{color:#fff;font-weight:600;line-height:1.25;margin-top:0}.ds-project-card p{margin-top:0}.ds-project-card{border:1px solid var(--border);border-radius:8px;padding:24px;min-width:0;display:flex;flex-direction:column}.ds-project-card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.ds-project-card h3{font-size:20px;letter-spacing:-.018em;margin-bottom:12px}.ds-project-card h3 a{display:inline-flex;align-items:center;gap:12px}.ds-project-card h3 svg{color:var(--brand)}.ds-page-count{white-space:nowrap;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:5px}.ds-project-description{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:20px;max-width:55ch}.ds-project-preview{margin-top:auto;padding-bottom:17px}.ds-project-preview>a{display:flex;align-items:center;gap:10px;min-height:36px;font-size:13px}.ds-project-preview>a>span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ds-project-preview>a>svg{color:var(--muted)}.ds-project-preview>a>svg:last-child{margin-left:auto}.ds-project-card-footer{border-top:1px solid var(--rule);padding-top:15px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--muted)}.ds-project-card-footer>a{margin-left:auto;display:inline-flex;align-items:center;gap:5px;color:var(--accent);font-weight:500}.ds-source-mode{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}.ds-source-mode:before{content:'';width:5px;height:5px;background:#76b900;border-radius:50%;display:inline-block}.ds-project-card-footer code{font-size:11px}@media(max-width:1250px) and (min-width:1101px){.ds-project-card{padding:20px}.ds-project-card-heading{display:block}.ds-page-count{display:block;padding-top:0;margin:-2px 0 10px}.ds-project-card-footer>a{margin-left:0;flex-basis:100%;margin-top:6px}}@media(max-width:1100px){.ds-project-card{padding:20px}.ds-project-card-heading{display:block}.ds-page-count{display:block;padding-top:0;margin:-2px 0 10px}.ds-project-card-footer>a{margin-left:0;flex-basis:100%;margin-top:5px}}@media(max-width:700px){.ds-project-card-heading{display:flex}.ds-page-count{padding-top:5px;margin:0}.ds-project-description{font-size:14px;margin-bottom:16px}.ds-project-preview>a{min-height:40px}.ds-project-card-footer{gap:10px}.ds-project-card-footer>a{margin:2px 0 0;min-height:30px}}"
+    },
+    {
+      "name": "Source Trail",
+      "kind": "custom",
+      "refersTo": "source-trail",
+      "description": "Path and exact revision following an authored document.",
+      "html": "<div class=\"ds-demo\"><div class=\"ds-document-source\"><div><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"6\" cy=\"5\" r=\"2\"/><circle cx=\"6\" cy=\"19\" r=\"2\"/><circle cx=\"18\" cy=\"6\" r=\"2\"/><path d=\"M6 7v10m12-9v2a5 5 0 0 1-5 5H6\"/></svg><strong>Source revision</strong><code>f74950ac</code></div><a href=\"#source\">docs/documentation-index.md <svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M14 3h7v7m0-7L10 14m0-9H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5\"/></svg></a><p>Content is maintained in the source repository.</p></div></div>",
+      "css": ".ds-demo{color-scheme:dark;background:var(--ground);font:400 14px/1.5 var(--font);color:var(--text)}.ds-demo a{color:inherit;text-decoration:none;text-underline-offset:3px}.ds-demo a:hover{color:var(--accent);transition:color 150ms ease-out,background-color 150ms ease-out}.ds-demo svg{flex:none;vertical-align:middle}.ds-demo a:focus-visible,.ds-demo button:focus-visible,.ds-demo input:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}.ds-demo code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.ds-document-source{border-top:1px solid var(--border);margin-top:38px;padding-top:22px;font-size:12px;color:var(--muted)}.ds-document-source>div{display:flex;align-items:center;gap:8px;margin-bottom:8px}.ds-document-source strong{font-weight:500}.ds-document-source code{margin-left:auto;font-size:11px}.ds-document-source>a{overflow-wrap:anywhere;line-height:1.8;color:var(--accent)}.ds-document-source p{margin-top:10px;font-size:12px}.ds-document-source p{margin-bottom:16px}@media(max-width:700px){.ds-document-source>div{flex-wrap:wrap;gap:6px}.ds-document-source code{margin-left:0;width:100%;padding-left:25px}.ds-document-source p{font-size:11px}}"
+    },
+    {
+      "name": "Reference Table",
+      "kind": "custom",
+      "refersTo": "reference-table",
+      "description": "Keyboard-focusable, labelled overflow wrapper with the shipped narrow-screen instruction.",
+      "html": "<div class=\"ds-demo\"><div class=\"ds-prose\"><p id=\"ds-table-hint\" class=\"ds-table-scroll-hint\">Scroll horizontally to see all columns.</p><div class=\"ds-table-scroll\" tabindex=\"0\" role=\"region\" aria-label=\"Reference table\" aria-describedby=\"ds-table-hint\"><table><thead><tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr></thead><tbody><tr><td>Command unavailable</td><td>Package not installed</td><td>Follow the authored installation procedure.</td></tr></tbody></table></div></div></div>",
+      "css": ".ds-demo{color-scheme:dark;background:var(--ground);font:400 14px/1.5 var(--font);color:var(--text)}.ds-demo a{color:inherit;text-decoration:none;text-underline-offset:3px}.ds-demo a:hover{color:var(--accent);transition:color 150ms ease-out,background-color 150ms ease-out}.ds-demo svg{flex:none;vertical-align:middle}.ds-demo a:focus-visible,.ds-demo button:focus-visible,.ds-demo input:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}.ds-demo code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.ds-prose{font-size:16px;line-height:1.75;overflow-wrap:anywhere}.ds-prose table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%;font-size:14px;margin:22px 0;line-height:1.6;scrollbar-width:thin}.ds-prose th{font-weight:500;text-align:left;white-space:nowrap}.ds-prose th,.ds-prose td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top}.ds-prose th:first-child,.ds-prose td:first-child{padding-left:0}.ds-table-scroll{max-width:100%;overflow-x:auto;margin:22px 0;scrollbar-width:thin;scrollbar-color:#666 transparent}.ds-prose .ds-table-scroll table{display:table;width:100%;margin:0}.ds-table-scroll:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.ds-prose p.ds-table-scroll-hint{display:none}@media(max-width:620px){.ds-prose p.ds-table-scroll-hint{display:block;color:var(--muted);font-size:12px;line-height:1.5;margin:18px 0 -10px}}@media(max-width:700px){.ds-prose .ds-table-scroll table{min-width:580px}.ds-prose th,.ds-prose td{padding:9px 12px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The NVIS - OVA Reference Shelf",
+    "overview": "A dark neutral frame and black topbar hold a dark reading sheet, raised project entries, and quiet source metadata for NVIS - OVA. The supplied NVIDIA reference's dark theme gives the engineering tooling a clear identity while long passages remain legible.\n\nIBM Plex Sans carries both navigation and prose; a system monospace stack distinguishes commands and exact revisions. Source paths stay in the surrounding sans unless authored as code. Fine borders and neutral tonal changes establish hierarchy. NVIDIA Green identifies links, keyboard focus, primary actions, and brand marks; Deep Green supplies the hover background for primary actions.",
+    "keyCharacteristics": [
+      "Dark reading sheets and raised charcoal panels within a dark neutral frame and black topbar.",
+      "NVIDIA Green links, focus, primary actions, and identity marks, with Deep Green primary-action hover backgrounds.",
+      "Compact navigation beside generous document line spacing.",
+      "Fine borders, modest corners, and flat resting surfaces.",
+      "Visible source paths, revisions, and publication context.",
+      "Semantic disclosures and contained horizontal scrolling on narrow screens."
+    ],
+    "rules": [
+      {
+        "name": "The NVIDIA Palette Rule",
+        "body": "Use the supplied reference's dark theme: NVIDIA Green for links, focus, primary action backgrounds, and identity marks; Deep Green for primary-action hover backgrounds; and dark neutral greys for the frame and reading surfaces.",
+        "section": "colors"
+      },
+      {
+        "name": "The Same Voice Rule",
+        "body": "Use IBM Plex Sans for interface text and authored prose; use the system monospace stack for code and revisions.",
+        "section": "typography"
+      },
+      {
+        "name": "The Overlay Shadow Rule",
+        "body": "Keep sheets and project panels flat. Use the soft shadow only on the floating mobile navigation. A search focus ring is an interaction indicator, not elevation.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep authored documentation on the dark reading sheet with its source trail visible.",
+      "Do use NVIDIA Green for links, visible keyboard focus, primary actions, and identity marks; use Deep Green for primary-action hover backgrounds.",
+      "Do keep the reader body at its established size and line height on narrow screens.",
+      "Do use real SVG strokes, semantic links, and native disclosure controls.",
+      "Do preserve horizontal table and code scrolling; show the table cue at the implemented narrow breakpoint."
+    ],
+    "donts": [
+      "Don't replace body or navigation text with a display typeface.",
+      "Don't add resting shadows or hover lifts to sheets and project panels.",
+      "Don't reintroduce olive or green-tinted neutrals; use the exact reference palette.",
+      "Don't shrink wide tables or code to fit the viewport; retain contained scrolling.",
+      "Don't replace source revisions with decorative status labels."
+    ]
+  }
+}

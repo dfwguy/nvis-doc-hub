@@ -1,0 +1,225 @@
+{
+  "at": "2026-10-22T22:59:49.209Z",
+  "base": "http://127.0.0.1:8000",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "errors": [],
+  "records": [
+    {
+      "screenshot": "390-40.png",
+      "url": "/projects/cluster-bringup/docs/docs/compute_node_ssh_access/how-to/install-ssh-gate-on-one-compute-node.md",
+      "title": "How to install the Slurm SSH gate on one live compute node · NVIS - OVA Docs",
+      "initial": {
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "height": 7514,
+        "code": 14,
+        "tables": 0,
+        "lists": 0,
+        "images": []
+      },
+      "bottom": [
+        {
+          "rel": "prev",
+          "text": "Previous pageCompute-node SSH access",
+          "textAlign": "start",
+          "left": 20,
+          "width": 158
+        },
+        {
+          "rel": "next",
+          "text": "Next page \n\nHow to install the Slurm SSH gate on the compute-node fleet",
+          "textAlign": "right",
+          "left": 198,
+          "width": 158
+        }
+      ],
+      "contents": {
+        "count": 8,
+        "label": "2.2 When the managed host has no network access",
+        "target": "#22-when-the-managed-host-has-no-network-access",
+        "anchor": {
+          "top": 48,
+          "text": "2.2 When the managed host has no network access"
+        }
+      },
+      "table": null,
+      "code": {
+        "width": 333,
+        "scroll": 333,
+        "font": "12px",
+        "copyMatches": true,
+        "keyboardActivated": true
+      }
+    },
+    {
+      "screenshot": "390-45.png",
+      "url": "/projects/cluster-bringup/docs/docs/internal_app_access/explanation/architecture-and-trust.md",
+      "title": "Explanation: architecture and trust boundaries · NVIS - OVA Docs",
+      "initial": {
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "height": 5246,
+        "code": 0,
+        "tables": 0,
+        "lists": 0,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8000/projects/cluster-bringup/assets/docs/internal_app_access/explanation/architecture-and-trust.svg",
+            "width": 335,
+            "naturalWidth": 300,
+            "alt": "Architecture diagram: the SSO portal reaches the isolated signing service; a relay delivers public CA and CRL artifacts to Caddy; user traffic reaches Caddy through an SSH forward and continues to the private HTTP service over loopback.",
+            "complete": true
+          }
+        ]
+      },
+      "bottom": [
+        {
+          "rel": "prev",
+          "text": "Previous pageReference: Caddy mTLS application access",
+          "textAlign": "start",
+          "left": 20,
+          "width": 158
+        },
+        {
+          "rel": "next",
+          "text": "Next page \n\nExplanation: rejected connection and enrollment methods",
+          "textAlign": "right",
+          "left": 198,
+          "width": 158
+        }
+      ],
+      "contents": {
+        "count": 4,
+        "label": "What revocation changes",
+        "target": "#what-revocation-changes",
+        "anchor": {
+          "top": 48,
+          "text": "What revocation changes"
+        }
+      },
+      "table": null,
+      "code": null
+    },
+    {
+      "screenshot": "390-73.png",
+      "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/reference.md",
+      "title": "Reference · NVIS - OVA Docs",
+      "initial": {
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "height": 11112,
+        "code": 10,
+        "tables": 12,
+        "lists": 0,
+        "images": []
+      },
+      "bottom": [
+        {
+          "rel": "prev",
+          "text": "Previous pageHow to troubleshoot a failing sinfo or squeue",
+          "textAlign": "start",
+          "left": 20,
+          "width": 158
+        },
+        {
+          "rel": "next",
+          "text": "Next page \n\nExplanations",
+          "textAlign": "right",
+          "left": 198,
+          "width": 158
+        }
+      ],
+      "contents": {
+        "count": 11,
+        "label": "Files this setup creates or modifies",
+        "target": "#files-this-setup-creates-or-modifies",
+        "anchor": {
+          "top": 48,
+          "text": "Files this setup creates or modifies"
+        }
+      },
+      "table": {
+        "before": {
+          "client": 335,
+          "scroll": 580,
+          "tabindex": 0,
+          "label": "Scrollable reference table",
+          "left": 0
+        },
+        "after": {
+          "left": 245,
+          "active": true
+        }
+      },
+      "code": {
+        "width": 333,
+        "scroll": 622,
+        "font": "12px",
+        "copyMatches": true,
+        "keyboardActivated": true
+      }
+    },
+    {
+      "screenshot": "390-82.png",
+      "url": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/tutorial.md",
+      "title": "Tutorial: use a Varlock GitLab group token on an Omnistation · NVIS - OVA Docs",
+      "initial": {
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "height": 16687,
+        "code": 21,
+        "tables": 1,
+        "lists": 3,
+        "images": []
+      },
+      "bottom": [
+        {
+          "rel": "prev",
+          "text": "Previous pageOmnistation GitLab group credentials",
+          "textAlign": "start",
+          "left": 20,
+          "width": 158
+        },
+        {
+          "rel": "next",
+          "text": "Next page \n\nHow to launch Codex for an existing group repository",
+          "textAlign": "right",
+          "left": 198,
+          "width": 158
+        }
+      ],
+      "contents": {
+        "count": 19,
+        "label": "10. Validate Varlock without revealing the token",
+        "target": "#10-validate-varlock-without-revealing-the-token",
+        "anchor": {
+          "top": 48,
+          "text": "10. Validate Varlock without revealing the token"
+        }
+      },
+      "table": {
+        "before": {
+          "client": 335,
+          "scroll": 580,
+          "tabindex": 0,
+          "label": "Scrollable reference table",
+          "left": 0
+        },
+        "after": {
+          "left": 245,
+          "active": true
+        }
+      },
+      "code": {
+        "width": 333,
+        "scroll": 333,
+        "font": "12px",
+        "copyMatches": true,
+        "keyboardActivated": true
+      }
+    }
+  ]
+}

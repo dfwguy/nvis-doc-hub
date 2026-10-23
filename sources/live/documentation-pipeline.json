@@ -1,0 +1,12 @@
+{
+  "slug": "documentation-pipeline",
+  "title": "Documentation Pipeline",
+  "description": "Build and publish repository documentation with NVIDIA repo_docs, Copier configuration, and GitLab Pages.",
+  "repo_url": "https://gitlab-master.nvidia.com/nvis-ova/documentation-pipeline.git",
+  "ref": "feat/copier-docs-pipeline",
+  "docs_paths": [
+    "README.md",
+    "docs"
+  ],
+  "source_mode": "gitlab"
+}

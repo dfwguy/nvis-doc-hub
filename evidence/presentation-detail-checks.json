@@ -1,0 +1,130 @@
+{
+  "at": "2026-10-22T23:00:39.119Z",
+  "checks": [
+    {
+      "name": "tablet-long-reference",
+      "overflow": false
+    },
+    {
+      "name": "tablet-long-tutorial",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 320,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 320,
+      "route": "/search",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 320,
+      "route": "/search?q=slurm",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 320,
+      "route": "/sources",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 320,
+      "route": "/help",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 320,
+      "route": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/troubleshoot.md",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 640,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 640,
+      "route": "/search",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 640,
+      "route": "/search?q=slurm",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 640,
+      "route": "/sources",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 640,
+      "route": "/help",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 640,
+      "route": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/troubleshoot.md",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 1280,
+      "route": "/",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 1280,
+      "route": "/search",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 1280,
+      "route": "/search?q=slurm",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 1280,
+      "route": "/sources",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 1280,
+      "route": "/help",
+      "overflow": false
+    },
+    {
+      "name": "boundary-width",
+      "width": 1280,
+      "route": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/troubleshoot.md",
+      "overflow": false
+    },
+    {
+      "name": "clipboard-fallback-selection",
+      "matchesAuthored": true
+    },
+    {
+      "name": "without-javascript",
+      "codeReadable": true,
+      "pageOverflow": false
+    }
+  ]
+}

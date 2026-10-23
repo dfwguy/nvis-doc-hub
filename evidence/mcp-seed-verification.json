@@ -1,0 +1,81 @@
+{
+  "transport": "stdio",
+  "tools": [
+    "get_document",
+    "list_projects",
+    "search_documents"
+  ],
+  "projects": [
+    {
+      "slug": "cluster-bringup",
+      "title": "Cluster Bringup",
+      "description": "Guides for setting up, accessing, and operating NVIS OVA infrastructure.",
+      "repo_url": "https://gitlab-master.nvidia.com/nvis-ova/cluster-bringup",
+      "ref": "main",
+      "topics": [],
+      "kind": null,
+      "source_mode": "snapshot",
+      "revision": "f74950acdc451f43f8857754efad25ce5233d26c",
+      "published_at": "2026-10-22T22:33:04.586583+00:00",
+      "document_count": 85,
+      "last_error": null,
+      "nav_mode": "curated",
+      "warnings": [],
+      "acquisition": {
+        "method": "git",
+        "acquired_at": "2026-10-22 22:22:47 UTC",
+        "ref": "main"
+      },
+      "pending_source": null
+    },
+    {
+      "slug": "documentation-pipeline",
+      "title": "Documentation Pipeline",
+      "description": "Build and publish repository documentation with NVIDIA repo_docs, Copier configuration, and GitLab Pages.",
+      "repo_url": "https://gitlab-master.nvidia.com/nvis-ova/documentation-pipeline",
+      "ref": "feat/copier-docs-pipeline",
+      "topics": [],
+      "kind": null,
+      "source_mode": "snapshot",
+      "revision": "0796f0212ccac88391765271f88f9aed6606f68a",
+      "published_at": "2026-10-22T22:33:04.691355+00:00",
+      "document_count": 7,
+      "last_error": null,
+      "nav_mode": "generated",
+      "warnings": [],
+      "acquisition": {
+        "method": "gitlab-mcp",
+        "acquired_at": "2026-10-22 22:22:47 UTC",
+        "ref": "feat/copier-docs-pipeline"
+      },
+      "pending_source": null
+    }
+  ],
+  "results": [
+    {
+      "project_slug": "documentation-pipeline",
+      "path": "docs/explanation/design.md",
+      "title": "Why the pipeline has two layers",
+      "kind": null,
+      "topics": [],
+      "revision": "0796f0212ccac88391765271f88f9aed6606f68a",
+      "source_url": "https://gitlab-master.nvidia.com/nvis-ova/documentation-pipeline/-/blob/0796f0212ccac88391765271f88f9aed6606f68a/docs/explanation/design.md",
+      "published_at": "2026-10-22T22:33:04.691355+00:00",
+      "project_title": "Documentation Pipeline",
+      "heading": "Why the pipeline has two layers",
+      "anchor": "why-the-pipeline-has-two-layers",
+      "snippet": "Why the pipeline has two layers Copier records a versioned adoption contract: project title, source location, navigation location, shared CI project, and shared ref. Consumer repositories own those values and their documentation. The central repository owns …",
+      "url": "/projects/documentation-pipeline/docs/docs/explanation/design.md#why-the-pipeline-has-two-layers"
+    }
+  ],
+  "document": {
+    "project_slug": "documentation-pipeline",
+    "path": "docs/explanation/design.md",
+    "title": "Why the pipeline has two layers",
+    "source_path": "docs/explanation/design.md",
+    "source_url": "https://gitlab-master.nvidia.com/nvis-ova/documentation-pipeline/-/blob/0796f0212ccac88391765271f88f9aed6606f68a/docs/explanation/design.md",
+    "revision": "0796f0212ccac88391765271f88f9aed6606f68a",
+    "published_at": "2026-10-22T22:33:04.691355+00:00",
+    "text": "Sources and version selection\n\nThe requested repo_docs 3.1.0 quickstart\nand how it works\nreturned HTTP 403 during implementation. Public Packman could not resolve\nrepo_docs@3.1.0 either. Its configuration has not been claimed as verified.\n\nThe working baseline follows NVIDIA's public\ncloud-native-docs dependency manifest\nwhich pins repo_docs 0.39.2. The downloaded package's configuration and code\nwere inspected and real builds verified against it. A future move to 3.1.0\nrequires access to the official package and documentation, a compatible bootstrap,\nand build validation before changing the central dependency manifest.\n\nCopier's template and saved answers documentation\nand update workflow\ninform the adoption/update contract. GitLab's\nCI YAML reference describes includes, child\npipelines, and Pages. The target self-managed instance still needs live CI Lint\nand a pipeline run for each new shared revision. The reported successful\ncluster-bringup GitLab build establishes working access for that run; earlier API\n403 responses do not establish a CI permission failure. Pages delivery and the\nhistorical runtime SHA still need independent verification."
+  }
+}

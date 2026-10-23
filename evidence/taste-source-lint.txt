@@ -1,0 +1,10 @@
+TASTESKILL · LINT   11 file(s)
+
+WARN
+  [mono] Monospace type. Only literal code may be monospace.  (1×)
+      src/nvis_hub/static/hub.css:5  font-family:ui-monospace,SFMono-Regular,Consolas,monospace
+  [shadow] Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may.  (1×)
+      src/nvis_hub/static/hub.css:13  box-shadow:
+
+RESULT: 0 FAIL, 2 WARN
+Interface fragments marked data-ui keep their own borders and shadows. Any other line that must keep a flagged pattern for a real reason can carry the comment taste-skill-ignore.

@@ -1,0 +1,73 @@
+{
+  "at": "2026-10-22T22:57:20.389Z",
+  "records": [
+    {
+      "id": "390-12",
+      "title": "Benchmark /cluster",
+      "font": "27px",
+      "codes": [
+        {
+          "text": "/cluster",
+          "font": "22.95px"
+        }
+      ],
+      "client": 375,
+      "scroll": 375
+    },
+    {
+      "id": "390-26",
+      "title": "Running cmsh from a non-BCM host",
+      "font": "27px",
+      "codes": [
+        {
+          "text": "cmsh",
+          "font": "22.95px"
+        }
+      ],
+      "client": 375,
+      "scroll": 375
+    },
+    {
+      "id": "390-72",
+      "title": "How to troubleshoot a failing sinfo or squeue",
+      "font": "27px",
+      "codes": [
+        {
+          "text": "sinfo",
+          "font": "22.95px"
+        },
+        {
+          "text": "squeue",
+          "font": "22.95px"
+        }
+      ],
+      "client": 375,
+      "scroll": 375
+    },
+    {
+      "id": "390-73-table-keyboard",
+      "scrollLeft": 5,
+      "client": 335,
+      "scroll": 580,
+      "focused": true
+    },
+    {
+      "id": "390-73-code-scroll",
+      "client": 333,
+      "scroll": 622,
+      "left": 289,
+      "documentClient": 375,
+      "documentScroll": 375
+    },
+    {
+      "id": "390-92-lone-previous",
+      "pager": [
+        {
+          "rel": "prev",
+          "textAlign": "start",
+          "left": 20
+        }
+      ]
+    }
+  ]
+}

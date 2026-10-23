@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "repo_url": "https://gitlab-master.nvidia.com/nvis-ova/documentation-pipeline.git",
+  "project_path": "nvis-ova/documentation-pipeline",
+  "ref": "feat/copier-docs-pipeline",
+  "revision": "0796f0212ccac88391765271f88f9aed6606f68a",
+  "acquired_at": "2026-10-22 22:22:47 UTC",
+  "fetched_at": "2026-10-22 22:22:47 UTC",
+  "acquisition_method": "gitlab-mcp",
+  "acquisition": "gitlab-mcp",
+  "paths": [
+    "README.md",
+    "docs/tutorials/adopt.md",
+    "docs/explanation/design.md",
+    "docs/how-to/update-cluster-bringup.md",
+    "docs/how-to/update.md",
+    "docs/reference/configuration.md",
+    "docs/reference/validation.md"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "c6887a5c2a9cae1eb7f24dadf467ff9d769340127cc32234d99434f0a7ae92d3",
+      "size": 1567,
+      "blob_id": "2fa3a752f3bffb678748970be0c97dc272cbc470",
+      "last_commit_id": "0796f0212ccac88391765271f88f9aed6606f68a"
+    },
+    {
+      "path": "docs/tutorials/adopt.md",
+      "sha256": "369289eac4766446476b28a5389118f18a7a97665a2eeaffc48b48a931dd46ab",
+      "size": 4023,
+      "blob_id": "152ac6f7355e0303b87a32f56170d64b4ade16f6",
+      "last_commit_id": "0796f0212ccac88391765271f88f9aed6606f68a"
+    },
+    {
+      "path": "docs/explanation/design.md",
+      "sha256": "a72d1cbdad56b4b7a2496c3468ce62591506cddaa5f5fdd44a9da6833f3dff8b",
+      "size": 3379,
+      "blob_id": "f14f1aa9f31360a9253531e9808dd8f170b22edf",
+      "last_commit_id": "0796f0212ccac88391765271f88f9aed6606f68a"
+    },
+    {
+      "path": "docs/how-to/update-cluster-bringup.md",
+      "sha256": "347d4c5a980ac2e1602ca93da13386dba2a5c2c1e141850798ea60639cdda478",
+      "size": 6414,
+      "blob_id": "b41ea5ed655cb7de2b6847fe2495389fbefbd8ab",
+      "last_commit_id": "0796f0212ccac88391765271f88f9aed6606f68a"
+    },
+    {
+      "path": "docs/how-to/update.md",
+      "sha256": "38661f9ae355c63e67bdfe0c6e42b990fc540b265dc3db4fd0f52e1dbebd32a0",
+      "size": 3109,
+      "blob_id": "ededf73604e5db6721b4de0f1038bffedd328726",
+      "last_commit_id": "0796f0212ccac88391765271f88f9aed6606f68a"
+    },
+    {
+      "path": "docs/reference/configuration.md",
+      "sha256": "840f6f64dade7e3c879127d15d10e9a106c12dffbed926ff020d3e91f5ca951a",
+      "size": 6787,
+      "blob_id": "2f99e4e86e685137471e45c58034cc88eb1d476c",
+      "last_commit_id": "0796f0212ccac88391765271f88f9aed6606f68a"
+    },
+    {
+      "path": "docs/reference/validation.md",
+      "sha256": "f026c2bf2d01d942c056e91b842b52787d1a24314794c7d94ef66f894010a151",
+      "size": 6829,
+      "blob_id": "9530c68ae7018d60f10110a855fdaa2e0e127b0c",
+      "last_commit_id": "0796f0212ccac88391765271f88f9aed6606f68a"
+    }
+  ],
+  "declared_scope": {
+    "document_paths": [
+      "README.md",
+      "docs/**/*.md"
+    ],
+    "asset_paths": [
+      "docs/**"
+    ],
+    "navigation": null
+  },
+  "omitted_files": [
+    ".gitignore",
+    ".gitlab-ci.yml",
+    "ci/docs.gitlab-ci.yml",
+    "copier.yml",
+    "pyproject.toml",
+    "runtime/build.py",
+    "runtime/packman/LICENSE",
+    "runtime/packman/UPSTREAM.md",
+    "runtime/packman/bootstrap/install_package.py",
+    "runtime/packman/config.packman.xml",
+    "runtime/packman/packman",
+    "runtime/packman/python.sh",
+    "runtime/repoman/bootstrap.py",
+    "runtime/repoman/repo-deps.packman.xml",
+    "runtime/sphinx_ext/repository_links.py",
+    "src/documentation_pipeline/__init__.py",
+    "src/documentation_pipeline/onboard.py",
+    "template/.docs-pipeline/ci.yml.jinja",
+    "template/.docs-pipeline/config.toml.jinja",
+    "template/{{_copier_conf.answers_file}}.jinja",
+    "tests/fixtures/existing/.gitlab-ci.yml",
+    "tests/fixtures/existing/docs/README.md",
+    "tests/fixtures/existing/docs/install.md",
+    "tests/fixtures/existing/other.yml",
+    "tests/fixtures/existing/repo.toml",
+    "tests/fixtures/minimal/docs/README.md",
+    "tests/test_build.py",
+    "tests/test_ci.py",
+    "tests/test_onboard.py"
+  ],
+  "notes": [
+    "Exact source content acquired with connected GitLab get_file_contents at the pinned revision. All UTF-8 bytes and sizes verified against GitLab content_sha256 and size metadata.",
+    "No curated navigation exists in the selected source. Use an honest generated fallback based on these authored paths.",
+    "Direct HTTPS Git access to this internal repository failed due missing or invalid noninteractive credentials. No credential setup performed.",
+    "The local sibling repository tree at the verified revision was used only to inventory omitted paths. All published bytes came from GitLab MCP."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "cluster-bringup",
+  "title": "Cluster Bringup",
+  "description": "Guides for setting up, accessing, and operating NVIS - OVA infrastructure.",
+  "repo_url": "https://gitlab-master.nvidia.com/nvis-ova/cluster-bringup.git",
+  "ref": "main",
+  "docs_paths": [
+    "README.md",
+    "docs"
+  ],
+  "nav_path": ".docs-pipeline/navigation.rst",
+  "source_mode": "gitlab"
+}

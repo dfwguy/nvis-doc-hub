@@ -1,0 +1,2049 @@
+{
+ "url": "http://127.0.0.1:8000/search?q=configuration&project=documentation-pipeline",
+ "at": "2026-10-22T22:48:09.630Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.3,
+    0.18,
+    0.25,
+    0.21
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 2854,
+     "screens": 3.2,
+     "words": 553,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 25,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Search documentation",
+     "words": 2,
+     "chars": 20,
+     "lines": 1,
+     "size": 28,
+     "vw": 1.9,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.25,
+     "top": 87,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Search documentation",
+     "words": 2,
+     "lines": 1,
+     "size": 28,
+     "font": "IBM Plex Sans"
+    },
+    "headings": [
+     {
+      "text": "Search documentation",
+      "words": 2,
+      "chars": 20,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "IBM Plex Sans",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 87,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Sans",
+       "share": 0.98,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      19,
+      28
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "IBM Plex Sans",
+      "size": 14,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6.6
+     },
+     "measureChars": 102,
+     "max": {
+      "size": 28,
+      "vw": 1.9,
+      "font": "IBM Plex Sans",
+      "text": "Search documentation"
+     },
+     "monoShare": 0.02,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 39
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#111111",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#111111",
+       "top": 48,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#999999",
+       "share": 0.82
+      },
+      {
+       "color": "#76b900",
+       "share": 0.08
+      },
+      {
+       "color": "#eeeeee",
+       "share": 0.08
+      },
+      {
+       "color": "#dddddd",
+       "share": 0.01
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#76b900",
+      "hsl": {
+       "h": 82,
+       "s": 1,
+       "l": 0.36
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 4,
+     "radius": 6,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Global search",
+      "Search",
+      "Apply filters"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 12,
+     "hairlineSamples": [
+      "div.result-summary 960px",
+      "li.search-result 960px",
+      "li.search-result 960px",
+      "li.search-result 960px",
+      "li.search-result 960px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 900,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "ibm plex sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 2854,
+    "margins": {
+     "left": 350,
+     "right": 130
+    },
+    "sections": [
+     {
+      "sel": "form.results-form",
+      "tag": "form",
+      "top": 185,
+      "height": 137,
+      "words": 7,
+      "media": 0,
+      "middle": 3,
+      "heading": null,
+      "left": 350,
+      "right": 130,
+      "textLeft": 350,
+      "textRight": 146,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 384,
+      "height": 161,
+      "words": 13,
+      "media": 0,
+      "middle": 565,
+      "heading": {
+       "text": "Configuration and command reference",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 350,
+      "right": 130,
+      "textLeft": 350,
+      "textRight": 130,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 545,
+      "height": 232,
+      "words": 54,
+      "media": 0,
+      "middle": 197,
+      "heading": {
+       "text": "Sources and version selection",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 350,
+      "right": 130,
+      "textLeft": 350,
+      "textRight": 130,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 777,
+      "height": 206,
+      "words": 48,
+      "media": 0,
+      "middle": 203,
+      "heading": {
+       "text": "Documentation pipeline",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 350,
+      "right": 130,
+      "textLeft": 350,
+      "textRight": 130,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 983,
+      "height": 232,
+      "words": 54,
+      "media": 0,
+      "middle": 206,
+      "heading": {
+       "text": "Assess verification status",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 350,
+      "right": 130,
+      "textLeft": 350,
+      "textRight": 130,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 1215,
+      "height": 210,
+      "words": 43,
+      "media": 0,
+      "middle": 196,
+      "heading": {
+       "text": "Apply and build locally",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 350,
+      "right": 130,
+      "textLeft": 350,
+      "textRight": 130,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 1425,
+      "height": 232,
+      "words": 60,
+      "media": 0,
+      "middle": 206,
+      "heading": {
+       "text": "Use the published development branch",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 350,
+      "right": 130,
+      "textLeft": 350,
+      "textRight": 130,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 1657,
+      "height": 206,
+      "words": 54,
+      "media": 0,
+      "middle": 207,
+      "heading": {
+       "text": "Why the pipeline has two layers",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 350,
+      "right": 130,
+      "textLeft": 350,
+      "textRight": 130,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 1863,
+      "height": 232,
+      "words": 53,
+      "media": 0,
+      "middle": 226,
+      "heading": {
+       "text": "Follow-up integration validation (2026-10-20)",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 350,
+      "right": 130,
+      "textLeft": 350,
+      "textRight": 130,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 2095,
+      "height": 206,
+      "words": 49,
+      "media": 0,
+      "middle": 209,
+      "heading": {
+       "text": "Update an adopted consumer",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 350,
+      "right": 130,
+      "textLeft": 350,
+      "textRight": 130,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 2301,
+      "height": 232,
+      "words": 58,
+      "media": 0,
+      "middle": 209,
+      "heading": {
+       "text": "Shared CI contract",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 350,
+      "right": 130,
+      "textLeft": 350,
+      "textRight": 130,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 2533,
+      "height": 232,
+      "words": 44,
+      "media": 0,
+      "middle": 198,
+      "heading": {
+       "text": "Historical pre-integration trial (2026-10-19)",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 350,
+      "right": 130,
+      "textLeft": 350,
+      "textRight": 130,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Search documentation",
+      "size": 28,
+      "top": 87,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 350,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 1,
+    "bodySize": 14,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.1,
+    "voidBox": {
+     "x": 0,
+     "y": 360,
+     "w": 300,
+     "h": 420
+    }
+   },
+   "app": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "dark": true,
+    "ground": "#111111",
+    "sidebar": {
+     "w": 228,
+     "tag": "aside",
+     "links": 8,
+     "share": 0.16
+    },
+    "topbar": {
+     "h": 48
+    },
+    "canvas": {
+     "left": 121,
+     "right": 53
+    },
+    "hero": {
+     "text": "Search documentation",
+     "words": 2,
+     "chars": 20,
+     "lines": 1,
+     "size": 28,
+     "vw": 1.9,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.25,
+     "top": 87,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 2,
+     "firstScreen": 2,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 2,
+     "radii": [
+      [
+       0,
+       1
+      ],
+      [
+       16,
+       1
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0.22,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      19,
+      28
+     ]
+    },
+    "title": {
+     "text": "Search documentation",
+     "size": 28,
+     "top": 87
+    },
+    "colourShare": 0.008
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 3,
+   "filled": [
+    0.36,
+    0.42,
+    0.43
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 2880,
+     "screens": 2.8,
+     "words": 528,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 25,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Search documentation",
+     "words": 2,
+     "chars": 20,
+     "lines": 1,
+     "size": 28,
+     "vw": 3.6,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.25,
+     "top": 83,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Search documentation",
+     "words": 2,
+     "lines": 1,
+     "size": 28,
+     "font": "IBM Plex Sans"
+    },
+    "headings": [
+     {
+      "text": "Search documentation",
+      "words": 2,
+      "chars": 20,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "IBM Plex Sans",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 83,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Sans",
+       "share": 0.98,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      28
+     ],
+     "sizeCount": 8,
+     "notLoaded": [],
+     "body": {
+      "font": "IBM Plex Sans",
+      "size": 14,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6.6
+     },
+     "measureChars": 99,
+     "max": {
+      "size": 28,
+      "vw": 3.6,
+      "font": "IBM Plex Sans",
+      "text": "Search documentation"
+     },
+     "monoShare": 0.02,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 36
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#111111",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#111111",
+       "top": 52,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#999999",
+       "share": 0.81
+      },
+      {
+       "color": "#76b900",
+       "share": 0.08
+      },
+      {
+       "color": "#eeeeee",
+       "share": 0.08
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.01
+      },
+      {
+       "color": "#dddddd",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#76b900",
+      "hsl": {
+       "h": 82,
+       "s": 1,
+       "l": 0.36
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 5,
+     "radius": 6,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Search",
+      "Apply filters"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "div.mobile-menu-body → rgba(0, 0, 0, 0.4) 0px 8px 24px 0px"
+     ],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 13,
+     "hairlineSamples": [
+      "a.mobile-help 318px",
+      "div.result-summary 690px",
+      "li.search-result 690px",
+      "li.search-result 690px",
+      "li.search-result 690px"
+     ],
+     "outlinedBoxes": 2,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 2,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 0,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "ibm plex sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 2880,
+    "margins": {
+     "left": 39,
+     "right": 39
+    },
+    "sections": [
+     {
+      "sel": "form.results-form",
+      "tag": "form",
+      "top": 181,
+      "height": 185,
+      "words": 9,
+      "media": 0,
+      "middle": 3,
+      "heading": null,
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 55,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 428,
+      "height": 161,
+      "words": 13,
+      "media": 0,
+      "middle": 295,
+      "heading": {
+       "text": "Configuration and command reference",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 589,
+      "height": 232,
+      "words": 54,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Sources and version selection",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 821,
+      "height": 206,
+      "words": 48,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Documentation pipeline",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 1027,
+      "height": 232,
+      "words": 54,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Assess verification status",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 1259,
+      "height": 210,
+      "words": 43,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Apply and build locally",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 1469,
+      "height": 232,
+      "words": 60,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Use the published development branch",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 1701,
+      "height": 206,
+      "words": 54,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Why the pipeline has two layers",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 1907,
+      "height": 232,
+      "words": 53,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Follow-up integration validation (2026-10-20)",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 2139,
+      "height": 206,
+      "words": 49,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Update an adopted consumer",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 2345,
+      "height": 232,
+      "words": 58,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Shared CI contract",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 2577,
+      "height": 232,
+      "words": 44,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Historical pre-integration trial (2026-10-19)",
+       "size": 19,
+       "tag": "h2"
+      },
+      "left": 39,
+      "right": 39,
+      "textLeft": 39,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Search documentation",
+      "size": 28,
+      "top": 83,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 39,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 1,
+    "bodySize": 14,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "dark": true,
+    "ground": "#111111",
+    "sidebar": null,
+    "topbar": {
+     "h": 52
+    },
+    "canvas": {
+     "left": 32,
+     "right": 39
+    },
+    "hero": {
+     "text": "Search documentation",
+     "words": 2,
+     "chars": 20,
+     "lines": 1,
+     "size": 28,
+     "vw": 3.6,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.25,
+     "top": 83,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 0,
+     "firstScreen": 0,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 1,
+     "radii": [
+      [
+       16,
+       1
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0.22,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      28
+     ]
+    },
+    "title": {
+     "text": "Search documentation",
+     "size": 28,
+     "top": 83
+    },
+    "colourShare": 0.013
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.46,
+    0.54,
+    0.47,
+    0.61,
+    0.52
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 3592,
+     "screens": 4.3,
+     "words": 523,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 25,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Search documentation",
+     "words": 2,
+     "chars": 20,
+     "lines": 1,
+     "size": 25,
+     "vw": 6.4,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.25,
+     "top": 80,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Search documentation",
+     "words": 2,
+     "lines": 1,
+     "size": 25,
+     "font": "IBM Plex Sans"
+    },
+    "headings": [
+     {
+      "text": "Search documentation",
+      "words": 2,
+      "chars": 20,
+      "lines": 1,
+      "size": 25,
+      "vw": 6.4,
+      "font": "IBM Plex Sans",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 80,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Sans",
+       "share": 0.98,
+       "mono": false
+      },
+      {
+       "family": "ui-monospace",
+       "share": 0.02,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      25
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "IBM Plex Sans",
+      "size": 14,
+      "leading": 1.6,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6.6
+     },
+     "measureChars": 50,
+     "max": {
+      "size": 25,
+      "vw": 6.4,
+      "font": "IBM Plex Sans",
+      "text": "Search documentation"
+     },
+     "monoShare": 0.02,
+     "monoProseShare": 0,
+     "monoFamilies": [
+      "ui-monospace"
+     ],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0,
+     "smallText": 35
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#111111",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#111111",
+       "top": 97,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#999999",
+       "share": 0.81
+      },
+      {
+       "color": "#76b900",
+       "share": 0.08
+      },
+      {
+       "color": "#eeeeee",
+       "share": 0.08
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.01
+      },
+      {
+       "color": "#dddddd",
+       "share": 0.01
+      }
+     ],
+     "button": {
+      "bg": "#76b900",
+      "hsl": {
+       "h": 82,
+       "s": 1,
+       "l": 0.36
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 5,
+     "radius": 6,
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Search",
+      "Apply filters"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "div.mobile-menu-body → rgba(0, 0, 0, 0.4) 0px 8px 24px 0px"
+     ],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 14,
+     "hairlineSamples": [
+      "a.mobile-help 318px",
+      "main#main.sheet 390px",
+      "div.result-summary 350px",
+      "li.search-result 350px",
+      "li.search-result 350px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 0,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "ibm plex sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 3592,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "form.results-form",
+      "tag": "form",
+      "top": 167,
+      "height": 431,
+      "words": 9,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 39,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 651,
+      "height": 156,
+      "words": 13,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Configuration and command reference",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 806,
+      "height": 272,
+      "words": 54,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Sources and version selection",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 1078,
+      "height": 245,
+      "words": 48,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Documentation pipeline",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 1323,
+      "height": 272,
+      "words": 54,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Assess verification status",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 1595,
+      "height": 249,
+      "words": 43,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Apply and build locally",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 1844,
+      "height": 297,
+      "words": 60,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Use the published development branch",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 2141,
+      "height": 245,
+      "words": 54,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Why the pipeline has two layers",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 2386,
+      "height": 297,
+      "words": 53,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Follow-up integration validation (2026-10-20)",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 2683,
+      "height": 245,
+      "words": 49,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Update an adopted consumer",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 2928,
+      "height": 294,
+      "words": 58,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Shared CI contract",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "li.search-result",
+      "tag": "li",
+      "top": 3222,
+      "height": 297,
+      "words": 44,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Historical pre-integration trial (2026-10-19)",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Search documentation",
+      "size": 25,
+      "top": 80,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 1,
+    "bodySize": 14,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "dark": true,
+    "ground": "#111111",
+    "sidebar": null,
+    "topbar": {
+     "h": 52
+    },
+    "canvas": {
+     "left": 20,
+     "right": 20
+    },
+    "hero": {
+     "text": "Search documentation",
+     "words": 2,
+     "chars": 20,
+     "lines": 1,
+     "size": 25,
+     "vw": 6.4,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.25,
+     "top": 80,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 0,
+     "firstScreen": 0,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 0,
+     "radii": [],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0.21,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      19,
+      25
+     ]
+    },
+    "title": {
+     "text": "Search documentation",
+     "size": 25,
+     "top": 80
+    },
+    "colourShare": 0.015
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dgayle/Desktop/NVIS/AI Software Factory/nvis-docs-hub/.taste-skill/inspect/search/desktop-fold.jpg",
+   "pages": [
+    "/Users/dgayle/Desktop/NVIS/AI Software Factory/nvis-docs-hub/.taste-skill/inspect/search/desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dgayle/Desktop/NVIS/AI Software Factory/nvis-docs-hub/.taste-skill/inspect/search/tablet-fold.jpg",
+   "pages": [
+    "/Users/dgayle/Desktop/NVIS/AI Software Factory/nvis-docs-hub/.taste-skill/inspect/search/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dgayle/Desktop/NVIS/AI Software Factory/nvis-docs-hub/.taste-skill/inspect/search/mobile-fold.jpg",
+   "pages": [
+    "/Users/dgayle/Desktop/NVIS/AI Software Factory/nvis-docs-hub/.taste-skill/inspect/search/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

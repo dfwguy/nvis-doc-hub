@@ -1,0 +1,262 @@
+{
+  "base": "http://127.0.0.1:8000",
+  "at": "2026-10-22T22:59:31.942Z",
+  "browser": "151.0.7922.34",
+  "checks": [
+    {
+      "name": "desktop",
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "desktop-search-start",
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "desktop-search-prompt-inset",
+      "detail": {
+        "left": 29,
+        "top": 39
+      }
+    },
+    {
+      "name": "desktop-search",
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "desktop-search-anchor",
+      "detail": "step-7-make-it-survive-a-reboot-and-work-under-sudo"
+    },
+    {
+      "name": "desktop-reader",
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "desktop-nested-link",
+      "detail": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/extract-cmsh-without-installing.md"
+    },
+    {
+      "name": "tablet",
+      "detail": {
+        "width": 768,
+        "scrollWidth": 768,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "tablet-search-start",
+      "detail": {
+        "width": 768,
+        "scrollWidth": 768,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "tablet-search-prompt-inset",
+      "detail": {
+        "left": 29,
+        "top": 39
+      }
+    },
+    {
+      "name": "tablet-search",
+      "detail": {
+        "width": 768,
+        "scrollWidth": 768,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "tablet-search-anchor",
+      "detail": "step-7-make-it-survive-a-reboot-and-work-under-sudo"
+    },
+    {
+      "name": "tablet-reader",
+      "detail": {
+        "width": 768,
+        "scrollWidth": 768,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "tablet-nested-link",
+      "detail": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/extract-cmsh-without-installing.md"
+    },
+    {
+      "name": "mobile",
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "mobile-search-start",
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "mobile-search-prompt-inset",
+      "detail": {
+        "left": 21,
+        "top": 25
+      }
+    },
+    {
+      "name": "mobile-navigation",
+      "detail": "Opens, exposes labelled project navigation, Escape restores focus."
+    },
+    {
+      "name": "mobile-search",
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "mobile-search-anchor",
+      "detail": "step-7-make-it-survive-a-reboot-and-work-under-sudo"
+    },
+    {
+      "name": "mobile-reader",
+      "detail": {
+        "width": 390,
+        "scrollWidth": 390,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "mobile-contents-and-table",
+      "detail": "Contents anchors work; wide table scrolls within the page."
+    },
+    {
+      "name": "mobile-nested-link",
+      "detail": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/extract-cmsh-without-installing.md"
+    },
+    {
+      "name": "desktop-image-reader",
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "hosted-image",
+      "detail": "/projects/cluster-bringup/assets/docs/internal_app_access/explanation/architecture-and-trust.svg"
+    },
+    {
+      "name": "last-document-navigation",
+      "detail": "Previous page remains on the left when no next page exists."
+    },
+    {
+      "name": "copy-code",
+      "detail": "Clipboard matches authored command."
+    },
+    {
+      "name": "code-copy-after-horizontal-scroll",
+      "detail": "Copy remains visible and copies the complete authored block."
+    },
+    {
+      "name": "desktop-filtered-search",
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "project-filter-control",
+      "detail": "Changing the project filter updates the actual result scope."
+    },
+    {
+      "name": "desktop-no-matches",
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "desktop-sources",
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "desktop-not-found",
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "h1": 1,
+        "font": "\"IBM Plex Sans\", system-ui, sans-serif",
+        "loaded": true
+      }
+    },
+    {
+      "name": "keyboard",
+      "detail": "Skip link works; / focuses search; visible focus CSS present."
+    },
+    {
+      "name": "search-button-hover-colors",
+      "detail": {
+        "text": "rgb(0, 0, 0)",
+        "background": "rgb(118, 185, 0)"
+      }
+    }
+  ],
+  "pageErrors": []
+}

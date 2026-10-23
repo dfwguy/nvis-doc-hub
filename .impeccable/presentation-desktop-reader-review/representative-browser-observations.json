@@ -1,0 +1,240 @@
+[
+  {
+    "number": 74,
+    "kind": "code",
+    "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md",
+    "overview": {
+      "height": 9333,
+      "images": [],
+      "lists": 3,
+      "code": 41,
+      "tables": 0
+    },
+    "captures": [
+      {
+        "position": "middle",
+        "scrollY": 4217,
+        "bodyWidth": 1425,
+        "viewport": 1440,
+        "visible": [
+          {
+            "tag": "PRE",
+            "class": "has-copy",
+            "top": 99,
+            "bottom": 188,
+            "left": 269,
+            "right": 907
+          },
+          {
+            "tag": "PRE",
+            "class": "has-copy",
+            "top": 214,
+            "bottom": 304,
+            "left": 269,
+            "right": 907
+          },
+          {
+            "tag": "PRE",
+            "class": "has-copy",
+            "top": 330,
+            "bottom": 419,
+            "left": 269,
+            "right": 907
+          },
+          {
+            "tag": "PRE",
+            "class": "has-copy",
+            "top": 580,
+            "bottom": 680,
+            "left": 269,
+            "right": 907
+          },
+          {
+            "tag": "PRE",
+            "class": "has-copy",
+            "top": 784,
+            "bottom": 874,
+            "left": 269,
+            "right": 907
+          }
+        ]
+      },
+      {
+        "position": "bottom",
+        "scrollY": 8433,
+        "bodyWidth": 1425,
+        "viewport": 1440,
+        "visible": [
+          {
+            "tag": "UL",
+            "class": "",
+            "top": 74,
+            "bottom": 164,
+            "left": 269,
+            "right": 907
+          },
+          {
+            "tag": "UL",
+            "class": "",
+            "top": 247,
+            "bottom": 585,
+            "left": 269,
+            "right": 907
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 73,
+    "kind": "tables",
+    "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/reference.md",
+    "overview": {
+      "height": 9713,
+      "images": [],
+      "lists": 0,
+      "code": 10,
+      "tables": 12
+    },
+    "captures": [
+      {
+        "position": "middle",
+        "scrollY": 4407,
+        "bodyWidth": 1425,
+        "viewport": 1440,
+        "visible": [
+          {
+            "tag": "TABLE",
+            "class": "",
+            "top": -475,
+            "bottom": 450,
+            "left": 269,
+            "right": 907
+          },
+          {
+            "tag": "TABLE",
+            "class": "",
+            "top": 539,
+            "bottom": 1516,
+            "left": 269,
+            "right": 907
+          }
+        ]
+      },
+      {
+        "position": "bottom",
+        "scrollY": 8813,
+        "bodyWidth": 1425,
+        "viewport": 1440,
+        "visible": [
+          {
+            "tag": "TABLE",
+            "class": "",
+            "top": -104,
+            "bottom": 268,
+            "left": 269,
+            "right": 907
+          },
+          {
+            "tag": "TABLE",
+            "class": "",
+            "top": 408,
+            "bottom": 585,
+            "left": 269,
+            "right": 907
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "number": 45,
+    "kind": "image",
+    "url": "/projects/cluster-bringup/docs/docs/internal_app_access/explanation/architecture-and-trust.md",
+    "overview": {
+      "height": 3382,
+      "images": [
+        {
+          "src": "/projects/cluster-bringup/assets/docs/internal_app_access/explanation/architecture-and-trust.svg",
+          "width": 638.3125,
+          "height": 111.34375,
+          "naturalWidth": 300,
+          "loaded": true
+        }
+      ],
+      "lists": 0,
+      "code": 0,
+      "tables": 0
+    },
+    "captures": [
+      {
+        "position": "middle",
+        "scrollY": 1241,
+        "bodyWidth": 1425,
+        "viewport": 1440,
+        "visible": []
+      },
+      {
+        "position": "bottom",
+        "scrollY": 2482,
+        "bodyWidth": 1425,
+        "viewport": 1440,
+        "visible": []
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "kind": "lists",
+    "url": "/projects/cluster-bringup/docs/docs/cluster_identity_access/tutorial.md",
+    "overview": {
+      "height": 2985,
+      "images": [],
+      "lists": 2,
+      "code": 3,
+      "tables": 0
+    },
+    "captures": [
+      {
+        "position": "middle",
+        "scrollY": 1043,
+        "bodyWidth": 1425,
+        "viewport": 1440,
+        "visible": [
+          {
+            "tag": "PRE",
+            "class": "has-copy",
+            "top": 53,
+            "bottom": 143,
+            "left": 269,
+            "right": 907
+          },
+          {
+            "tag": "PRE",
+            "class": "has-copy",
+            "top": 784,
+            "bottom": 895,
+            "left": 269,
+            "right": 907
+          }
+        ]
+      },
+      {
+        "position": "bottom",
+        "scrollY": 2085,
+        "bodyWidth": 1425,
+        "viewport": 1440,
+        "visible": [
+          {
+            "tag": "PRE",
+            "class": "has-copy",
+            "top": -43,
+            "bottom": 68,
+            "left": 269,
+            "right": 907
+          }
+        ]
+      }
+    ]
+  }
+]

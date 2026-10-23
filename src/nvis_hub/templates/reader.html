@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% from 'components.html' import icon with context %}
+{% block content %}
+<div class="reader-top"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Documentation</a>{{ icon('chevron',12) }}<a href="/projects/{{ project.slug }}">{{ project.title }}</a>{{ icon('chevron',12) }}<span aria-current="page">{{ document.title }}</span></nav><a class="reader-search" href="/search?project={{ project.slug }}">{{ icon('search',16) }}<span>Search project</span></a></div>
+<div class="reader-grid"><div class="reading-column">
+<div class="reading-meta"><span>{{ document.kind or 'Documentation' }}</span><span>{{ read_minutes }} min read</span>{% if project.source_mode == 'snapshot' %}<a href="/sources">Source snapshot</a>{% endif %}</div>
+<details class="mobile-contents"><summary>On this page</summary><nav aria-label="Page contents">{% for heading in document.headings if heading.level > 1 and heading.level < 4 %}<a href="#{{ heading.id }}">{{ heading.title }}</a>{% else %}<span>This page has no subsections.</span>{% endfor %}</nav></details>
+<article class="prose" aria-label="{{ document.title }}">
+{% if '<h1' not in document.html %}<h1>{{ document.title }}</h1>{% endif %}
+{{ document.html|reader_html|safe }}
+</article>
+<div class="document-source"><div>{{ icon('source',17) }}<strong>Source revision</strong><code>{{ document.revision[:12] }}</code></div>{% if document.source_url %}<a href="{{ document.source_url }}" target="_blank" rel="noopener noreferrer">{{ document.source_path }} {{ icon('external',13) }}</a>{% else %}<span>{{ document.source_path }} · Local content digest</span>{% endif %}<p>Published {{ document.published_at|display_date }} · Content is maintained in the source repository.</p></div>
+<nav class="document-paging" aria-label="Adjacent documentation">{% if previous %}<a href="{{ previous.url }}" rel="prev"><span>Previous page</span><strong>{{ previous.title }}</strong></a>{% endif %}{% if following %}<a href="{{ following.url }}" rel="next"><span>Next page {{ icon('arrow',14) }}</span><strong>{{ following.title }}</strong></a>{% endif %}</nav>
+</div><aside class="contents-rail" aria-label="On this page"><div class="contents-inner"><h2>On this page</h2><nav>{% for heading in document.headings if heading.level > 1 and heading.level < 4 %}<a href="#{{ heading.id }}" class="{{ 'contents-child' if heading.level == 3 else '' }}">{{ heading.title }}</a>{% else %}<span class="muted">This page has no subsections.</span>{% endfor %}</nav><div class="contents-source"><h2>From the source</h2>{% if document.source_url %}<a href="{{ document.source_url }}" target="_blank" rel="noopener noreferrer">View in GitLab {{ icon('external',13) }}</a>{% else %}<p>Local content digest</p>{% endif %}<div><code title="{{ document.revision }}">{{ document.revision[:8] }}</code></div><p>{{ document.published_at|display_date }}</p><button type="button" class="copy-page" data-copy-page>{{ icon('copy',14) }}Copy page link</button></div></div></aside></div>
+{% endblock %}

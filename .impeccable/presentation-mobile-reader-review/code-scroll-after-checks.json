@@ -1,0 +1,89 @@
+{
+  "at": "2026-10-22T22:59:34.904Z",
+  "records": [
+    {
+      "position": "start",
+      "before": {
+        "client": 333,
+        "scroll": 622,
+        "left": 0,
+        "documentClient": 375,
+        "documentScroll": 375,
+        "buttonText": "Copy code",
+        "button": {
+          "left": 268.875,
+          "right": 347,
+          "top": 342.046875,
+          "height": 36
+        },
+        "code": {
+          "left": 20,
+          "right": 355
+        }
+      },
+      "after": {
+        "left": 0,
+        "focused": true,
+        "buttonText": "Copied"
+      },
+      "activation": "click",
+      "clipboardMatches": true
+    },
+    {
+      "position": "middle",
+      "before": {
+        "client": 333,
+        "scroll": 622,
+        "left": 145,
+        "documentClient": 375,
+        "documentScroll": 375,
+        "buttonText": "Copied",
+        "button": {
+          "left": 287.3125,
+          "right": 347,
+          "top": 342.046875,
+          "height": 36
+        },
+        "code": {
+          "left": 20,
+          "right": 355
+        }
+      },
+      "after": {
+        "left": 145,
+        "focused": true,
+        "buttonText": "Copied"
+      },
+      "activation": "click",
+      "clipboardMatches": true
+    },
+    {
+      "position": "end",
+      "before": {
+        "client": 333,
+        "scroll": 622,
+        "left": 289,
+        "documentClient": 375,
+        "documentScroll": 375,
+        "buttonText": "Copied",
+        "button": {
+          "left": 287.3125,
+          "right": 347,
+          "top": 342.046875,
+          "height": 36
+        },
+        "code": {
+          "left": 20,
+          "right": 355
+        }
+      },
+      "after": {
+        "left": 289,
+        "focused": true,
+        "buttonText": "Copied"
+      },
+      "activation": "keyboard Enter",
+      "clipboardMatches": true
+    }
+  ]
+}

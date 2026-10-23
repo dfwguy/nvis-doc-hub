@@ -1,0 +1,23 @@
+{% from 'components.html' import icon, brand, navigation with context %}
+<!doctype html>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark"><title>{{ title }} · NVIS - OVA Docs</title><link rel="icon" type="image/svg+xml" href="/static/favicon.svg"><link rel="stylesheet" href="/static/hub.css"><script src="/static/hub.js" defer></script></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<aside class="sidebar" aria-label="Documentation sidebar">
+{{ brand() }}
+<div class="sidebar-scroll">{{ navigation(projects, page, project, document) }}</div>
+<div class="sidebar-footer"><a href="/help">{{ icon('help') }}Using the hub</a><a href="/help#agents">{{ icon('code') }}Connect an agent</a><span>NVIS - OVA Documentation</span></div>
+</aside>
+<div class="workspace">
+<header class="topbar">
+<div class="desktop-context"><a href="/">NVIS - OVA</a><span>/</span><span>Documentation hub</span></div>
+<div class="mobile-brand">{{ brand() }}</div>
+<details class="mobile-menu"><summary aria-label="Open navigation">{{ icon('menu', 20) }}<span>Menu</span></summary><div class="mobile-menu-body">{{ navigation(projects, page, project, document) }}<a class="mobile-help" href="/help">Using the hub</a></div></details>
+<a class="topbar-help" href="/help#sources">Maintained in GitLab {{ icon('external', 13) }}</a>
+</header>
+<main class="sheet {{ 'reading-sheet' if page == 'reader' else '' }}" id="main" tabindex="-1">
+{% block content %}{% endblock %}
+</main>
+<footer class="workspace-footer"><span>NVIS - OVA Documentation</span><span>Authored in repositories. Read here.</span></footer>
+</div><div class="sr-only" id="copy-status" role="status" aria-live="polite"></div>
+</body></html>

@@ -1,0 +1,1299 @@
+{
+ "url": "http://127.0.0.1:8000/search",
+ "at": "2026-10-22T22:56:58.514Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.32,
+    0.32
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 901,
+     "screens": 1,
+     "words": 102,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 14,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Search documentation",
+     "words": 2,
+     "chars": 20,
+     "lines": 1,
+     "size": 28,
+     "vw": 1.9,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.25,
+     "top": 87,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Search documentation",
+     "words": 2,
+     "lines": 1,
+     "size": 28,
+     "font": "IBM Plex Sans"
+    },
+    "headings": [
+     {
+      "text": "Search documentation",
+      "words": 2,
+      "chars": 20,
+      "lines": 1,
+      "size": 28,
+      "vw": 1.9,
+      "font": "IBM Plex Sans",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 87,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Sans",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      18,
+      19,
+      28
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "IBM Plex Sans",
+      "size": 14,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6.1
+     },
+     "measureChars": 78,
+     "max": {
+      "size": 28,
+      "vw": 1.9,
+      "font": "IBM Plex Sans",
+      "text": "Search documentation"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.04,
+     "centerShare": 0.03,
+     "smallText": 6
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#111111",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#111111",
+       "top": 48,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#999999",
+       "share": 0.57
+      },
+      {
+       "color": "#eeeeee",
+       "share": 0.13
+      },
+      {
+       "color": "#dddddd",
+       "share": 0.11
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.1
+      },
+      {
+       "color": "#76b900",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#76b900",
+      "hsl": {
+       "h": 82,
+       "s": 1,
+       "l": 0.36
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 4,
+     "inHero": 4,
+     "radius": 6,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Global search",
+      "Search",
+      "Apply filters"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 2,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 2,
+     "boxRadius": 16,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 900,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "ibm plex sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 901,
+    "margins": {
+     "left": 252,
+     "right": 28
+    },
+    "sections": [
+     {
+      "sel": "form.results-form",
+      "tag": "form",
+      "top": 185,
+      "height": 137,
+      "words": 7,
+      "media": 0,
+      "middle": 3,
+      "heading": null,
+      "left": 350,
+      "right": 130,
+      "textLeft": 350,
+      "textRight": 146,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.empty-state.search-start",
+      "tag": "div",
+      "top": 350,
+      "height": 191,
+      "words": 33,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "What are you working on?",
+       "size": 18,
+       "tag": "h2"
+      },
+      "left": 379,
+      "right": 576,
+      "textLeft": 379,
+      "textRight": 576,
+      "fullBleed": false,
+      "footer": true,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 500,
+      "height": 372
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Search documentation",
+      "size": 28,
+      "top": 87,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 379,
+      "n": 2
+     },
+     {
+      "x": 350,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 3,
+    "bodySize": 14,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.29,
+    "voidBox": {
+     "x": 180,
+     "y": 540,
+     "w": 1260,
+     "h": 300
+    }
+   },
+   "app": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "dark": true,
+    "ground": "#111111",
+    "sidebar": {
+     "w": 228,
+     "tag": "aside",
+     "links": 8,
+     "share": 0.16
+    },
+    "topbar": {
+     "h": 48
+    },
+    "canvas": {
+     "left": 24,
+     "right": 28
+    },
+    "hero": {
+     "text": "Search documentation",
+     "words": 2,
+     "chars": 20,
+     "lines": 1,
+     "size": 28,
+     "vw": 1.9,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.25,
+     "top": 87,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 2,
+     "firstScreen": 2,
+     "ragged": [],
+     "voids": [
+      {
+       "gap": 273,
+       "at": 541,
+       "panel": "Search documentation"
+      }
+     ]
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 3,
+     "radii": [
+      [
+       0,
+       1
+      ],
+      [
+       16,
+       1
+      ],
+      [
+       8,
+       1
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0.24,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      18,
+      19,
+      28
+     ]
+    },
+    "title": {
+     "text": "Search documentation",
+     "size": 28,
+     "top": 87
+    },
+    "colourShare": 0.004
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.24,
+    0.24
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 1025,
+     "screens": 1,
+     "words": 60,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 14,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Search documentation",
+     "words": 2,
+     "chars": 20,
+     "lines": 1,
+     "size": 28,
+     "vw": 3.6,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.25,
+     "top": 83,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Search documentation",
+     "words": 2,
+     "lines": 1,
+     "size": 28,
+     "font": "IBM Plex Sans"
+    },
+    "headings": [
+     {
+      "text": "Search documentation",
+      "words": 2,
+      "chars": 20,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "IBM Plex Sans",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 83,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Sans",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      28
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "IBM Plex Sans",
+      "size": 14,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6.1
+     },
+     "measureChars": 78,
+     "max": {
+      "size": 28,
+      "vw": 3.6,
+      "font": "IBM Plex Sans",
+      "text": "Search documentation"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.04,
+     "smallText": 3
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#111111",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#111111",
+       "top": 52,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#999999",
+       "share": 0.54
+      },
+      {
+       "color": "#eeeeee",
+       "share": 0.17
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.12
+      },
+      {
+       "color": "#dddddd",
+       "share": 0.06
+      },
+      {
+       "color": "#76b900",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#76b900",
+      "hsl": {
+       "h": 82,
+       "s": 1,
+       "l": 0.36
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 5,
+     "radius": 6,
+     "height": 40,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Search"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "div.mobile-menu-body → rgba(0, 0, 0, 0.4) 0px 8px 24px 0px"
+     ],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 1,
+     "hairlineSamples": [
+      "a.mobile-help 318px"
+     ],
+     "outlinedBoxes": 3,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 3,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 0,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "ibm plex sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 1025,
+    "margins": {
+     "left": 39,
+     "right": 28
+    },
+    "sections": [],
+    "gaps": [
+     {
+      "top": 468,
+      "height": 528
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Search documentation",
+      "size": 28,
+      "top": 83,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 68,
+      "n": 2
+     },
+     {
+      "x": 39,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 3,
+    "bodySize": 14,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "dark": true,
+    "ground": "#111111",
+    "sidebar": null,
+    "topbar": {
+     "h": 52
+    },
+    "canvas": {
+     "left": 22,
+     "right": 26
+    },
+    "hero": {
+     "text": "Search documentation",
+     "words": 2,
+     "chars": 20,
+     "lines": 1,
+     "size": 28,
+     "vw": 3.6,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.25,
+     "top": 83,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 1,
+     "firstScreen": 1,
+     "ragged": [],
+     "voids": [
+      {
+       "gap": 450,
+       "at": 506,
+       "panel": "Search documentation"
+      }
+     ]
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 2,
+     "radii": [
+      [
+       16,
+       1
+      ],
+      [
+       8,
+       1
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0.22,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      28
+     ]
+    },
+    "title": {
+     "text": "Search documentation",
+     "size": 28,
+     "top": 83
+    },
+    "colourShare": 0.006
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.49,
+    0.49
+   ],
+   "motion": {
+    "elements": 0,
+    "css": 0,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 845,
+     "screens": 1,
+     "words": 55,
+     "img": 0,
+     "video": 0,
+     "canvas": 0,
+     "svg": 14,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Search documentation",
+     "words": 2,
+     "chars": 20,
+     "lines": 1,
+     "size": 25,
+     "vw": 6.4,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.25,
+     "top": 80,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "Search documentation",
+     "words": 2,
+     "lines": 1,
+     "size": 25,
+     "font": "IBM Plex Sans"
+    },
+    "headings": [
+     {
+      "text": "Search documentation",
+      "words": 2,
+      "chars": 20,
+      "lines": 1,
+      "size": 25,
+      "vw": 6.4,
+      "font": "IBM Plex Sans",
+      "weight": 600,
+      "tracking": -0.025,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 80,
+      "tag": "h1",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "IBM Plex Sans",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      25
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": {
+      "font": "IBM Plex Sans",
+      "size": 14,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 6.1
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 25,
+      "vw": 6.4,
+      "font": "IBM Plex Sans",
+      "text": "Search documentation"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.04,
+     "smallText": 2
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#111111",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#111111",
+       "top": 97,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.07
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#999999",
+       "share": 0.5
+      },
+      {
+       "color": "#eeeeee",
+       "share": 0.19
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.13
+      },
+      {
+       "color": "#dddddd",
+       "share": 0.07
+      },
+      {
+       "color": "#76b900",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#76b900",
+      "hsl": {
+       "h": 82,
+       "s": 1,
+       "l": 0.36
+      },
+      "fg": "#000000"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 5,
+     "radius": 6,
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Search"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 1,
+     "shadowOverlay": 0,
+     "shadowSamples": [
+      "div.mobile-menu-body → rgba(0, 0, 0, 0.4) 0px 8px 24px 0px"
+     ],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 2,
+     "hairlineSamples": [
+      "a.mobile-help 318px",
+      "main#main.sheet 390px"
+     ],
+     "outlinedBoxes": 2,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 2,
+     "boxRadius": 8,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 0,
+     "fixed": true,
+     "height": 0,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "ibm plex sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 845,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Search documentation",
+      "size": 25,
+      "top": 80,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 41,
+      "n": 2
+     },
+     {
+      "x": 20,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 3,
+    "bodySize": 14,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "dark": true,
+    "ground": "#111111",
+    "sidebar": null,
+    "topbar": {
+     "h": 52
+    },
+    "canvas": {
+     "left": 19,
+     "right": 20
+    },
+    "hero": {
+     "text": "Search documentation",
+     "words": 2,
+     "chars": 20,
+     "lines": 1,
+     "size": 25,
+     "vw": 6.4,
+     "font": "IBM Plex Sans",
+     "weight": 600,
+     "tracking": -0.02,
+     "leading": 1.25,
+     "top": 80,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 1,
+     "firstScreen": 1,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 1,
+     "radii": [
+      [
+       8,
+       1
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0.18,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      19,
+      25
+     ]
+    },
+    "title": {
+     "text": "Search documentation",
+     "size": 25,
+     "top": 80
+    },
+    "colourShare": 0.009
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "hero-void",
+   "width": 1440,
+   "message": "29% of the first screen is one empty block (1260×300px at 180,540).",
+   "fix": "Place the void on purpose or fill it: move the picture, the film or one fact into it, grow the headline to meet it, or shrink the screen to its content. A void reads as placed only when something closes it on the far side and it is the screen's one rest."
+  },
+  {
+   "level": "WARN",
+   "id": "panel-void",
+   "width": 1440,
+   "message": "1 card(s) hold a blank band inside: 273px in \"Search documentation\".",
+   "fix": "A card stretches to its neighbour only when it has content to fill. Keep a legend or a note directly under its chart (only an action or a total may sit at a stretched card's foot), let a short card keep its own height (align-items: start), and let a filtered block shrink to its rows."
+  },
+  {
+   "level": "WARN",
+   "id": "blank-gap",
+   "width": 768,
+   "message": "A 528px stretch at 468px holds nothing.",
+   "fix": "Check that it is a deliberate rest (once per page at most); otherwise close it to the normal section gap."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/Users/dgayle/Desktop/NVIS/AI Software Factory/nvis-docs-hub/.taste-skill/inspect/presentation-search-start/desktop-fold.jpg",
+   "pages": [
+    "/Users/dgayle/Desktop/NVIS/AI Software Factory/nvis-docs-hub/.taste-skill/inspect/presentation-search-start/desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/Users/dgayle/Desktop/NVIS/AI Software Factory/nvis-docs-hub/.taste-skill/inspect/presentation-search-start/tablet-fold.jpg",
+   "pages": [
+    "/Users/dgayle/Desktop/NVIS/AI Software Factory/nvis-docs-hub/.taste-skill/inspect/presentation-search-start/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/Users/dgayle/Desktop/NVIS/AI Software Factory/nvis-docs-hub/.taste-skill/inspect/presentation-search-start/mobile-fold.jpg",
+   "pages": [
+    "/Users/dgayle/Desktop/NVIS/AI Software Factory/nvis-docs-hub/.taste-skill/inspect/presentation-search-start/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

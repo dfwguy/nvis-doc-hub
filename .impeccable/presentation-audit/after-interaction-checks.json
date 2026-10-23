@@ -1,0 +1,131 @@
+[
+  {
+    "width": 1440,
+    "name": "Global search navigation",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "name": "Search submission",
+    "pass": true,
+    "count": 30
+  },
+  {
+    "width": 1440,
+    "name": "Project filter submit",
+    "pass": true,
+    "count": 11
+  },
+  {
+    "width": 1440,
+    "name": "Result opens matching section",
+    "pass": true,
+    "url": "http://127.0.0.1:8000/projects/documentation-pipeline/docs/docs/reference/configuration.md#configuration-and-command-reference"
+  },
+  {
+    "width": 1440,
+    "name": "Next and Previous results preserve query and paginate",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "name": "Dense rail and fixed footer reachable",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "name": "Source instructions link",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "name": "404 recovery",
+    "pass": true
+  },
+  {
+    "width": 768,
+    "name": "Global search navigation",
+    "pass": true
+  },
+  {
+    "width": 768,
+    "name": "Search submission",
+    "pass": true,
+    "count": 30
+  },
+  {
+    "width": 768,
+    "name": "Project filter submit",
+    "pass": true,
+    "count": 11
+  },
+  {
+    "width": 768,
+    "name": "Result opens matching section",
+    "pass": true,
+    "url": "http://127.0.0.1:8000/projects/documentation-pipeline/docs/docs/reference/configuration.md#configuration-and-command-reference"
+  },
+  {
+    "width": 768,
+    "name": "Next and Previous results preserve query and paginate",
+    "pass": true
+  },
+  {
+    "width": 768,
+    "name": "Dense menu bottom help link reachable",
+    "pass": true
+  },
+  {
+    "width": 768,
+    "name": "Source instructions link",
+    "pass": true
+  },
+  {
+    "width": 768,
+    "name": "404 recovery",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "name": "Global search navigation",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "name": "Search submission",
+    "pass": true,
+    "count": 30
+  },
+  {
+    "width": 390,
+    "name": "Project filter submit",
+    "pass": true,
+    "count": 11
+  },
+  {
+    "width": 390,
+    "name": "Result opens matching section",
+    "pass": true,
+    "url": "http://127.0.0.1:8000/projects/documentation-pipeline/docs/docs/reference/configuration.md#configuration-and-command-reference"
+  },
+  {
+    "width": 390,
+    "name": "Next and Previous results preserve query and paginate",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "name": "Dense menu bottom help link reachable",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "name": "Source instructions link",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "name": "404 recovery",
+    "pass": true
+  }
+]

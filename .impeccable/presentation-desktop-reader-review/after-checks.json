@@ -1,0 +1,100 @@
+[
+  {
+    "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/how-to/benchmark-cluster.md",
+    "title": "Benchmark /cluster",
+    "headingCode": [
+      {
+        "text": "/cluster",
+        "fontSize": "25.5px",
+        "headingSize": "30px"
+      }
+    ],
+    "adjacent": [
+      {
+        "rel": "prev",
+        "text": "Previous pageApply the md0 tuning",
+        "textAlign": "start",
+        "left": 269,
+        "right": 576
+      },
+      {
+        "rel": "next",
+        "text": "Next page \n\nCompare md0 settings",
+        "textAlign": "right",
+        "left": 600,
+        "right": 907
+      }
+    ]
+  },
+  {
+    "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/set-up-cmsh-credentials.md",
+    "title": "How to set up cmsh credentials",
+    "headingCode": [],
+    "adjacent": [
+      {
+        "rel": "prev",
+        "text": "Previous pageHow to make cmsh permanent and convenient",
+        "textAlign": "start",
+        "left": 269,
+        "right": 576
+      },
+      {
+        "rel": "next",
+        "text": "Next page \n\nHow to troubleshoot a cmsh connection",
+        "textAlign": "right",
+        "left": 600,
+        "right": 907
+      }
+    ]
+  },
+  {
+    "url": "/projects/cluster-bringup/docs/docs/cluster_identity_access/tutorial.md",
+    "title": "Tutorial: provision a person for passwordless cluster access",
+    "headingCode": [],
+    "adjacent": [
+      {
+        "rel": "prev",
+        "text": "Previous pageCluster identity and automation access",
+        "textAlign": "start",
+        "left": 269,
+        "right": 576
+      },
+      {
+        "rel": "next",
+        "text": "Next page \n\nHow to operate as cmods",
+        "textAlign": "right",
+        "left": 600,
+        "right": 907
+      }
+    ]
+  },
+  {
+    "url": "/projects/documentation-pipeline/docs/docs/tutorials/adopt.md",
+    "title": "Adopt the pipeline in an existing repository",
+    "headingCode": [],
+    "adjacent": [
+      {
+        "rel": "prev",
+        "text": "Previous pageValidation record",
+        "textAlign": "start",
+        "left": 269,
+        "right": 588
+      }
+    ]
+  },
+  {
+    "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/explanation/why-dpkg-x.md",
+    "headingCode": [
+      {
+        "text": "dpkg -x",
+        "fontSize": "25.5px",
+        "headingSize": "30px"
+      },
+      {
+        "text": "apt install",
+        "fontSize": "25.5px",
+        "headingSize": "30px"
+      }
+    ]
+  }
+]

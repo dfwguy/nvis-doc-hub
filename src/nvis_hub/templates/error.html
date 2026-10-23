@@ -1,0 +1,3 @@
+{% extends 'base.html' %}
+{% from 'components.html' import icon %}
+{% block content %}<div class="error-page"><p class="error-code">{{ 404 if 'not found' in title|lower else 'Unavailable' }}</p><h1>{{ title }}</h1><p>{{ detail }}</p><div><a class="button" href="/">Browse documentation {{ icon('arrow',16) }}</a><a class="text-link" href="/search">Search all projects</a></div></div>{% endblock %}

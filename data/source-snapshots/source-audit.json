@@ -1,0 +1,104 @@
+{
+  "checked_at": "2026-10-22T22:17:33.383936+00:00",
+  "provenance": "Read-only source investigation; no source fetch, credential setup, application GitLab import, or publication was performed.",
+  "live_access": {
+    "direct_dns": "failed",
+    "host": "gitlab-master.nvidia.com",
+    "error": "socket.gaierror: [Errno 8] nodename nor servname provided, or not known",
+    "connected_gitlab_tools": "No GitLab/repository/search-code tool was present in ALL_TOOLS at inspection time. Historical handoff MCP access does not establish current access."
+  },
+  "sources": [
+    {
+      "project_path": "nvis-ova/documentation-pipeline",
+      "requested_ref": "feat/copier-docs-pipeline",
+      "current_remote_revision": null,
+      "remote_status": "unverified: direct DNS and connected tool unavailable",
+      "local_checkout_revision": "0796f0212ccac88391765271f88f9aed6606f68a",
+      "local_checkout_branch": "feat/copier-docs-pipeline",
+      "local_worktree_status": "?? handoff.md",
+      "recommended_scope": [
+        "README.md",
+        "docs/"
+      ],
+      "navigation_status": "No project navigation.rst checked in; README has explicit ordered links to tutorials/adopt.md, how-to/update.md, reference/configuration.md, explanation/design.md, reference/validation.md. Use honestly labelled generated fallback for sidebar navigation.",
+      "authored_documents": [
+        {
+          "path": "README.md",
+          "sha256": "c6887a5c2a9cae1eb7f24dadf467ff9d769340127cc32234d99434f0a7ae92d3",
+          "bytes": 1567,
+          "title": "Documentation pipeline"
+        },
+        {
+          "path": "docs/explanation/design.md",
+          "sha256": "a72d1cbdad56b4b7a2496c3468ce62591506cddaa5f5fdd44a9da6833f3dff8b",
+          "bytes": 3379,
+          "title": "Why the pipeline has two layers"
+        },
+        {
+          "path": "docs/how-to/update-cluster-bringup.md",
+          "sha256": "347d4c5a980ac2e1602ca93da13386dba2a5c2c1e141850798ea60639cdda478",
+          "bytes": 6414,
+          "title": "Update the existing cluster-bringup integration"
+        },
+        {
+          "path": "docs/how-to/update.md",
+          "sha256": "38661f9ae355c63e67bdfe0c6e42b990fc540b265dc3db4fd0f52e1dbebd32a0",
+          "bytes": 3109,
+          "title": "Update an adopted consumer"
+        },
+        {
+          "path": "docs/reference/configuration.md",
+          "sha256": "840f6f64dade7e3c879127d15d10e9a106c12dffbed926ff020d3e91f5ca951a",
+          "bytes": 6787,
+          "title": "Configuration and command reference"
+        },
+        {
+          "path": "docs/reference/validation.md",
+          "sha256": "f026c2bf2d01d942c056e91b842b52787d1a24314794c7d94ef66f894010a151",
+          "bytes": 6829,
+          "title": "Validation record"
+        },
+        {
+          "path": "docs/tutorials/adopt.md",
+          "sha256": "369289eac4766446476b28a5389118f18a7a97665a2eeaffc48b48a931dd46ab",
+          "bytes": 4023,
+          "title": "Adopt the pipeline in an existing repository"
+        }
+      ],
+      "image_assets": "No tracked PNG/JPEG/SVG/GIF/WebP files found in the local checkout.",
+      "warning": "README contains historical claims of local/unpublished follow-up changes. Treat document text as authored content at this exact commit, not as evidence of current remote or deployment state."
+    },
+    {
+      "project_path": "nvis-ova/cluster-bringup",
+      "requested_ref": "main",
+      "current_remote_revision": null,
+      "historical_revision_from_handoff": "f74950acdc451f43f8857754efad25ce5233d26c",
+      "remote_status": "unverified: direct DNS and connected tool unavailable",
+      "source_scope_from_historical_context": ".",
+      "navigation_path_from_historical_context": ".docs-pipeline/navigation.rst",
+      "authored_documents": null,
+      "warning": "No local source checkout or fetched source snapshot was available. Do not recreate cluster runbooks from descriptions or publish synthetic content under this project name."
+    }
+  ],
+  "pipeline_contract": {
+    "config_path": ".docs-pipeline/config.toml",
+    "config_keys": [
+      "title",
+      "source_dir",
+      "navigation"
+    ],
+    "navigation_format": "reStructuredText with .. toctree::, indented options such as :maxdepth: 3, then entries relative to source_dir with .md/.rst extensions removed; manual navigation is consumer-owned and preserved.",
+    "generated_order": "README/index first, then case-insensitive path sort",
+    "isolated_renderer": "repo_docs 0.39.2, root_doc=_pipeline_index, sphinx 4.5.0.2; requires Linux/network bootstrap; generic hub importer should not execute it on untrusted source.",
+    "excluded_paths": [
+      "hidden names",
+      "_build",
+      "_repo",
+      "node_modules",
+      "__pycache__"
+    ],
+    "links": "Directory links ending / resolve to README then index. Fragment is preserved. Links outside selected source tree need broader source scope or an explicit unavailable-source presentation.",
+    "assets": "Runtime copies assets inside source scope; symlinks are rejected."
+  },
+  "recommendation": "Build the real authenticated GitLab adapter and register both real seeds; report unavailable imports accurately. Use deterministic labelled fixtures for validation and, if desired, a separately labelled local-checkout snapshot of documentation-pipeline at the recorded revision. No current live GitLab import has been established."
+}

@@ -1,0 +1,666 @@
+{
+  "schema_version": 1,
+  "repo_url": "https://gitlab-master.nvidia.com/nvis-ova/cluster-bringup.git",
+  "project_path": "nvis-ova/cluster-bringup",
+  "ref": "main",
+  "revision": "f74950acdc451f43f8857754efad25ce5233d26c",
+  "acquired_at": "2026-10-22 22:22:47 UTC",
+  "fetched_at": "2026-10-22 22:22:47 UTC",
+  "acquisition_method": "git",
+  "acquisition": "git",
+  "paths": [
+    ".docs-pipeline/config.toml",
+    ".docs-pipeline/navigation.rst",
+    "README.md",
+    "docs/README.md",
+    "docs/app_server_tuning/README.md",
+    "docs/app_server_tuning/explanation/benchmarking-this-array.md",
+    "docs/app_server_tuning/explanation/discard-on-raid5.md",
+    "docs/app_server_tuning/explanation/md-write-throughput.md",
+    "docs/app_server_tuning/explanation/pxe-boot-and-local-config.md",
+    "docs/app_server_tuning/explanation/the-gen4-ceiling.md",
+    "docs/app_server_tuning/explanation/the-parity-coordinator.md",
+    "docs/app_server_tuning/explanation/tunables-that-do-not-persist.md",
+    "docs/app_server_tuning/how-to/apply-md-tuning.md",
+    "docs/app_server_tuning/how-to/benchmark-cluster.md",
+    "docs/app_server_tuning/how-to/compare-md-settings.md",
+    "docs/app_server_tuning/how-to/enable-trim.md",
+    "docs/app_server_tuning/how-to/measure-parity-cpu.md",
+    "docs/app_server_tuning/reference/hardware.md",
+    "docs/app_server_tuning/reference/md0.md",
+    "docs/app_server_tuning/reference/results.md",
+    "docs/app_server_tuning/reference/values-to-re-derive.md",
+    "docs/app_server_tuning/tutorials/see-the-tuning-work.md",
+    "docs/cluster_identity_access/README.md",
+    "docs/cluster_identity_access/explanation/identity-boundaries.md",
+    "docs/cluster_identity_access/how-to/operate-as-service-account.md",
+    "docs/cluster_identity_access/reference/access-model.md",
+    "docs/cluster_identity_access/tutorial.md",
+    "docs/cmsh_setup/README.md",
+    "docs/cmsh_setup/explanation/how-cmsh-talks-to-cmdaemon.md",
+    "docs/cmsh_setup/explanation/version-parity.md",
+    "docs/cmsh_setup/explanation/why-dpkg-x.md",
+    "docs/cmsh_setup/how-to/download-bcm-packages.md",
+    "docs/cmsh_setup/how-to/extract-cmsh-without-installing.md",
+    "docs/cmsh_setup/how-to/make-cmsh-permanent.md",
+    "docs/cmsh_setup/how-to/set-up-cmsh-credentials.md",
+    "docs/cmsh_setup/how-to/troubleshoot-connection.md",
+    "docs/cmsh_setup/reference/commands.md",
+    "docs/cmsh_setup/reference/environment.md",
+    "docs/cmsh_setup/tutorial.md",
+    "docs/compute_node_ssh_access/README.md",
+    "docs/compute_node_ssh_access/explanation/how-the-ssh-access-policy-works.md",
+    "docs/compute_node_ssh_access/how-to/install-ssh-gate-on-one-compute-node.md",
+    "docs/compute_node_ssh_access/how-to/install-ssh-gate-on-the-compute-node-fleet.md",
+    "docs/compute_node_ssh_access/how-to/verify-slurm-ssh-gate.md",
+    "docs/index.md",
+    "docs/internal_app_access/README.md",
+    "docs/internal_app_access/explanation/architecture-and-trust.md",
+    "docs/internal_app_access/explanation/architecture-and-trust.mmd",
+    "docs/internal_app_access/explanation/architecture-and-trust.svg",
+    "docs/internal_app_access/explanation/rejected-methods.md",
+    "docs/internal_app_access/how-to/add-caddy-site.md",
+    "docs/internal_app_access/how-to/install-client-certificate.md",
+    "docs/internal_app_access/how-to/revoke-client-certificate.md",
+    "docs/internal_app_access/reference/configuration.md",
+    "docs/internal_app_access/tutorial.md",
+    "docs/observability_server_setup/README.md",
+    "docs/observability_server_setup/explanation.md",
+    "docs/observability_server_setup/explanation/client-only-slurm-node.md",
+    "docs/observability_server_setup/explanation/clustershell-groups.md",
+    "docs/observability_server_setup/explanation/dns-design.md",
+    "docs/observability_server_setup/explanation/identity-and-environment.md",
+    "docs/observability_server_setup/explanation/submission-dependencies.md",
+    "docs/observability_server_setup/how-to/README.md",
+    "docs/observability_server_setup/how-to/add-cmods-user.md",
+    "docs/observability_server_setup/how-to/align-uids.md",
+    "docs/observability_server_setup/how-to/configure-enroot.md",
+    "docs/observability_server_setup/how-to/distribute-ssh-keys.md",
+    "docs/observability_server_setup/how-to/enable-job-submission.md",
+    "docs/observability_server_setup/how-to/install-enroot.md",
+    "docs/observability_server_setup/how-to/install-slurm-binaries.md",
+    "docs/observability_server_setup/how-to/mount-cm-shared.md",
+    "docs/observability_server_setup/how-to/persist-environment.md",
+    "docs/observability_server_setup/how-to/set-up-clush.md",
+    "docs/observability_server_setup/how-to/set-up-dns.md",
+    "docs/observability_server_setup/how-to/set-up-munge.md",
+    "docs/observability_server_setup/how-to/troubleshoot.md",
+    "docs/observability_server_setup/reference.md",
+    "docs/observability_server_setup/tutorial.md",
+    "docs/omnistation_gitlab_credentials/README.md",
+    "docs/omnistation_gitlab_credentials/explanation/credential-workspace-and-runtime-trust.md",
+    "docs/omnistation_gitlab_credentials/how-to/launch-codex-for-existing-repository.md",
+    "docs/omnistation_gitlab_credentials/how-to/rotate-group-token.md",
+    "docs/omnistation_gitlab_credentials/how-to/troubleshoot-gitlab-access.md",
+    "docs/omnistation_gitlab_credentials/how-to/verify-gitlab-access.md",
+    "docs/omnistation_gitlab_credentials/reference/varlock-gitlab-reference.md",
+    "docs/omnistation_gitlab_credentials/tutorial.md",
+    "docs/tailscale_access/README.md",
+    "docs/tailscale_access/explanation/overlapping-private-networks.md",
+    "docs/tailscale_access/how-to/reach-one-jumpbox.md"
+  ],
+  "files": [
+    {
+      "path": ".docs-pipeline/config.toml",
+      "sha256": "b4b849421cc49d837a177271116a1fd5cf9c1d4be2beae9f546757084c8eeb5b",
+      "size": 148,
+      "blob_id": "08023bd7817708292b7a35ae7cc7c9cd8d4a5f61"
+    },
+    {
+      "path": ".docs-pipeline/navigation.rst",
+      "sha256": "63b46b06033bbda115949aea576afca3dab19fbf7997691f6beedf1e2fdda4d3",
+      "size": 10397,
+      "blob_id": "ff08c5593001cc263f12efbe0343754743da57ab"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f0c992256ff932e4c124e755335179b4e054cba86a905e51a75db0c5b988ed5b",
+      "size": 2053,
+      "blob_id": "4578d2dd5de535514a908db70262bb0140bb93a5"
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "a8331877f5256b863f324726cf2f73642e2167e139af2be80ec406085a973539",
+      "size": 16652,
+      "blob_id": "7a12c0415a400bbace1342c5cc597aba70f121c2"
+    },
+    {
+      "path": "docs/app_server_tuning/README.md",
+      "sha256": "fbf2df4a7eff76b2af32f0583db96e2b493d59f5d578626cd212bfe17550b528",
+      "size": 8940,
+      "blob_id": "b604c5c54ea2fd916773d9c226db8c5e05da7e12"
+    },
+    {
+      "path": "docs/app_server_tuning/explanation/benchmarking-this-array.md",
+      "sha256": "3c6acadb886b2d5972e6fb2ba7709086c7e6b4997a5fc16c2cb272a2f5ae20a4",
+      "size": 5385,
+      "blob_id": "52b63a5675720302b6d1bee79c4533233ca06b3e"
+    },
+    {
+      "path": "docs/app_server_tuning/explanation/discard-on-raid5.md",
+      "sha256": "d9c6e9b7daf8d0b496901b0493e8265decaa03a53a1ce2257738eba2c0830f7b",
+      "size": 4408,
+      "blob_id": "486e5fd7d3e5d7d38ac97c8b8c5675e792c06c17"
+    },
+    {
+      "path": "docs/app_server_tuning/explanation/md-write-throughput.md",
+      "sha256": "952377903f87d4a0ce2d7a3626c99e459c0c6e53c6c7b3fcd89d41d1d586790e",
+      "size": 5972,
+      "blob_id": "c765ca005fb2b9d42478fe5e794b287ef6130568"
+    },
+    {
+      "path": "docs/app_server_tuning/explanation/pxe-boot-and-local-config.md",
+      "sha256": "97773da2375091ee16ad24e0ea2889b61a65e4752ae759b8220712a195e9dbc2",
+      "size": 3514,
+      "blob_id": "097ef9e7ff45f004e9e2c3c1b9fc163d67c519e3"
+    },
+    {
+      "path": "docs/app_server_tuning/explanation/the-gen4-ceiling.md",
+      "sha256": "758d526bc06e4460059d5caee7a72f79fd9a23a5cd2d4de446858f65775ed107",
+      "size": 4136,
+      "blob_id": "28cd5bd15da12344bf4624956b9b9b478594038a"
+    },
+    {
+      "path": "docs/app_server_tuning/explanation/the-parity-coordinator.md",
+      "sha256": "416c02660797a4b79cff17d3c2ec1447b39a79dc4886b92c5998dd834b642b74",
+      "size": 6818,
+      "blob_id": "3c8cd97d9532f2a79de7c8a15b5f1e312db38ba0"
+    },
+    {
+      "path": "docs/app_server_tuning/explanation/tunables-that-do-not-persist.md",
+      "sha256": "0192803c269c6dfc4df7ff83dcc816802696041d60a176b31d6d0b6d1fb52cf2",
+      "size": 5263,
+      "blob_id": "e82ebe8fabe805b53f0d3976902786b9e8fb6730"
+    },
+    {
+      "path": "docs/app_server_tuning/how-to/apply-md-tuning.md",
+      "sha256": "e3d2ba37b25b1da57af5b4001ad0ca2cea115251f31e6c311f0ec3c808785426",
+      "size": 3946,
+      "blob_id": "056d6d0289af5852f3f291c715f0a8e9793a9dd0"
+    },
+    {
+      "path": "docs/app_server_tuning/how-to/benchmark-cluster.md",
+      "sha256": "94dd0527d10a302d97fd5f8d9db7dcbb447231e044d5c7be57f1e5fe1814121e",
+      "size": 3927,
+      "blob_id": "6f84565dcc90882b302a7cefd23e4195948409dd"
+    },
+    {
+      "path": "docs/app_server_tuning/how-to/compare-md-settings.md",
+      "sha256": "f86dfff16e37e47a4eebf5563c42e7ea6c717bd3ac6ce335ab298381f68dea53",
+      "size": 4173,
+      "blob_id": "a85c9b8c96d774efa0cbfd90b73afe1a63db478b"
+    },
+    {
+      "path": "docs/app_server_tuning/how-to/enable-trim.md",
+      "sha256": "fe3444bc203c7b7d8432c038ae0c795094db20d26ddcf5939694c75941897990",
+      "size": 4291,
+      "blob_id": "4bfe7fa54d1eed301e7cf2ae48692e17d1c97e13"
+    },
+    {
+      "path": "docs/app_server_tuning/how-to/measure-parity-cpu.md",
+      "sha256": "9866a41b4288abaf7ea5e7b526b1c2cef858d92fd842cb78ecd8ef3ee146866e",
+      "size": 3979,
+      "blob_id": "c56e24e7b78b119ac293aae07ecade620e6c68b1"
+    },
+    {
+      "path": "docs/app_server_tuning/reference/hardware.md",
+      "sha256": "e9719bc3b6f3f1dbe11a18d50c4a602a2e74cd05784f1ff929fd5c5f8c743c5d",
+      "size": 3625,
+      "blob_id": "bf2f31ae9533611a85525a14d6c6fd1e408bb2db"
+    },
+    {
+      "path": "docs/app_server_tuning/reference/md0.md",
+      "sha256": "fcc486532792f57ccb68242caf2e2b75fec13c626dc0c606fa7f3c24dd8c1287",
+      "size": 5333,
+      "blob_id": "a8479c6775a88810c1752ce5081e6f5b8ac0edeb"
+    },
+    {
+      "path": "docs/app_server_tuning/reference/results.md",
+      "sha256": "dc79af552945156e80a89e11c0abed9ec990068f3bf60b23533562a6bb158cc2",
+      "size": 8677,
+      "blob_id": "774f5c1d2ce227f497fe6445af031ebe34a807be"
+    },
+    {
+      "path": "docs/app_server_tuning/reference/values-to-re-derive.md",
+      "sha256": "922a9381618d5cd0db82abe454e585351dfeb47e05fb10e94d1a9a8d56445f81",
+      "size": 6318,
+      "blob_id": "09bfe9fd63b9ac228a10683e1ecb8dcbf9546a42"
+    },
+    {
+      "path": "docs/app_server_tuning/tutorials/see-the-tuning-work.md",
+      "sha256": "d859624c2947e838b8a0f4497d5e86d1af3facd680403dd71dbb66d00c7f7923",
+      "size": 7151,
+      "blob_id": "81d1e24e0d2b840524c7b682f9e3b7a1090cc50f"
+    },
+    {
+      "path": "docs/cluster_identity_access/README.md",
+      "sha256": "83b3efa03c2a36bc226a96bdb81c1dcf6802cf3eaaca991615cc4893f841dd31",
+      "size": 1971,
+      "blob_id": "110befecd748a31218f87dff811066f15ee78d99"
+    },
+    {
+      "path": "docs/cluster_identity_access/explanation/identity-boundaries.md",
+      "sha256": "f22371a3a1f28834273b2db9616f7e2f2f18f5634bd4c86494175a26b27d51a5",
+      "size": 2899,
+      "blob_id": "9fdad198ae132fd95e42efc00a0898def35ce9b4"
+    },
+    {
+      "path": "docs/cluster_identity_access/how-to/operate-as-service-account.md",
+      "sha256": "79363a36fa71eb476fdfe7b5eed4a55eb5c0a705f5afd1fbe8c062a58a5d4211",
+      "size": 2287,
+      "blob_id": "f9fd38819526c611b40e3f62b52b7dafd943ad2b"
+    },
+    {
+      "path": "docs/cluster_identity_access/reference/access-model.md",
+      "sha256": "78d02581d28c3f0d42ebe3bca5b6eb3b55c82cf9765e2816c20d1b840a04d88c",
+      "size": 3678,
+      "blob_id": "0786affd4734ff707f83d0c6e8345cf267b4a794"
+    },
+    {
+      "path": "docs/cluster_identity_access/tutorial.md",
+      "sha256": "9517b80b9dd435c817bd53c5bee714dd08ec108804a615bd3f4701d29b9c40de",
+      "size": 3636,
+      "blob_id": "7b59cb7031bc7930bf11325cc2c46550941e8b58"
+    },
+    {
+      "path": "docs/cmsh_setup/README.md",
+      "sha256": "709cb7d577a0149b412026c4188a367d617e308b27ee58888005381e5c3d4fe7",
+      "size": 2425,
+      "blob_id": "74569814fe0a40efa663c3a522e2cfe6a481a7d6"
+    },
+    {
+      "path": "docs/cmsh_setup/explanation/how-cmsh-talks-to-cmdaemon.md",
+      "sha256": "0a9bd8aaf3f53d799cff460d3511a6600ae388eb6b4f874c4c042b248a0978f1",
+      "size": 2377,
+      "blob_id": "6f304e599131d58ecf0cfa5f0be429286ab1f409"
+    },
+    {
+      "path": "docs/cmsh_setup/explanation/version-parity.md",
+      "sha256": "3acbf0967fea654a1d5f7845217395360b8dec3fe573a39d4cc1bf971e8f5d8c",
+      "size": 2417,
+      "blob_id": "59236f92596b0520b6e9b164b9806a68dcc1e551"
+    },
+    {
+      "path": "docs/cmsh_setup/explanation/why-dpkg-x.md",
+      "sha256": "10e47496667c03823ed0875b14af5151db6f6758f34b3b094db02434a7af3ec6",
+      "size": 2784,
+      "blob_id": "5533d76b880488771a3c61009758a597da7660ab"
+    },
+    {
+      "path": "docs/cmsh_setup/how-to/download-bcm-packages.md",
+      "sha256": "5f630c3ab8c57e6ca2252077fcca56f1d42884174026b62f3c2ee19edd3d842a",
+      "size": 1164,
+      "blob_id": "916762803496916fa5f82d451656188d2f4c891e"
+    },
+    {
+      "path": "docs/cmsh_setup/how-to/extract-cmsh-without-installing.md",
+      "sha256": "aa9ff3e8a9244991b51e5d3c0bef1ae1ede2312f28a9b25d430d98ca0faecafd",
+      "size": 1315,
+      "blob_id": "1cd46466fc32fb33d09ec5efed2cd1acd6ad8e09"
+    },
+    {
+      "path": "docs/cmsh_setup/how-to/make-cmsh-permanent.md",
+      "sha256": "3d87e0d992a2d0737709caae01a39c696834e7c942f069fe8b8ef3eae77186ff",
+      "size": 1623,
+      "blob_id": "f66b44d19318339e86b04c5fb31a30dd1ba5fcc1"
+    },
+    {
+      "path": "docs/cmsh_setup/how-to/set-up-cmsh-credentials.md",
+      "sha256": "8ca952f95ffdd7bf8a3c8c5aa90e57ba04b72b07f76a0f2885c370ec26cad06c",
+      "size": 2464,
+      "blob_id": "91ef4444cbffcbd026e2c2cf31ace9ad0ba4aa71"
+    },
+    {
+      "path": "docs/cmsh_setup/how-to/troubleshoot-connection.md",
+      "sha256": "9f735c328a5f352046c774a69961c01ff5f05391416e711a5b2940e2dc1de03c",
+      "size": 1915,
+      "blob_id": "e438fa0253095b731a3daa96f393bc77249d8fb0"
+    },
+    {
+      "path": "docs/cmsh_setup/reference/commands.md",
+      "sha256": "32f74c3b166847cae4f8607524d87450b5e954696ba48104f5d7d2fb3d3d0ef1",
+      "size": 2147,
+      "blob_id": "4e7f762a075a7d6f16e354fa5a30c871c1cafaed"
+    },
+    {
+      "path": "docs/cmsh_setup/reference/environment.md",
+      "sha256": "c364c27b069553767e64e10c01b03af914206e7e473376881540f8c0c42623fd",
+      "size": 3213,
+      "blob_id": "857daefadb031249d832b3784b6bc7a79b8b63f3"
+    },
+    {
+      "path": "docs/cmsh_setup/tutorial.md",
+      "sha256": "9900613c26380fa67a712bc6c26c6cbcda834f5ad56c49fdc3755c2cba9caf62",
+      "size": 4332,
+      "blob_id": "4306781d1d2ad71fd29221daa9456e50d954a421"
+    },
+    {
+      "path": "docs/compute_node_ssh_access/README.md",
+      "sha256": "06f2a784a6b38331999b83395315d5da8065c35be7301291dfdb2279c3dd444e",
+      "size": 1409,
+      "blob_id": "272d167624237cab5c5167f16da93c347bf87c96"
+    },
+    {
+      "path": "docs/compute_node_ssh_access/explanation/how-the-ssh-access-policy-works.md",
+      "sha256": "f145c020ef23547ca7b4955c92f01ffe285dd64de031b044ae7f57d90b813b08",
+      "size": 3019,
+      "blob_id": "c9c65e420f7f7612e419ad182f72b8203e77d541"
+    },
+    {
+      "path": "docs/compute_node_ssh_access/how-to/install-ssh-gate-on-one-compute-node.md",
+      "sha256": "52c28b42d4b551d94d2065975bba71c099b3d23f09318acaf2a298c3589b8b05",
+      "size": 7908,
+      "blob_id": "389f723c8c17467cd39d6c556e1336cb1e2d44e8"
+    },
+    {
+      "path": "docs/compute_node_ssh_access/how-to/install-ssh-gate-on-the-compute-node-fleet.md",
+      "sha256": "e4b4e5a1cd28adbf774c6fb18951cf765b62466d3286e8ed3c3afda78ecb1413",
+      "size": 3096,
+      "blob_id": "c5c7153f373af780a2554865f5a1924cd0bcfa4c"
+    },
+    {
+      "path": "docs/compute_node_ssh_access/how-to/verify-slurm-ssh-gate.md",
+      "sha256": "f9038e1d9f6e86f3bb1bb7fd26b4faa34b79228a512c8f0e9c82c937bd6c90f6",
+      "size": 2832,
+      "blob_id": "750a5ca1cf4b73f48ad65e16e53c8b7e3f6b6a09"
+    },
+    {
+      "path": "docs/index.md",
+      "sha256": "72233cdedab4db9442eb5fedafdae148296dcc0bac43eaeef381711e81e53a3b",
+      "size": 1564,
+      "blob_id": "5de61ab7f53881a31795ec8b43baa7da21251d49"
+    },
+    {
+      "path": "docs/internal_app_access/README.md",
+      "sha256": "ed20d07641bbf21b646223cab17ea8bc3b9bdb323728923a3d9dcaee55017194",
+      "size": 3880,
+      "blob_id": "598b03726ae7b68115e82847c4d282532e3da810"
+    },
+    {
+      "path": "docs/internal_app_access/explanation/architecture-and-trust.md",
+      "sha256": "d5568810bd6bd0f7b87a67631b3e2180a2c481c160d4503b59e4c4aece0d8009",
+      "size": 6309,
+      "blob_id": "616aadcb7fa1c5cba613f934ded064bc4f567931"
+    },
+    {
+      "path": "docs/internal_app_access/explanation/architecture-and-trust.mmd",
+      "sha256": "34c767f23ef58dc8cff11e6072a6e4b99df56dc25d35a37b505c206c4bc53f2f",
+      "size": 726,
+      "blob_id": "e1255cf62cf2ff53cd740525c15d15a1100101fa"
+    },
+    {
+      "path": "docs/internal_app_access/explanation/architecture-and-trust.svg",
+      "sha256": "150b9c2ba465874331715537e07f2a037dfd9cf3320ce9e28852fc046f0eb98c",
+      "size": 25692,
+      "blob_id": "bd3ade27f10f14e8fcbcb363e8fa571083f23b00"
+    },
+    {
+      "path": "docs/internal_app_access/explanation/rejected-methods.md",
+      "sha256": "05243860b571b8dec664ba03d14b8fd2a0c0a26f36c294a6dcd91298798e0f83",
+      "size": 2837,
+      "blob_id": "6632aa01f458a9d6d43c71a7c1694027e344e400"
+    },
+    {
+      "path": "docs/internal_app_access/how-to/add-caddy-site.md",
+      "sha256": "91dfcda39ed5d3f37a7e0a154cfcd143c0a9af924481003ff4f0ff544984c141",
+      "size": 2144,
+      "blob_id": "3ed6c8b94b9663698ab755140d232f0893ec9dbe"
+    },
+    {
+      "path": "docs/internal_app_access/how-to/install-client-certificate.md",
+      "sha256": "966f8df34692ac4d83725783660120dfb780cd22a805a455bcf58ee7f8503230",
+      "size": 1499,
+      "blob_id": "c67ece6bc87a5df9c8f0ea612ef1e8d34ae55790"
+    },
+    {
+      "path": "docs/internal_app_access/how-to/revoke-client-certificate.md",
+      "sha256": "cd4bf7737e39934609213f0e79c99ef7cb658e85694cfd53474043e5bf02e781",
+      "size": 1944,
+      "blob_id": "06226c0e00a07a7f4e5bc3ae084ea6dd34c7349e"
+    },
+    {
+      "path": "docs/internal_app_access/reference/configuration.md",
+      "sha256": "63950415f962255e0fdc184ee35e7689412c6d3856b9ac9a42ee96f85827d7fd",
+      "size": 8551,
+      "blob_id": "a49fe4805ec395cba46a90cc10b681dcba99fa56"
+    },
+    {
+      "path": "docs/internal_app_access/tutorial.md",
+      "sha256": "8d98006f10401796eed29186489ae5eb4a18ebd0414f8d8bb1262ce04740ad22",
+      "size": 5978,
+      "blob_id": "941d767201f9eeeff032bd2e76a251eb86e78f9f"
+    },
+    {
+      "path": "docs/observability_server_setup/README.md",
+      "sha256": "d3aa973e052d064590c35923b06f65b19ca9ec4372757ba9765733439f21c436",
+      "size": 3403,
+      "blob_id": "356693383db95eaea127e8cbff6497633b0bd2cb"
+    },
+    {
+      "path": "docs/observability_server_setup/explanation.md",
+      "sha256": "ff56a541c6a608b4eddc3f62679d014cc2e517734a490633dedc694eee9d1bcb",
+      "size": 712,
+      "blob_id": "a758cd59913e8371ad7d7baede0c934d719057e2"
+    },
+    {
+      "path": "docs/observability_server_setup/explanation/client-only-slurm-node.md",
+      "sha256": "e0015707b3158423f21ee977d280528bf991ac8876a88cae90ced1a357104dcc",
+      "size": 1511,
+      "blob_id": "40a37277ac46f91162a54af25fa0b51b4c96eb55"
+    },
+    {
+      "path": "docs/observability_server_setup/explanation/clustershell-groups.md",
+      "sha256": "551aefd5362bd6f9b2a08af966aeccce6a9d7439dd1c055aa31b5a871821fd42",
+      "size": 1297,
+      "blob_id": "aa656a38e87b8b55cd363056986e47dd0d5aa0f3"
+    },
+    {
+      "path": "docs/observability_server_setup/explanation/dns-design.md",
+      "sha256": "b8d9688f7edad7de0e67b59884c704997c868dbd845d487326c134eb0c106dde",
+      "size": 1114,
+      "blob_id": "88e27e33b7bf2c5fed11156d8386b3c19b25ddac"
+    },
+    {
+      "path": "docs/observability_server_setup/explanation/identity-and-environment.md",
+      "sha256": "b9aa99f0f29c847a4a4516932cd0a9eda0c83ec8f8ad2711e8e94d5570ba7e76",
+      "size": 1365,
+      "blob_id": "6ce445d2a76577efcde09f3cc552c53c08baaa24"
+    },
+    {
+      "path": "docs/observability_server_setup/explanation/submission-dependencies.md",
+      "sha256": "06715ef74770a3463162794c861c2a0b4ba5b5d80f6f81cf260bd6c5a0a474f0",
+      "size": 1353,
+      "blob_id": "f94e77f7145d641b2c206d8409f67924c675a8f1"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/README.md",
+      "sha256": "f8a11f41905a91d28aae3477c224c76820ec3e89c3490d22c57eb92b2010a152",
+      "size": 1596,
+      "blob_id": "62c2946978c3fdf334df1a205274efbe21b346b9"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/add-cmods-user.md",
+      "sha256": "0053a7ef804fd70b30abf33814e8b4ed70c3bcb091211fab99b82bf9b929283d",
+      "size": 4244,
+      "blob_id": "a6143ce3c4e200febe8847a03313c3e590f3494f"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/align-uids.md",
+      "sha256": "51558036ff6de974499cbb2a8616e576203f47121e900f7877931d092e514f60",
+      "size": 2958,
+      "blob_id": "e213a0d2e2a8cb24df8c0ad569c12177c3b3e3f9"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/configure-enroot.md",
+      "sha256": "83549fa509cf025b404ce054a61088a55218f404fd42f27747596b1e06d6c542",
+      "size": 6890,
+      "blob_id": "20559ae2d16284e6fbf05d7803242c55c2b6e51b"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/distribute-ssh-keys.md",
+      "sha256": "ce02a3d1361b01d515e270cbee50d75b6f0ef33c35b87d38e2ddd43fce294c44",
+      "size": 3528,
+      "blob_id": "02027262d2d82b27c5e646f7e014aab70b40c533"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/enable-job-submission.md",
+      "sha256": "9b1ed17138fa6dce27862b60562a823cbce3beb4cbfd6cf22b5b40ac23e4fe02",
+      "size": 2783,
+      "blob_id": "94540569c47fba976d023876429e2cf6bf5674d7"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/install-enroot.md",
+      "sha256": "c519607e50204e0e74d5b091afbaef9b28d76283dc2d51ba62da1e7d141d7fbb",
+      "size": 3358,
+      "blob_id": "667dbe356b013adea66f5f271310825b03332385"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/install-slurm-binaries.md",
+      "sha256": "3a8b7e1d7bba0541c2ff54820439ce70d071834230b001ec8d4aaf6bc75c2365",
+      "size": 2182,
+      "blob_id": "adb1dc9fdaac83502317e7a2649b6f658c1bc91b"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/mount-cm-shared.md",
+      "sha256": "9810ecb67818552b3584b4903752728609608f393ccfc37572ab8e8b982a665a",
+      "size": 4282,
+      "blob_id": "0d106d67a6adca75837b5788dfb4865181d320ea"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/persist-environment.md",
+      "sha256": "9b25d154d35fb10554518f6f894584cafa3e16dd2ec9744906f4e51a3d97c119",
+      "size": 2186,
+      "blob_id": "6c8fbb48a3c29c2fc8d64a7e543d0082fc28ecc1"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/set-up-clush.md",
+      "sha256": "17a8348696f65bb8f7a214bfe7048f4a849a7b301cb45ecb2ef7e6824242a772",
+      "size": 2173,
+      "blob_id": "f08417cc344993cfce4a1a554426e18364cca136"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/set-up-dns.md",
+      "sha256": "6166a92ff03a8560574028b0c11c4d6d209af42e6ccd78ce49838d8fcbb0e24b",
+      "size": 1908,
+      "blob_id": "2bc8c0b89d891145c59e8beff06c01153fc35ea2"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/set-up-munge.md",
+      "sha256": "ac57d4049bd10aa2c9cc8cf2afa011968fe812de3d6bdb6c568baff467d4ab95",
+      "size": 2479,
+      "blob_id": "919c1c010f9c047beed57487f3a8b7fb777b63f6"
+    },
+    {
+      "path": "docs/observability_server_setup/how-to/troubleshoot.md",
+      "sha256": "e5613ad638044e1b0c7cf7cd9eeb9f4bec8b685530205846d78060f657429375",
+      "size": 6909,
+      "blob_id": "4fbb6c1596c82b760a267e693d698a75a65e519f"
+    },
+    {
+      "path": "docs/observability_server_setup/reference.md",
+      "sha256": "7e0d3c859b4d5f69131b89f57aeeccde9e9a4928e0e54b9c785296b669c1cb6b",
+      "size": 11632,
+      "blob_id": "dbba201fae3c99fbb8ba3e4c2accfd1b96f295b5"
+    },
+    {
+      "path": "docs/observability_server_setup/tutorial.md",
+      "sha256": "8b7574b5334ee00370603f6d6661ea93919443e884e2e3f3b1933bfbc7bb6e0e",
+      "size": 8693,
+      "blob_id": "bb2bd14032294041d232d140931f1604eb611528"
+    },
+    {
+      "path": "docs/omnistation_gitlab_credentials/README.md",
+      "sha256": "9b7bfc584cab3980e308e356c39d2eced3841a2c637844d998534bc3116c6bfa",
+      "size": 2706,
+      "blob_id": "98ea9936ccf1e5858297b89c249453eda8176dfd"
+    },
+    {
+      "path": "docs/omnistation_gitlab_credentials/explanation/credential-workspace-and-runtime-trust.md",
+      "sha256": "01acde6e12acdc911cfb785ac9aadcec67c4faa868aab5e4fec603f20d0efc47",
+      "size": 6296,
+      "blob_id": "45d83d4b8bd8164d61c527805c1e703b16524267"
+    },
+    {
+      "path": "docs/omnistation_gitlab_credentials/how-to/launch-codex-for-existing-repository.md",
+      "sha256": "f92f1438e24f53d161ac1a8416ef67ddcd72cc11a6a714bc7197748fc9d87db3",
+      "size": 1961,
+      "blob_id": "3494c7dbc500775a6a5a96337630d5813f370ec3"
+    },
+    {
+      "path": "docs/omnistation_gitlab_credentials/how-to/rotate-group-token.md",
+      "sha256": "12fb60de5380217d2ab118f76c8d644bb9e13b88fee40837a299e32d00a1400e",
+      "size": 2069,
+      "blob_id": "3e1332d41a3128b46f3eb21f269bd1a3683bd2f0"
+    },
+    {
+      "path": "docs/omnistation_gitlab_credentials/how-to/troubleshoot-gitlab-access.md",
+      "sha256": "0f02c1113ddb94cf558cca55068b67d76293e95824c1eacaceb8d0b2bd747d0d",
+      "size": 3458,
+      "blob_id": "9023a2cf06b79aa63407dcdf69595cfbc20b815f"
+    },
+    {
+      "path": "docs/omnistation_gitlab_credentials/how-to/verify-gitlab-access.md",
+      "sha256": "b6ea87d222340192a429c1fc34952d1df78aed2c0dc016fa60e7b1bba982deef",
+      "size": 3294,
+      "blob_id": "a45a612007b97ee46902d894ca46bf3f7ddc3e72"
+    },
+    {
+      "path": "docs/omnistation_gitlab_credentials/reference/varlock-gitlab-reference.md",
+      "sha256": "9d640eeff39a6a6c4991a97da928df21219a861626ffbfd9b597493bfb3ecb98",
+      "size": 8302,
+      "blob_id": "179193b598e46caaa2e47dc4dcdd33d8479c836f"
+    },
+    {
+      "path": "docs/omnistation_gitlab_credentials/tutorial.md",
+      "sha256": "ac0a6787cb344f15171b6227dc42ec968bd71988dd7595cfb4ec046fe97a186d",
+      "size": 17244,
+      "blob_id": "a756d824e4505fa3207cd6cc0115cd8841d00b86"
+    },
+    {
+      "path": "docs/tailscale_access/README.md",
+      "sha256": "8f6f164f0ef3d632761b72c58b94cbff23270d2359437a2b9720f0d4f922241d",
+      "size": 1038,
+      "blob_id": "6a656f5dcb804346a36aea6539bbe4454d162638"
+    },
+    {
+      "path": "docs/tailscale_access/explanation/overlapping-private-networks.md",
+      "sha256": "d5892cb2e627fba709d0673b7151824bec236471e322d0d0255fbebc90421332",
+      "size": 4066,
+      "blob_id": "a4ec1dabb16ae4e8283ae12ecdee381af74e5cdc"
+    },
+    {
+      "path": "docs/tailscale_access/how-to/reach-one-jumpbox.md",
+      "sha256": "5202b7df71eb6175bfaea5e62bd09afbfd7754d4b63803b827ffa06d5c3d526f",
+      "size": 3656,
+      "blob_id": "7726284681ec69cf8075755be03e9dae9d791871"
+    }
+  ],
+  "declared_scope": {
+    "document_paths": [
+      "README.md",
+      "docs/**/*.md",
+      "docs/**/*.rst"
+    ],
+    "asset_paths": [
+      "docs/**"
+    ],
+    "navigation": ".docs-pipeline/navigation.rst",
+    "ancillary_paths": [
+      ".docs-pipeline/config.toml"
+    ]
+  },
+  "omitted_files": [
+    ".copier-docs-answers.yml",
+    ".docs-pipeline/ADOPTION.md",
+    ".docs-pipeline/ci.yml",
+    ".gitignore",
+    ".gitlab-ci.yml",
+    "scripts/aic_bcm_headnode_add_user.sh",
+    "scripts/check_node_busy.sh",
+    "tools/check-markdown-links.pl"
+  ],
+  "notes": [
+    "Exact source bytes copied from a fresh depth-1 Git clone. Head independently verified with GitLab MCP. Repository code was not executed.",
+    "Root scripts and non-documentation code omitted from publication; source links can provide access to them."
+  ]
+}

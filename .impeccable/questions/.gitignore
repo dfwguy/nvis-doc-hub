@@ -1,0 +1,7 @@
+# Written by Impeccable: local runtime state, never committed.
+*
+!.gitignore
+!roll.json
+!seeds/
+seeds/*
+!seeds/*.json

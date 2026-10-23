@@ -1,0 +1,656 @@
+[
+  {
+    "slug": "cluster-bringup",
+    "title": "Cluster Bringup",
+    "description": "Guides for setting up, accessing, and operating NVIS OVA infrastructure.",
+    "repo_url": "https://gitlab-master.nvidia.com/nvis-ova/cluster-bringup",
+    "ref": "main",
+    "topics": [],
+    "kind": null,
+    "source_mode": "snapshot",
+    "revision": "f74950acdc451f43f8857754efad25ce5233d26c",
+    "published_at": "2026-10-22T22:33:04.586583+00:00",
+    "document_count": 85,
+    "last_error": null,
+    "nav_mode": "curated",
+    "navigation": [
+      {
+        "title": "Start here",
+        "path": null,
+        "url": null,
+        "level": 0
+      },
+      {
+        "title": "Home",
+        "path": "docs/index.md",
+        "url": "/projects/cluster-bringup/docs/docs/index.md",
+        "level": 1
+      },
+      {
+        "title": "Complete documentation index",
+        "path": "docs/README.md",
+        "url": "/projects/cluster-bringup/docs/docs/README.md",
+        "level": 1
+      },
+      {
+        "title": "Repository overview",
+        "path": "README.md",
+        "url": "/projects/cluster-bringup/docs/README.md",
+        "level": 1
+      },
+      {
+        "title": "GitLab group credentials",
+        "path": null,
+        "url": null,
+        "level": 0
+      },
+      {
+        "title": "Overview",
+        "path": "docs/omnistation_gitlab_credentials/README.md",
+        "url": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/README.md",
+        "level": 1
+      },
+      {
+        "title": "Tutorial: use a Varlock GitLab group token on an Omnistation",
+        "path": "docs/omnistation_gitlab_credentials/tutorial.md",
+        "url": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/tutorial.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: launch Codex for an existing group repository",
+        "path": "docs/omnistation_gitlab_credentials/how-to/launch-codex-for-existing-repository.md",
+        "url": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/how-to/launch-codex-for-existing-repository.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: rotate an NVIS GitLab group token",
+        "path": "docs/omnistation_gitlab_credentials/how-to/rotate-group-token.md",
+        "url": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/how-to/rotate-group-token.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: troubleshoot Varlock-backed GitLab access",
+        "path": "docs/omnistation_gitlab_credentials/how-to/troubleshoot-gitlab-access.md",
+        "url": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/how-to/troubleshoot-gitlab-access.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: verify GitLab API and repository access",
+        "path": "docs/omnistation_gitlab_credentials/how-to/verify-gitlab-access.md",
+        "url": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/how-to/verify-gitlab-access.md",
+        "level": 1
+      },
+      {
+        "title": "Reference: Varlock-backed NVIS GitLab credentials",
+        "path": "docs/omnistation_gitlab_credentials/reference/varlock-gitlab-reference.md",
+        "url": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/reference/varlock-gitlab-reference.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: credential workspace and runtime trust",
+        "path": "docs/omnistation_gitlab_credentials/explanation/credential-workspace-and-runtime-trust.md",
+        "url": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/explanation/credential-workspace-and-runtime-trust.md",
+        "level": 1
+      },
+      {
+        "title": "App server tuning",
+        "path": null,
+        "url": null,
+        "level": 0
+      },
+      {
+        "title": "Overview",
+        "path": "docs/app_server_tuning/README.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/README.md",
+        "level": 1
+      },
+      {
+        "title": "Tutorial: See the tuning work",
+        "path": "docs/app_server_tuning/tutorials/see-the-tuning-work.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/tutorials/see-the-tuning-work.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: Apply the md0 tuning",
+        "path": "docs/app_server_tuning/how-to/apply-md-tuning.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/how-to/apply-md-tuning.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: Benchmark /cluster",
+        "path": "docs/app_server_tuning/how-to/benchmark-cluster.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/how-to/benchmark-cluster.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: Compare md0 settings",
+        "path": "docs/app_server_tuning/how-to/compare-md-settings.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/how-to/compare-md-settings.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: Enable TRIM on /cluster",
+        "path": "docs/app_server_tuning/how-to/enable-trim.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/how-to/enable-trim.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: Measure the parity path's CPU",
+        "path": "docs/app_server_tuning/how-to/measure-parity-cpu.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/how-to/measure-parity-cpu.md",
+        "level": 1
+      },
+      {
+        "title": "Reference: Hardware",
+        "path": "docs/app_server_tuning/reference/hardware.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/reference/hardware.md",
+        "level": 1
+      },
+      {
+        "title": "Reference: md0 and its tunables",
+        "path": "docs/app_server_tuning/reference/md0.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/reference/md0.md",
+        "level": 1
+      },
+      {
+        "title": "Reference: Measurements",
+        "path": "docs/app_server_tuning/reference/results.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/reference/results.md",
+        "level": 1
+      },
+      {
+        "title": "Reference: Values to re-derive on a new host",
+        "path": "docs/app_server_tuning/reference/values-to-re-derive.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/reference/values-to-re-derive.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: Four ways our own benchmarks lied",
+        "path": "docs/app_server_tuning/explanation/benchmarking-this-array.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/explanation/benchmarking-this-array.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: why TRIM was off, and what turning it on bought",
+        "path": "docs/app_server_tuning/explanation/discard-on-raid5.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/explanation/discard-on-raid5.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: why writes were slow",
+        "path": "docs/app_server_tuning/explanation/md-write-throughput.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/explanation/md-write-throughput.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: Which local changes on this host are real",
+        "path": "docs/app_server_tuning/explanation/pxe-boot-and-local-config.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/explanation/pxe-boot-and-local-config.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: Gen5 drives in Gen4 bays",
+        "path": "docs/app_server_tuning/explanation/the-gen4-ceiling.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/explanation/the-gen4-ceiling.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: The one thread that cannot be parallelised",
+        "path": "docs/app_server_tuning/explanation/the-parity-coordinator.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/explanation/the-parity-coordinator.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: why the tuning vanished",
+        "path": "docs/app_server_tuning/explanation/tunables-that-do-not-persist.md",
+        "url": "/projects/cluster-bringup/docs/docs/app_server_tuning/explanation/tunables-that-do-not-persist.md",
+        "level": 1
+      },
+      {
+        "title": "Cluster identity and access",
+        "path": null,
+        "url": null,
+        "level": 0
+      },
+      {
+        "title": "Overview",
+        "path": "docs/cluster_identity_access/README.md",
+        "url": "/projects/cluster-bringup/docs/docs/cluster_identity_access/README.md",
+        "level": 1
+      },
+      {
+        "title": "Tutorial: provision a person for passwordless cluster access",
+        "path": "docs/cluster_identity_access/tutorial.md",
+        "url": "/projects/cluster-bringup/docs/docs/cluster_identity_access/tutorial.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: operate as cmods",
+        "path": "docs/cluster_identity_access/how-to/operate-as-service-account.md",
+        "url": "/projects/cluster-bringup/docs/docs/cluster_identity_access/how-to/operate-as-service-account.md",
+        "level": 1
+      },
+      {
+        "title": "Reference: cluster access model",
+        "path": "docs/cluster_identity_access/reference/access-model.md",
+        "url": "/projects/cluster-bringup/docs/docs/cluster_identity_access/reference/access-model.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: why identities are separate",
+        "path": "docs/cluster_identity_access/explanation/identity-boundaries.md",
+        "url": "/projects/cluster-bringup/docs/docs/cluster_identity_access/explanation/identity-boundaries.md",
+        "level": 1
+      },
+      {
+        "title": "Internal web-app access",
+        "path": null,
+        "url": null,
+        "level": 0
+      },
+      {
+        "title": "Overview",
+        "path": "docs/internal_app_access/README.md",
+        "url": "/projects/cluster-bringup/docs/docs/internal_app_access/README.md",
+        "level": 1
+      },
+      {
+        "title": "Tutorial: deploy one Caddy-protected HTTP service",
+        "path": "docs/internal_app_access/tutorial.md",
+        "url": "/projects/cluster-bringup/docs/docs/internal_app_access/tutorial.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: add a Caddy-protected site",
+        "path": "docs/internal_app_access/how-to/add-caddy-site.md",
+        "url": "/projects/cluster-bringup/docs/docs/internal_app_access/how-to/add-caddy-site.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: enroll a client certificate",
+        "path": "docs/internal_app_access/how-to/install-client-certificate.md",
+        "url": "/projects/cluster-bringup/docs/docs/internal_app_access/how-to/install-client-certificate.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: revoke a client certificate",
+        "path": "docs/internal_app_access/how-to/revoke-client-certificate.md",
+        "url": "/projects/cluster-bringup/docs/docs/internal_app_access/how-to/revoke-client-certificate.md",
+        "level": 1
+      },
+      {
+        "title": "Reference: Caddy mTLS application access",
+        "path": "docs/internal_app_access/reference/configuration.md",
+        "url": "/projects/cluster-bringup/docs/docs/internal_app_access/reference/configuration.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: architecture and trust boundaries",
+        "path": "docs/internal_app_access/explanation/architecture-and-trust.md",
+        "url": "/projects/cluster-bringup/docs/docs/internal_app_access/explanation/architecture-and-trust.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: rejected connection and enrollment methods",
+        "path": "docs/internal_app_access/explanation/rejected-methods.md",
+        "url": "/projects/cluster-bringup/docs/docs/internal_app_access/explanation/rejected-methods.md",
+        "level": 1
+      },
+      {
+        "title": "cmsh setup",
+        "path": null,
+        "url": null,
+        "level": 0
+      },
+      {
+        "title": "Overview",
+        "path": "docs/cmsh_setup/README.md",
+        "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/README.md",
+        "level": 1
+      },
+      {
+        "title": "Tutorial: connect cmsh from a non-BCM host",
+        "path": "docs/cmsh_setup/tutorial.md",
+        "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/tutorial.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: download BCM packages for an offline install",
+        "path": "docs/cmsh_setup/how-to/download-bcm-packages.md",
+        "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/download-bcm-packages.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: extract cmsh without installing it",
+        "path": "docs/cmsh_setup/how-to/extract-cmsh-without-installing.md",
+        "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/extract-cmsh-without-installing.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: make cmsh permanent and convenient",
+        "path": "docs/cmsh_setup/how-to/make-cmsh-permanent.md",
+        "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/make-cmsh-permanent.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: set up cmsh credentials",
+        "path": "docs/cmsh_setup/how-to/set-up-cmsh-credentials.md",
+        "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/set-up-cmsh-credentials.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: troubleshoot a cmsh connection",
+        "path": "docs/cmsh_setup/how-to/troubleshoot-connection.md",
+        "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+        "level": 1
+      },
+      {
+        "title": "Reference: commands used",
+        "path": "docs/cmsh_setup/reference/commands.md",
+        "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/reference/commands.md",
+        "level": 1
+      },
+      {
+        "title": "Reference: environment as built",
+        "path": "docs/cmsh_setup/reference/environment.md",
+        "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/reference/environment.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: why this works at all: cmsh and CMDaemon",
+        "path": "docs/cmsh_setup/explanation/how-cmsh-talks-to-cmdaemon.md",
+        "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/explanation/how-cmsh-talks-to-cmdaemon.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: Version parity and upgrade risk",
+        "path": "docs/cmsh_setup/explanation/version-parity.md",
+        "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/explanation/version-parity.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: why dpkg -x instead of apt install",
+        "path": "docs/cmsh_setup/explanation/why-dpkg-x.md",
+        "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/explanation/why-dpkg-x.md",
+        "level": 1
+      },
+      {
+        "title": "Compute-node SSH access",
+        "path": null,
+        "url": null,
+        "level": 0
+      },
+      {
+        "title": "Overview",
+        "path": "docs/compute_node_ssh_access/README.md",
+        "url": "/projects/cluster-bringup/docs/docs/compute_node_ssh_access/README.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: install the Slurm SSH gate on one live compute node",
+        "path": "docs/compute_node_ssh_access/how-to/install-ssh-gate-on-one-compute-node.md",
+        "url": "/projects/cluster-bringup/docs/docs/compute_node_ssh_access/how-to/install-ssh-gate-on-one-compute-node.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: install the Slurm SSH gate on the compute-node fleet",
+        "path": "docs/compute_node_ssh_access/how-to/install-ssh-gate-on-the-compute-node-fleet.md",
+        "url": "/projects/cluster-bringup/docs/docs/compute_node_ssh_access/how-to/install-ssh-gate-on-the-compute-node-fleet.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: verify the Slurm SSH gate",
+        "path": "docs/compute_node_ssh_access/how-to/verify-slurm-ssh-gate.md",
+        "url": "/projects/cluster-bringup/docs/docs/compute_node_ssh_access/how-to/verify-slurm-ssh-gate.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: how the SSH access policy works",
+        "path": "docs/compute_node_ssh_access/explanation/how-the-ssh-access-policy-works.md",
+        "url": "/projects/cluster-bringup/docs/docs/compute_node_ssh_access/explanation/how-the-ssh-access-policy-works.md",
+        "level": 1
+      },
+      {
+        "title": "Observability server setup",
+        "path": null,
+        "url": null,
+        "level": 0
+      },
+      {
+        "title": "Overview",
+        "path": "docs/observability_server_setup/README.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/README.md",
+        "level": 1
+      },
+      {
+        "title": "Tutorial: Make a standalone host into a Slurm client",
+        "path": "docs/observability_server_setup/tutorial.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md",
+        "level": 1
+      },
+      {
+        "title": "How-to guides: observability server setup",
+        "path": "docs/observability_server_setup/how-to/README.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/README.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: add the cmods user to another node",
+        "path": "docs/observability_server_setup/how-to/add-cmods-user.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/add-cmods-user.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: align local UIDs with the cluster",
+        "path": "docs/observability_server_setup/how-to/align-uids.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/align-uids.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: configure Enroot for NGC and Pyxis jobs",
+        "path": "docs/observability_server_setup/how-to/configure-enroot.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/configure-enroot.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: set up SSH access to managed nodes",
+        "path": "docs/observability_server_setup/how-to/distribute-ssh-keys.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/distribute-ssh-keys.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: make srun and sbatch work",
+        "path": "docs/observability_server_setup/how-to/enable-job-submission.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/enable-job-submission.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: install enroot for container job submission",
+        "path": "docs/observability_server_setup/how-to/install-enroot.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/install-enroot.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: install Slurm client binaries without BCM repository access",
+        "path": "docs/observability_server_setup/how-to/install-slurm-binaries.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/install-slurm-binaries.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: set up the shared filesystems",
+        "path": "docs/observability_server_setup/how-to/mount-cm-shared.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/mount-cm-shared.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: make the Slurm client work permanently",
+        "path": "docs/observability_server_setup/how-to/persist-environment.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: run commands across Slurm node groups with clush",
+        "path": "docs/observability_server_setup/how-to/set-up-clush.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/set-up-clush.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: resolve cluster hostnames through the BCM head node",
+        "path": "docs/observability_server_setup/how-to/set-up-dns.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/set-up-dns.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: set up munge with the cluster's key",
+        "path": "docs/observability_server_setup/how-to/set-up-munge.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/set-up-munge.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: troubleshoot a failing sinfo or squeue",
+        "path": "docs/observability_server_setup/how-to/troubleshoot.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/troubleshoot.md",
+        "level": 1
+      },
+      {
+        "title": "Reference",
+        "path": "docs/observability_server_setup/reference.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/reference.md",
+        "level": 1
+      },
+      {
+        "title": "Explanations",
+        "path": "docs/observability_server_setup/explanation.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/explanation.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: how a client-only Slurm node works",
+        "path": "docs/observability_server_setup/explanation/client-only-slurm-node.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: why clush groups come from Slurm",
+        "path": "docs/observability_server_setup/explanation/clustershell-groups.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/clustershell-groups.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: why cluster DNS uses systemd-resolved",
+        "path": "docs/observability_server_setup/explanation/dns-design.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/dns-design.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: Munge, UIDs, and non-interactive environments",
+        "path": "docs/observability_server_setup/explanation/identity-and-environment.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/identity-and-environment.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: why submission needs more than query tools",
+        "path": "docs/observability_server_setup/explanation/submission-dependencies.md",
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/submission-dependencies.md",
+        "level": 1
+      },
+      {
+        "title": "Tailscale access",
+        "path": null,
+        "url": null,
+        "level": 0
+      },
+      {
+        "title": "Overview",
+        "path": "docs/tailscale_access/README.md",
+        "url": "/projects/cluster-bringup/docs/docs/tailscale_access/README.md",
+        "level": 1
+      },
+      {
+        "title": "How-to: reach one jumpbox through an overlapping subnet",
+        "path": "docs/tailscale_access/how-to/reach-one-jumpbox.md",
+        "url": "/projects/cluster-bringup/docs/docs/tailscale_access/how-to/reach-one-jumpbox.md",
+        "level": 1
+      },
+      {
+        "title": "Explanation: why a host route helps—and when it cannot",
+        "path": "docs/tailscale_access/explanation/overlapping-private-networks.md",
+        "url": "/projects/cluster-bringup/docs/docs/tailscale_access/explanation/overlapping-private-networks.md",
+        "level": 1
+      }
+    ],
+    "warnings": [],
+    "acquisition": {
+      "method": "git",
+      "acquired_at": "2026-10-22 22:22:47 UTC",
+      "ref": "main"
+    },
+    "pending_source": null
+  },
+  {
+    "slug": "documentation-pipeline",
+    "title": "Documentation Pipeline",
+    "description": "Build and publish repository documentation with NVIDIA repo_docs, Copier configuration, and GitLab Pages.",
+    "repo_url": "https://gitlab-master.nvidia.com/nvis-ova/documentation-pipeline",
+    "ref": "feat/copier-docs-pipeline",
+    "topics": [],
+    "kind": null,
+    "source_mode": "snapshot",
+    "revision": "0796f0212ccac88391765271f88f9aed6606f68a",
+    "published_at": "2026-10-22T22:33:04.691355+00:00",
+    "document_count": 7,
+    "last_error": null,
+    "nav_mode": "generated",
+    "navigation": [
+      {
+        "title": "Documentation pipeline",
+        "path": "README.md",
+        "level": 1,
+        "url": "/projects/documentation-pipeline/docs/README.md"
+      },
+      {
+        "title": "Why the pipeline has two layers",
+        "path": "docs/explanation/design.md",
+        "level": 1,
+        "url": "/projects/documentation-pipeline/docs/docs/explanation/design.md"
+      },
+      {
+        "title": "Update the existing cluster-bringup integration",
+        "path": "docs/how-to/update-cluster-bringup.md",
+        "level": 1,
+        "url": "/projects/documentation-pipeline/docs/docs/how-to/update-cluster-bringup.md"
+      },
+      {
+        "title": "Update an adopted consumer",
+        "path": "docs/how-to/update.md",
+        "level": 1,
+        "url": "/projects/documentation-pipeline/docs/docs/how-to/update.md"
+      },
+      {
+        "title": "Configuration and command reference",
+        "path": "docs/reference/configuration.md",
+        "level": 1,
+        "url": "/projects/documentation-pipeline/docs/docs/reference/configuration.md"
+      },
+      {
+        "title": "Validation record",
+        "path": "docs/reference/validation.md",
+        "level": 1,
+        "url": "/projects/documentation-pipeline/docs/docs/reference/validation.md"
+      },
+      {
+        "title": "Adopt the pipeline in an existing repository",
+        "path": "docs/tutorials/adopt.md",
+        "level": 1,
+        "url": "/projects/documentation-pipeline/docs/docs/tutorials/adopt.md"
+      }
+    ],
+    "warnings": [],
+    "acquisition": {
+      "method": "gitlab-mcp",
+      "acquired_at": "2026-10-22 22:22:47 UTC",
+      "ref": "feat/copier-docs-pipeline"
+    },
+    "pending_source": null
+  }
+]

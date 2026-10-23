@@ -1,0 +1,116 @@
+{
+  "url": "http://127.0.0.1:59105",
+  "database": "/tmp/nvis-state-browser-gx725m31/state.sqlite3",
+  "browser": "Chrome",
+  "headless": false,
+  "checks": {
+    "emptyCatalog": true,
+    "noMatch": true,
+    "failureVisible": true,
+    "previousPublicationVisible": true,
+    "exactRetainedRevisionVisible": true,
+    "retainedFixtureReadable": true,
+    "codeScrollsHorizontally": true,
+    "noMobilePageOverflow": true,
+    "noBrowserPageErrors": true
+  },
+  "errors": [],
+  "publication": {
+    "slug": "browser-verification-fixture",
+    "title": "Browser verification fixture",
+    "description": "Synthetic test content created only for browser state verification.",
+    "repo_url": "https://example.test/browser-verification-fixture",
+    "ref": "fixture",
+    "topics": [],
+    "kind": null,
+    "source_mode": "local",
+    "revision": "content-sha256:bf0579b56b292fc59a0a008470071cfcf1cd170b47e96d6847b0e848b45afd32",
+    "published_at": "2026-10-22T22:33:18.056871+00:00",
+    "document_count": 1,
+    "last_error": null,
+    "nav_mode": "generated",
+    "navigation": [
+      {
+        "title": "Browser verification fixture",
+        "path": "docs/long-code.md",
+        "level": 1,
+        "url": "/projects/browser-verification-fixture/docs/docs/long-code.md"
+      }
+    ],
+    "warnings": [],
+    "acquisition": {
+      "method": "local"
+    },
+    "pending_source": null
+  },
+  "failure": {
+    "error": "Local source directory does not exist.",
+    "before": {
+      "slug": "browser-verification-fixture",
+      "title": "Browser verification fixture",
+      "description": "Synthetic test content created only for browser state verification.",
+      "repo_url": "https://example.test/browser-verification-fixture",
+      "ref": "fixture",
+      "topics": [],
+      "kind": null,
+      "source_mode": "local",
+      "revision": "content-sha256:bf0579b56b292fc59a0a008470071cfcf1cd170b47e96d6847b0e848b45afd32",
+      "published_at": "2026-10-22T22:33:18.056871+00:00",
+      "document_count": 1,
+      "last_error": null,
+      "nav_mode": "generated",
+      "navigation": [
+        {
+          "title": "Browser verification fixture",
+          "path": "docs/long-code.md",
+          "level": 1,
+          "url": "/projects/browser-verification-fixture/docs/docs/long-code.md"
+        }
+      ],
+      "warnings": [],
+      "acquisition": {
+        "method": "local"
+      },
+      "pending_source": null
+    },
+    "after": {
+      "slug": "browser-verification-fixture",
+      "title": "Browser verification fixture",
+      "description": "Synthetic test content created only for browser state verification.",
+      "repo_url": "https://example.test/browser-verification-fixture",
+      "ref": "fixture",
+      "topics": [],
+      "kind": null,
+      "source_mode": "local",
+      "revision": "content-sha256:bf0579b56b292fc59a0a008470071cfcf1cd170b47e96d6847b0e848b45afd32",
+      "published_at": "2026-10-22T22:33:18.056871+00:00",
+      "document_count": 1,
+      "last_error": "Local source directory does not exist.",
+      "nav_mode": "generated",
+      "navigation": [
+        {
+          "title": "Browser verification fixture",
+          "path": "docs/long-code.md",
+          "level": 1,
+          "url": "/projects/browser-verification-fixture/docs/docs/long-code.md"
+        }
+      ],
+      "warnings": [],
+      "acquisition": {
+        "method": "local"
+      },
+      "pending_source": null
+    },
+    "retained_document": true
+  },
+  "mobile": {
+    "viewport": 390,
+    "pageClientWidth": 375,
+    "pageScrollWidth": 375,
+    "codeClientWidth": 333,
+    "codeScrollWidth": 4061,
+    "codeScrollLeftBefore": 0,
+    "codeScrollLeftAfter": 180,
+    "codeOverflowX": "auto"
+  }
+}
