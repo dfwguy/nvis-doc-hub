@@ -4,6 +4,12 @@ Timestamp: 2026-10-22 22:34:59 UTC.
 
 Topic: Functional local implementation, authentic publications, tests and browser verification.
 
+23 October follow-up: the local server was restarted. Local Git version control
+now has `main` and `development`; the initial application baseline is `29061f2`.
+GitLab remote publication is pending creation of the blank private project through
+the user's NVIDIA SSO. Read [repository setup](../../../evidence/repository-setup.md)
+before retrying the push. The local repository must not be reinitialized.
+
 Read the [implemented application checkpoint](20261022T223459Z-implemented.md).
 
 The local application is now built. See [startup](../../../README.md) and
