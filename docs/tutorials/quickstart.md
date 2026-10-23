@@ -21,17 +21,18 @@ an available filter. Empty metadata dimensions are omitted. Filters apply when
 changed; without JavaScript, use Apply filters. Clear search preserves filters,
 and Clear filters preserves the query.
 
-Homepage shelves open documents directly. Popular documents reflects real shared
-all-time opens in this database, including repeat opens; Explore documentation
-appears before usage exists. Arrow controls, keyboard navigation, or touch
-scrolling reveal more cards. Project shelves provide starting points when type
-metadata is absent. No reader profiles are stored.
+Explore popular documentation is the only default discovery section. It shows
+up to six genuinely opened documents in one carousel, with a clear empty
+state before usage exists. Use its arrow buttons, keyboard, or touch to explore. Choose a Project or Browse documents for a paginated
+vertical list. The default page does not expand extra project collections, and
+the sidebar does not list every project. Reader navigation contains only the
+current project’s document sections. Popularity counts shared all-time opens, including repeats, without
+reader profiles.
 
-With JavaScript enabled, typing at least two characters opens live suggestions
-for matching sections, including partial final words. Click a suggestion or use
-Up/Down and Enter to open it. Escape closes suggestions. Enter without a selected
-suggestion opens ordinary full search. Project and metadata filters apply to both
-paths; full search remains available without JavaScript.
+Use the Dark mode switch in the header to choose light or dark appearance. The
+preference persists across pages and reloads; dark is the initial default. With
+JavaScript disabled the switch is hidden and the native dark interface, search,
+filters, document links and disclosures continue to work.
 
 Project indexes and navigation have collapsible document categories. Expand a
 section to see its pages; the category containing the current document opens

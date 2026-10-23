@@ -1,24 +1,35 @@
 # Latest NVIS documentation hub session
 
-Timestamp: 2026-10-23 19:08:34 UTC.
+Timestamp: 2026-10-23 19:38:23 UTC.
 
-Topic: Unified document discovery with real shared popularity and KUI-guided shelves.
+Topic: Popular-only discovery, source-preserving display casing and light/dark choice.
 
-Read the [current discovery checkpoint](20261023T190834Z-document-discovery.md)
-first. One Browse documentation destination now combines search, filtering,
-document browsing and shelves. Popularity uses shared all-time opens without
-user profiles. KUI guidance is adapted to native HTML/CSS; no React migration
-or npm install was performed. The Python suite passes 94 tests; existing,
-category and live-search regressions pass 35, 34 and 28 checks. Discovery's
-final rerun passes all 16 checks, recorded in its linked browser evidence.
-Final lint/formatting, mypy and diff checks pass. This checkpoint
-accompanies the finished `development` feature; use Git's tracking status to
-confirm remote synchronization. `main` retains the verified application baseline.
-Reader access control and contributor publishing automation remain deferred.
+Read the [current refinement checkpoint](20261023T193823Z-discovery-refinement.md)
+first. Default Browse retains one Explore popular documentation carousel, at most six
+actually opened documents and an honest empty-history state. Extra project/type
+rows and the global Projects sidebar list are removed; the Project dropdown
+chooses projects, and project/reader routes retain local Document sections category
+navigation. Project selection opens its vertical paginated library. Display
+casing preserves technical spelling and authored source; a native persisted
+light/dark switch defaults to dark.
+The corrected carousel/sidebar implementation passes 145 Python tests and
+120 browser checks (23 focused + 35 existing + 28 live-search + 34 category).
+Lint, formatting, mypy and diff checks also pass; the inspector has zero findings.
+This accompanies the finished
+`development` refinement; use Git tracking to confirm remote synchronization.
+`main` retains the baseline; access, contributor publishing and deployment remain
+deferred. The main app is healthy on port 8000; current QA uses isolated port 8001.
 
-Feature commit `58912f5` is published to `origin/development`; Git tracking showed
+Before refinement UI edits, `4682c9d` was confirmed pushed with a clean worktree
+and zero ahead/behind commits, satisfying the user's explicit checkpoint request.
+
+The [earlier discovery checkpoint](20261023T190834Z-document-discovery.md)
+preserves the multi-shelf iteration and its 94/16-test proof. The current
+refinement replaces that default with one bounded popular carousel.
+
+Historical discovery feature commit `58912f5` was published to `origin/development`; Git tracking showed
 zero commits ahead or behind after the push. The local app is healthy on port
-8000. The temporary browser-QA server/database on port 8001 was stopped/removed.
+8000. That iteration's temporary browser-QA server/database on port 8001 was stopped/removed.
 
 The earlier feature and repository notes below are retained as historical
 context; the linked current checkpoint gives the present source and branch state.

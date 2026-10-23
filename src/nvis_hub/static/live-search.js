@@ -1,3 +1,18 @@
+/* Match the server's conservative display rule without changing result URLs/data. */
+const titleCommands = new Set((document.body.dataset.titleCommands || '').split(' '));
+function displaySearchTitle(value) {
+  const match = /^(\s*["'“‘(]*)(\S+)/u.exec(value);
+  if (!match) return value;
+  const token = match[2].replace(/[,;:!?)\]}'"”’]+$/u, '');
+  if (!token || !/^\p{Ll}/u.test(token) || titleCommands.has(token)
+      || /[\d/\\._\-$@=<>`:]/u.test(token)
+      || /\p{Lu}/u.test(token.slice(1))) return value;
+  const first = token[0].toUpperCase();
+  if (first.length !== 1) return value;
+  const offset = match[1].length;
+  return value.slice(0, offset) + first + value.slice(offset + 1);
+}
+
 /* Optional live suggestions; the ordinary search form remains the fallback. */
 document.querySelectorAll('[data-search-input]').forEach((input, index) => {
   const form = input.form;
@@ -133,11 +148,11 @@ document.querySelectorAll('[data-search-input]').forEach((input, index) => {
       link.setAttribute('aria-selected', 'false');
       const title = document.createElement('span');
       title.className = 'search-suggestion-title';
-      title.textContent = result.heading || result.title;
+      title.textContent = displaySearchTitle(result.heading || result.title);
       const context = document.createElement('span');
       context.className = 'search-suggestion-context';
       context.textContent = result.heading && result.heading !== result.title
-        ? `${result.project_title} · ${result.title}` : result.project_title;
+        ? `${displaySearchTitle(result.project_title)} · ${displaySearchTitle(result.title)}` : displaySearchTitle(result.project_title);
       const excerpt = document.createElement('span');
       excerpt.className = 'search-suggestion-excerpt';
       excerpt.textContent = result.snippet.replace(/\s+/g, ' ').trim();

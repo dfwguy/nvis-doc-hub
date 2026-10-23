@@ -1,0 +1,3218 @@
+{
+  "phase": "full verification",
+  "at": "2026-10-23T19:43:48.269Z",
+  "base": "http://127.0.0.1:8001",
+  "initialRed": {
+    "phase": "initial red",
+    "at": "2026-10-23T19:25:32.074Z",
+    "target": "http://127.0.0.1:8001",
+    "browser": "151.0.7922.34",
+    "usageHistory": "Isolated SQLite backup contained zero document_views rows before browser QA; no counters were removed or altered.",
+    "tests": [
+      {
+        "name": "Default discovery has exactly one Explore popular documentation section",
+        "status": "failed",
+        "error": "Expected values to be strictly equal:\n\n3 !== 1\n"
+      },
+      {
+        "name": "Genuinely empty usage history does not fabricate popular cards",
+        "status": "failed",
+        "error": "Expected values to be strictly equal:\n\n18 !== 0\n"
+      },
+      {
+        "name": "Default document discovery has no carousel controls",
+        "status": "failed",
+        "error": "Expected values to be strictly equal:\n\n3 !== 0\n"
+      },
+      {
+        "name": "Discovery document lists never scroll horizontally",
+        "status": "failed",
+        "error": "The expression evaluated to a falsy value:\n\n  assert(await page.locator('.document-shelf').evaluateAll(rails=>rails.every(rail=>rail.scrollWidth<=rail.clientWidth+1)))\n"
+      },
+      {
+        "name": "Sentence-style navigation titles capitalize ordinary prose",
+        "status": "failed",
+        "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'launch Codex for an existing group repository'\n- 'Launch Codex for an existing group repository'\n"
+      },
+      {
+        "name": "Native light/dark theme toggle works by keyboard",
+        "status": "passed"
+      }
+    ]
+  },
+  "correctionRed": {
+    "at": "2026-10-23T19:41:33.153Z",
+    "target": "http://127.0.0.1:8001",
+    "tests": [
+      {
+        "name": "Home and mobile navigation omit global Projects lists",
+        "status": "failed",
+        "error": "Expected values to be strictly equal:\n\n4 !== 0\n"
+      },
+      {
+        "name": "The single popular section is a native carousel with controls",
+        "status": "failed",
+        "error": "The expression evaluated to a falsy value:\n\n  assert(await page.locator('.shelf-controls').count()>0)\n"
+      },
+      {
+        "name": "Project navigation contains only the active project context",
+        "status": "failed",
+        "error": "The expression evaluated to a falsy value:\n\n  assert(!links.some(href=>href!=='/projects/cluster-bringup'))\n"
+      }
+    ]
+  },
+  "preCorrectionVerification": {
+    "at": "2026-10-23T19:38:57.947Z",
+    "passed": 23,
+    "failed": 0,
+    "browser": "151.0.7922.34",
+    "otherSuites": {
+      "browser": 35,
+      "live": 28,
+      "navigation": 34
+    },
+    "scope": "Historical grid revision before the user corrected the request to one popular carousel."
+  },
+  "emptyHistoryVerification": {
+    "at": "2026-10-23T19:32:22.984Z",
+    "heading": "Explore popular documentation",
+    "cards": 0,
+    "text": "Explore popular documentation\n\nMost opened across this hub, all time. Includes repeat opens.\n\nNo popular documentation yet\n\nPopular documents appear as people open them. Choose a project above or Browse documents to find what you need."
+  },
+  "checks": [
+    {
+      "name": "Root and empty search share one discovery form and one navigation destination",
+      "status": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "heading": "Browse documentation",
+          "shelves": [
+            "Explore popular documentation"
+          ]
+        },
+        {
+          "route": "/search",
+          "heading": "Browse documentation",
+          "shelves": [
+            "Explore popular documentation"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Default discovery is one honest popular carousel without extra project shelves",
+      "status": "passed",
+      "detail": {
+        "heading": "Explore popular documentation",
+        "cards": [
+          {
+            "href": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+            "title": "How to troubleshoot a cmsh connection",
+            "text": "Cluster Bringup1 How to troubleshoot a cmsh connection 44 opens",
+            "kind": "",
+            "opens": 44
+          },
+          {
+            "href": "/projects/documentation-pipeline/docs/docs/tutorials/adopt.md",
+            "title": "Adopt the pipeline in an existing repository",
+            "text": "Documentation Pipeline2 Adopt the pipeline in an existing repository 14 opens",
+            "kind": "",
+            "opens": 14
+          },
+          {
+            "href": "/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md",
+            "title": "How a client-only Slurm node works",
+            "text": "Cluster Bringup3 How a client-only Slurm node works 10 opens",
+            "kind": "",
+            "opens": 10
+          },
+          {
+            "href": "/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md",
+            "title": "Tutorial: Make a standalone host into a Slurm client",
+            "text": "Cluster Bringup4 Tutorial: Make a standalone host into a Slurm client 9 opens",
+            "kind": "",
+            "opens": 9
+          },
+          {
+            "href": "/projects/cluster-bringup/docs/docs/app_server_tuning/README.md",
+            "title": "App server performance tuning",
+            "text": "Cluster Bringup5 App server performance tuning 6 opens",
+            "kind": "",
+            "opens": 6
+          },
+          {
+            "href": "/projects/cluster-bringup/docs/docs/app_server_tuning/how-to/apply-md-tuning.md",
+            "title": "Apply the md0 tuning",
+            "text": "Cluster Bringup6 Apply the md0 tuning 5 opens",
+            "kind": "",
+            "opens": 5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Popularity uses real aggregate reader opens shared across browser contexts",
+      "status": "passed",
+      "detail": {
+        "before": {
+          "heading": "Explore popular documentation",
+          "cards": 6,
+          "target": {
+            "href": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+            "title": "How to troubleshoot a cmsh connection",
+            "text": "Cluster Bringup1 How to troubleshoot a cmsh connection 44 opens",
+            "kind": "",
+            "opens": 44
+          }
+        },
+        "after": {
+          "heading": "Explore popular documentation",
+          "top": {
+            "href": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+            "title": "How to troubleshoot a cmsh connection",
+            "text": "Cluster Bringup1 How to troubleshoot a cmsh connection 46 opens",
+            "kind": "",
+            "opens": 46
+          }
+        },
+        "browserContexts": 2
+      }
+    },
+    {
+      "name": "The popular carousel contains at most six genuinely opened documents",
+      "status": "passed",
+      "detail": {
+        "actualReaderOpens": 8,
+        "popularCards": [
+          {
+            "href": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+            "title": "How to troubleshoot a cmsh connection",
+            "text": "Cluster Bringup1 How to troubleshoot a cmsh connection 46 opens",
+            "kind": "",
+            "opens": 46
+          },
+          {
+            "href": "/projects/documentation-pipeline/docs/docs/tutorials/adopt.md",
+            "title": "Adopt the pipeline in an existing repository",
+            "text": "Documentation Pipeline2 Adopt the pipeline in an existing repository 15 opens",
+            "kind": "",
+            "opens": 15
+          },
+          {
+            "href": "/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md",
+            "title": "How a client-only Slurm node works",
+            "text": "Cluster Bringup3 How a client-only Slurm node works 10 opens",
+            "kind": "",
+            "opens": 10
+          },
+          {
+            "href": "/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md",
+            "title": "Tutorial: Make a standalone host into a Slurm client",
+            "text": "Cluster Bringup4 Tutorial: Make a standalone host into a Slurm client 9 opens",
+            "kind": "",
+            "opens": 9
+          },
+          {
+            "href": "/projects/cluster-bringup/docs/docs/app_server_tuning/README.md",
+            "title": "App server performance tuning",
+            "text": "Cluster Bringup5 App server performance tuning 7 opens",
+            "kind": "",
+            "opens": 7
+          },
+          {
+            "href": "/projects/cluster-bringup/docs/docs/app_server_tuning/how-to/apply-md-tuning.md",
+            "title": "Apply the md0 tuning",
+            "text": "Cluster Bringup6 Apply the md0 tuning 6 opens",
+            "kind": "",
+            "opens": 6
+          }
+        ]
+      }
+    },
+    {
+      "name": "Browse documents paginates the complete alphabetical document library",
+      "status": "passed",
+      "detail": {
+        "expected": 92,
+        "documents": 92,
+        "pages": [
+          {
+            "url": "http://127.0.0.1:8001/?view=all#documents",
+            "documents": 30
+          },
+          {
+            "url": "http://127.0.0.1:8001/search?view=all&offset=30",
+            "documents": 30
+          },
+          {
+            "url": "http://127.0.0.1:8001/search?view=all&offset=60",
+            "documents": 30
+          },
+          {
+            "url": "http://127.0.0.1:8001/search?view=all&offset=90",
+            "documents": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "Empty-query project filters auto-submit and browse real matching documents",
+      "status": "passed",
+      "detail": {
+        "url": "http://127.0.0.1:8001/search?view=all&q=&project=documentation-pipeline",
+        "documents": 7
+      }
+    },
+    {
+      "name": "Search and automatic filter navigation retain one query and matching scope",
+      "status": "passed",
+      "detail": {
+        "url": "http://127.0.0.1:8001/search?view=all&q=configuration&project=cluster-bringup",
+        "results": 30
+      }
+    },
+    {
+      "name": "Clear search retains filters and Clear filters retains the query",
+      "status": "passed",
+      "detail": {
+        "url": "http://127.0.0.1:8001/search?q=configuration&view=all&offset=0"
+      }
+    },
+    {
+      "name": "Filter chips remove their own constraint while retaining query and other filters",
+      "status": "passed",
+      "detail": {
+        "availableFacets": {
+          "topic": "",
+          "kind": ""
+        },
+        "tested": [
+          {
+            "key": "project",
+            "href": "/search?q=configuration&topic=qa-unavailable-topic&kind=qa-unavailable-type&view=all&offset=0"
+          },
+          {
+            "key": "topic",
+            "href": "/search?q=configuration&project=documentation-pipeline&kind=qa-unavailable-type&view=all&offset=0"
+          },
+          {
+            "key": "kind",
+            "href": "/search?q=configuration&project=documentation-pipeline&topic=qa-unavailable-topic&view=all&offset=0"
+          }
+        ],
+        "note": "Published sources have no topic/type facets; explicit unavailable URL values verify visible removable controls without fabricating content classifications."
+      }
+    },
+    {
+      "name": "Active-project-only navigation retains sentence-style names and command spelling",
+      "status": "passed",
+      "detail": [
+        {
+          "href": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/how-to/launch-codex-for-existing-repository.md",
+          "title": "Launch Codex for an existing group repository"
+        },
+        {
+          "href": "/projects/cluster-bringup/docs/docs/cmsh_setup/tutorial.md",
+          "title": "Connect cmsh from a non-BCM host"
+        }
+      ]
+    },
+    {
+      "name": "desktop single popular carousel remains readable and contained",
+      "status": "passed",
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "cards": [
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 273,
+            "right": 553,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 569,
+            "right": 849,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 865,
+            "right": 1145,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 1161,
+            "right": 1441,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 1457,
+            "right": 1737,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 1753,
+            "right": 2033,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          }
+        ],
+        "grids": [
+          {
+            "clientWidth": 1107,
+            "scrollWidth": 1768,
+            "overflowX": "auto"
+          }
+        ],
+        "filters": [
+          {
+            "label": "project",
+            "height": 44,
+            "left": 269,
+            "right": 627.328125
+          }
+        ]
+      }
+    },
+    {
+      "name": "compact-desktop single popular carousel remains readable and contained",
+      "status": "passed",
+      "detail": {
+        "width": 1280,
+        "scrollWidth": 1265,
+        "cards": [
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 273,
+            "right": 553,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 569,
+            "right": 849,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 865,
+            "right": 1145,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 1161,
+            "right": 1441,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 1457,
+            "right": 1737,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 1753,
+            "right": 2033,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          }
+        ],
+        "grids": [
+          {
+            "clientWidth": 947,
+            "scrollWidth": 1768,
+            "overflowX": "auto"
+          }
+        ],
+        "filters": [
+          {
+            "label": "project",
+            "height": 44,
+            "left": 269,
+            "right": 574
+          }
+        ]
+      }
+    },
+    {
+      "name": "tablet single popular carousel remains readable and contained",
+      "status": "passed",
+      "detail": {
+        "width": 768,
+        "scrollWidth": 753,
+        "cards": [
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 43,
+            "right": 323,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 339,
+            "right": 619,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 635,
+            "right": 915,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 931,
+            "right": 1211,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 1227,
+            "right": 1507,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 177.375,
+            "width": 280,
+            "left": 1523,
+            "right": 1803,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          }
+        ],
+        "grids": [
+          {
+            "clientWidth": 675,
+            "scrollWidth": 1768,
+            "overflowX": "auto"
+          }
+        ],
+        "filters": [
+          {
+            "label": "project",
+            "height": 44,
+            "left": 39,
+            "right": 253.328125
+          }
+        ]
+      }
+    },
+    {
+      "name": "phone single popular carousel remains readable and contained",
+      "status": "passed",
+      "detail": {
+        "width": 390,
+        "scrollWidth": 375,
+        "cards": [
+          {
+            "height": 168,
+            "width": 287.75,
+            "left": 24,
+            "right": 311.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 168,
+            "width": 287.75,
+            "left": 327.75,
+            "right": 615.5,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 168,
+            "width": 287.75,
+            "left": 631.5,
+            "right": 919.25,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 168,
+            "width": 287.75,
+            "left": 935.25,
+            "right": 1223,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 168,
+            "width": 287.75,
+            "left": 1239,
+            "right": 1526.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 168,
+            "width": 287.75,
+            "left": 1542.75,
+            "right": 1830.5,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          }
+        ],
+        "grids": [
+          {
+            "clientWidth": 335,
+            "scrollWidth": 1815,
+            "overflowX": "auto"
+          }
+        ],
+        "filters": [
+          {
+            "label": "project",
+            "height": 44,
+            "left": 20,
+            "right": 355
+          }
+        ]
+      }
+    },
+    {
+      "name": "narrow-phone single popular carousel remains readable and contained",
+      "status": "passed",
+      "detail": {
+        "width": 320,
+        "scrollWidth": 305,
+        "cards": [
+          {
+            "height": 186.5625,
+            "width": 226.15625,
+            "left": 24,
+            "right": 250.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 186.5625,
+            "width": 226.15625,
+            "left": 266.15625,
+            "right": 492.3125,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 186.5625,
+            "width": 226.15625,
+            "left": 508.3125,
+            "right": 734.46875,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 186.5625,
+            "width": 226.15625,
+            "left": 750.46875,
+            "right": 976.625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 186.5625,
+            "width": 226.15625,
+            "left": 992.625,
+            "right": 1218.78125,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 186.5625,
+            "width": 226.15625,
+            "left": 1234.78125,
+            "right": 1460.9375,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          }
+        ],
+        "grids": [
+          {
+            "clientWidth": 265,
+            "scrollWidth": 1445,
+            "overflowX": "auto"
+          }
+        ],
+        "filters": [
+          {
+            "label": "project",
+            "height": 44,
+            "left": 20,
+            "right": 285
+          }
+        ]
+      }
+    },
+    {
+      "name": "Native carousel controls and cards retain keyboard focus, contrast and reduced-motion support",
+      "status": "passed",
+      "detail": {
+        "focus": {
+          "focused": true,
+          "width": 2,
+          "style": "solid",
+          "animation": "none"
+        },
+        "contrast": [
+          {
+            "className": "document-card-project",
+            "ratio": 6.108865559643775
+          },
+          {
+            "className": "H3",
+            "ratio": 17.40432753274219
+          },
+          {
+            "className": "document-card-opens",
+            "ratio": 15.000750253814065
+          }
+        ],
+        "href": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md"
+      }
+    },
+    {
+      "name": "Native touch swiping moves the carousel and a card tap opens its document",
+      "status": "passed",
+      "detail": {
+        "href": "/projects/documentation-pipeline/docs/docs/tutorials/adopt.md"
+      }
+    },
+    {
+      "name": "Theme switch supports keyboard selection and persists across reloads and routes",
+      "status": "passed",
+      "detail": {
+        "default": "dark",
+        "keyboard": [
+          "Enter",
+          "Space"
+        ],
+        "reloads": [
+          "light",
+          "dark"
+        ],
+        "routePersistence": true
+      }
+    },
+    {
+      "name": "dark theme keeps discovery, search and reader contrast and responsive header containment",
+      "status": "passed",
+      "detail": [
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "route": "/",
+          "metrics": {
+            "width": 1440,
+            "clientWidth": 1425,
+            "scrollWidth": 1425,
+            "headerTop": 0,
+            "headerBottom": 48,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".document-card h3",
+                "ratio": 17.40432753274219
+              },
+              {
+                "selector": ".document-card-project",
+                "ratio": 6.108865559643775
+              },
+              {
+                "selector": ".document-card-opens",
+                "ratio": 15.000750253814065
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "",
+                "left": 252,
+                "right": 313.90625,
+                "top": 15,
+                "bottom": 33,
+                "width": 61.90625,
+                "height": 18
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 1078.875,
+                "right": 1225.640625,
+                "top": 2,
+                "bottom": 46,
+                "width": 146.765625,
+                "height": 44
+              },
+              {
+                "tag": "A",
+                "className": "topbar-help",
+                "left": 1261.640625,
+                "right": 1393,
+                "top": 15,
+                "bottom": 33,
+                "width": 131.359375,
+                "height": 18
+              }
+            ],
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "route": "/search?q=configuration",
+          "metrics": {
+            "width": 1440,
+            "clientWidth": 1425,
+            "scrollWidth": 1425,
+            "headerTop": 0,
+            "headerBottom": 48,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".search-result h3 a",
+                "ratio": 7.831880016218948
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "",
+                "left": 252,
+                "right": 313.90625,
+                "top": 15,
+                "bottom": 33,
+                "width": 61.90625,
+                "height": 18
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 1078.875,
+                "right": 1225.640625,
+                "top": 2,
+                "bottom": 46,
+                "width": 146.765625,
+                "height": 44
+              },
+              {
+                "tag": "A",
+                "className": "topbar-help",
+                "left": 1261.640625,
+                "right": 1393,
+                "top": 15,
+                "bottom": 33,
+                "width": 131.359375,
+                "height": 18
+              }
+            ],
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "route": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+          "metrics": {
+            "width": 1440,
+            "clientWidth": 1425,
+            "scrollWidth": 1425,
+            "headerTop": 0,
+            "headerBottom": 48,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".prose p",
+                "ratio": 16.275267230207366
+              },
+              {
+                "selector": ".prose a",
+                "ratio": 7.831880016218948
+              },
+              {
+                "selector": ".prose code",
+                "ratio": 7.218565107372482
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "",
+                "left": 252,
+                "right": 313.90625,
+                "top": 15,
+                "bottom": 33,
+                "width": 61.90625,
+                "height": 18
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 1078.875,
+                "right": 1225.640625,
+                "top": 2,
+                "bottom": 46,
+                "width": 146.765625,
+                "height": 44
+              },
+              {
+                "tag": "A",
+                "className": "topbar-help",
+                "left": 1261.640625,
+                "right": 1393,
+                "top": 15,
+                "bottom": 33,
+                "width": 131.359375,
+                "height": 18
+              }
+            ],
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "route": "/",
+          "metrics": {
+            "width": 1280,
+            "clientWidth": 1265,
+            "scrollWidth": 1265,
+            "headerTop": 0,
+            "headerBottom": 48,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".document-card h3",
+                "ratio": 17.40432753274219
+              },
+              {
+                "selector": ".document-card-project",
+                "ratio": 6.108865559643775
+              },
+              {
+                "selector": ".document-card-opens",
+                "ratio": 15.000750253814065
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "",
+                "left": 252,
+                "right": 313.90625,
+                "top": 15,
+                "bottom": 33,
+                "width": 61.90625,
+                "height": 18
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 918.875,
+                "right": 1065.640625,
+                "top": 2,
+                "bottom": 46,
+                "width": 146.765625,
+                "height": 44
+              },
+              {
+                "tag": "A",
+                "className": "topbar-help",
+                "left": 1101.640625,
+                "right": 1233,
+                "top": 15,
+                "bottom": 33,
+                "width": 131.359375,
+                "height": 18
+              }
+            ],
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "route": "/search?q=configuration",
+          "metrics": {
+            "width": 1280,
+            "clientWidth": 1265,
+            "scrollWidth": 1265,
+            "headerTop": 0,
+            "headerBottom": 48,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".search-result h3 a",
+                "ratio": 7.831880016218948
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "",
+                "left": 252,
+                "right": 313.90625,
+                "top": 15,
+                "bottom": 33,
+                "width": 61.90625,
+                "height": 18
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 918.875,
+                "right": 1065.640625,
+                "top": 2,
+                "bottom": 46,
+                "width": 146.765625,
+                "height": 44
+              },
+              {
+                "tag": "A",
+                "className": "topbar-help",
+                "left": 1101.640625,
+                "right": 1233,
+                "top": 15,
+                "bottom": 33,
+                "width": 131.359375,
+                "height": 18
+              }
+            ],
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "route": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+          "metrics": {
+            "width": 1280,
+            "clientWidth": 1265,
+            "scrollWidth": 1265,
+            "headerTop": 0,
+            "headerBottom": 48,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".prose p",
+                "ratio": 16.275267230207366
+              },
+              {
+                "selector": ".prose a",
+                "ratio": 7.831880016218948
+              },
+              {
+                "selector": ".prose code",
+                "ratio": 7.218565107372482
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "",
+                "left": 252,
+                "right": 313.90625,
+                "top": 15,
+                "bottom": 33,
+                "width": 61.90625,
+                "height": 18
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 918.875,
+                "right": 1065.640625,
+                "top": 2,
+                "bottom": 46,
+                "width": 146.765625,
+                "height": 44
+              },
+              {
+                "tag": "A",
+                "className": "topbar-help",
+                "left": 1101.640625,
+                "right": 1233,
+                "top": 15,
+                "bottom": 33,
+                "width": 131.359375,
+                "height": 18
+              }
+            ],
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "route": "/",
+          "metrics": {
+            "width": 768,
+            "clientWidth": 753,
+            "scrollWidth": 753,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".document-card h3",
+                "ratio": 17.40432753274219
+              },
+              {
+                "selector": ".document-card-project",
+                "ratio": 6.108865559643775
+              },
+              {
+                "selector": ".document-card-opens",
+                "ratio": 15.000750253814065
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 22,
+                "right": 142.203125,
+                "top": 14,
+                "bottom": 38,
+                "width": 120.203125,
+                "height": 24
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 162.203125,
+                "right": 229.671875,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 584.234375,
+                "right": 731,
+                "top": 4,
+                "bottom": 48,
+                "width": 146.765625,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 377,
+              "right": 737,
+              "top": 60,
+              "bottom": 251,
+              "scrollWidth": 358,
+              "clientWidth": 358
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "route": "/search?q=configuration",
+          "metrics": {
+            "width": 768,
+            "clientWidth": 753,
+            "scrollWidth": 753,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".search-result h3 a",
+                "ratio": 7.831880016218948
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 22,
+                "right": 142.203125,
+                "top": 14,
+                "bottom": 38,
+                "width": 120.203125,
+                "height": 24
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 162.203125,
+                "right": 229.671875,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 584.234375,
+                "right": 731,
+                "top": 4,
+                "bottom": 48,
+                "width": 146.765625,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 377,
+              "right": 737,
+              "top": 60,
+              "bottom": 251,
+              "scrollWidth": 358,
+              "clientWidth": 358
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "route": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+          "metrics": {
+            "width": 768,
+            "clientWidth": 753,
+            "scrollWidth": 753,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".prose p",
+                "ratio": 16.275267230207366
+              },
+              {
+                "selector": ".prose a",
+                "ratio": 7.831880016218948
+              },
+              {
+                "selector": ".prose code",
+                "ratio": 7.218565107372482
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 22,
+                "right": 142.203125,
+                "top": 14,
+                "bottom": 38,
+                "width": 120.203125,
+                "height": 24
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 162.203125,
+                "right": 229.671875,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 584.234375,
+                "right": 731,
+                "top": 4,
+                "bottom": 48,
+                "width": 146.765625,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 377,
+              "right": 737,
+              "top": 60,
+              "bottom": 1008,
+              "scrollWidth": 343,
+              "clientWidth": 343
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "route": "/",
+          "metrics": {
+            "width": 390,
+            "clientWidth": 375,
+            "scrollWidth": 375,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".document-card h3",
+                "ratio": 17.40432753274219
+              },
+              {
+                "selector": ".document-card-project",
+                "ratio": 6.108865559643775
+              },
+              {
+                "selector": ".document-card-opens",
+                "ratio": 15.000750253814065
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 20,
+                "right": 140.203125,
+                "top": 14,
+                "bottom": 38,
+                "width": 120.203125,
+                "height": 24
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 179.875,
+                "right": 247.34375,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 287,
+                "right": 355,
+                "top": 4,
+                "bottom": 48,
+                "width": 68,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 16,
+              "right": 359,
+              "top": 60,
+              "bottom": 251,
+              "scrollWidth": 341,
+              "clientWidth": 341
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "route": "/search?q=configuration",
+          "metrics": {
+            "width": 390,
+            "clientWidth": 375,
+            "scrollWidth": 375,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".search-result h3 a",
+                "ratio": 7.831880016218948
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 20,
+                "right": 140.203125,
+                "top": 14,
+                "bottom": 38,
+                "width": 120.203125,
+                "height": 24
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 179.875,
+                "right": 247.34375,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 287,
+                "right": 355,
+                "top": 4,
+                "bottom": 48,
+                "width": 68,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 16,
+              "right": 359,
+              "top": 60,
+              "bottom": 251,
+              "scrollWidth": 341,
+              "clientWidth": 341
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "route": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+          "metrics": {
+            "width": 390,
+            "clientWidth": 375,
+            "scrollWidth": 375,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".prose p",
+                "ratio": 16.275267230207366
+              },
+              {
+                "selector": ".prose a",
+                "ratio": 7.831880016218948
+              },
+              {
+                "selector": ".prose code",
+                "ratio": 7.218565107372482
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 20,
+                "right": 140.203125,
+                "top": 14,
+                "bottom": 38,
+                "width": 120.203125,
+                "height": 24
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 179.875,
+                "right": 247.34375,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 287,
+                "right": 355,
+                "top": 4,
+                "bottom": 48,
+                "width": 68,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 16,
+              "right": 359,
+              "top": 60,
+              "bottom": 828,
+              "scrollWidth": 326,
+              "clientWidth": 326
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "route": "/",
+          "metrics": {
+            "width": 320,
+            "clientWidth": 305,
+            "scrollWidth": 305,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".document-card h3",
+                "ratio": 17.40432753274219
+              },
+              {
+                "selector": ".document-card-project",
+                "ratio": 6.108865559643775
+              },
+              {
+                "selector": ".document-card-opens",
+                "ratio": 15.000750253814065
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 20,
+                "right": 109.53125,
+                "top": 8.40625,
+                "bottom": 43.59375,
+                "width": 89.53125,
+                "height": 35.1875
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 129.53125,
+                "right": 197,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 217,
+                "right": 285,
+                "top": 4,
+                "bottom": 48,
+                "width": 68,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 16,
+              "right": 289,
+              "top": 60,
+              "bottom": 251,
+              "scrollWidth": 271,
+              "clientWidth": 271
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "route": "/search?q=configuration",
+          "metrics": {
+            "width": 320,
+            "clientWidth": 305,
+            "scrollWidth": 305,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".search-result h3 a",
+                "ratio": 7.831880016218948
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 20,
+                "right": 109.53125,
+                "top": 8.40625,
+                "bottom": 43.59375,
+                "width": 89.53125,
+                "height": 35.1875
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 129.53125,
+                "right": 197,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 217,
+                "right": 285,
+                "top": 4,
+                "bottom": 48,
+                "width": 68,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 16,
+              "right": 289,
+              "top": 60,
+              "bottom": 251,
+              "scrollWidth": 271,
+              "clientWidth": 271
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "route": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+          "metrics": {
+            "width": 320,
+            "clientWidth": 305,
+            "scrollWidth": 305,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 18.883060964594996
+              },
+              {
+                "selector": ".prose p",
+                "ratio": 16.275267230207366
+              },
+              {
+                "selector": ".prose a",
+                "ratio": 7.831880016218948
+              },
+              {
+                "selector": ".prose code",
+                "ratio": 7.218565107372482
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 18.099852162484677
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 20,
+                "right": 109.53125,
+                "top": 8.40625,
+                "bottom": 43.59375,
+                "width": 89.53125,
+                "height": 35.1875
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 129.53125,
+                "right": 197,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 217,
+                "right": 285,
+                "top": 4,
+                "bottom": 48,
+                "width": 68,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 16,
+              "right": 289,
+              "top": 60,
+              "bottom": 828,
+              "scrollWidth": 256,
+              "clientWidth": 256
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 8.709895109112436
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        }
+      ]
+    },
+    {
+      "name": "light theme keeps discovery, search and reader contrast and responsive header containment",
+      "status": "passed",
+      "detail": [
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "route": "/",
+          "metrics": {
+            "width": 1440,
+            "clientWidth": 1425,
+            "scrollWidth": 1425,
+            "headerTop": 0,
+            "headerBottom": 48,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".document-card h3",
+                "ratio": 14.59322338694774
+              },
+              {
+                "selector": ".document-card-project",
+                "ratio": 6.424995482321328
+              },
+              {
+                "selector": ".document-card-opens",
+                "ratio": 14.59322338694774
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "",
+                "left": 252,
+                "right": 313.90625,
+                "top": 15,
+                "bottom": 33,
+                "width": 61.90625,
+                "height": 18
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 1078.875,
+                "right": 1225.640625,
+                "top": 2,
+                "bottom": 46,
+                "width": 146.765625,
+                "height": 44
+              },
+              {
+                "tag": "A",
+                "className": "topbar-help",
+                "left": 1261.640625,
+                "right": 1393,
+                "top": 15,
+                "bottom": 33,
+                "width": 131.359375,
+                "height": 18
+              }
+            ],
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "route": "/search?q=configuration",
+          "metrics": {
+            "width": 1440,
+            "clientWidth": 1425,
+            "scrollWidth": 1425,
+            "headerTop": 0,
+            "headerBottom": 48,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".search-result h3 a",
+                "ratio": 10.652889527319804
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "",
+                "left": 252,
+                "right": 313.90625,
+                "top": 15,
+                "bottom": 33,
+                "width": 61.90625,
+                "height": 18
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 1078.875,
+                "right": 1225.640625,
+                "top": 2,
+                "bottom": 46,
+                "width": 146.765625,
+                "height": 44
+              },
+              {
+                "tag": "A",
+                "className": "topbar-help",
+                "left": 1261.640625,
+                "right": 1393,
+                "top": 15,
+                "bottom": 33,
+                "width": 131.359375,
+                "height": 18
+              }
+            ],
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "route": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+          "metrics": {
+            "width": 1440,
+            "clientWidth": 1425,
+            "scrollWidth": 1425,
+            "headerTop": 0,
+            "headerBottom": 48,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".prose p",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".prose a",
+                "ratio": 10.652889527319804
+              },
+              {
+                "selector": ".prose code",
+                "ratio": 9.771222420443749
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "",
+                "left": 252,
+                "right": 313.90625,
+                "top": 15,
+                "bottom": 33,
+                "width": 61.90625,
+                "height": 18
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 1078.875,
+                "right": 1225.640625,
+                "top": 2,
+                "bottom": 46,
+                "width": 146.765625,
+                "height": 44
+              },
+              {
+                "tag": "A",
+                "className": "topbar-help",
+                "left": 1261.640625,
+                "right": 1393,
+                "top": 15,
+                "bottom": 33,
+                "width": 131.359375,
+                "height": 18
+              }
+            ],
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "route": "/",
+          "metrics": {
+            "width": 1280,
+            "clientWidth": 1265,
+            "scrollWidth": 1265,
+            "headerTop": 0,
+            "headerBottom": 48,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".document-card h3",
+                "ratio": 14.59322338694774
+              },
+              {
+                "selector": ".document-card-project",
+                "ratio": 6.424995482321328
+              },
+              {
+                "selector": ".document-card-opens",
+                "ratio": 14.59322338694774
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "",
+                "left": 252,
+                "right": 313.90625,
+                "top": 15,
+                "bottom": 33,
+                "width": 61.90625,
+                "height": 18
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 918.875,
+                "right": 1065.640625,
+                "top": 2,
+                "bottom": 46,
+                "width": 146.765625,
+                "height": 44
+              },
+              {
+                "tag": "A",
+                "className": "topbar-help",
+                "left": 1101.640625,
+                "right": 1233,
+                "top": 15,
+                "bottom": 33,
+                "width": 131.359375,
+                "height": 18
+              }
+            ],
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "route": "/search?q=configuration",
+          "metrics": {
+            "width": 1280,
+            "clientWidth": 1265,
+            "scrollWidth": 1265,
+            "headerTop": 0,
+            "headerBottom": 48,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".search-result h3 a",
+                "ratio": 10.652889527319804
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "",
+                "left": 252,
+                "right": 313.90625,
+                "top": 15,
+                "bottom": 33,
+                "width": 61.90625,
+                "height": 18
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 918.875,
+                "right": 1065.640625,
+                "top": 2,
+                "bottom": 46,
+                "width": 146.765625,
+                "height": 44
+              },
+              {
+                "tag": "A",
+                "className": "topbar-help",
+                "left": 1101.640625,
+                "right": 1233,
+                "top": 15,
+                "bottom": 33,
+                "width": 131.359375,
+                "height": 18
+              }
+            ],
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 900
+          },
+          "route": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+          "metrics": {
+            "width": 1280,
+            "clientWidth": 1265,
+            "scrollWidth": 1265,
+            "headerTop": 0,
+            "headerBottom": 48,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".prose p",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".prose a",
+                "ratio": 10.652889527319804
+              },
+              {
+                "selector": ".prose code",
+                "ratio": 9.771222420443749
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "",
+                "left": 252,
+                "right": 313.90625,
+                "top": 15,
+                "bottom": 33,
+                "width": 61.90625,
+                "height": 18
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 918.875,
+                "right": 1065.640625,
+                "top": 2,
+                "bottom": 46,
+                "width": 146.765625,
+                "height": 44
+              },
+              {
+                "tag": "A",
+                "className": "topbar-help",
+                "left": 1101.640625,
+                "right": 1233,
+                "top": 15,
+                "bottom": 33,
+                "width": 131.359375,
+                "height": 18
+              }
+            ],
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "route": "/",
+          "metrics": {
+            "width": 768,
+            "clientWidth": 753,
+            "scrollWidth": 753,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".document-card h3",
+                "ratio": 14.59322338694774
+              },
+              {
+                "selector": ".document-card-project",
+                "ratio": 6.424995482321328
+              },
+              {
+                "selector": ".document-card-opens",
+                "ratio": 14.59322338694774
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 22,
+                "right": 142.203125,
+                "top": 14,
+                "bottom": 38,
+                "width": 120.203125,
+                "height": 24
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 162.203125,
+                "right": 229.671875,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 584.234375,
+                "right": 731,
+                "top": 4,
+                "bottom": 48,
+                "width": 146.765625,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 377,
+              "right": 737,
+              "top": 60,
+              "bottom": 251,
+              "scrollWidth": 358,
+              "clientWidth": 358
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "route": "/search?q=configuration",
+          "metrics": {
+            "width": 768,
+            "clientWidth": 753,
+            "scrollWidth": 753,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".search-result h3 a",
+                "ratio": 10.652889527319804
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 22,
+                "right": 142.203125,
+                "top": 14,
+                "bottom": 38,
+                "width": 120.203125,
+                "height": 24
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 162.203125,
+                "right": 229.671875,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 584.234375,
+                "right": 731,
+                "top": 4,
+                "bottom": 48,
+                "width": 146.765625,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 377,
+              "right": 737,
+              "top": 60,
+              "bottom": 251,
+              "scrollWidth": 358,
+              "clientWidth": 358
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "route": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+          "metrics": {
+            "width": 768,
+            "clientWidth": 753,
+            "scrollWidth": 753,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".prose p",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".prose a",
+                "ratio": 10.652889527319804
+              },
+              {
+                "selector": ".prose code",
+                "ratio": 9.771222420443749
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 22,
+                "right": 142.203125,
+                "top": 14,
+                "bottom": 38,
+                "width": 120.203125,
+                "height": 24
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 162.203125,
+                "right": 229.671875,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 584.234375,
+                "right": 731,
+                "top": 4,
+                "bottom": 48,
+                "width": 146.765625,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 377,
+              "right": 737,
+              "top": 60,
+              "bottom": 1008,
+              "scrollWidth": 343,
+              "clientWidth": 343
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "route": "/",
+          "metrics": {
+            "width": 390,
+            "clientWidth": 375,
+            "scrollWidth": 375,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".document-card h3",
+                "ratio": 14.59322338694774
+              },
+              {
+                "selector": ".document-card-project",
+                "ratio": 6.424995482321328
+              },
+              {
+                "selector": ".document-card-opens",
+                "ratio": 14.59322338694774
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 20,
+                "right": 140.203125,
+                "top": 14,
+                "bottom": 38,
+                "width": 120.203125,
+                "height": 24
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 179.875,
+                "right": 247.34375,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 287,
+                "right": 355,
+                "top": 4,
+                "bottom": 48,
+                "width": 68,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 16,
+              "right": 359,
+              "top": 60,
+              "bottom": 251,
+              "scrollWidth": 341,
+              "clientWidth": 341
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "route": "/search?q=configuration",
+          "metrics": {
+            "width": 390,
+            "clientWidth": 375,
+            "scrollWidth": 375,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".search-result h3 a",
+                "ratio": 10.652889527319804
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 20,
+                "right": 140.203125,
+                "top": 14,
+                "bottom": 38,
+                "width": 120.203125,
+                "height": 24
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 179.875,
+                "right": 247.34375,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 287,
+                "right": 355,
+                "top": 4,
+                "bottom": 48,
+                "width": 68,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 16,
+              "right": 359,
+              "top": 60,
+              "bottom": 251,
+              "scrollWidth": 341,
+              "clientWidth": 341
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "route": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+          "metrics": {
+            "width": 390,
+            "clientWidth": 375,
+            "scrollWidth": 375,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".prose p",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".prose a",
+                "ratio": 10.652889527319804
+              },
+              {
+                "selector": ".prose code",
+                "ratio": 9.771222420443749
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 20,
+                "right": 140.203125,
+                "top": 14,
+                "bottom": 38,
+                "width": 120.203125,
+                "height": 24
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 179.875,
+                "right": 247.34375,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 287,
+                "right": 355,
+                "top": 4,
+                "bottom": 48,
+                "width": 68,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 16,
+              "right": 359,
+              "top": 60,
+              "bottom": 828,
+              "scrollWidth": 326,
+              "clientWidth": 326
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "route": "/",
+          "metrics": {
+            "width": 320,
+            "clientWidth": 305,
+            "scrollWidth": 305,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".document-card h3",
+                "ratio": 14.59322338694774
+              },
+              {
+                "selector": ".document-card-project",
+                "ratio": 6.424995482321328
+              },
+              {
+                "selector": ".document-card-opens",
+                "ratio": 14.59322338694774
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 20,
+                "right": 109.53125,
+                "top": 8.40625,
+                "bottom": 43.59375,
+                "width": 89.53125,
+                "height": 35.1875
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 129.53125,
+                "right": 197,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 217,
+                "right": 285,
+                "top": 4,
+                "bottom": 48,
+                "width": 68,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 16,
+              "right": 289,
+              "top": 60,
+              "bottom": 251,
+              "scrollWidth": 271,
+              "clientWidth": 271
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "route": "/search?q=configuration",
+          "metrics": {
+            "width": 320,
+            "clientWidth": 305,
+            "scrollWidth": 305,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".search-result h3 a",
+                "ratio": 10.652889527319804
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 20,
+                "right": 109.53125,
+                "top": 8.40625,
+                "bottom": 43.59375,
+                "width": 89.53125,
+                "height": 35.1875
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 129.53125,
+                "right": 197,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 217,
+                "right": 285,
+                "top": 4,
+                "bottom": 48,
+                "width": 68,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 16,
+              "right": 289,
+              "top": 60,
+              "bottom": 251,
+              "scrollWidth": 271,
+              "clientWidth": 271
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "route": "/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/troubleshoot-connection.md",
+          "metrics": {
+            "width": 320,
+            "clientWidth": 305,
+            "scrollWidth": 305,
+            "headerTop": 0,
+            "headerBottom": 52,
+            "contrast": [
+              {
+                "selector": "h1",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".prose p",
+                "ratio": 15.909984431773273
+              },
+              {
+                "selector": ".prose a",
+                "ratio": 10.652889527319804
+              },
+              {
+                "selector": ".prose code",
+                "ratio": 9.771222420443749
+              },
+              {
+                "selector": "[data-theme-toggle]",
+                "ratio": 15.909984431773273
+              }
+            ],
+            "header": [
+              {
+                "tag": "A",
+                "className": "brand",
+                "left": 20,
+                "right": 109.53125,
+                "top": 8.40625,
+                "bottom": 43.59375,
+                "width": 89.53125,
+                "height": 35.1875
+              },
+              {
+                "tag": "SUMMARY",
+                "className": "",
+                "left": 129.53125,
+                "right": 197,
+                "top": 4,
+                "bottom": 48,
+                "width": 67.46875,
+                "height": 44
+              },
+              {
+                "tag": "BUTTON",
+                "className": "theme-toggle",
+                "left": 217,
+                "right": 285,
+                "top": 4,
+                "bottom": 48,
+                "width": 68,
+                "height": 44
+              }
+            ],
+            "menu": {
+              "left": 16,
+              "right": 289,
+              "top": 60,
+              "bottom": 828,
+              "scrollWidth": 256,
+              "clientWidth": 256
+            },
+            "headerFocus": {
+              "width": 2,
+              "style": "solid",
+              "ratio": 10.652889527319804
+            }
+          },
+          "focus": {
+            "focused": true,
+            "width": 2,
+            "style": "solid"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Blocked browser storage falls back to dark and leaves the theme switch usable",
+      "status": "passed",
+      "detail": {
+        "fallback": "dark",
+        "inPageToggle": "light",
+        "errors": []
+      }
+    },
+    {
+      "name": "JavaScript-free discovery search and visible filters submit natively",
+      "status": "passed",
+      "detail": {
+        "url": "http://127.0.0.1:8001/search?project=documentation-pipeline&view=all&offset=0"
+      }
+    },
+    {
+      "name": "Discovery interactions produce no browser JavaScript errors",
+      "status": "passed"
+    }
+  ],
+  "captures": [
+    ".impeccable/review/simplification-desktop-document-library.png",
+    ".impeccable/review/simplification-project-filtered-library.png",
+    ".impeccable/review/simplification-query-and-filter-results.png",
+    ".impeccable/review/simplification-desktop-home.png",
+    ".impeccable/review/simplification-compact-desktop-home.png",
+    ".impeccable/review/simplification-tablet-home.png",
+    ".impeccable/review/simplification-phone-home.png",
+    ".impeccable/review/simplification-narrow-phone-home.png",
+    ".impeccable/review/simplification-phone-carousel-keyboard-reduced-motion.png",
+    ".impeccable/review/simplification-dark-home-1440.png",
+    ".impeccable/review/simplification-dark-search-1440.png",
+    ".impeccable/review/simplification-dark-reader-1440.png",
+    ".impeccable/review/simplification-dark-home-1280.png",
+    ".impeccable/review/simplification-dark-search-1280.png",
+    ".impeccable/review/simplification-dark-reader-1280.png",
+    ".impeccable/review/simplification-dark-home-768.png",
+    ".impeccable/review/simplification-dark-search-768.png",
+    ".impeccable/review/simplification-dark-reader-768.png",
+    ".impeccable/review/simplification-dark-home-390.png",
+    ".impeccable/review/simplification-dark-search-390.png",
+    ".impeccable/review/simplification-dark-reader-390.png",
+    ".impeccable/review/simplification-dark-home-320.png",
+    ".impeccable/review/simplification-dark-search-320.png",
+    ".impeccable/review/simplification-dark-reader-320.png",
+    ".impeccable/review/simplification-light-home-1440.png",
+    ".impeccable/review/simplification-light-search-1440.png",
+    ".impeccable/review/simplification-light-reader-1440.png",
+    ".impeccable/review/simplification-light-home-1280.png",
+    ".impeccable/review/simplification-light-search-1280.png",
+    ".impeccable/review/simplification-light-reader-1280.png",
+    ".impeccable/review/simplification-light-home-768.png",
+    ".impeccable/review/simplification-light-search-768.png",
+    ".impeccable/review/simplification-light-reader-768.png",
+    ".impeccable/review/simplification-light-home-390.png",
+    ".impeccable/review/simplification-light-search-390.png",
+    ".impeccable/review/simplification-light-reader-390.png",
+    ".impeccable/review/simplification-light-home-320.png",
+    ".impeccable/review/simplification-light-search-320.png",
+    ".impeccable/review/simplification-light-reader-320.png"
+  ],
+  "pageErrors": [],
+  "browser": "151.0.7922.34",
+  "passed": 23,
+  "failed": 0
+}

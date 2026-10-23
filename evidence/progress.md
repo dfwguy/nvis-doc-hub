@@ -1,5 +1,53 @@
 # Implementation progress
 
+23 October, discovery refinement: one Explore popular documentation carousel now
+shows at most six documents ranked by actual shared all-time opens, including
+repeats. Zero history shows an honest empty message. The default has no
+alphabetical popularity substitute or extra project/type shelves. The user's
+latest clarification retains the one popular carousel, including keyboard/touch
+scrolling, 44px previous/next controls and 88% phone cards. The global Projects
+sidebar list is removed; the Project dropdown chooses projects. Project/reader
+routes retain local category navigation under Document sections, without a
+source-project name list or project switcher in the sidebar.
+Project selection opens the existing 30-per-page vertical document library;
+search, filters, URLs, SQL and API/CLI/MCP retrieval retain their contracts.
+
+Display formatting changes only an initial prose letter. Technical tokens,
+acronyms, paths and commands such as `dpkg`, `grep`, `npm` and `apt` keep their
+spelling. Reader formatting affects only an initial plain-text heading node;
+stored HTML/Markdown, body prose, code, API content and anchors remain unchanged.
+Topic labels retain their authored meaning separately from Document type labels.
+
+A native KUI-guided Dark mode switch applies light/dark appearance immediately,
+persists `nvis-hub-theme` locally, defaults to dark and remains usable when
+storage is blocked. No JavaScript leaves the established dark surface usable.
+Light surfaces use readable dark text and Deep Green links/focus. No React
+migration or dependency install was performed.
+
+The corrected implementation passes 145 Python tests, Ruff lint, formatting
+(19 Python files), mypy (11 source modules) and diff checks. Its 23 focused
+browser checks pass in both themes at 1440, 1280, 768, 390 and 320 pixels.
+Corrected existing/live-search/category regressions pass 35/28/34 checks, for
+120 browser checks total. Dark desktop carousel and light phone captures are clean.
+The preceding review findings—light focus contrast, command casing and Topic-kind
+label separation—and the narrow mobile menu issues are resolved. The corrected
+Tasteskill inspector has zero findings; detector advisories and runtime contrast
+disposition are recorded in
+[refinement verification](discovery-refinement-verification.md), with
+[code review](discovery-refinement-code-review.md),
+[browser results](discovery-simplification-browser.json),
+[theme implementation](theme-implementation.md), and the
+[current checkpoint](../handoff/sessions/nvis-docs-hub/20261023T193823Z-discovery-refinement.md).
+
+As explicitly requested, `4682c9d` was confirmed pushed to `origin/development`
+and the worktree clean/zero ahead-behind before UI edits. This checkpoint
+accompanies the finished `development` refinement; use Git tracking for current
+remote synchronization. `main` remains the verified baseline. Main port 8000 is
+healthy after restart; port-8001 QA uses isolated data and does not pollute its
+opens. Authentic content remains 85 + 7 documents with source hashes unchanged.
+Imported packages and deferred access/publishing/deployment scope are preserved.
+Earlier entries below retain historical features and verification results.
+
 23 October, unified document discovery: one Browse documentation destination
 replaces the separate catalog/search choices. `/` and `/search` share a search,
 filter and document-browse surface. Browse documents opens the complete

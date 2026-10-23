@@ -1,7 +1,7 @@
 {% from 'components.html' import icon, brand, navigation with context %}
 <!doctype html>
-<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark"><title>{{ title }} · NVIS - OVA Docs</title><link rel="icon" type="image/svg+xml" href="/static/favicon.svg"><link rel="stylesheet" href="/static/hub.css"><script src="/static/hub.js" defer></script><script src="/static/live-search.js" defer></script><script src="/static/discovery.js" defer></script></head>
-<body>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark light"><title>{{ title|display_title }} · NVIS - OVA Docs</title><link rel="icon" type="image/svg+xml" href="/static/favicon.svg"><script src="/static/theme.js"></script><link rel="stylesheet" href="/static/hub.css"><link rel="stylesheet" href="/static/themes.css"><script src="/static/hub.js" defer></script><script src="/static/live-search.js" defer></script><script src="/static/discovery.js" defer></script></head>
+<body data-title-commands="{{ title_commands|join(' ') }}">
 <a class="skip-link" href="#main">Skip to content</a>
 <aside class="sidebar" aria-label="Documentation sidebar">
 {{ brand() }}
@@ -13,6 +13,7 @@
 <div class="desktop-context"><a href="/">NVIS - OVA</a><span>/</span><span>Documentation hub</span></div>
 <div class="mobile-brand">{{ brand() }}</div>
 <details class="mobile-menu"><summary aria-label="Open navigation">{{ icon('menu', 20) }}<span>Menu</span></summary><div class="mobile-menu-body">{{ navigation(projects, page, project, document, navigation_groups) }}<a class="mobile-help" href="/help">Using the hub</a></div></details>
+<button type="button" class="theme-toggle" role="switch" aria-checked="true" aria-label="Dark mode" data-theme-toggle hidden>{{ icon('moon',16) }}<span class="theme-toggle-track" aria-hidden="true"></span><span class="theme-toggle-label">Dark mode</span></button>
 <a class="topbar-help" href="/help#sources">Maintained in GitLab {{ icon('external', 13) }}</a>
 </header>
 <main class="sheet {{ 'reading-sheet' if page == 'reader' else '' }}" id="main" tabindex="-1">

@@ -76,6 +76,12 @@ async function checkDisclosure(group, input, prefix) {
     const inventories = [];
     for (const project of projects) {
       await visit(projectRoute(project.slug));
+      for (const scope of ['.sidebar', '.mobile-menu']) {
+        const nav = page.locator(scope);
+        assert.equal(await nav.locator('.nav-heading').innerText(), 'Document sections');
+        const links = await nav.locator('.project-nav-link').evaluateAll(nodes => nodes.map(node => node.getAttribute('href')));
+        assert.equal(links.length, 0, 'Document-section navigation has no global project-name list');
+      }
       const groups = page.locator('details.document-category');
       assert(await groups.count() > 0, `${project.slug}: native document disclosures exist`);
       assert.equal(await groups.locator('summary').count(), await groups.count(), 'Each category has one native summary');

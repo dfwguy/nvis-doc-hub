@@ -13,9 +13,16 @@ from fastapi.templating import Jinja2Templates
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from nvis_hub.navigation import group_navigation
+from nvis_hub.presentation import TITLE_COMMANDS, display_heading_html, display_title
 from nvis_hub.service import Hub
 
 PACKAGE = Path(__file__).parent
+KIND_LABELS = {
+    "how-to": "How-to guide",
+    "reference": "Reference",
+    "tutorial": "Tutorial",
+    "explanation": "Explanation",
+}
 SOURCE_LABELS = {"snapshot": "Source snapshot", "gitlab": "GitLab", "local": "Local source"}
 
 
@@ -42,13 +49,23 @@ def create_app(db_path: Path | str | None = None) -> FastAPI:
     app.state.hub = hub
     templates = Jinja2Templates(directory=str(PACKAGE / "templates"))
     templates.env.filters["display_date"] = display_date
-    templates.env.filters["reader_html"] = lambda html: html.replace(
-        "<table>",
-        '<p class="table-scroll-hint">Scroll horizontally to see all columns.</p>'
-        '<div class="table-scroll" tabindex="0" role="region" '
-        'aria-label="Scrollable reference table"><table>',
-    ).replace("</table>", "</table></div>")
-    templates.env.globals.update(doc_url=doc_url, source_labels=SOURCE_LABELS)
+    templates.env.filters["display_title"] = display_title
+    templates.env.filters["reader_html"] = lambda html: (
+        display_heading_html(html)
+        .replace(
+            "<table>",
+            '<p class="table-scroll-hint">Scroll horizontally to see all columns.</p>'
+            '<div class="table-scroll" tabindex="0" role="region" '
+            'aria-label="Scrollable reference table"><table>',
+        )
+        .replace("</table>", "</table></div>")
+    )
+    templates.env.globals.update(
+        doc_url=doc_url,
+        source_labels=SOURCE_LABELS,
+        title_commands=sorted(TITLE_COMMANDS),
+        kind_labels=KIND_LABELS,
+    )
     app.mount("/static", StaticFiles(directory=str(PACKAGE / "static")), name="static")
 
     @app.middleware("http")
@@ -141,7 +158,11 @@ def create_app(db_path: Path | str | None = None) -> FastAPI:
         active_filters = [
             {
                 "label": {"project": "Project", "topic": "Topic", "kind": "Document type"}[name],
-                "value": project_titles.get(value, value) if name == "project" else value,
+                "value": display_title(project_titles.get(value, value))
+                if name == "project"
+                else KIND_LABELS.get(value, display_title(value))
+                if name == "kind"
+                else display_title(value),
                 "url": url(**{name: "", "offset": 0}),
             }
             for name, value in filters.items()
@@ -149,54 +170,15 @@ def create_app(db_path: Path | str | None = None) -> FastAPI:
         ]
         shelves = []
         if discovering:
-            popular = hub.popular_documents(limit=6)
-            initial = popular or hub.browse_documents(limit=6)
-            if initial:
-                shelves.append(
-                    {
-                        "id": "popular" if popular else "explore",
-                        "title": "Popular documents" if popular else "Explore documentation",
-                        "description": (
-                            "Most opened across this hub. Counts include repeat opens."
-                            if popular
-                            else "Choose a document to get started. Popular documents appear as the hub is used."
-                        ),
-                        "documents": initial,
-                        "popular": bool(popular),
-                        "url": "/?view=all#documents",
-                    }
-                )
-            for mode, label, description in [
-                ("how-to", "How-to guides", "Practical steps for getting something done."),
-                ("reference", "Reference", "Look up commands, configuration, and system details."),
-            ]:
-                documents = hub.browse_documents(kind=mode, limit=6)
-                if documents:
-                    shelves.append(
-                        {
-                            "id": mode,
-                            "title": label,
-                            "description": description,
-                            "documents": documents,
-                            "popular": False,
-                            "url": url(kind=mode),
-                        }
-                    )
-            for item in hub.list_projects():
-                if len(shelves) >= 3:
-                    break
-                documents = hub.browse_documents(project=item["slug"], limit=6)
-                if documents:
-                    shelves.append(
-                        {
-                            "id": "project-" + item["slug"],
-                            "title": "From " + item["title"],
-                            "description": "Read documentation from this project.",
-                            "documents": documents,
-                            "popular": False,
-                            "url": url(project=item["slug"]),
-                        }
-                    )
+            shelves.append(
+                {
+                    "id": "popular",
+                    "title": "Explore popular documentation",
+                    "description": "Most opened across this hub, all time. Includes repeat opens.",
+                    "documents": hub.popular_documents(limit=6),
+                    "popular": True,
+                }
+            )
         document_count = hub.document_count(**scope)
         return page(
             request,

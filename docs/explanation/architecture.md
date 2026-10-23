@@ -24,10 +24,13 @@ all-time counters retain no reader identifiers, survive publication replacement,
 and join current documents so deleted pages cannot rank. CLI/MCP/API retrieval
 does not increment these counters. Counts are shared only within one database.
 
-Kaizen UI's documented browse, search, filter, card, and carousel patterns guide
+Kaizen UI's documented browse, search, filter, card, carousel, and switch patterns guide
 the native server-rendered markup. Styles use documented semantic CSS token
 names with established dark-theme fallbacks. React components and their runtime
-CSS are not installed or represented as native Jinja components.
+CSS are not installed or represented as native Jinja components. A small external
+head script applies the saved light/dark preference before styles paint; an
+accessible native switch updates semantic theme tokens immediately. Display-title
+formatting is isolated from stored Markdown, heading anchors, and API responses.
 
 Acquisition reads either an HTTPS GitLab archive, an authentic revision-labelled
 snapshot, or a local development directory. Parsing finishes before the service

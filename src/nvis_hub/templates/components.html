@@ -8,6 +8,7 @@
 {% elif name == 'external' %}<path d="M14 3h7v7m0-7L10 14m0-9H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/>
 {% elif name == 'chevron' %}<path d="m9 5 7 7-7 7"/>
 {% elif name == 'close' %}<path d="m6 6 12 12M18 6 6 18"/>
+{% elif name == 'moon' %}<path d="M20.5 14.1A8.7 8.7 0 0 1 9.9 3.5 8.7 8.7 0 1 0 20.5 14.1Z"/>
 {% elif name == 'code' %}<path d="m8 5-6 7 6 7m8-14 6 7-6 7m-3-16-2 18"/>
 {% elif name == 'menu' %}<path d="M4 6h16M4 12h16M4 18h16"/>
 {% elif name == 'copy' %}<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/>
@@ -26,23 +27,21 @@
 <a href="/" {% if page in ['catalog', 'search'] %}aria-current="page"{% endif %}>{{ icon('search') }}Browse documentation</a>
 <a href="/sources" {% if page == 'sources' %}aria-current="page"{% endif %}>{{ icon('source') }}Source status</a>
 </nav>
-<nav class="project-navigation" aria-label="Project documentation">
-<div class="nav-heading">Projects</div>
-{% for item in projects %}<a class="project-nav-link" href="/projects/{{ item.slug }}" {% if project and project.slug == item.slug %}aria-current="{{ 'true' if document else 'page' }}"{% endif %}>{{ item.title }}</a>
-{% if project and project.slug == item.slug and navigation_groups %}
+{% if project and navigation_groups %}
+<nav class="project-navigation" aria-label="Document sections">
+<div class="nav-heading">Document sections</div>
 <div class="doc-tree">
 {% for group in navigation_groups %}<details class="nav-category" {% if group.active %}open{% endif %}>
-<summary>{{ icon('chevron',14) }}<span class="category-title">{{ group.label }}</span><span class="category-count" aria-label="{{ group.entries|length }} {{ 'page' if group.entries|length == 1 else 'pages' }}">{{ group.entries|length }}</span></summary>
-{% for entry in group.entries %}<a href="{{ entry.url }}" class="tree-link category-depth-{{ entry.depth }}" {% if entry.active %}aria-current="page"{% endif %}><span>{{ entry.title }}</span>{% if entry.context %}<span class="tree-context">{{ entry.context }}</span>{% endif %}</a>{% endfor %}
-</details>{% endfor %}</div>{% endif %}
-{% else %}<p class="nav-empty">Registered projects appear here.</p>{% endfor %}
-</nav>
+<summary>{{ icon('chevron',14) }}<span class="category-title">{{ group.label|display_title }}</span><span class="category-count" aria-label="{{ group.entries|length }} {{ 'page' if group.entries|length == 1 else 'pages' }}">{{ group.entries|length }}</span></summary>
+{% for entry in group.entries %}<a href="{{ entry.url }}" class="tree-link category-depth-{{ entry.depth }}" {% if entry.active %}aria-current="page"{% endif %}><span>{{ entry.title|display_title }}</span>{% if entry.context %}<span class="tree-context">{{ entry.context|display_title }}</span>{% endif %}</a>{% endfor %}
+</details>{% endfor %}</div></nav>
+{% endif %}
 {%- endmacro %}
 
 {% macro documentation_groups(groups) -%}
 <div class="document-list">{% for group in groups %}<details class="document-category" {% if group.active %}open{% endif %}>
-<summary><h3>{{ icon('chevron',18) }}<span class="category-title">{{ group.title }}</span><span class="category-count" aria-label="{{ group.entries|length }} {{ 'page' if group.entries|length == 1 else 'pages' }}">{{ group.entries|length }}</span></h3></summary>
-<div class="document-category-body">{% for entry in group.entries %}<a href="{{ entry.url }}" class="document-row category-depth-{{ entry.depth }}"><span><span class="category-entry-title">{{ entry.title }}</span>{% if entry.context %}<span class="document-context">{{ entry.context }}</span>{% endif %}</span><span class="document-row-path">{{ entry.path }}</span>{{ icon('arrow',16) }}</a>{% endfor %}</div>
+<summary><h3>{{ icon('chevron',18) }}<span class="category-title">{{ group.title|display_title }}</span><span class="category-count" aria-label="{{ group.entries|length }} {{ 'page' if group.entries|length == 1 else 'pages' }}">{{ group.entries|length }}</span></h3></summary>
+<div class="document-category-body">{% for entry in group.entries %}<a href="{{ entry.url }}" class="document-row category-depth-{{ entry.depth }}"><span><span class="category-entry-title">{{ entry.title|display_title }}</span>{% if entry.context %}<span class="document-context">{{ entry.context|display_title }}</span>{% endif %}</span><span class="document-row-path">{{ entry.path }}</span>{{ icon('arrow',16) }}</a>{% endfor %}</div>
 </details>{% endfor %}</div>
 {%- endmacro %}
 

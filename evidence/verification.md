@@ -1,6 +1,9 @@
 # Local implementation verification
 
-The current default is the **dark NVIDIA theme**: #111 canvas, #1a1a1a panels, light text and #76B900 accents. The light variant was rejected; current screenshots and runtime evidence show dark mode.
+The default is the **dark NVIDIA theme**: #111 canvas, #1a1a1a panels, light text
+and #76B900 accents. The user's later appearance request adds an optional light
+theme with white reading surfaces, dark text and Deep Green links/focus. The
+native Dark mode switch applies immediately and persists the choice locally.
 
 Brand correction: the running application now identifies as **NVIS - OVA** and
 uses the exact NVIDIA reference palette. The reference became reachable over
@@ -13,12 +16,36 @@ The existing singular GitLab repository now has published `main` and
 `development` branches; see [repository setup](repository-setup.md). `main`
 retains the verified application baseline. No production deployment was performed.
 
-23 October, unified discovery: `/` and `/search` share one Browse documentation
+23 October, discovery refinement: the default has one Explore popular
+documentation region with at most six genuinely opened documents in a single
+carousel. The user's latest clarification retains that carousel and removes the
+extra project/type rows. An unused hub has an honest empty-history message;
+project selection opens that project's vertical paginated library. The global
+Projects sidebar list is removed: Project dropdown chooses the project, and only
+project/reader routes show only local Document sections category navigation.
+Display formatting capitalizes an initial prose
+letter while preserving technical spelling, source content and anchors. The
+native KUI-guided light/dark switch defaults to dark and tolerates blocked storage.
+The corrected carousel/sidebar implementation passes 145 Python tests and
+120 browser checks: 23 focused across both themes and 1440/1280/768/390/320px,
+plus 35 existing, 28 live-search and 34 category regressions. Final results are
+recorded in the linked report.
+Before any refinement UI edit, `4682c9d` was confirmed pushed to
+`origin/development`, with a clean worktree and zero ahead/behind commits, as the
+user explicitly requested. See
+[complete refinement verification](discovery-refinement-verification.md),
+[theme implementation](theme-implementation.md),
+[independent review](discovery-refinement-code-review.md), and
+[browser results](discovery-simplification-browser.json). The checkpoint
+accompanies the finished `development` feature; Git tracking gives its remote state.
+
+Earlier 23 October, unified discovery: `/` and `/search` shared one Browse documentation
 surface with live section search, document browsing, URL-preserved filters and
-document shelves. The Python suite passes 94 tests. Shared all-time document
-opens drive genuine popularity; empty history uses Explore documentation.
-Browser QA uses an isolated database on port 8001, preserving the main instance's
-open counts. See [complete discovery verification](discovery-verification.md),
+document shelves. That checkpoint passed 94 Python tests and used an Explore
+documentation fallback before the current popular-only refinement. Shared
+all-time document opens continue to drive genuine popularity. Browser QA uses
+an isolated database on port 8001, preserving the main instance's open counts.
+See [complete discovery verification](discovery-verification.md),
 [KUI adaptation](discovery-kui-guidance.md),
 [independent code review](discovery-code-review.md), and
 [browser results](discovery-browser-review.json). This checkpoint accompanies the
@@ -42,10 +69,10 @@ python3.12 -m venv .venv
 ./scripts/dev.sh
 ```
 
-Open http://127.0.0.1:8000. The final discovery check found the main server healthy,
-serving the unified 92-document surface with Explore documentation and no stored
-popular opens. That empty counter state confirms isolation from the QA reader
-visits on port 8001. The environment, registrations, publications and server
+Open http://127.0.0.1:8000. The main server was restarted for the refinement and
+is healthy, serving the unified 92-document application. Browser QA runs against
+the separate port-8001 database, keeping its reader visits out of the user's
+main-instance open counts. The environment, registrations, publications and server
 were exercised in this session. Startup serves the persistent `data/hub.sqlite3`.
 The supplied seed command intentionally imports verified local snapshots so it
 also works without private-source network access. Refreshing a snapshot does not
@@ -77,9 +104,13 @@ Final integrated run:
 .venv/bin/mypy src/nvis_hub
 ```
 
-The final Python suite passes 94 tests. Ruff lint, formatting (17 Python files),
-mypy (10 source modules) and diff checks pass. Full feature results are in
-[discovery verification](discovery-verification.md).
+The corrected refinement's final integrated suite passes 145 Python tests,
+Ruff lint, formatting (19 Python files), mypy (11 source modules) and diff checks.
+The additional regression verifies reader-only current-project navigation. See
+[refinement verification](discovery-refinement-verification.md).
+The focused presentation suite passes 49 tests. The preceding unified-discovery
+checkpoint passed 94 Python tests, Ruff lint/formatting and mypy; its results
+remain in [discovery verification](discovery-verification.md).
 One upstream Starlette TestClient deprecation
 warning remains. Tests exercise imports/scopes, metadata,
 hosted nested links/assets, safe content and paths, snapshot integrity, title and
@@ -104,6 +135,14 @@ unified routes and successful web-only counting. API, CLI and MCP retrieval
 remain side-effect-free. The aggregate table stores project, path and count;
 it stores no identifier, cookie or user profile. Opens are recorded after a
 successful reader template render; failed renders and HEAD requests do not count.
+
+Refinement checks additionally cover initial-letter display formatting,
+technical-token and command preservation, and heading-only rendering. Independent
+fixtures confirm stored HTML/Markdown, body prose, fenced code, API headings and
+heading IDs remain unchanged. The shared server/live-suggestion command list
+preserves names including `dpkg`, `grep`, `npm` and `apt`; Topic labels retain
+their authored meaning instead of using Document type names. Search ranking,
+SQL and API/CLI/MCP source contracts remain unchanged by the refinement.
 
 The MCP integration uses the official SDK's real stdio subprocess client. It
 discovers all three read-only tools, searches and retrieves authored sections with
@@ -175,7 +214,7 @@ To repeat the category checks:
 NODE_PATH="$PWD/.browser-tools/node_modules" node scripts/navigation_verify.cjs
 ```
 
-Unified discovery's portable browser suite passes all 16 checks. It covers unified
+The earlier unified-discovery browser suite passed all 16 checks. It covered unified
 entry routes/navigation, real shared popularity, complete 92-document browse
 pagination, scoped search/filter URLs, independent clearing/removal, desktop,
 tablet and 390/320-pixel layouts, no-JavaScript forms, real touch scrolling,
@@ -188,17 +227,42 @@ unresolved material code defect.
 
 The real snapshots have no explicit topic/type facets. Unavailable metadata
 controls remain hidden unless their URL filter is active; active unknown values
-stay visible and removable. Typed shelves appear only from actual metadata;
-remaining slots use real From {project title} documents with project-filtered
-View all links. No source metadata, classifications, descriptions or popularity
-were invented. The 85 + 7 documents and all 96 source-file hashes remain unchanged.
+stay visible and removable. The earlier iteration used typed shelves only from
+actual metadata and filled remaining slots with real From {project title}
+documents. The current popular-only refinement removes those default shelves.
+No source metadata, classifications, descriptions or popularity were invented.
+The 85 + 7 documents and all 96 source-file hashes remain unchanged.
 
-KUI's browse, search, filter, card and carousel guidance was applied to native
+The corrected [refinement browser suite](discovery-simplification-browser.json)
+passes all 23 checks for the user's retained popular carousel and removed global
+Projects list. It covers honest empty history, project-selected vertical
+browse, display casing, both themes,
+preference persistence, Enter/Space operation, blocked storage, no-JavaScript
+fallback, reduced motion, visible focus, text contrast and menu containment at
+1440, 1280, 768, 390 and 320 pixels. All independent code findings are resolved:
+light topbar focus contrast, preserved command names and Topic/Document type
+label separation. The browser review's narrow-header/menu positioning defects
+are also fixed. See [review evidence](discovery-refinement-code-review.md) and
+[theme behavior/tokens](theme-implementation.md).
+Corrected existing/live-search/category regressions pass 35/28/34 checks,
+bringing the current browser total to 120.
+The corrected Tasteskill inspector has zero findings. The single Impeccable scan
+records 25 type/palette advisories plus the
+known static hover false positive; actual runtime hover contrast passes.
+Corrected dark desktop carousel and light phone captures were reviewed with no
+material issue.
+See [inspector evidence](taste-refinement.json) and
+[detector results](refinement-impeccable-detect.json).
+
+KUI's browse, search, filter, card and initial carousel guidance was applied to native
 FastAPI/Jinja/HTML controls and semantic CSS variables with settled-theme
 fallbacks. React components and their shared CSS are not installed; no npm
 install or frontend migration was performed. The 101 original imported skill
 files and all 121 user-supplied KUI files remain unchanged. See
 [KUI guidance and boundaries](discovery-kui-guidance.md).
+The refinement follows the native Switch/settings and semantic-theme guidance
+in [theme implementation](theme-implementation.md); its single popular carousel
+retains keyboard/touch scrolling, 44px controls and 88% phone cards.
 
 Run discovery QA against a separate seeded/copy database, rather than the user's
 main instance, because successful reader GETs intentionally increment opens:

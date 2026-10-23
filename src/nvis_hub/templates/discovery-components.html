@@ -1,12 +1,16 @@
 {% from 'components.html' import icon with context %}
 {% macro document_shelf(shelf) -%}
-<section class="discovery-shelf" aria-labelledby="{{ shelf.id }}-heading" data-shelf>
-<div class="shelf-heading"><div><h2 id="{{ shelf.id }}-heading">{{ shelf.title }}</h2><p>{{ shelf.description }}</p></div><div class="shelf-actions"><a class="text-link" href="{{ shelf.url }}">View all {{ icon('arrow',16) }}</a><div class="shelf-controls" hidden><button type="button" class="shelf-previous" aria-label="Previous {{ shelf.title }}" aria-controls="{{ shelf.id }}-shelf">{{ icon('chevron',18) }}</button><button type="button" class="shelf-next" aria-label="Next {{ shelf.title }}" aria-controls="{{ shelf.id }}-shelf">{{ icon('chevron',18) }}</button></div></div></div>
-<ul class="document-shelf" id="{{ shelf.id }}-shelf" tabindex="0" aria-label="{{ shelf.title }} documents">
-{% for item in shelf.documents %}<li><a class="document-card" href="{{ item.url }}" data-kind="{{ item.kind or '' }}" data-opens="{{ item.view_count }}">
-<div class="document-card-top"><span class="document-card-kind">{{ {'how-to':'How-to guide','reference':'Reference','tutorial':'Tutorial','explanation':'Explanation'}.get(item.kind, item.kind or 'Documentation') }}</span>{% if shelf.popular %}<span class="document-card-rank" aria-label="Rank {{ loop.index }}">{{ loop.index }}</span>{% else %}{{ icon('book',18) }}{% endif %}</div>
-<span class="document-card-project">{{ item.project_title }}</span><h3>{{ item.title }}</h3>
-<div class="document-card-footer"><span class="document-card-path">{{ item.path }}</span>{% if shelf.popular %}<span class="document-card-opens">{{ item.view_count }} {{ 'open' if item.view_count == 1 else 'opens' }}</span>{% endif %}</div>
-</a></li>{% endfor %}</ul>
+<section class="discovery-shelf" aria-labelledby="popular-heading" data-shelf>
+<div class="shelf-heading"><div><h2 id="popular-heading">Explore popular documentation</h2><p>{{ shelf.description }}</p></div>{% if shelf.documents %}<div class="shelf-controls" hidden><button type="button" class="shelf-previous" aria-label="Previous popular documents" aria-controls="popular-documents">{{ icon('chevron',18) }}</button><button type="button" class="shelf-next" aria-label="Next popular documents" aria-controls="popular-documents">{{ icon('chevron',18) }}</button></div>{% endif %}</div>
+{% if shelf.documents %}
+<ol class="document-shelf popular-carousel" id="popular-documents" tabindex="0" aria-label="Popular documentation">
+{% for item in shelf.documents %}<li><a class="document-card" href="{{ item.url }}" title="{{ item.path }}" data-kind="{{ item.kind or '' }}" data-opens="{{ item.view_count }}">
+<div class="document-card-top"><span class="document-card-project">{{ item.project_title|display_title }}</span><span class="document-card-rank" aria-label="Rank {{ loop.index }}">{{ loop.index }}</span></div>
+<h3>{{ item.title|display_title }}</h3>
+<div class="document-card-footer"><span class="document-card-opens">{{ item.view_count }} {{ 'open' if item.view_count == 1 else 'opens' }}</span>{{ icon('arrow',18) }}</div>
+</a></li>{% endfor %}</ol>
+{% else %}
+<div class="popular-empty"><h3>{{ 'No popular documentation yet' if all_document_count else 'No documents published yet' }}</h3><p>{{ 'Popular documents appear as people open them. Choose a project above or Browse documents to find what you need.' if all_document_count else 'Register a documentation source, then refresh it to make its documents available here.' }}</p>{% if not all_document_count %}<a class="button" href="/help#sources">Set up a source {{ icon('arrow',16) }}</a>{% endif %}</div>
+{% endif %}
 </section>
 {%- endmacro %}

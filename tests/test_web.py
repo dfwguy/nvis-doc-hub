@@ -204,9 +204,12 @@ def test_unified_discovery_replaces_duplicate_destinations_and_project_previews(
         assert "Global search" not in response.text
         assert "All documentation" not in response.text
         assert "Browse projects" not in response.text
-        assert "Explore documentation" in response.text
-        assert ">Popular documents</h2>" not in response.text
-        assert "Network setup" in response.text
+        assert ">Explore popular documentation</h2>" in response.text
+        assert "No popular documentation yet" in response.text
+        assert response.text.count('class="discovery-shelf"') == 1
+        assert 'class="document-card"' not in response.text
+        assert "From Cluster bringup" not in response.text
+        assert 'class="project-navigation"' not in response.text
         assert "data-discovery-form" in response.text
 
 
@@ -234,6 +237,42 @@ def test_only_successful_browser_reader_opens_feed_shared_popularity(tmp_path: P
     assert client.get("/projects/bringup/docs/docs/guides/setup.md").status_code == 200
     assert hub.popular_documents()[0]["view_count"] == 1
     home = client.get("/").text
-    assert "Popular documents" in home
+    assert ">Explore popular documentation</h2>" in home
     assert "1 open" in home
     assert hub.popular_documents()[0]["view_count"] == 1
+
+
+def test_default_discovery_does_not_fetch_project_preview_collections(tmp_path: Path) -> None:
+    client = published_client(tmp_path)
+
+    def unexpected_preview(*args: object, **kwargs: object) -> None:
+        raise AssertionError("The default view must not enumerate project document previews")
+
+    client.app.state.hub.browse_documents = unexpected_preview
+    response = client.get("/")
+    assert response.status_code == 200
+    assert "No popular documentation yet" in response.text
+
+
+def test_reading_shows_only_current_document_sections_not_a_project_directory(tmp_path: Path) -> None:
+    client = published_client(tmp_path)
+    hub = client.app.state.hub
+    hub.register(
+        Registration(
+            slug="other",
+            title="Other project",
+            description="Another project",
+            repo_url="https://gitlab.example.com/team/other",
+            source_mode="local",
+            local_path=str(tmp_path / "source"),
+            docs_paths=["docs"],
+        )
+    )
+    hub.refresh("other")
+    for route in ["/projects/bringup", "/projects/bringup/docs/docs/guides/setup.md"]:
+        response = client.get(route)
+        assert response.status_code == 200
+        assert 'aria-label="Document sections"' in response.text
+        assert "Other project" not in response.text
+        assert 'class="project-nav-link"' not in response.text
+        assert "Network setup" in response.text

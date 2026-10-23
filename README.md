@@ -9,12 +9,20 @@ discovery. **Browse documents** opens the complete paginated library; an empty
 query can browse documents using any available metadata filters. The existing
 `/search` URL opens the same discovery experience.
 
-Homepage shelves link directly to documents. Popular documents are ranked by
-aggregate all-time opens in this hub's database, including repeat opens. No reader
-identity or profile is stored. Separate installations have separate counts.
-Before usage exists, the homepage shows Explore documentation; project shelves
-fill gaps when sources have no explicit document-type metadata. Source refreshes
-preserve counts, and removed documents disappear from rankings.
+The default page has one **Explore popular documentation** section: up to six
+real documents ranked by aggregate all-time opens in this hub's database,
+including repeat opens. One carousel supports buttons, keyboard, and touch,
+without extra per-project collections. The global Projects sidebar list is removed;
+only the current document sections appear while reading. Before usage exists, an honest empty state
+points to search, the Project dropdown, and Browse documents. Project selection
+opens a paginated vertical library. Counts survive source refreshes; removed
+pages cannot rank. No reader identity or profile is stored, and separate
+installations have separate counts.
+
+The header's **Dark mode** switch applies immediately and remembers the browser's
+choice. Dark remains the default; light mode uses accessible neutral surfaces and
+NVIDIA action colors. Display titles use consistent sentence case while retaining
+commands, paths, acronyms, and source contents.
 
 The Python templates follow the supplied [Kaizen UI guidance](evidence/discovery-kui-guidance.md),
 using documented patterns and semantic CSS tokens with the established dark-theme

@@ -1,6 +1,6 @@
 {
   "base": "http://127.0.0.1:8001",
-  "at": "2026-10-23T19:06:57.652Z",
+  "at": "2026-10-23T19:44:55.420Z",
   "browser": "151.0.7922.34",
   "checks": [
     {
@@ -96,8 +96,8 @@
       "name": "reader-active-Tutorials — learning by doing 6",
       "detail": {
         "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md",
-        "top": 527.3125,
-        "bottom": 600.078125,
+        "top": 568.71875,
+        "bottom": 641.484375,
         "railTop": 87.890625,
         "railBottom": 860
       }
@@ -106,8 +106,8 @@
       "name": "reader-active-How-to guides — getting something done 36",
       "detail": {
         "url": "/projects/cluster-bringup/docs/docs/tailscale_access/how-to/reach-one-jumpbox.md",
-        "top": 552.78125,
-        "bottom": 643.734375,
+        "top": 595,
+        "bottom": 685.953125,
         "railTop": 87.890625,
         "railBottom": 860
       }
@@ -116,8 +116,8 @@
       "name": "reader-active-Reference — the machinery, described 9",
       "detail": {
         "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/reference/environment.md",
-        "top": 633.671875,
-        "bottom": 688.25,
+        "top": 675.078125,
+        "bottom": 729.65625,
         "railTop": 87.890625,
         "railBottom": 860
       }
@@ -126,8 +126,8 @@
       "name": "reader-active-Explanation — why it is like this 21",
       "detail": {
         "url": "/projects/cluster-bringup/docs/docs/tailscale_access/explanation/overlapping-private-networks.md",
-        "top": 659.046875,
-        "bottom": 731.8125,
+        "top": 700.453125,
+        "bottom": 773.21875,
         "railTop": 87.890625,
         "railBottom": 860
       }
@@ -136,8 +136,8 @@
       "name": "reader-active-Other documentation 13",
       "detail": {
         "url": "/projects/cluster-bringup/docs/docs/tailscale_access/README.md",
-        "top": 731.984375,
-        "bottom": 786.5625,
+        "top": 773.390625,
+        "bottom": 827.96875,
         "railTop": 87.890625,
         "railBottom": 860
       }
@@ -203,7 +203,7 @@
         ],
         "overflowRows": [],
         "longestRow": {
-          "title": "install the Slurm SSH gate on the compute-node fleetCompute-node SSH accessdocs/compute_node_ssh_access/how-to/install-ssh-gate-on-the-compute-node-fleet.md",
+          "title": "Install the Slurm SSH gate on the compute-node fleetCompute-node SSH accessdocs/compute_node_ssh_access/how-to/install-ssh-gate-on-the-compute-node-fleet.md",
           "clientWidth": 1075,
           "scrollWidth": 1075
         }
@@ -270,7 +270,7 @@
         ],
         "overflowRows": [],
         "longestRow": {
-          "title": "install the Slurm SSH gate on the compute-node fleetCompute-node SSH accessdocs/compute_node_ssh_access/how-to/install-ssh-gate-on-the-compute-node-fleet.md",
+          "title": "Install the Slurm SSH gate on the compute-node fleetCompute-node SSH accessdocs/compute_node_ssh_access/how-to/install-ssh-gate-on-the-compute-node-fleet.md",
           "clientWidth": 643,
           "scrollWidth": 643
         }
@@ -287,10 +287,10 @@
     {
       "name": "tablet-menu-bounds-and-escape",
       "detail": {
-        "left": 383,
-        "right": 743,
-        "top": 53,
-        "bottom": 1001,
+        "left": 377,
+        "right": 737,
+        "top": 60,
+        "bottom": 1008,
         "width": 360,
         "scrollWidth": 343,
         "clientWidth": 343,
@@ -302,10 +302,10 @@
       "detail": {
         "href": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/how-to/launch-codex-for-existing-repository.md",
         "bounds": {
-          "left": 383,
-          "right": 743,
-          "top": 53,
-          "bottom": 1001,
+          "left": 377,
+          "right": 737,
+          "top": 60,
+          "bottom": 1008,
           "width": 360,
           "scrollWidth": 343,
           "clientWidth": 343,
@@ -374,7 +374,7 @@
         ],
         "overflowRows": [],
         "longestRow": {
-          "title": "install the Slurm SSH gate on the compute-node fleetCompute-node SSH accessdocs/compute_node_ssh_access/how-to/install-ssh-gate-on-the-compute-node-fleet.md",
+          "title": "Install the Slurm SSH gate on the compute-node fleetCompute-node SSH accessdocs/compute_node_ssh_access/how-to/install-ssh-gate-on-the-compute-node-fleet.md",
           "clientWidth": 311,
           "scrollWidth": 311
         }
@@ -391,13 +391,13 @@
     {
       "name": "mobile-menu-bounds-and-escape",
       "detail": {
-        "left": 7,
-        "right": 367,
-        "top": 53,
-        "bottom": 821,
-        "width": 360,
-        "scrollWidth": 343,
-        "clientWidth": 343,
+        "left": 16,
+        "right": 359,
+        "top": 60,
+        "bottom": 828,
+        "width": 343,
+        "scrollWidth": 326,
+        "clientWidth": 326,
         "overflowingDescendants": []
       }
     },
@@ -406,13 +406,13 @@
       "detail": {
         "href": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/how-to/launch-codex-for-existing-repository.md",
         "bounds": {
-          "left": 7,
-          "right": 367,
-          "top": 53,
-          "bottom": 821,
-          "width": 360,
-          "scrollWidth": 343,
-          "clientWidth": 343,
+          "left": 16,
+          "right": 359,
+          "top": 60,
+          "bottom": 828,
+          "width": 343,
+          "scrollWidth": 326,
+          "clientWidth": 326,
           "overflowingDescendants": []
         }
       }

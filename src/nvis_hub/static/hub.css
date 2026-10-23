@@ -81,14 +81,6 @@ h1,h2,h3,h4{color:#fff}
 .shelf-heading > div:first-child { min-width: 0; }
 .shelf-heading h2 { margin: 0; font-size: 18px; line-height: 1.4; }
 .shelf-heading p { margin: 6px 0 0; color: var(--text-color-secondary, var(--muted)); font-size: 13px; line-height: 1.5; }
-.shelf-actions { display: flex; flex: none; align-items: center; gap: 12px; }
-.shelf-actions > a { min-height: 44px; }
-.shelf-controls { display: flex; gap: 8px; }
-.shelf-controls[hidden] { display: none; }
-.shelf-controls button { display: inline-flex; align-items: center; justify-content: center; height: 44px; width: 44px; padding: 0; color: var(--text-color-primary, var(--text)); background: var(--background-color-surface-raised, var(--raised)); border: 1px solid var(--border-color-interaction-base, var(--control)); border-radius: var(--radius-md, 6px); }
-.shelf-controls button:hover:not(:disabled) { background: var(--background-color-interaction-hover, var(--active)); }
-.shelf-controls button:disabled { color: var(--muted); opacity: .5; cursor: default; }
-.shelf-previous svg { transform: rotate(180deg); }
 .document-shelf {
   display: grid;
   grid-auto-flow: column;
@@ -104,17 +96,15 @@ h1,h2,h3,h4{color:#fff}
   padding: 4px 4px 12px;
   margin: 0;
 }
-.document-shelf > li { min-width: 0; display: flex; scroll-snap-align: start; }
-.document-card { display: flex; flex: 1; flex-direction: column; min-width: 0; min-height: 224px; padding: var(--spacing-density-2xl, 24px); gap: var(--spacing-density-md, 8px); background: var(--background-color-surface-raised, var(--raised)); border: 1px solid var(--border-color-base, var(--border)); border-radius: var(--radius-lg, 8px); overflow-wrap: anywhere; }
+.document-shelf > li { min-width: 0; display: flex; }
+.document-card { display: flex; flex: 1; flex-direction: column; min-width: 0; min-height: 168px; padding: var(--spacing-density-2xl, 24px); gap: var(--spacing-density-md, 8px); background: var(--background-color-surface-raised, var(--raised)); border: 1px solid var(--border-color-base, var(--border)); border-radius: var(--radius-lg, 8px); overflow-wrap: anywhere; }
 .document-card:hover { background: var(--background-color-interaction-hover, var(--active)); border-color: var(--border-color-brand, var(--accent)); color: var(--text-color-primary, var(--text)); }
-.document-card-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 24px; margin-bottom: 8px; }
-.document-card-kind { color: var(--text-color-secondary, var(--muted)); font-size: 12px; }
-.document-card-top svg, .document-card-rank { color: var(--accent); }
+.document-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; min-height: 24px; }
+.document-card-rank { color: var(--accent); }
 .document-card-rank { font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .document-card-project { color: var(--text-color-secondary, var(--muted)); font-size: 12px; }
-.document-card h3 { font-size: 18px; line-height: 1.4; margin: 0 0 8px; font-weight: 500; }
-.document-card-footer { display: flex; flex-direction: column; gap: 8px; margin-top: auto; }
-.document-card-path { color: var(--text-color-secondary, var(--muted)); font-size: 12px; line-height: 1.5; }
+.document-card h3 { font-size: 18px; line-height: 1.4; margin: 0 0 16px; font-weight: 500; }
+.document-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; }
 .document-card-opens { color: var(--text-color-primary, var(--text)); font-size: 12px; font-variant-numeric: tabular-nums; }
 .document-library { margin-top: var(--spacing-density-3xl, 32px); scroll-margin-top: 72px; }
 .document-library .result-summary { margin: 0 0 16px; }
@@ -135,12 +125,33 @@ h1,h2,h3,h4{color:#fff}
   .discovery-page .page-heading { gap: 12px; }
   .discovery-page .page-heading > .text-link { display: inline-flex; margin: 0; min-height: 44px; }
   .shelf-heading { flex-direction: column; gap: 8px; }
-  .shelf-actions { width: 100%; justify-content: space-between; }
-  .document-shelf { grid-auto-columns: 88%; }
-  .document-card { padding: var(--spacing-density-xl, 16px); }
+    .document-card { padding: var(--spacing-density-xl, 16px); }
   .discovery-filterbar { gap: var(--spacing-density-lg, 12px); }
 }
 @media(max-width:575px) {
   .discovery-filterbar { grid-template-columns: minmax(0, 1fr); }
   .document-library .result-summary { flex-wrap: wrap; gap: 8px; }
 }
+
+/* Popular discovery stays bounded; project lists remain paginated. */
+.popular-carousel .document-card-footer svg { color: var(--accent); }
+.popular-empty { padding: 24px 0; max-width: 65ch; }
+.popular-empty h3 { font-size: 16px; margin-bottom: 8px; }
+.popular-empty p { color: var(--muted); font-size: 14px; line-height: 1.6; margin: 0; }
+.topbar .theme-toggle { margin-left: auto; }
+.topbar .theme-toggle + .topbar-help { margin-left: 16px; }
+@media(max-width:575px){ .topbar .theme-toggle { margin-left: 0; } }
+@media(max-width:1100px){
+  .topbar { position: relative; }
+  .topbar .mobile-menu { position: static; }
+  .topbar .mobile-menu-body { right: 16px; top: calc(100% + 8px); min-width: 0; width: min(360px, calc(100% - 32px)); max-width: calc(100% - 32px); }
+}
+
+/* One bounded popular carousel; project collections are selected explicitly. */
+.shelf-controls { display: flex; gap: 8px; }
+.shelf-controls[hidden] { display: none; }
+.shelf-controls button { display: inline-flex; align-items: center; justify-content: center; height: 44px; width: 44px; padding: 0; color: var(--text-color-primary, var(--text)); background: var(--background-color-surface-raised, var(--raised)); border: 1px solid var(--border-color-interaction-base, var(--control)); border-radius: var(--radius-md, 6px); }
+.shelf-controls button:hover:not(:disabled) { background: var(--background-color-interaction-hover, var(--active)); }
+.shelf-controls button:disabled { color: var(--muted); opacity: .5; cursor: default; }
+.shelf-previous svg { transform: rotate(180deg); }
+@media(max-width:700px){ .document-shelf { grid-auto-columns:88%; } .shelf-controls { align-self:flex-end; } }
