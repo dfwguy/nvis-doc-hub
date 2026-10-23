@@ -4,6 +4,17 @@ Browse, read, and search authored project documentation in one local hub. The we
 reader and MCP server share the same SQLite publications and section search.
 Source repositories remain authoritative; registration and refresh are explicit.
 
+After cloning, install [Git LFS](https://git-lfs.com/) with your platform's package
+manager or its installer, then run these commands from the repository root:
+
+```bash
+git lfs install --local
+git lfs pull
+```
+
+Git LFS stores the unchanged imported Impeccable executable. Fetch it before
+checking the imported-skill hashes or using that design tool.
+
 Requires Python 3.12 or newer with SQLite FTS5. From this directory:
 
 ```bash
@@ -53,7 +64,9 @@ Read the [quickstart](docs/tutorials/quickstart.md),
 
 ## Development branches
 
-The private GitLab repository is `nvis-ova/nvis-docs-hub`. `main` holds the verified
+The private GitLab repository is [`nvis-ova/nvis-doc-hub`](https://gitlab-master.nvidia.com/nvis-ova/nvis-doc-hub).
+Its SSH URL is `ssh://git@gitlab-master.nvidia.com:12051/nvis-ova/nvis-doc-hub.git`.
+The local project directory remains `nvis-docs-hub`. `main` holds the verified
 baseline; `development` is the shared branch for testing changes before merging
 them into `main`. Keep changes on `development` or a feature branch and run the
 checks above before opening a merge request to `main`.

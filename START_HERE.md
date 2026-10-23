@@ -1,5 +1,12 @@
 # Resume the NVIS documentation hub build
 
+**Current GitLab destination (2026-10-23):** the user selected PRIVATE
+`nvis-ova/nvis-doc-hub` at
+`ssh://git@gitlab-master.nvidia.com:12051/nvis-ova/nvis-doc-hub.git`.
+The local directory remains `nvis-docs-hub`. This supersedes the planned plural
+repository name in the historical prompt below. See [repository setup](evidence/repository-setup.md)
+and the README's Git LFS instructions before resuming.
+
 **Implementation status (2026-10-22):** the local application is now built. Start
 with [README.md](README.md), [verification evidence](evidence/verification.md), and
 the [latest checkpoint](handoff/sessions/nvis-docs-hub/latest.md). The original

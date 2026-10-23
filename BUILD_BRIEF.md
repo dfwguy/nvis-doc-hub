@@ -2,6 +2,13 @@
 
 ## Latest direction
 
+Current repository destination, supplied by the user on 23 October 2026, is
+PRIVATE `nvis-ova/nvis-doc-hub`:
+`ssh://git@gitlab-master.nvidia.com:12051/nvis-ova/nvis-doc-hub.git`.
+The local project directory remains `nvis-docs-hub`. This overrides the original
+planned plural remote name retained below. Publication and Git LFS details are
+recorded in [repository setup](evidence/repository-setup.md).
+
 The user clarified that the application must use the **dark NVIDIA theme**: #111 backgrounds, #1a1a1a raised surfaces, black chrome, white/#eee text, and #76B900 accents. The light variant was rejected. #004831 is a secondary dark-theme background.
 
 Brand correction from the user after the initial build: the team and application

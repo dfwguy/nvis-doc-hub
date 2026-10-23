@@ -4,11 +4,20 @@ Timestamp: 2026-10-22 22:34:59 UTC.
 
 Topic: Functional local implementation, authentic publications, tests and browser verification.
 
-23 October follow-up: the local server was restarted. Local Git version control
-now has `main` and `development`; the initial application baseline is `29061f2`.
-GitLab remote publication is pending creation of the blank private project through
-the user's NVIDIA SSO. Read [repository setup](../../../evidence/repository-setup.md)
-before retrying the push. The local repository must not be reinitialized.
+23 October follow-up: the local server was restarted. The user-created GitLab
+project `nvis-ova/nvis-doc-hub`, requested as **Private**, now has published `main` and `development`
+branches. The initial application baseline is `35f18d8` after migrating the unchanged
+imported Impeccable executable to Git LFS for GitLab's 5 MiB Git-blob limit. A fresh
+remote `main` clone passed LFS download, all 101 imported-skill hashes, and all 96
+source-snapshot hashes; a separate empty-cache LFS download also verified the
+official destination's executable. Read [repository setup](../../../evidence/repository-setup.md)
+and the README's Git LFS setup before resuming. Live-search suggestions remain on
+`development`; this `main` checkpoint describes the baseline application. Do not
+reinitialize or force-push the published repository.
+
+The singular remote name is the user's final destination and supersedes the
+planned plural name in the historical prompt below. Local directory names remain
+`nvis-docs-hub`.
 
 Read the [implemented application checkpoint](20261022T223459Z-implemented.md).
 
