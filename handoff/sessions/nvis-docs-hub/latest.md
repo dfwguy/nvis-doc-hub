@@ -6,9 +6,10 @@ Topic: Functional local implementation, authentic publications, tests and browse
 
 23 October follow-up: the local server was restarted. Local Git version control
 now has `main` and `development`; the initial application baseline is `29061f2`.
-GitLab remote publication is pending creation of the blank private project through
-the user's NVIDIA SSO. Read [repository setup](../../../evidence/repository-setup.md)
-before retrying the push. The local repository must not be reinitialized.
+The user confirmed missing `nvis-ova` group push access and deferred GitLab remote
+setup until that permission is available. Do not retry or use a personal namespace
+until the user resumes. Read [repository setup](../../../evidence/repository-setup.md)
+before publishing. The local repository must not be reinitialized.
 
 Read the [implemented application checkpoint](20261022T223459Z-implemented.md).
 

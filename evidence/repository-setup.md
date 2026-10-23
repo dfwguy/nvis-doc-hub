@@ -21,6 +21,8 @@ A fresh local clone successfully registered and published both tracked snapshots
 
 SSH authentication succeeds as `dgayle` on port 12051. GitLab rejected the attempt to create the project through `git push`, returning that the project could not be found or the user lacked permission. The configured CLI API session returned HTTP 401, and the browser requires NVIDIA SSO.
 
-No remote push has succeeded. The user has been asked to create a blank **Private** project named `nvis-docs-hub` under `nvis-ova`, leaving README initialization unchecked. After creation or access is supplied, push `main` and `development`, verify their remote commit IDs and default branch, and update this pending status. Do not force-push or reinitialize this local repository.
+No remote push has succeeded. The user confirmed that their account does not yet have the required group push access and explicitly deferred remote setup until that access is available. Do not retry remote creation or publishing, or substitute a personal namespace, until the user resumes this work.
+
+When resumed with the required group permissions, create or verify the blank **Private** `nvis-ova/nvis-docs-hub` project, push `main` and `development`, and verify their remote commit IDs and default branch. Do not force-push or reinitialize this local repository.
 
 Hosting, remote HTTP MCP, automatic documentation refresh, access control, and the publishing skill remain deferred.
