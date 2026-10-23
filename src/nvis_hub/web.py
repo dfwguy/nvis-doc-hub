@@ -1,4 +1,4 @@
-"""Read-only web views over the shared publication service."""
+"""Documentation discovery and reading over the shared publication service."""
 
 import os
 from datetime import datetime
@@ -108,64 +108,117 @@ def create_app(db_path: Path | str | None = None) -> FastAPI:
         )
 
     @app.get("/", response_class=HTMLResponse)
-    def catalog(request: Request) -> HTMLResponse:
-        projects = hub.list_projects()
-        previews = {}
-        for item in projects:
-            docs = hub.list_documents(item["slug"])
-            by_path = {doc["path"]: doc for doc in docs}
-            navigation = (hub.get_project(item["slug"]) or {}).get("navigation", [])
-            ordered = [by_path[entry["path"]] for entry in navigation if entry.get("path") in by_path]
-            previews[item["slug"]] = (ordered or docs)[:3]
-        return page(
-            request,
-            "catalog.html",
-            title="Documentation",
-            previews=previews,
-            document_count=sum(p.get("document_count", 0) for p in projects),
-            facets=hub.facets(),
-        )
-
     @app.get("/search", response_class=HTMLResponse)
-    def search(
+    def discovery(
         request: Request,
         q: str = "",
         project: str = "",
         topic: str = "",
         kind: str = "",
+        view: str = "",
         offset: int = Query(0, ge=0, le=100000),
     ) -> HTMLResponse:
         query = q.strip()
         too_long = len(query) > 200
-        results = (
-            []
-            if too_long
-            else hub.search(
-                query,
-                project=project or None,
-                topic=topic or None,
-                kind=kind or None,
-                limit=31,
-                offset=offset,
+        filters = {"project": project, "topic": topic, "kind": kind}
+        scope = {name: value or None for name, value in filters.items()}
+        discovering = not (query or any(filters.values()) or view == "all" or offset)
+        params = {"q": query, **filters, "view": "all"}
+
+        def url(**changes: Any) -> str:
+            return "/search?" + urlencode(
+                {name: value for name, value in {**params, **changes}.items() if value != ""}
             )
-        )
-        params = {"q": query, "project": project, "topic": topic, "kind": kind}
-        next_url = "/search?" + urlencode({**params, "offset": offset + 30})
-        prev_url = "/search?" + urlencode({**params, "offset": max(0, offset - 30)})
+
+        results = []
+        if not discovering and not too_long:
+            results = (
+                hub.search(query, **scope, limit=31, offset=offset)
+                if query
+                else hub.browse_documents(**scope, limit=31, offset=offset)
+            )
+        project_titles = {item["slug"]: item["title"] for item in hub.list_projects()}
+        active_filters = [
+            {
+                "label": {"project": "Project", "topic": "Topic", "kind": "Document type"}[name],
+                "value": project_titles.get(value, value) if name == "project" else value,
+                "url": url(**{name: "", "offset": 0}),
+            }
+            for name, value in filters.items()
+            if value
+        ]
+        shelves = []
+        if discovering:
+            popular = hub.popular_documents(limit=6)
+            initial = popular or hub.browse_documents(limit=6)
+            if initial:
+                shelves.append(
+                    {
+                        "id": "popular" if popular else "explore",
+                        "title": "Popular documents" if popular else "Explore documentation",
+                        "description": (
+                            "Most opened across this hub. Counts include repeat opens."
+                            if popular
+                            else "Choose a document to get started. Popular documents appear as the hub is used."
+                        ),
+                        "documents": initial,
+                        "popular": bool(popular),
+                        "url": "/?view=all#documents",
+                    }
+                )
+            for mode, label, description in [
+                ("how-to", "How-to guides", "Practical steps for getting something done."),
+                ("reference", "Reference", "Look up commands, configuration, and system details."),
+            ]:
+                documents = hub.browse_documents(kind=mode, limit=6)
+                if documents:
+                    shelves.append(
+                        {
+                            "id": mode,
+                            "title": label,
+                            "description": description,
+                            "documents": documents,
+                            "popular": False,
+                            "url": url(kind=mode),
+                        }
+                    )
+            for item in hub.list_projects():
+                if len(shelves) >= 3:
+                    break
+                documents = hub.browse_documents(project=item["slug"], limit=6)
+                if documents:
+                    shelves.append(
+                        {
+                            "id": "project-" + item["slug"],
+                            "title": "From " + item["title"],
+                            "description": "Read documentation from this project.",
+                            "documents": documents,
+                            "popular": False,
+                            "url": url(project=item["slug"]),
+                        }
+                    )
+        document_count = hub.document_count(**scope)
         return page(
             request,
-            "search.html",
-            title="Search documentation",
-            page="search",
-            q=query,
+            "catalog.html",
+            title="Browse documentation",
+            page="catalog",
+            discovering=discovering,
+            shelves=shelves,
+            document_count=document_count,
+            all_document_count=hub.document_count(),
             results=results[:30],
             has_next=len(results) > 30,
-            next_url=next_url,
-            prev_url=prev_url,
+            next_url=url(offset=offset + 30),
+            prev_url=url(offset=max(0, offset - 30)),
             offset=offset,
-            filters=params,
+            filters=filters,
+            active_filters=active_filters,
+            clear_filters_url=url(project="", topic="", kind="", offset=0),
+            clear_search_url=url(q="", offset=0),
             facets=hub.facets(),
             too_long=too_long,
+            q=query,
         )
 
     @app.get("/projects/{slug}", response_class=HTMLResponse)
@@ -201,7 +254,7 @@ def create_app(db_path: Path | str | None = None) -> FastAPI:
             doc for doc in documents if doc["path"] not in nav_paths
         ]
         position = next((i for i, d in enumerate(documents) if d["path"] == path), 0)
-        return page(
+        response = page(
             request,
             "reader.html",
             title=document["title"],
@@ -212,6 +265,8 @@ def create_app(db_path: Path | str | None = None) -> FastAPI:
             previous=documents[position - 1] if position > 0 else None,
             following=documents[position + 1] if position + 1 < len(documents) else None,
         )
+        hub.record_document_view(slug, path)
+        return response
 
     @app.get("/projects/{slug}/assets/{path:path}")
     def asset(slug: str, path: str) -> Response:

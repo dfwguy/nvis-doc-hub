@@ -102,15 +102,15 @@ const deferred = () => { let resolve; const promise = new Promise(r => { resolve
     await check('Unselected Enter preserves ordinary full search', async () => {
       await visit(); await type();
       assert(!await input().getAttribute('aria-activedescendant'));
-      await input().press('Enter'); await page.waitForURL('**/search?q=slur');
+      await input().press('Enter'); await page.waitForURL(url => url.pathname === '/search' && url.searchParams.get('q') === 'slur');
       assert.equal(new URL(page.url()).hash, '');
     });
     await check('Escape, Tab, clear, outside click and blur dismiss stale choices', async () => {
       for (const action of ['Escape', 'Tab', 'clear', 'outside', 'blur']) {
         await visit(); await type();
         if (action === 'clear') await input().fill('');
-        else if (action === 'outside') await page.getByRole('heading', { name: 'Documentation', exact: true }).click();
-        else if (action === 'blur') await page.getByRole('link', { name: 'About the hub' }).focus();
+        else if (action === 'outside') await page.locator('h1').click();
+        else if (action === 'blur') await page.locator('.sidebar').getByRole('link', { name: 'Source status', exact: true }).focus();
         else await input().press(action);
         await expect(popup(), action + ' dismisses suggestions').toBeHidden(); await expect(input()).toHaveAttribute('aria-expanded', 'false');
         assert(!await input().getAttribute('aria-activedescendant'), action + ' clears active selection');
@@ -128,11 +128,10 @@ const deferred = () => { let resolve; const promise = new Promise(r => { resolve
     });
     await check('Full-search footer preserves query and available active filters', async () => {
       await visit('/search');
-      await page.getByLabel('Project', { exact: true }).selectOption('cluster-bringup');
       const topic = await page.getByLabel('Topic', { exact: true }).locator('option').evaluateAll(nodes => nodes.find(n => /slurm|observability|compute/i.test(n.value))?.value || nodes.find(n => n.value)?.value || '');
       const kind = await page.getByLabel('Document type', { exact: true }).locator('option').evaluateAll(nodes => nodes.find(n => n.value === 'how-to')?.value || nodes.find(n => n.value)?.value || '');
-      await page.getByLabel('Topic', { exact: true }).selectOption(topic);
-      await page.getByLabel('Document type', { exact: true }).selectOption(kind);
+      const scope = new URLSearchParams({project: 'cluster-bringup', ...(topic ? {topic} : {}), ...(kind ? {kind} : {})});
+      await visit('/search?' + scope);
       await input().fill('slur');
       await expect(popup()).toBeVisible(); await expect(all()).toBeVisible();
       const href = await all().getAttribute('href'), url = new URL(href, BASE);
@@ -146,10 +145,13 @@ const deferred = () => { let resolve; const promise = new Promise(r => { resolve
     });
     await check('Changing active filters clears old choices and uses updated scope', async () => {
       await visit('/search'); await type('configur'); const old = await optionURLs(); assert(old.length);
-      const requested = page.waitForRequest(request => request.url().includes('/api/search/suggestions') && new URL(request.url()).searchParams.get('project') === 'documentation-pipeline');
       await page.getByLabel('Project', { exact: true }).selectOption('documentation-pipeline');
-      assert.equal(await options().count(), 0, 'changing filters immediately clears stale choices');
-      await input().focus();
+      await page.waitForURL(url => url.pathname === '/search' && url.searchParams.get('project') === 'documentation-pipeline');
+      assert.equal(new URL(page.url()).searchParams.get('q'), 'configur', 'auto-submitting a filter preserves the current query');
+      assert.equal(await options().count(), 0, 'filter navigation clears stale choices');
+      const requested = page.waitForRequest(request => request.url().includes('/api/search/suggestions') && new URL(request.url()).searchParams.get('project') === 'documentation-pipeline');
+      await input().fill('');
+      await input().fill('configur');
       await requested;
       await options().first().waitFor({ state: 'visible' });
       const actual = await context.request.get(BASE + '/api/search/suggestions?q=configur&project=documentation-pipeline');
@@ -207,7 +209,7 @@ const deferred = () => { let resolve; const promise = new Promise(r => { resolve
         await racePage.getByRole('combobox', { name: /Search.*documentation/ }).fill('slur'); await oldRequest;
         await racePage.getByRole('combobox', { name: /Search.*documentation/ }).fill('configur');
         const response = await context.request.get(BASE + '/api/search/suggestions?q=configur'); const expected = (await response.json()).map(row => absolute(row.url));
-        const urls = () => racePage.getByRole('option').evaluateAll(nodes => nodes.map(n => n.getAttribute('href')));
+        const urls = () => racePage.getByRole('listbox', { name: 'Matching documentation' }).getByRole('option').evaluateAll(nodes => nodes.map(n => n.getAttribute('href')));
         await expect.poll(urls).toEqual(expected); await racePage.waitForTimeout(750); assert.deepEqual(await urls(), expected);
         return { newerQuery: 'configur', urls: expected, delayedOldResponseMs: 650 };
       } finally { await racePage.close(); }
@@ -249,15 +251,15 @@ const deferred = () => { let resolve; const promise = new Promise(r => { resolve
       const phone = await browser.newContext(devices['iPhone 13']); const touch = await phone.newPage();
       try {
         await touch.goto(BASE); await touch.getByRole('combobox', { name: /Search.*documentation/ }).tap(); await touch.getByRole('combobox', { name: /Search.*documentation/ }).fill('slur');
-        const option = touch.getByRole('option').first(); await option.waitFor({ state: 'visible' }); const href = await option.getAttribute('href');
+        const option = touch.getByRole('listbox', { name: 'Matching documentation' }).getByRole('option').first(); await option.waitFor({ state: 'visible' }); const href = await option.getAttribute('href');
         await option.tap(); await touch.waitForURL(absolute(href)); return { href };
       } finally { await phone.close(); }
     });
     await check('JavaScript-free form and filters preserve full search fallback', async () => {
       const plain = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 1440, height: 900 } }); const noJS = await plain.newPage();
       try {
-        await noJS.goto(BASE); await noJS.getByLabel('Search all documentation', { exact: true }).fill('slurm');
-        await noJS.getByRole('button', { name: 'Search', exact: false }).click(); await noJS.waitForURL('**/search?q=slurm');
+        await noJS.goto(BASE); await noJS.getByRole('searchbox', { name: /Search.*documentation/ }).fill('slurm');
+        await noJS.getByRole('button', { name: 'Search', exact: false }).click(); await noJS.waitForURL(url => url.pathname === '/search' && url.searchParams.get('q') === 'slurm');
         assert(await noJS.locator('.search-result').count() > 0);
         await noJS.getByLabel('Project', { exact: true }).selectOption('cluster-bringup');
         await noJS.getByRole('button', { name: 'Apply filters' }).click(); await noJS.waitForURL(/project=cluster-bringup/);

@@ -184,7 +184,7 @@ The exact palette comes from the supplied NVIDIA documentation reference, audite
 
 - **Headline:** the `headline` role serves page titles; the reader uses `reader-headline`, capped at 30ch. At widths through 700px, page titles become 25px and reader titles become 27px with 1.3 line height.
 - **Reader section:** the `reader-section` role separates document sections; it becomes 21px through 700px. Third-level reader headings are 18px at 1.4 line height.
-- **Title:** the `title` role labels project entries. Search-result titles use 19px at 1.4 line height, becoming 18px through 700px. Ordinary interface section headings range from 16px to 18px.
+- **Title:** the `title` role labels project entries. Unified-library search-result titles use 19px at 1.4 line height; document shelf titles use the 18px hierarchy described below. Ordinary interface section headings range from 16px to 18px.
 - **Body:** `body` supports tooling; `reader-body` supports documents. The reader remains at its full body size and line height on mobile. Project descriptions use the body size with 1.6 line height.
 - **Label and metadata:** `label` identifies actions and `metadata` records paths, publication context, counts, and provenance. Source revision labels can step down to 11px. Numeric counts use tabular figures.
 - **Code:** the `code` role describes code blocks. Inline code is 13px with NVIDIA Green text on a small charcoal background; block code becomes 12px through 700px, while retaining whitespace and scrolling.
@@ -198,7 +198,7 @@ widths it appears there once; the workspace footer retains its source-authority
 line. Through 1100px, when the sidebar folds, the documentation label appears in
 the workspace footer instead.
 
-The desktop frame has a fixed 228px rail, a 48px topbar, and a sheet inset 8px from the right edge. The sheet uses 38px 40px 48px padding; reader sheets use 28px top padding above 1100px. Catalog and source surfaces cap their content at 1160px; search caps at 960px. Project entries share two equal columns with the gap token; an unmatched last entry spans both columns.
+The desktop frame has a fixed 228px rail, a 48px topbar, and a sheet inset 8px from the right edge. The sheet uses 38px 40px 48px padding; reader sheets use 28px top padding above 1100px. Unified discovery and its results cap their content at 80rem; project and source surfaces cap at 1160px. The earlier homepage project grid is replaced by horizontal document shelves and the document library described below.
 
 The reader pairs a flexible text column capped at 76ch with a 176px contents rail and the reader-gap token. The contents rail sticks 28px from the viewport top. Authored paragraphs use an 18px bottom gap, section headings begin after 38px, and the typography supplies the reading rhythm rather than spacious decorative separators.
 
@@ -219,7 +219,7 @@ Sheets and panels are flat. Dark reading surfaces, raised charcoal panels, fine 
 
 **The Overlay Shadow Rule.** Keep sheets and project panels flat. Use the soft shadow only on the floating mobile navigation. A search focus ring is an interaction indicator, not elevation.
 
-Motion is limited to color and background-color on hovered links and buttons (150ms, ease-out) and smooth document scrolling. Reduced-motion preference removes transitions and animation and switches scrolling to auto. There is no defined pressed transform or hover lift.
+Motion is limited to color and background-color on hovered links and buttons (150ms, ease-out), smooth document scrolling, and user-triggered shelf scrolling. Reduced-motion preference removes transitions and animation and switches scrolling to auto. There is no defined pressed transform or hover lift.
 
 ## Shapes
 
@@ -237,7 +237,7 @@ Compact and deliberate. Primary buttons use NVIDIA Action Green with black text,
 
 A labelled, broad search assembly with a leading SVG icon and an integrated primary submit. The field uses its frontmatter padding, a 1px Search Border edge, panel corners, a 56px minimum height, and a 12px internal gap. The 15px input has a 24px line height and no separate border. Focus within changes the edge to NVIDIA Green and adds the focus ring; the input delegates its focus indication to the assembly. The submit has a 40px minimum height, 10px 17px padding, and its dedicated radius. Its disabled treatment is `#999` on `#262626`. Through 700px the input becomes 14px, its submit arrow is hidden, and field padding becomes 5px 6px 5px 12px.
 
-Search-result titles wrap within a shrinkable text span while their arrow remains beside the first line. The initial search prompt uses the shared empty-state panel and its full inset.
+Search-result titles wrap within a shrinkable text span while their arrow remains beside the first line. Unified discovery uses the same search assembly above its shelves or results; the earlier standalone search-start prompt is replaced by document discovery.
 
 Live suggestions progressively enhance the same input on the catalog, project,
 and search pages. After two characters and a 180ms pause, up to five ranked
@@ -254,7 +254,7 @@ available with JavaScript disabled. The project label names its scoped search.
 
 ### Navigation
 
-Quiet labelled destinations and an authored document tree. Main links have a 38px minimum height and 4px vertical separation. Current links use Active Neutral, Body Text, and medium weight; hover uses `nav-hover`. Project links and tree links retain the same current-location language with narrower hierarchy. At the 1100px breakpoint the existing navigation is reused inside a semantic menu disclosure with 44px main link targets. The reader's contents disclosure appears through 700px; its desktop alternative uses quiet text and NVIDIA Green hover/current states.
+Quiet labelled destinations and an authored document tree. One Browse documentation destination covers the homepage and results, replacing the separate All documentation and Global search destinations. Main links have a 38px minimum height and 4px vertical separation. Current links use Active Neutral, Body Text, and medium weight; hover uses `nav-hover`. Project links and tree links retain the same current-location language with narrower hierarchy. At the 1100px breakpoint the existing navigation is reused inside a semantic menu disclosure with 44px main link targets. The reader's contents disclosure appears through 700px; its desktop alternative uses quiet text and NVIDIA Green hover/current states.
 
 Adjacent-document links use their `prev` and `next` relationship for alignment. Previous stays left and next stays right, including the first and last document.
 
@@ -273,9 +273,58 @@ rows retain authored guide/caption context beneath their title. Nested entries
 retain their order and stepped indentation. These lists remain flat surfaces with
 no new shadow or color. Native focus receives the established green outline.
 
-### Project panels
+### Document discovery
 
-Bordered charcoal entries with the panel radius, frontmatter padding, a descriptive title, authored page previews, actual counts, and a separated source footer. The title is an explicit link; the whole panel is not an implied button. Preview links use 36px rows, increasing to 40px through 700px. Description width caps at 55ch. The source footer has a quiet rule and 15px top padding. There is no panel shadow or hover transform.
+The homepage and `/search` share one discovery surface. A flat heading and Browse
+documents link sit above the labelled search and up to three filters. Project
+stays available when projects exist; Topic and Document type appear only when
+their metadata has values or their URL filter is active. Active unavailable
+values remain visible and removable instead of being silently dropped.
+Filters use equal shrinkable columns, 16px gaps, 12px labels with 8px separation,
+and 44px selects. Through 575px they stack in one column. Changes submit with
+JavaScript; a no-JavaScript Apply filters button preserves ordinary form use.
+Applied-filter links have 44px targets and explicit removal names. Clear search
+preserves filters; Clear filters preserves the query. State stays in the URL.
+
+Unfiltered discovery shows up to three document shelves: Popular documents,
+then How-to guides and Reference when those explicit kinds exist. Remaining
+shelf slots use From {project title}, with real documents and a project-filtered
+View all destination. Current publications have no topic/type metadata, so they
+use these project shelves without inferring classifications. Popularity is shared
+all-time browser opens, includes repeat opens, and displays actual ranks/counts.
+With no usage history, the first shelf is Explore documentation and shows no
+popularity claims. No documents produces the source-setup empty state. A Browse
+documents action opens the alphabetical library, paged at 30 documents. A query
+shows ranked matching sections, retaining the same controls and visible state;
+filtered misses keep controls and offer a relevant clear action.
+
+Each shelf is a labelled native list with contained horizontal scrolling,
+proximity scroll snapping, 16px card gaps, and 280px minimum columns at wider
+sizes. Through 700px each column uses 88% of the shelf width to reveal that more
+content can be reached. Cards are full native links with no nested actions:
+document kind and icon/rank, muted project name, title, authored path, and real
+open count on the popular shelf. No description or image is invented. Cards use
+Raised Charcoal, a 1px neutral border, an 8px radius, 224px minimum height, 24px
+padding (16px on phones), and 8px internal gaps. Titles are 18px medium at 1.4
+line height; project, kind, path, and count use 12px metadata. Long text wraps.
+Hover uses Active Neutral and a green border, with no lift or shadow.
+
+Shelf headers use 18px headings and 13px supporting text. Previous/next buttons
+have 44px square targets, descriptive names, and controlled-list relationships;
+they appear only with JavaScript and horizontal overflow. Buttons disable at the
+ends. Lists remain focusable and scrollable without JavaScript. There is no
+autoplay. Control-triggered smooth scrolling becomes immediate under reduced
+motion. Shelf headings and actions stack through 700px. Distinct regions use
+32px separation, preserving the existing reader and authored category navigation.
+
+This refinement applies KUI's browse/search/filter/card/carousel guidance to the
+existing Python frontend. Semantic CSS variable references for surfaces, text,
+borders, radius, and density spacing fall back to the exact settled dark tokens.
+The KUI React package and shared typography CSS are not installed. Native
+elements are not presented as KUI React components, and the existing documented
+typography values remain explicit rather than inventing unavailable font tokens.
+Reference selection and adaptation limits are recorded in
+[discovery KUI guidance](evidence/discovery-kui-guidance.md).
 
 ### Source trail
 

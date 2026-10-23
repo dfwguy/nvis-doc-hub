@@ -94,6 +94,35 @@ class Hub:
             doc["url"] += "#" + quote(section, safe="-_")
         return doc
 
+    def record_document_view(self, slug: str, path: str) -> bool:
+        """Count an explicit browser open without changing normal retrieval calls."""
+        try:
+            validate_path(path)
+        except ValueError:
+            return False
+        return self.store.record_document_view(slug, path)
+
+    def popular_documents(self, limit: int = 6) -> list[dict[str, Any]]:
+        """Return real published documents ranked by shared all-time page opens."""
+        return self.store.popular_documents(limit)
+
+    def browse_documents(
+        self,
+        project: str | None = None,
+        topic: str | None = None,
+        kind: str | None = None,
+        limit: int = 30,
+        offset: int = 0,
+    ) -> list[dict[str, Any]]:
+        """List published document cards using explicit classification filters."""
+        return self.store.browse_documents(project, topic, kind, limit, offset)
+
+    def document_count(
+        self, project: str | None = None, topic: str | None = None, kind: str | None = None
+    ) -> int:
+        """Count documents matching the same browse metadata filters."""
+        return self.store.document_count(project, topic, kind)
+
     def search(
         self,
         query: str,

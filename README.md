@@ -4,6 +4,23 @@ Browse, read, and search authored project documentation in one local hub. The we
 reader and MCP server share the same SQLite publications and section search.
 Source repositories remain authoritative; registration and refresh are explicit.
 
+**Browse documentation** combines search, live suggestions, filters, and document
+discovery. **Browse documents** opens the complete paginated library; an empty
+query can browse documents using any available metadata filters. The existing
+`/search` URL opens the same discovery experience.
+
+Homepage shelves link directly to documents. Popular documents are ranked by
+aggregate all-time opens in this hub's database, including repeat opens. No reader
+identity or profile is stored. Separate installations have separate counts.
+Before usage exists, the homepage shows Explore documentation; project shelves
+fill gaps when sources have no explicit document-type metadata. Source refreshes
+preserve counts, and removed documents disappear from rankings.
+
+The Python templates follow the supplied [Kaizen UI guidance](evidence/discovery-kui-guidance.md),
+using documented patterns and semantic CSS tokens with the established dark-theme
+fallbacks. The frontend has not been migrated to React. The supplied npm package
+configuration remains pending installation; Python startup does not require npm.
+
 After cloning, install [Git LFS](https://git-lfs.com/) with your platform's package
 manager or its installer, then run these commands from the repository root:
 

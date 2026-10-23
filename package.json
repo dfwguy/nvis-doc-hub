@@ -1,0 +1,13 @@
+{
+  "name": "nvis-docs-hub",
+  "private": true,
+  "scripts": {
+    "prepare": "kui-sync-skills --dir .agents"
+  },
+  "devDependencies": {
+    "@kui/foundations-react-core": "1.18.0"
+  },
+  "kui": {
+    "disablePostInstall": true
+  }
+}

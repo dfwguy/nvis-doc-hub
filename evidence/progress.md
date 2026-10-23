@@ -1,5 +1,47 @@
 # Implementation progress
 
+23 October, unified document discovery: one Browse documentation destination
+replaces the separate catalog/search choices. `/` and `/search` share a search,
+filter and document-browse surface. Browse documents opens the complete
+alphabetical library; a text query keeps ranked matching sections. Query and
+filters clear independently and remain in shared URLs and pagination.
+
+Home shelves link directly to documents. Popular documents uses real shared
+all-time opens, including repeats; empty history uses Explore documentation.
+Typed shelves require explicit metadata. The actual snapshots have empty
+topic/type facets, so remaining slots, up to three shelves total, show real
+From {project title} documents. Their View all links filter by project. Empty
+metadata controls stay hidden unless their URL value is active, visible as
+unavailable and removable. No source classification was inferred or changed.
+
+An additive aggregate counter stores project/path/count without a user
+identifier, cookie or profile. Successful browser reader rendering records an
+open; API, CLI and MCP retrieval remain side-effect-free. Counts survive refresh
+and restart while rankings exclude removed documents. Browser QA runs against an
+isolated database on port 8001, preserving the user's main-instance counts.
+
+The final Python suite passes 94 tests; Ruff lint, formatting (17 Python files),
+mypy (10 source modules) and diff checks pass. Existing browser and category regressions pass
+35 and 34 checks; the live-search regression passes all 28. Discovery's portable
+suite passes all 16 checks in its final rerun.
+Both real phone findings—hidden Browse documents and collapsing shelf cards—are
+fixed and independently verified. KUI guidance is applied through native HTML,
+CSS semantic-token fallbacks and progressive enhancement, with no React migration
+or npm install. All 101 original skill files, 121 user-supplied KUI files and 96
+source snapshot files retain their original hashes.
+
+Read [complete discovery verification](discovery-verification.md),
+[KUI guidance](discovery-kui-guidance.md),
+[code review](discovery-code-review.md),
+[browser evidence](discovery-browser-review.json), and the
+[current checkpoint](../handoff/sessions/nvis-docs-hub/20261023T190834Z-document-discovery.md).
+This checkpoint accompanies the finished `development` feature; Git's tracking
+status gives the remote state. `main` retains the verified baseline, and actual
+content remains 85 Cluster Bringup + 7 Documentation Pipeline pages. Reader access
+control, contributor publishing automation, source synchronization and production
+deployment remain deferred. Earlier entries below preserve their original
+verification counts and publication-stage context.
+
 23 October, collapsible categories: implementation and independent code/browser
 review are complete on `development`. Project indexes and desktop/mobile trees
 share native disclosure groups for Tutorials, How-to guides, Reference and

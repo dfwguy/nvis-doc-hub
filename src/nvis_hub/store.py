@@ -15,6 +15,24 @@ from .models import Registration
 PUBLIC_SOURCE_FIELDS = ("repo_url", "ref", "source_mode")
 
 
+def _document_conditions(
+    project: str | None, topic: str | None, kind: str | None
+) -> tuple[list[str], list[Any]]:
+    """Parameterize filters against authored metadata on the documents alias."""
+    conditions: list[str] = []
+    parameters: list[Any] = []
+    if project:
+        conditions.append("d.project=?")
+        parameters.append(project)
+    if topic:
+        conditions.append("EXISTS(SELECT 1 FROM json_each(d.body, '$.topics') WHERE value=?)")
+        parameters.append(topic)
+    if kind:
+        conditions.append("json_extract(d.body, '$.kind')=?")
+        parameters.append(kind)
+    return conditions, parameters
+
+
 class Store:
     """Keep registrations, readable content, assets, and search in one database."""
 
@@ -31,6 +49,11 @@ class Store:
                 );
                 CREATE TABLE IF NOT EXISTS documents (
                     project TEXT NOT NULL, path TEXT NOT NULL, body TEXT NOT NULL,
+                    PRIMARY KEY(project,path)
+                );
+                CREATE TABLE IF NOT EXISTS document_views (
+                    project TEXT NOT NULL, path TEXT NOT NULL,
+                    view_count INTEGER NOT NULL CHECK(view_count > 0),
                     PRIMARY KEY(project,path)
                 );
                 CREATE TABLE IF NOT EXISTS assets (
@@ -187,6 +210,86 @@ class Store:
                 "SELECT data,mime FROM assets WHERE project=? AND path=?", (slug, path)
             ).fetchone()
         return (bytes(row["data"]), row["mime"]) if row else None
+
+    def record_document_view(self, slug: str, path: str) -> bool:
+        """Atomically count an explicit open only while the document is published."""
+        with self.connection() as database:
+            cursor = database.execute(
+                """INSERT INTO document_views(project,path,view_count)
+                SELECT project,path,1 FROM documents WHERE project=? AND path=?
+                ON CONFLICT(project,path) DO UPDATE SET
+                    view_count=document_views.view_count+1""",
+                (slug, path),
+            )
+            return cursor.rowcount == 1
+
+    def document_count(self, project: str | None, topic: str | None, kind: str | None) -> int:
+        """Count current published documents matching explicit metadata filters."""
+        conditions, parameters = _document_conditions(project, topic, kind)
+        with self.connection() as database:
+            row = database.execute(
+                "SELECT count(*) AS total FROM documents d"
+                + (" WHERE " + " AND ".join(conditions) if conditions else ""),
+                parameters,
+            ).fetchone()
+        return int(row["total"])
+
+    def browse_documents(
+        self,
+        project: str | None,
+        topic: str | None,
+        kind: str | None,
+        limit: int,
+        offset: int,
+    ) -> list[dict[str, Any]]:
+        """Browse the current publication alphabetically without an FTS query."""
+        return self._document_cards(project, topic, kind, limit, offset, popular=False)
+
+    def popular_documents(self, limit: int) -> list[dict[str, Any]]:
+        """Rank currently published documents by aggregate all-time opens."""
+        return self._document_cards(None, None, None, limit, 0, popular=True)
+
+    def _document_cards(
+        self,
+        project: str | None,
+        topic: str | None,
+        kind: str | None,
+        limit: int,
+        offset: int,
+        *,
+        popular: bool,
+    ) -> list[dict[str, Any]]:
+        conditions, parameters = _document_conditions(project, topic, kind)
+        if popular:
+            conditions.append("v.view_count > 0")
+        parameters.extend((max(1, min(limit, 10000)), max(0, offset)))
+        sql = (
+            """SELECT d.body AS document,
+            json_extract(p.registration,'$.title') AS project_title,
+            coalesce(v.view_count,0) AS view_count
+            FROM documents d JOIN projects p ON p.slug=d.project
+            LEFT JOIN document_views v ON v.project=d.project AND v.path=d.path"""
+            + (" WHERE " + " AND ".join(conditions) if conditions else "")
+            + " ORDER BY "
+            + ("v.view_count DESC," if popular else "")
+            + "json_extract(d.body,'$.title') COLLATE NOCASE,d.project,d.path LIMIT ? OFFSET ?"
+        )
+        with self.connection() as database:
+            rows = database.execute(sql, parameters).fetchall()
+        result = []
+        for row in rows:
+            document = json.loads(row["document"])
+            result.append(
+                {
+                    **{
+                        key: document[key]
+                        for key in ("path", "title", "kind", "topics", "url", "revision", "project_slug")
+                    },
+                    "project_title": row["project_title"],
+                    "view_count": row["view_count"],
+                }
+            )
+        return result
 
     def search(
         self,

@@ -62,7 +62,7 @@ def test_catalog_search_and_nested_reader(tmp_path: Path) -> None:
 
 def test_empty_no_matches_missing_and_asset_safety(tmp_path: Path) -> None:
     client = TestClient(create_app(tmp_path / "empty.db"))
-    assert "No projects published yet" in client.get("/").text
+    assert "No documents published yet" in client.get("/").text
     assert "No matching documentation" in client.get("/search?q=nonexistent").text
     assert client.get("/projects/missing").status_code == 404
     assert client.get("/projects/missing/docs/README.md").status_code == 404
@@ -167,7 +167,8 @@ def test_suggestions_prefix_the_final_term_even_after_many_completed_terms(tmp_p
 def test_reader_tables_and_contents_have_narrow_layout_affordances(tmp_path: Path) -> None:
     client = published_client(tmp_path)
     result = client.get("/search?q=switch")
-    assert '<details class="search-filters" open' in result.text
+    assert '<legend class="sr-only">Filter documents</legend>' in result.text
+    assert 'id="project-filter"' in result.text
     reader = client.get("/projects/bringup/docs/docs/guides/setup.md")
     assert 'class="mobile-contents"' in reader.text
     assert 'class="table-scroll"' in reader.text
@@ -192,3 +193,47 @@ def test_source_status_shows_pending_registration_without_relabeling_publication
     status = client.get("/sources")
     assert "Registration changed" in status.text
     assert "awaiting a successful refresh" in status.text
+
+
+def test_unified_discovery_replaces_duplicate_destinations_and_project_previews(tmp_path: Path) -> None:
+    client = published_client(tmp_path)
+    for route in ["/", "/search"]:
+        response = client.get(route)
+        assert response.status_code == 200
+        assert "<h1>Browse documentation</h1>" in response.text
+        assert "Global search" not in response.text
+        assert "All documentation" not in response.text
+        assert "Browse projects" not in response.text
+        assert "Explore documentation" in response.text
+        assert ">Popular documents</h2>" not in response.text
+        assert "Network setup" in response.text
+        assert "data-discovery-form" in response.text
+
+
+def test_empty_query_can_browse_and_filter_documents_on_either_entry_route(tmp_path: Path) -> None:
+    client = published_client(tmp_path)
+    for route in ["/", "/search"]:
+        response = client.get(route, params={"view": "all", "kind": "how-to"})
+        assert response.status_code == 200
+        assert "Network setup" in response.text
+        assert "Bringup docs" not in response.text
+        assert "1 document" in response.text
+        assert "Explore documentation" not in response.text
+    assert "No matching documentation" in client.get("/?kind=tutorial").text
+
+
+def test_only_successful_browser_reader_opens_feed_shared_popularity(tmp_path: Path) -> None:
+    client = published_client(tmp_path)
+    hub = client.app.state.hub
+    assert hub.popular_documents() == []
+    assert client.get("/api/projects").status_code == 200
+    client.get("/search?q=switch")
+    client.get("/api/search/suggestions?q=swi")
+    client.get("/projects/bringup/docs/missing.md")
+    assert hub.popular_documents() == []
+    assert client.get("/projects/bringup/docs/docs/guides/setup.md").status_code == 200
+    assert hub.popular_documents()[0]["view_count"] == 1
+    home = client.get("/").text
+    assert "Popular documents" in home
+    assert "1 open" in home
+    assert hub.popular_documents()[0]["view_count"] == 1

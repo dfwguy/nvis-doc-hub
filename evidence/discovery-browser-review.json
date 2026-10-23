@@ -1,0 +1,833 @@
+{
+  "phase": "full verification",
+  "at": "2026-10-23T19:10:26.340Z",
+  "base": "http://127.0.0.1:8001",
+  "initialRed": {
+    "phase": "initial red",
+    "at": "2026-10-23T18:56:31.937Z",
+    "target": "http://127.0.0.1:8001",
+    "browser": "151.0.7922.34",
+    "tests": [
+      {
+        "name": "One unified Browse documentation navigation destination",
+        "status": "failed",
+        "error": "Expected values to be strictly equal:\n\n0 !== 1\n"
+      },
+      {
+        "name": "One discovery form contains visible query and three filters",
+        "status": "failed",
+        "error": "Expected values to be strictly equal:\n\n0 !== 1\n"
+      },
+      {
+        "name": "Discovery shelves link directly to published documents",
+        "status": "failed",
+        "error": "The expression evaluated to a falsy value:\n\n  assert(await page.locator('.document-shelf .document-card[href*=\"/docs/\"]').count()>0)\n"
+      },
+      {
+        "name": "Browse documents links to complete document library",
+        "status": "failed",
+        "error": "locator.getAttribute: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Browse documents', exact: true })\u001b[22m\n"
+      },
+      {
+        "name": "Empty query with filter browses document cards",
+        "status": "failed",
+        "error": "The expression evaluated to a falsy value:\n\n  assert(await page.locator('.document-card[href*=\"/projects/documentation-pipeline/docs/\"]').count()>0)\n"
+      }
+    ]
+  },
+  "emptyHistoryVerification": {
+    "before": {
+      "heading": "Explore documentation",
+      "top": {
+        "href": "/projects/documentation-pipeline/docs/docs/tutorials/adopt.md",
+        "title": "Adopt the pipeline in an existing repository",
+        "text": "Documentation Documentation PipelineAdopt the pipeline in an existing repository docs/tutorials/adopt.md",
+        "kind": "",
+        "opens": 0
+      }
+    },
+    "after": {
+      "heading": "Popular documents",
+      "top": {
+        "href": "/projects/documentation-pipeline/docs/docs/tutorials/adopt.md",
+        "title": "Adopt the pipeline in an existing repository",
+        "text": "Documentation1 Documentation PipelineAdopt the pipeline in an existing repository docs/tutorials/adopt.md2 opens",
+        "kind": "",
+        "opens": 2
+      }
+    },
+    "browserContexts": 2
+  },
+  "checks": [
+    {
+      "name": "Root and empty search share one discovery form and one navigation destination",
+      "status": "passed",
+      "detail": [
+        {
+          "route": "/",
+          "heading": "Browse documentation",
+          "shelves": [
+            "Popular documents",
+            "From Cluster Bringup",
+            "From Documentation Pipeline"
+          ]
+        },
+        {
+          "route": "/search",
+          "heading": "Browse documentation",
+          "shelves": [
+            "Popular documents",
+            "From Cluster Bringup",
+            "From Documentation Pipeline"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Popularity uses real aggregate reader opens shared across browser contexts",
+      "status": "passed",
+      "detail": {
+        "before": {
+          "heading": "Popular documents",
+          "top": {
+            "href": "/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md",
+            "title": "How a client-only Slurm node works",
+            "text": "Documentation1 Cluster BringupHow a client-only Slurm node works docs/observability_server_setup/explanation/client-only-slurm-node.md23 opens",
+            "kind": "",
+            "opens": 23
+          }
+        },
+        "after": {
+          "heading": "Popular documents",
+          "top": {
+            "href": "/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md",
+            "title": "How a client-only Slurm node works",
+            "text": "Documentation1 Cluster BringupHow a client-only Slurm node works docs/observability_server_setup/explanation/client-only-slurm-node.md25 opens",
+            "kind": "",
+            "opens": 25
+          }
+        },
+        "browserContexts": 2
+      }
+    },
+    {
+      "name": "How-to and Reference shelves contain only explicitly classified documents",
+      "status": "passed",
+      "detail": {
+        "typedShelves": [],
+        "note": "No typed shelf is fabricated when published classifications are absent."
+      }
+    },
+    {
+      "name": "Browse documents paginates the complete alphabetical document library",
+      "status": "passed",
+      "detail": {
+        "expected": 92,
+        "documents": 92,
+        "pages": [
+          {
+            "url": "http://127.0.0.1:8001/?view=all#documents",
+            "documents": 30
+          },
+          {
+            "url": "http://127.0.0.1:8001/search?view=all&offset=30",
+            "documents": 30
+          },
+          {
+            "url": "http://127.0.0.1:8001/search?view=all&offset=60",
+            "documents": 30
+          },
+          {
+            "url": "http://127.0.0.1:8001/search?view=all&offset=90",
+            "documents": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "Empty-query project filters auto-submit and browse real matching documents",
+      "status": "passed",
+      "detail": {
+        "url": "http://127.0.0.1:8001/search?view=all&q=&project=documentation-pipeline",
+        "documents": 7
+      }
+    },
+    {
+      "name": "Search and automatic filter navigation retain one query and matching scope",
+      "status": "passed",
+      "detail": {
+        "url": "http://127.0.0.1:8001/search?view=all&q=configuration&project=cluster-bringup",
+        "results": 30
+      }
+    },
+    {
+      "name": "Clear search retains filters and Clear filters retains the query",
+      "status": "passed",
+      "detail": {
+        "url": "http://127.0.0.1:8001/search?q=configuration&view=all&offset=0"
+      }
+    },
+    {
+      "name": "Filter chips remove their own constraint while retaining query and other filters",
+      "status": "passed",
+      "detail": {
+        "availableFacets": {
+          "topic": "",
+          "kind": ""
+        },
+        "tested": [
+          {
+            "key": "project",
+            "href": "/search?q=configuration&topic=qa-unavailable-topic&kind=qa-unavailable-type&view=all&offset=0"
+          },
+          {
+            "key": "topic",
+            "href": "/search?q=configuration&project=documentation-pipeline&kind=qa-unavailable-type&view=all&offset=0"
+          },
+          {
+            "key": "kind",
+            "href": "/search?q=configuration&project=documentation-pipeline&topic=qa-unavailable-topic&view=all&offset=0"
+          }
+        ],
+        "note": "Published sources have no topic/type facets; explicit unavailable URL values verify visible removable controls without fabricating content classifications."
+      }
+    },
+    {
+      "name": "desktop discovery shelves, filters, cards, and navigation fit",
+      "status": "passed",
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "cards": [
+          {
+            "height": 265.375,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 265.375,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 265.375,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 265.375,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 265.375,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 265.375,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          }
+        ],
+        "shelves": [
+          {
+            "clientWidth": 1107,
+            "scrollWidth": 1768,
+            "firstCardWidth": 280
+          },
+          {
+            "clientWidth": 1107,
+            "scrollWidth": 1768,
+            "firstCardWidth": 280
+          },
+          {
+            "clientWidth": 1107,
+            "scrollWidth": 1768,
+            "firstCardWidth": 280
+          }
+        ],
+        "filters": [
+          {
+            "label": "project",
+            "height": 44,
+            "left": 269,
+            "right": 627.328125
+          }
+        ]
+      }
+    },
+    {
+      "name": "tablet discovery shelves, filters, cards, and navigation fit",
+      "status": "passed",
+      "detail": {
+        "width": 768,
+        "scrollWidth": 753,
+        "cards": [
+          {
+            "height": 265.375,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 265.375,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 265.375,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 265.375,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 265.375,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 265.375,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          },
+          {
+            "height": 224,
+            "width": 280,
+            "clientWidth": 278,
+            "scrollWidth": 278
+          }
+        ],
+        "shelves": [
+          {
+            "clientWidth": 675,
+            "scrollWidth": 1768,
+            "firstCardWidth": 280
+          },
+          {
+            "clientWidth": 675,
+            "scrollWidth": 1768,
+            "firstCardWidth": 280
+          },
+          {
+            "clientWidth": 675,
+            "scrollWidth": 1768,
+            "firstCardWidth": 280
+          }
+        ],
+        "filters": [
+          {
+            "label": "project",
+            "height": 44,
+            "left": 39,
+            "right": 253.328125
+          }
+        ]
+      }
+    },
+    {
+      "name": "phone discovery shelves, filters, cards, and navigation fit",
+      "status": "passed",
+      "detail": {
+        "width": 390,
+        "scrollWidth": 375,
+        "cards": [
+          {
+            "height": 231.375,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 231.375,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 231.375,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 231.375,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 231.375,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 231.375,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 224,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 224,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 224,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 224,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 224,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 224,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 224,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 224,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 224,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 224,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 224,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          },
+          {
+            "height": 224,
+            "width": 287.75,
+            "clientWidth": 286,
+            "scrollWidth": 286
+          }
+        ],
+        "shelves": [
+          {
+            "clientWidth": 335,
+            "scrollWidth": 1815,
+            "firstCardWidth": 287.75
+          },
+          {
+            "clientWidth": 335,
+            "scrollWidth": 1815,
+            "firstCardWidth": 287.75
+          },
+          {
+            "clientWidth": 335,
+            "scrollWidth": 1815,
+            "firstCardWidth": 287.75
+          }
+        ],
+        "filters": [
+          {
+            "label": "project",
+            "height": 44,
+            "left": 20,
+            "right": 355
+          }
+        ]
+      }
+    },
+    {
+      "name": "narrow-phone discovery shelves, filters, cards, and navigation fit",
+      "status": "passed",
+      "detail": {
+        "width": 320,
+        "scrollWidth": 305,
+        "cards": [
+          {
+            "height": 274.5625,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 274.5625,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 274.5625,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 274.5625,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 274.5625,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 274.5625,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 224,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 224,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 224,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 224,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 224,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 224,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 227.5625,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 227.5625,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 227.5625,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 227.5625,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 227.5625,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          },
+          {
+            "height": 227.5625,
+            "width": 226.15625,
+            "clientWidth": 224,
+            "scrollWidth": 224
+          }
+        ],
+        "shelves": [
+          {
+            "clientWidth": 265,
+            "scrollWidth": 1445,
+            "firstCardWidth": 226.15625
+          },
+          {
+            "clientWidth": 265,
+            "scrollWidth": 1445,
+            "firstCardWidth": 226.15625
+          },
+          {
+            "clientWidth": 265,
+            "scrollWidth": 1445,
+            "firstCardWidth": 226.15625
+          }
+        ],
+        "filters": [
+          {
+            "label": "project",
+            "height": 44,
+            "left": 20,
+            "right": 285
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shelf controls work with visible keyboard focus, contrast, and reduced motion",
+      "status": "passed",
+      "detail": {
+        "focus": {
+          "focused": true,
+          "width": 2,
+          "style": "solid"
+        },
+        "contrast": [
+          {
+            "className": "document-card-project",
+            "ratio": 6.108865559643775
+          },
+          {
+            "className": "H3",
+            "ratio": 17.40432753274219
+          },
+          {
+            "className": "document-card-path",
+            "ratio": 6.108865559643775
+          },
+          {
+            "className": "document-card-opens",
+            "ratio": 15.000750253814065
+          }
+        ],
+        "scrollBehavior": "auto"
+      }
+    },
+    {
+      "name": "Touch swipe scrolls the shelf and a native card tap opens its document",
+      "status": "passed",
+      "detail": {
+        "href": "/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md"
+      }
+    },
+    {
+      "name": "JavaScript-free discovery search and visible filters submit natively",
+      "status": "passed",
+      "detail": {
+        "url": "http://127.0.0.1:8001/search?project=documentation-pipeline&view=all&offset=0"
+      }
+    },
+    {
+      "name": "Discovery interactions produce no browser JavaScript errors",
+      "status": "passed"
+    }
+  ],
+  "captures": [
+    ".impeccable/review/discovery-desktop-document-library.png",
+    ".impeccable/review/discovery-project-filtered-library.png",
+    ".impeccable/review/discovery-query-and-filter-results.png",
+    ".impeccable/review/discovery-desktop-home.png",
+    ".impeccable/review/discovery-tablet-home.png",
+    ".impeccable/review/discovery-tablet-menu.png",
+    ".impeccable/review/discovery-phone-home.png",
+    ".impeccable/review/discovery-phone-menu.png",
+    ".impeccable/review/discovery-narrow-phone-home.png",
+    ".impeccable/review/discovery-narrow-phone-menu.png",
+    ".impeccable/review/discovery-phone-shelf-keyboard-reduced-motion.png"
+  ],
+  "pageErrors": [],
+  "browser": "151.0.7922.34",
+  "passed": 16,
+  "failed": 0
+}

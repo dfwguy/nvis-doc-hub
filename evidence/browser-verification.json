@@ -1,6 +1,6 @@
 {
-  "base": "http://127.0.0.1:8000",
-  "at": "2026-10-23T18:30:28.636Z",
+  "base": "http://127.0.0.1:8001",
+  "at": "2026-10-23T19:06:54.259Z",
   "browser": "151.0.7922.34",
   "checks": [
     {
@@ -14,7 +14,7 @@
       }
     },
     {
-      "name": "desktop-search-start",
+      "name": "desktop-discovery-home",
       "detail": {
         "width": 1440,
         "scrollWidth": 1440,
@@ -24,11 +24,8 @@
       }
     },
     {
-      "name": "desktop-search-prompt-inset",
-      "detail": {
-        "left": 29,
-        "top": 39
-      }
+      "name": "desktop-discovery-filters",
+      "detail": "Query and available metadata filters share the discovery form."
     },
     {
       "name": "desktop-search",
@@ -56,7 +53,7 @@
     },
     {
       "name": "desktop-nested-link",
-      "detail": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/extract-cmsh-without-installing.md"
+      "detail": "http://127.0.0.1:8001/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/extract-cmsh-without-installing.md"
     },
     {
       "name": "tablet",
@@ -69,7 +66,7 @@
       }
     },
     {
-      "name": "tablet-search-start",
+      "name": "tablet-discovery-home",
       "detail": {
         "width": 768,
         "scrollWidth": 768,
@@ -79,11 +76,8 @@
       }
     },
     {
-      "name": "tablet-search-prompt-inset",
-      "detail": {
-        "left": 29,
-        "top": 39
-      }
+      "name": "tablet-discovery-filters",
+      "detail": "Query and available metadata filters share the discovery form."
     },
     {
       "name": "tablet-search",
@@ -111,7 +105,7 @@
     },
     {
       "name": "tablet-nested-link",
-      "detail": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/extract-cmsh-without-installing.md"
+      "detail": "http://127.0.0.1:8001/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/extract-cmsh-without-installing.md"
     },
     {
       "name": "mobile",
@@ -124,7 +118,7 @@
       }
     },
     {
-      "name": "mobile-search-start",
+      "name": "mobile-discovery-home",
       "detail": {
         "width": 390,
         "scrollWidth": 390,
@@ -134,11 +128,8 @@
       }
     },
     {
-      "name": "mobile-search-prompt-inset",
-      "detail": {
-        "left": 21,
-        "top": 25
-      }
+      "name": "mobile-discovery-filters",
+      "detail": "Query and available metadata filters share the discovery form."
     },
     {
       "name": "mobile-navigation",
@@ -174,7 +165,7 @@
     },
     {
       "name": "mobile-nested-link",
-      "detail": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/extract-cmsh-without-installing.md"
+      "detail": "http://127.0.0.1:8001/projects/cluster-bringup/docs/docs/cmsh_setup/how-to/extract-cmsh-without-installing.md"
     },
     {
       "name": "desktop-image-reader",

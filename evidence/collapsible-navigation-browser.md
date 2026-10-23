@@ -1,6 +1,6 @@
 # Collapsible navigation browser verification
 
-Verified against `http://127.0.0.1:8000` on 23 October 2026 in visible Chromium
+Latest regression run verified against isolated `http://127.0.0.1:8001` on 23 October 2026 in visible Chromium
 151.0.7922.34. The final run passed 34 checks at 1440 × 1000, 768 × 1024, and
 390 × 844. The machine-readable results are in
 [collapsible-navigation-browser.json](collapsible-navigation-browser.json).

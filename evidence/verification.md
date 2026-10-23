@@ -13,10 +13,20 @@ The existing singular GitLab repository now has published `main` and
 `development` branches; see [repository setup](repository-setup.md). `main`
 retains the verified application baseline. No production deployment was performed.
 
-23 October update: collapsible documentation categories are implemented on
-`development`, alongside live search. The full Python suite passes 83 tests. The
-new category browser suite passes 34 checks and verifies all 92 published page
-URLs. Final regression checks pass; the finished feature belongs on `development`.
+23 October, unified discovery: `/` and `/search` share one Browse documentation
+surface with live section search, document browsing, URL-preserved filters and
+document shelves. The Python suite passes 94 tests. Shared all-time document
+opens drive genuine popularity; empty history uses Explore documentation.
+Browser QA uses an isolated database on port 8001, preserving the main instance's
+open counts. See [complete discovery verification](discovery-verification.md),
+[KUI adaptation](discovery-kui-guidance.md),
+[independent code review](discovery-code-review.md), and
+[browser results](discovery-browser-review.json). This checkpoint accompanies the
+finished `development` feature; use Git's tracking status for remote synchronization.
+
+Earlier 23 October, collapsible documentation categories were verified on
+`development`, alongside live search. That checkpoint passed 83 Python tests;
+the category browser suite passed 34 checks across all 92 published page URLs.
 See the [complete feature verification](collapsible-navigation-verification.md),
 [category browser review](collapsible-navigation-browser.md)
 and [independent code review](collapsible-navigation-code-review.md).
@@ -32,7 +42,10 @@ python3.12 -m venv .venv
 ./scripts/dev.sh
 ```
 
-Open http://127.0.0.1:8000. The environment, registrations, publications and server
+Open http://127.0.0.1:8000. The final discovery check found the main server healthy,
+serving the unified 92-document surface with Explore documentation and no stored
+popular opens. That empty counter state confirms isolation from the QA reader
+visits on port 8001. The environment, registrations, publications and server
 were exercised in this session. Startup serves the persistent `data/hub.sqlite3`.
 The supplied seed command intentionally imports verified local snapshots so it
 also works without private-source network access. Refreshing a snapshot does not
@@ -64,8 +77,9 @@ Final integrated run:
 .venv/bin/mypy src/nvis_hub
 ```
 
-The current Python suite passes 83 tests. Final Ruff lint, formatting (16 Python
-files), mypy (10 source modules) and diff checks pass.
+The final Python suite passes 94 tests. Ruff lint, formatting (17 Python files),
+mypy (10 source modules) and diff checks pass. Full feature results are in
+[discovery verification](discovery-verification.md).
 One upstream Starlette TestClient deprecation
 warning remains. Tests exercise imports/scopes, metadata,
 hosted nested links/assets, safe content and paths, snapshot integrity, title and
@@ -82,6 +96,14 @@ active-category state. YAML parsing reads data only and never executes repositor
 configuration. Existing RST navigation remains supported. The source inspection
 is recorded in [TOC template reference](toc-template-reference.md); the reference
 project was not imported into the catalog.
+
+Discovery tests additionally cover alphabetical browse/filter counts and
+pagination, real popularity and stable ties, concurrent increments, additive
+database upgrade, refresh/restart persistence, removed-document exclusion,
+unified routes and successful web-only counting. API, CLI and MCP retrieval
+remain side-effect-free. The aggregate table stores project, path and count;
+it stores no identifier, cookie or user profile. Opens are recorded after a
+successful reader template render; failed renders and HEAD requests do not count.
 
 The MCP integration uses the official SDK's real stdio subprocess client. It
 discovers all three read-only tools, searches and retrieves authored sections with
@@ -131,6 +153,8 @@ colors are in [browser-verification.json](browser-verification.json).
 
 Live search adds 28 browser checks for prefix suggestions, keyboard/click/touch,
 filter scope, request races, failure recovery, viewport constraints, and fallback.
+All 28 pass the discovery regression rerun after updating the superseded URL
+selector for the unified form.
 See [live-search verification](live-search-verification.md) for the exact coverage
 and reviewed captures.
 
@@ -151,6 +175,38 @@ To repeat the category checks:
 NODE_PATH="$PWD/.browser-tools/node_modules" node scripts/navigation_verify.cjs
 ```
 
+Unified discovery's portable browser suite passes all 16 checks. It covers unified
+entry routes/navigation, real shared popularity, complete 92-document browse
+pagination, scoped search/filter URLs, independent clearing/removal, desktop,
+tablet and 390/320-pixel layouts, no-JavaScript forms, real touch scrolling,
+keyboard shelf controls, reduced motion and runtime contrast. The final results
+are in [discovery browser evidence](discovery-browser-review.json).
+The existing 35-check browser and 34-check category suites also pass their
+discovery regression reruns. The review's hidden phone Browse documents action
+and shrinking phone shelf cards are fixed; independent verification found no
+unresolved material code defect.
+
+The real snapshots have no explicit topic/type facets. Unavailable metadata
+controls remain hidden unless their URL filter is active; active unknown values
+stay visible and removable. Typed shelves appear only from actual metadata;
+remaining slots use real From {project title} documents with project-filtered
+View all links. No source metadata, classifications, descriptions or popularity
+were invented. The 85 + 7 documents and all 96 source-file hashes remain unchanged.
+
+KUI's browse, search, filter, card and carousel guidance was applied to native
+FastAPI/Jinja/HTML controls and semantic CSS variables with settled-theme
+fallbacks. React components and their shared CSS are not installed; no npm
+install or frontend migration was performed. The 101 original imported skill
+files and all 121 user-supplied KUI files remain unchanged. See
+[KUI guidance and boundaries](discovery-kui-guidance.md).
+
+Run discovery QA against a separate seeded/copy database, rather than the user's
+main instance, because successful reader GETs intentionally increment opens:
+
+```bash
+NVIS_HUB_URL=http://127.0.0.1:8001 NODE_PATH="$PWD/.browser-tools/node_modules" node scripts/discovery_verify.cjs
+```
+
 Tasteskill's browser inspector reports no findings for catalog, filtered search
 and reader at all three widths. Source lint has two justified warnings: monospace
 is confined to literal code/identifiers; the shadow is confined to the mobile
@@ -165,7 +221,7 @@ No catalog entries or operational instructions were invented. All 101 imported
 skill files still match their original hashes.
 
 [DESIGN.md](../DESIGN.md) and the schema-v2 design sidecar record the finished
-tokens, breakpoints, states and seven reusable component patterns. Frontmatter
+tokens, breakpoints, states and reusable component patterns. Frontmatter
 color values were independently checked against the shipped CSS.
 
 The independent [visual review](visual-review.md) required a visible phone table

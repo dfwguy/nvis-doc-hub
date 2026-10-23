@@ -1,6 +1,6 @@
 {
-  "base": "http://127.0.0.1:8000",
-  "at": "2026-10-23T18:26:36.674Z",
+  "base": "http://127.0.0.1:8001",
+  "at": "2026-10-23T19:06:57.652Z",
   "browser": "151.0.7922.34",
   "checks": [
     {
@@ -427,14 +427,14 @@
           "Cluster Bringup · How to make the Slurm client work permanently",
           "Cluster Bringup"
         ],
-        "url": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account",
+        "url": "http://127.0.0.1:8001/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account",
         "keyboardSelection": true
       }
     },
     {
       "name": "normal-search-regression",
       "detail": {
-        "url": "http://127.0.0.1:8000/search?q=slurm&project=cluster-bringup",
+        "url": "http://127.0.0.1:8001/search?q=slurm&project=cluster-bringup",
         "results": 30
       }
     },
@@ -456,7 +456,7 @@
     },
     {
       "name": "no-javascript-normal-search",
-      "detail": "http://127.0.0.1:8000/search?q=configuration&project=documentation-pipeline"
+      "detail": "http://127.0.0.1:8001/search?q=configuration&project=documentation-pipeline"
     },
     {
       "name": "no-javascript-mobile-navigation",

@@ -7,6 +7,7 @@
 {% elif name == 'arrow' %}<path d="M5 12h14m-5-5 5 5-5 5"/>
 {% elif name == 'external' %}<path d="M14 3h7v7m0-7L10 14m0-9H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/>
 {% elif name == 'chevron' %}<path d="m9 5 7 7-7 7"/>
+{% elif name == 'close' %}<path d="m6 6 12 12M18 6 6 18"/>
 {% elif name == 'code' %}<path d="m8 5-6 7 6 7m8-14 6 7-6 7m-3-16-2 18"/>
 {% elif name == 'menu' %}<path d="M4 6h16M4 12h16M4 18h16"/>
 {% elif name == 'copy' %}<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/>
@@ -22,8 +23,7 @@
 
 {% macro navigation(projects, page, project, document, navigation_groups=[]) -%}
 <nav class="main-navigation" aria-label="Hub navigation">
-<a href="/" {% if page == 'catalog' %}aria-current="page"{% endif %}>{{ icon('grid') }}All documentation</a>
-<a href="/search" {% if page == 'search' %}aria-current="page"{% endif %}>{{ icon('search') }}Global search</a>
+<a href="/" {% if page in ['catalog', 'search'] %}aria-current="page"{% endif %}>{{ icon('search') }}Browse documentation</a>
 <a href="/sources" {% if page == 'sources' %}aria-current="page"{% endif %}>{{ icon('source') }}Source status</a>
 </nav>
 <nav class="project-navigation" aria-label="Project documentation">

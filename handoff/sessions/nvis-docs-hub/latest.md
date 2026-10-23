@@ -1,20 +1,26 @@
 # Latest NVIS documentation hub session
 
-Timestamp: 2026-10-23 18:30:32 UTC.
+Timestamp: 2026-10-23 19:08:34 UTC.
 
-Topic: Collapsible documentation categories and YAML/Diataxis navigation support.
+Topic: Unified document discovery with real shared popularity and KUI-guided shelves.
 
-Read the [current category checkpoint](20261023T183032Z-collapsible-navigation.md)
-first. Native category groups are implemented on `development`; the full Python
-suite passes 83 tests and the new browser suite passes 34 checks across all 92
-published URLs. Final existing-browser/live-search reruns and Python quality
-checks pass. This checkpoint accompanies the finished `development` change;
-use Git's tracking status to confirm remote synchronization.
-`main` retains the verified application baseline.
+Read the [current discovery checkpoint](20261023T190834Z-document-discovery.md)
+first. One Browse documentation destination now combines search, filtering,
+document browsing and shelves. Popularity uses shared all-time opens without
+user profiles. KUI guidance is adapted to native HTML/CSS; no React migration
+or npm install was performed. The Python suite passes 94 tests; existing,
+category and live-search regressions pass 35, 34 and 28 checks. Discovery's
+final rerun passes all 16 checks, recorded in its linked browser evidence.
+Final lint/formatting, mypy and diff checks pass. This checkpoint
+accompanies the finished `development` feature; use Git's tracking status to
+confirm remote synchronization. `main` retains the verified application baseline.
 Reader access control and contributor publishing automation remain deferred.
 
 The earlier feature and repository notes below are retained as historical
 context; the linked current checkpoint gives the present source and branch state.
+
+The [category checkpoint](20261023T183032Z-collapsible-navigation.md) records
+native category groups and YAML/Diataxis support; preserve that reader behavior.
 
 Latest feature, 23 October: live search suggestions are implemented and verified
 on `development`. Start typing two characters on the catalog, project page, or

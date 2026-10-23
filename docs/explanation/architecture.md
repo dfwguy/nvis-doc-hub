@@ -16,6 +16,19 @@ most. A separate progressive-enhancement script debounces requests, discards sta
 responses, and adds pointer/keyboard navigation to the existing search forms.
 Ordinary full search and MCP retain their existing exact-term matching.
 
+The homepage and existing `/search` route render a single documentation discovery
+surface. Empty-query browsing uses published document metadata without changing
+the shared search contract. The website records successful reader opens in an
+additive SQLite `document_views` table keyed by project and path. Its aggregate
+all-time counters retain no reader identifiers, survive publication replacement,
+and join current documents so deleted pages cannot rank. CLI/MCP/API retrieval
+does not increment these counters. Counts are shared only within one database.
+
+Kaizen UI's documented browse, search, filter, card, and carousel patterns guide
+the native server-rendered markup. Styles use documented semantic CSS token
+names with established dark-theme fallbacks. React components and their runtime
+CSS are not installed or represented as native Jinja components.
+
 Acquisition reads either an HTTPS GitLab archive, an authentic revision-labelled
 snapshot, or a local development directory. Parsing finishes before the service
 atomically replaces a project's publication. A failed refresh records an error

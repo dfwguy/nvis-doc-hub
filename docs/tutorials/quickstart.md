@@ -15,6 +15,18 @@ a project or metadata filter, and open a result at its matching heading. The
 reader includes source path, revision, and publication time. Missing topic or
 document-type metadata stays unclassified.
 
+Browse documentation is the shared homepage and search destination. Choose
+Browse documents for the complete library, or leave the query empty and select
+an available filter. Empty metadata dimensions are omitted. Filters apply when
+changed; without JavaScript, use Apply filters. Clear search preserves filters,
+and Clear filters preserves the query.
+
+Homepage shelves open documents directly. Popular documents reflects real shared
+all-time opens in this database, including repeat opens; Explore documentation
+appears before usage exists. Arrow controls, keyboard navigation, or touch
+scrolling reveal more cards. Project shelves provide starting points when type
+metadata is absent. No reader profiles are stored.
+
 With JavaScript enabled, typing at least two characters opens live suggestions
 for matching sections, including partial final words. Click a suggestion or use
 Up/Down and Enter to open it. Escape closes suggestions. Enter without a selected

@@ -23,8 +23,10 @@ GitLab repositories, curated documentation navigation, exact commit provenance,
 explicit registration and refresh, local evaluation before deployment.
 
 ## Capabilities and Constraints
-Hosted documentation, project catalog, ranked section search and metadata filters,
-persistent publications, MCP discovery/search/retrieval. No generated answers.
+Hosted documentation, unified document browsing and ranked section search with
+available metadata filters, document discovery shelves ranked by aggregate browser opens,
+persistent publications, MCP discovery/search/retrieval. Popularity stores shared
+all-time opens by document, including repeats, without user profiles. No generated answers.
 SSO, NVIS membership enforcement, automatic synchronization, and the contributor
 publishing skill are deferred. Hosting is undecided. Keep sibling projects intact.
 

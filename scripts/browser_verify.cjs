@@ -48,19 +48,18 @@ fs.mkdirSync(output, { recursive: true });
     ]) {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
       await visit('/');
-      await page.getByRole('heading', { name: 'Documentation', exact: true }).waitFor();
-      assert.equal(await page.locator('.project-card').count(), 2);
+      await page.locator('h1').waitFor();
+      assert(await page.locator('.document-shelf .document-card').count() > 0, 'Discovery shelves expose published document cards');
       await capture(viewport.name);
       await visit('/search');
-      const promptInset = await page.locator('.search-start').evaluate(panel => {
-        const box = panel.getBoundingClientRect();
-        const heading = panel.querySelector('h2').getBoundingClientRect();
-        return { left: heading.left - box.left, top: heading.top - box.top };
-      });
-      assert(promptInset.left >= 20 && promptInset.top >= 20,
-        'Initial search prompt must have room inside every panel edge');
-      await capture(`${viewport.name}-search-start`);
-      record(`${viewport.name}-search-prompt-inset`, promptInset);
+      assert.equal(await page.locator('[data-discovery-form]').count(), 1, 'Empty search uses the unified discovery form');
+      for (const name of ['Project', 'Topic', 'Document type']) {
+        const control = page.getByLabel(name, { exact: true });
+        if (name === 'Project') assert.equal(await control.count(), 1, 'Project filter is available');
+        if (await control.count()) assert(await control.isVisible(), `${name} filter stays visible when available or active`);
+      }
+      await capture(`${viewport.name}-discovery-home`);
+      record(`${viewport.name}-discovery-filters`, 'Query and available metadata filters share the discovery form.');
       await visit('/');
       if (viewport.width === 390) {
         await page.getByLabel('Open navigation').click();
@@ -70,22 +69,22 @@ fs.mkdirSync(output, { recursive: true });
         assert.equal(await page.locator('.mobile-menu[open]').count(), 0);
         record('mobile-navigation', 'Opens, exposes labelled project navigation, Escape restores focus.');
       }
-      await page.getByRole('combobox', { name: 'Search all documentation' }).fill('slurm');
+      await page.getByRole('combobox', { name: /Search.*documentation/ }).fill('slurm');
       await page.getByRole('button', { name: 'Search', exact: false }).click();
-      await page.waitForURL('**/search?q=slurm');
+      await page.waitForURL(url => url.pathname === '/search' && url.searchParams.get('q') === 'slurm');
       await page.locator('.search-result').first().waitFor();
       if (viewport.width === 1440) {
         assert(await page.getByLabel('Project', { exact: true }).isVisible(), 'Desktop project filter hidden');
       }
       await capture(`${viewport.name}-search`);
-      const orphanArrows = await page.locator('.search-result h2 a').evaluateAll(links =>
+      const orphanArrows = await page.locator('.search-result :is(h2,h3) a').evaluateAll(links =>
         links.filter(link => {
           const title = link.querySelector('span').getBoundingClientRect();
           const arrow = link.querySelector('svg').getBoundingClientRect();
           return arrow.top > title.top + parseFloat(getComputedStyle(link).lineHeight);
         }).length);
       assert.equal(orphanArrows, 0, 'Search result arrows must stay beside the first title line');
-      const result = page.locator('.search-result h2 a').first();
+      const result = page.locator('.search-result :is(h2,h3) a').first();
       assert((await result.getAttribute('href')).includes('#'), 'Search must link to matching anchor');
       await result.click();
       await page.locator('.prose h1').waitFor();
@@ -153,7 +152,6 @@ fs.mkdirSync(output, { recursive: true });
     assert((await page.locator('.result-context').allTextContents()).every(t => t.includes('Documentation Pipeline')));
     await capture('desktop-filtered-search');
     await page.getByLabel('Project', { exact: true }).selectOption('cluster-bringup');
-    await page.getByRole('button', { name: 'Apply filters' }).click();
     await page.waitForURL(/project=cluster-bringup/);
     assert((await page.locator('.result-context').allTextContents()).every(t => t.includes('Cluster Bringup')));
     record('project-filter-control', 'Changing the project filter updates the actual result scope.');

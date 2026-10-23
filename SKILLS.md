@@ -27,6 +27,24 @@ the original hashes.
 - The package includes its launcher and installed supporting binary. Copy
   verification does not establish that the launcher has run successfully here.
 
+## Kaizen UI
+
+- Local entry: `.agents/skills/kaizen-ui/SKILL.md`.
+- Imported unchanged from the user-supplied `kaizen-ui.zip` on 2026-10-23.
+- The archive reports library version `1.18.0` and skill metadata version `5`.
+- `package.json` pins `@kui/foundations-react-core` to `1.18.0` to match
+  the supplied documentation. Its `prepare` script runs
+  `kui-sync-skills --dir .agents`, and `kui.disablePostInstall` suppresses
+  the package's postinstall reminder.
+- Package installation is pending: this environment could not resolve
+  `registry.npmjs.org`. The imported skills are available locally, but package
+  sync has not been verified. With access to the registry serving `@kui`, run
+  `npm install` from this directory; npm will run `prepare` automatically.
+  Commit the resulting `package-lock.json` after installation succeeds.
+- Read the Kaizen skill when working with KUI components. This import adds
+  documentation and tooling configuration; the Python app has not been
+  migrated to React.
+
 ## Use together
 
 Read both skills rather than treating their names as a style instruction. Preserve
