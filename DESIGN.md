@@ -258,6 +258,21 @@ Quiet labelled destinations and an authored document tree. Main links have a 38p
 
 Adjacent-document links use their `prev` and `next` relationship for alignment. Previous stays left and next stays right, including the first and last document.
 
+Project navigation and indexes group documents into native collapsible Tutorials,
+How-to guides, Reference, and Explanation sections, following the supplied
+`_toc.yml` template. Unknown classifications appear under Other documentation;
+empty sections are omitted. The sidebar uses short category labels and the index
+uses the full explanatory captions. Counts reflect the actual contained pages.
+Groups start collapsed except the active reader's category, which opens to expose
+its current-page link. Disclosure headers remain usable without JavaScript.
+
+Sidebar summaries have 44px targets, 13px medium labels, quiet 12px counts, and the
+existing chevron, which rotates when open. Index summaries use 16px medium labels
+(15px on phones), a 16px inset (12px on phones), and fine row separators. Document
+rows retain authored guide/caption context beneath their title. Nested entries
+retain their order and stepped indentation. These lists remain flat surfaces with
+no new shadow or color. Native focus receives the established green outline.
+
 ### Project panels
 
 Bordered charcoal entries with the panel radius, frontmatter padding, a descriptive title, authored page previews, actual counts, and a separated source footer. The title is an explicit link; the whole panel is not an implied button. Preview links use 36px rows, increasing to 40px through 700px. Description width caps at 55ch. The source footer has a quiet rule and 15px top padding. There is no panel shadow or hover transform.

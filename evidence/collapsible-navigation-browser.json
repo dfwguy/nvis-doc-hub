@@ -1,0 +1,467 @@
+{
+  "base": "http://127.0.0.1:8000",
+  "at": "2026-10-23T18:26:36.674Z",
+  "browser": "151.0.7922.34",
+  "checks": [
+    {
+      "name": "source-context-cluster-bringup",
+      "detail": {
+        "entriesWithContext": 85,
+        "desktopAndMobileContextParity": true
+      }
+    },
+    {
+      "name": "coverage-cluster-bringup",
+      "detail": {
+        "publishedPages": 85,
+        "uniqueIndexLinks": 85,
+        "allURLsRespond": true,
+        "desktopAndMobileParity": true,
+        "categories": [
+          {
+            "label": "Tutorials — learning by doing 6",
+            "count": 6
+          },
+          {
+            "label": "How-to guides — getting something done 36",
+            "count": 36
+          },
+          {
+            "label": "Reference — the machinery, described 9",
+            "count": 9
+          },
+          {
+            "label": "Explanation — why it is like this 21",
+            "count": 21
+          },
+          {
+            "label": "Other documentation 13",
+            "count": 13
+          }
+        ]
+      }
+    },
+    {
+      "name": "source-context-documentation-pipeline",
+      "detail": {
+        "entriesWithContext": 0,
+        "desktopAndMobileContextParity": true
+      }
+    },
+    {
+      "name": "coverage-documentation-pipeline",
+      "detail": {
+        "publishedPages": 7,
+        "uniqueIndexLinks": 7,
+        "allURLsRespond": true,
+        "desktopAndMobileParity": true,
+        "categories": [
+          {
+            "label": "Other documentation 7",
+            "count": 7
+          }
+        ]
+      }
+    },
+    {
+      "name": "total-published-coverage",
+      "detail": 92
+    },
+    {
+      "name": "desktop-index-mouse",
+      "detail": "mouse: hidden links become visible; disclosure closes again"
+    },
+    {
+      "name": "desktop-index-keyboard",
+      "detail": "keyboard: hidden links become visible; disclosure closes again"
+    },
+    {
+      "name": "keyboard-focus",
+      "detail": {
+        "focused": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(118, 185, 0)"
+      }
+    },
+    {
+      "name": "desktop-navigation-mouse",
+      "detail": "mouse: hidden links become visible; disclosure closes again"
+    },
+    {
+      "name": "desktop-navigation-keyboard",
+      "detail": "keyboard: hidden links become visible; disclosure closes again"
+    },
+    {
+      "name": "reader-active-Tutorials — learning by doing 6",
+      "detail": {
+        "url": "/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md",
+        "top": 527.3125,
+        "bottom": 600.078125,
+        "railTop": 87.890625,
+        "railBottom": 860
+      }
+    },
+    {
+      "name": "reader-active-How-to guides — getting something done 36",
+      "detail": {
+        "url": "/projects/cluster-bringup/docs/docs/tailscale_access/how-to/reach-one-jumpbox.md",
+        "top": 552.78125,
+        "bottom": 643.734375,
+        "railTop": 87.890625,
+        "railBottom": 860
+      }
+    },
+    {
+      "name": "reader-active-Reference — the machinery, described 9",
+      "detail": {
+        "url": "/projects/cluster-bringup/docs/docs/cmsh_setup/reference/environment.md",
+        "top": 633.671875,
+        "bottom": 688.25,
+        "railTop": 87.890625,
+        "railBottom": 860
+      }
+    },
+    {
+      "name": "reader-active-Explanation — why it is like this 21",
+      "detail": {
+        "url": "/projects/cluster-bringup/docs/docs/tailscale_access/explanation/overlapping-private-networks.md",
+        "top": 659.046875,
+        "bottom": 731.8125,
+        "railTop": 87.890625,
+        "railBottom": 860
+      }
+    },
+    {
+      "name": "reader-active-Other documentation 13",
+      "detail": {
+        "url": "/projects/cluster-bringup/docs/docs/tailscale_access/README.md",
+        "top": 731.984375,
+        "bottom": 786.5625,
+        "railTop": 87.890625,
+        "railBottom": 860
+      }
+    },
+    {
+      "name": "layout-desktop",
+      "detail": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "mainLeft": 228,
+        "mainRight": 1417,
+        "groups": [
+          {
+            "label": "Tutorials — learning by doing 6",
+            "width": 1107,
+            "clientWidth": 1107,
+            "scrollWidth": 1107,
+            "left": 269,
+            "right": 1376,
+            "paddingLeft": 16,
+            "paddingRight": 16
+          },
+          {
+            "label": "How-to guides — getting something done 36",
+            "width": 1107,
+            "clientWidth": 1107,
+            "scrollWidth": 1107,
+            "left": 269,
+            "right": 1376,
+            "paddingLeft": 16,
+            "paddingRight": 16
+          },
+          {
+            "label": "Reference — the machinery, described 9",
+            "width": 1107,
+            "clientWidth": 1107,
+            "scrollWidth": 1107,
+            "left": 269,
+            "right": 1376,
+            "paddingLeft": 16,
+            "paddingRight": 16
+          },
+          {
+            "label": "Explanation — why it is like this 21",
+            "width": 1107,
+            "clientWidth": 1107,
+            "scrollWidth": 1107,
+            "left": 269,
+            "right": 1376,
+            "paddingLeft": 16,
+            "paddingRight": 16
+          },
+          {
+            "label": "Other documentation 13",
+            "width": 1107,
+            "clientWidth": 1107,
+            "scrollWidth": 1107,
+            "left": 269,
+            "right": 1376,
+            "paddingLeft": 16,
+            "paddingRight": 16
+          }
+        ],
+        "overflowRows": [],
+        "longestRow": {
+          "title": "install the Slurm SSH gate on the compute-node fleetCompute-node SSH accessdocs/compute_node_ssh_access/how-to/install-ssh-gate-on-the-compute-node-fleet.md",
+          "clientWidth": 1075,
+          "scrollWidth": 1075
+        }
+      }
+    },
+    {
+      "name": "layout-tablet",
+      "detail": {
+        "width": 768,
+        "scrollWidth": 753,
+        "mainLeft": 8,
+        "mainRight": 745,
+        "groups": [
+          {
+            "label": "Tutorials — learning by doing 6",
+            "width": 675,
+            "clientWidth": 675,
+            "scrollWidth": 675,
+            "left": 39,
+            "right": 714,
+            "paddingLeft": 16,
+            "paddingRight": 16
+          },
+          {
+            "label": "How-to guides — getting something done 36",
+            "width": 675,
+            "clientWidth": 675,
+            "scrollWidth": 675,
+            "left": 39,
+            "right": 714,
+            "paddingLeft": 16,
+            "paddingRight": 16
+          },
+          {
+            "label": "Reference — the machinery, described 9",
+            "width": 675,
+            "clientWidth": 675,
+            "scrollWidth": 675,
+            "left": 39,
+            "right": 714,
+            "paddingLeft": 16,
+            "paddingRight": 16
+          },
+          {
+            "label": "Explanation — why it is like this 21",
+            "width": 675,
+            "clientWidth": 675,
+            "scrollWidth": 675,
+            "left": 39,
+            "right": 714,
+            "paddingLeft": 16,
+            "paddingRight": 16
+          },
+          {
+            "label": "Other documentation 13",
+            "width": 675,
+            "clientWidth": 675,
+            "scrollWidth": 675,
+            "left": 39,
+            "right": 714,
+            "paddingLeft": 16,
+            "paddingRight": 16
+          }
+        ],
+        "overflowRows": [],
+        "longestRow": {
+          "title": "install the Slurm SSH gate on the compute-node fleetCompute-node SSH accessdocs/compute_node_ssh_access/how-to/install-ssh-gate-on-the-compute-node-fleet.md",
+          "clientWidth": 643,
+          "scrollWidth": 643
+        }
+      }
+    },
+    {
+      "name": "tablet-menu-category-mouse",
+      "detail": "mouse: hidden links become visible; disclosure closes again"
+    },
+    {
+      "name": "tablet-menu-category-keyboard",
+      "detail": "keyboard: hidden links become visible; disclosure closes again"
+    },
+    {
+      "name": "tablet-menu-bounds-and-escape",
+      "detail": {
+        "left": 383,
+        "right": 743,
+        "top": 53,
+        "bottom": 1001,
+        "width": 360,
+        "scrollWidth": 343,
+        "clientWidth": 343,
+        "overflowingDescendants": []
+      }
+    },
+    {
+      "name": "tablet-menu-reader-link",
+      "detail": {
+        "href": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/how-to/launch-codex-for-existing-repository.md",
+        "bounds": {
+          "left": 383,
+          "right": 743,
+          "top": 53,
+          "bottom": 1001,
+          "width": 360,
+          "scrollWidth": 343,
+          "clientWidth": 343,
+          "overflowingDescendants": []
+        }
+      }
+    },
+    {
+      "name": "layout-mobile",
+      "detail": {
+        "width": 390,
+        "scrollWidth": 375,
+        "mainLeft": 0,
+        "mainRight": 375,
+        "groups": [
+          {
+            "label": "Tutorials — learning by doing 6",
+            "width": 335,
+            "clientWidth": 335,
+            "scrollWidth": 335,
+            "left": 20,
+            "right": 355,
+            "paddingLeft": 12,
+            "paddingRight": 12
+          },
+          {
+            "label": "How-to guides — getting something done 36",
+            "width": 335,
+            "clientWidth": 335,
+            "scrollWidth": 335,
+            "left": 20,
+            "right": 355,
+            "paddingLeft": 12,
+            "paddingRight": 12
+          },
+          {
+            "label": "Reference — the machinery, described 9",
+            "width": 335,
+            "clientWidth": 335,
+            "scrollWidth": 335,
+            "left": 20,
+            "right": 355,
+            "paddingLeft": 12,
+            "paddingRight": 12
+          },
+          {
+            "label": "Explanation — why it is like this 21",
+            "width": 335,
+            "clientWidth": 335,
+            "scrollWidth": 335,
+            "left": 20,
+            "right": 355,
+            "paddingLeft": 12,
+            "paddingRight": 12
+          },
+          {
+            "label": "Other documentation 13",
+            "width": 335,
+            "clientWidth": 335,
+            "scrollWidth": 335,
+            "left": 20,
+            "right": 355,
+            "paddingLeft": 12,
+            "paddingRight": 12
+          }
+        ],
+        "overflowRows": [],
+        "longestRow": {
+          "title": "install the Slurm SSH gate on the compute-node fleetCompute-node SSH accessdocs/compute_node_ssh_access/how-to/install-ssh-gate-on-the-compute-node-fleet.md",
+          "clientWidth": 311,
+          "scrollWidth": 311
+        }
+      }
+    },
+    {
+      "name": "mobile-menu-category-mouse",
+      "detail": "mouse: hidden links become visible; disclosure closes again"
+    },
+    {
+      "name": "mobile-menu-category-keyboard",
+      "detail": "keyboard: hidden links become visible; disclosure closes again"
+    },
+    {
+      "name": "mobile-menu-bounds-and-escape",
+      "detail": {
+        "left": 7,
+        "right": 367,
+        "top": 53,
+        "bottom": 821,
+        "width": 360,
+        "scrollWidth": 343,
+        "clientWidth": 343,
+        "overflowingDescendants": []
+      }
+    },
+    {
+      "name": "mobile-menu-reader-link",
+      "detail": {
+        "href": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/how-to/launch-codex-for-existing-repository.md",
+        "bounds": {
+          "left": 7,
+          "right": 367,
+          "top": 53,
+          "bottom": 821,
+          "width": 360,
+          "scrollWidth": 343,
+          "clientWidth": 343,
+          "overflowingDescendants": []
+        }
+      }
+    },
+    {
+      "name": "live-search-regression",
+      "detail": {
+        "contexts": [
+          "Cluster Bringup · Tutorial: Make a standalone host into a Slurm client",
+          "Cluster Bringup · Tutorial: Make a standalone host into a Slurm client",
+          "Cluster Bringup · How to make the Slurm client work permanently",
+          "Cluster Bringup · How to make the Slurm client work permanently",
+          "Cluster Bringup"
+        ],
+        "url": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account",
+        "keyboardSelection": true
+      }
+    },
+    {
+      "name": "normal-search-regression",
+      "detail": {
+        "url": "http://127.0.0.1:8000/search?q=slurm&project=cluster-bringup",
+        "results": 30
+      }
+    },
+    {
+      "name": "no-javascript-index-mouse",
+      "detail": "mouse: hidden links become visible; disclosure closes again"
+    },
+    {
+      "name": "no-javascript-index-keyboard",
+      "detail": "keyboard: hidden links become visible; disclosure closes again"
+    },
+    {
+      "name": "no-javascript-navigation-keyboard",
+      "detail": "keyboard: hidden links become visible; disclosure closes again"
+    },
+    {
+      "name": "no-javascript-reader",
+      "detail": "/projects/cluster-bringup/docs/docs/omnistation_gitlab_credentials/how-to/launch-codex-for-existing-repository.md"
+    },
+    {
+      "name": "no-javascript-normal-search",
+      "detail": "http://127.0.0.1:8000/search?q=configuration&project=documentation-pipeline"
+    },
+    {
+      "name": "no-javascript-mobile-navigation",
+      "detail": "keyboard: hidden links become visible; disclosure closes again"
+    }
+  ],
+  "pageErrors": []
+}

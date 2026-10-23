@@ -1,8 +1,20 @@
 # Latest NVIS documentation hub session
 
-Timestamp: 2026-10-22 22:34:59 UTC.
+Timestamp: 2026-10-23 18:30:32 UTC.
 
-Topic: Functional local implementation, authentic publications, tests and browser verification.
+Topic: Collapsible documentation categories and YAML/Diataxis navigation support.
+
+Read the [current category checkpoint](20261023T183032Z-collapsible-navigation.md)
+first. Native category groups are implemented on `development`; the full Python
+suite passes 83 tests and the new browser suite passes 34 checks across all 92
+published URLs. Final existing-browser/live-search reruns and Python quality
+checks pass. This checkpoint accompanies the finished `development` change;
+use Git's tracking status to confirm remote synchronization.
+`main` retains the verified application baseline.
+Reader access control and contributor publishing automation remain deferred.
+
+The earlier feature and repository notes below are retained as historical
+context; the linked current checkpoint gives the present source and branch state.
 
 Latest feature, 23 October: live search suggestions are implemented and verified
 on `development`. Start typing two characters on the catalog, project page, or
@@ -29,7 +41,8 @@ The singular repository is the only configured remote. The user confirmed
 deleting the earlier plural GitLab project on 23 October. Repository publishing
 does not require webpage verification; use Git checks for commits and pushes.
 
-Read the [implemented application checkpoint](20261022T223459Z-implemented.md).
+The earlier [implemented application checkpoint](20261022T223459Z-implemented.md)
+records the original local build and repository setup.
 
 The local application is now built. See [startup](../../../README.md) and
 [verification](../../../evidence/verification.md). The original resume prompt below

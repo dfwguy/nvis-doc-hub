@@ -12,6 +12,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
+from nvis_hub.navigation import group_navigation
 from nvis_hub.service import Hub
 
 PACKAGE = Path(__file__).parent
@@ -68,6 +69,18 @@ def create_app(db_path: Path | str | None = None) -> FastAPI:
 
     def page(request: Request, template: str, status: int = 200, **values: Any) -> HTMLResponse:
         projects = hub.list_projects()
+        project = values.get("project")
+        document = values.get("document")
+        navigation_groups = (
+            group_navigation(
+                project.get("navigation", []),
+                hub.list_documents(project["slug"]),
+                curated=project.get("nav_mode") == "curated",
+                current_path=document["path"] if document else None,
+            )
+            if project
+            else []
+        )
         return templates.TemplateResponse(
             request=request,
             name=template,
@@ -76,6 +89,7 @@ def create_app(db_path: Path | str | None = None) -> FastAPI:
                 "page": "catalog",
                 "project": None,
                 "document": None,
+                "navigation_groups": navigation_groups,
                 "q": "",
                 **values,
             },

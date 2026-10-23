@@ -1,6 +1,6 @@
 {
   "phase": "full verification",
-  "at": "2026-10-23T15:15:09.896Z",
+  "at": "2026-10-23T18:30:22.367Z",
   "target": "http://127.0.0.1:8000",
   "initialRed": {
     "phase": "initial red",
@@ -23,31 +23,31 @@
           "tag": "A",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account",
           "id": "search-suggestions-0-option-0",
-          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH export SLURM_CONF=/cm/shared/apps/slurm/etc/slurm/slurm.conf sinfo It fails: Invalid user for SlurmUser slurm. The config names a SlurmUser that must \u2026"
+          "text": "Step 4: Create the slurm service accountCluster Bringup · Tutorial: Make a standalone host into a Slurm client… export PATH=/cm/local/apps/slurm/25.05/bin:$PATH export SLURM_CONF=/cm/shared/apps/slurm/etc/slurm/slurm.conf sinfo It fails: Invalid user for SlurmUser slurm. The config names a SlurmUser that must …"
         },
         {
           "tag": "A",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo",
           "id": "search-suggestions-0-option-1",
-          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/slurm/25.05/bin:$PATH\\nexport SLURM_CONF=/cm/shared/apps/slurm/etc/slurm/slurm.conf\\n' > /etc/profile.d/slurm.sh chmod 0644 /etc/profile.d/slurm.sh Symlink \u2026"
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup · Tutorial: Make a standalone host into a Slurm client… printf 'export PATH=/cm/local/apps/slurm/25.05/bin:$PATH\\nexport SLURM_CONF=/cm/shared/apps/slurm/etc/slurm/slurm.conf\\n' > /etc/profile.d/slurm.sh chmod 0644 /etc/profile.d/slurm.sh Symlink …"
         },
         {
           "tag": "A",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path",
           "id": "search-suggestions-0-option-2",
-          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as the SLURM_CONF export. profile.d loads only in login shells, so cron, sudo, and non-interactive scripts would otherwise have no config. /etc \u2026"
+          "text": "Symlink the config to the default pathCluster Bringup · How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as the SLURM_CONF export. profile.d loads only in login shells, so cron, sudo, and non-interactive scripts would otherwise have no config. /etc …"
         },
         {
           "tag": "A",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells",
           "id": "search-suggestions-0-option-3",
-          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05/bin:$PATH\\nexport SLURM_CONF=/cm/shared/apps/slurm/etc/slurm/slurm.conf\\n' > /etc/profile.d/slurm.sh chmod 0644 /etc \u2026"
+          "text": "Set PATH for login shellsCluster Bringup · How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05/bin:$PATH\\nexport SLURM_CONF=/cm/shared/apps/slurm/etc/slurm/slurm.conf\\n' > /etc/profile.d/slurm.sh chmod 0644 /etc …"
         },
         {
           "tag": "A",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/explanation/client-only-slurm-node.md#how-a-client-only-slurm-node-works",
           "id": "search-suggestions-0-option-4",
-          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacct need four things: Requirement Purpose Slurm binaries and libslurmfull.so Implement the Slurm protocol slurm \u2026"
+          "text": "How a client-only Slurm node worksCluster BringupHow a client-only Slurm node works A Slurm query client is smaller than a compute node. sinfo, squeue, and sacct need four things: Requirement Purpose Slurm binaries and libslurmfull.so Implement the Slurm protocol slurm …"
         }
       ]
     },
@@ -290,25 +290,25 @@
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "text": "Step 4: Create the slurm service accountCluster Bringup · Tutorial: Make a standalone host into a Slurm client… export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup · Tutorial: Make a standalone host into a Slurm client… printf 'export PATH=/cm/local/apps/s",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "text": "Symlink the config to the default pathCluster Bringup · How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "text": "Set PATH for login shellsCluster Bringup · How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
         },
         {
@@ -341,25 +341,25 @@
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "text": "Step 4: Create the slurm service accountCluster Bringup · Tutorial: Make a standalone host into a Slurm client… export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup · Tutorial: Make a standalone host into a Slurm client… printf 'export PATH=/cm/local/apps/s",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "text": "Symlink the config to the default pathCluster Bringup · How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "text": "Set PATH for login shellsCluster Bringup · How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
         },
         {
@@ -392,25 +392,25 @@
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "text": "Step 4: Create the slurm service accountCluster Bringup · Tutorial: Make a standalone host into a Slurm client… export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup · Tutorial: Make a standalone host into a Slurm client… printf 'export PATH=/cm/local/apps/s",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "text": "Symlink the config to the default pathCluster Bringup · How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "text": "Set PATH for login shellsCluster Bringup · How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
         },
         {
@@ -443,25 +443,25 @@
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "text": "Step 4: Create the slurm service accountCluster Bringup · Tutorial: Make a standalone host into a Slurm client… export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup · Tutorial: Make a standalone host into a Slurm client… printf 'export PATH=/cm/local/apps/s",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "text": "Symlink the config to the default pathCluster Bringup · How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "text": "Set PATH for login shellsCluster Bringup · How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
         },
         {
@@ -494,25 +494,25 @@
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "text": "Step 4: Create the slurm service accountCluster Bringup · Tutorial: Make a standalone host into a Slurm client… export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup · Tutorial: Make a standalone host into a Slurm client… printf 'export PATH=/cm/local/apps/s",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "text": "Symlink the config to the default pathCluster Bringup · How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "text": "Set PATH for login shellsCluster Bringup · How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
         },
         {
@@ -545,25 +545,25 @@
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "text": "Step 4: Create the slurm service accountCluster Bringup · Tutorial: Make a standalone host into a Slurm client… export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup · Tutorial: Make a standalone host into a Slurm client… printf 'export PATH=/cm/local/apps/s",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "text": "Symlink the config to the default pathCluster Bringup · How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "text": "Set PATH for login shellsCluster Bringup · How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
         },
         {
@@ -596,25 +596,25 @@
         {
           "height": 129,
           "leftInset": 12,
-          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "text": "Step 4: Create the slurm service accountCluster Bringup · Tutorial: Make a standalone host into a Slurm client… export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
         },
         {
           "height": 150,
           "leftInset": 12,
-          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup · Tutorial: Make a standalone host into a Slurm client… printf 'export PATH=/cm/local/apps/s",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
         },
         {
           "height": 129,
           "leftInset": 12,
-          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "text": "Symlink the config to the default pathCluster Bringup · How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
         },
         {
           "height": 129,
           "leftInset": 12,
-          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "text": "Set PATH for login shellsCluster Bringup · How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
         },
         {
@@ -647,25 +647,25 @@
         {
           "height": 129,
           "leftInset": 12,
-          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "text": "Step 4: Create the slurm service accountCluster Bringup · Tutorial: Make a standalone host into a Slurm client… export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
         },
         {
           "height": 150,
           "leftInset": 12,
-          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup · Tutorial: Make a standalone host into a Slurm client… printf 'export PATH=/cm/local/apps/s",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
         },
         {
           "height": 129,
           "leftInset": 12,
-          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "text": "Symlink the config to the default pathCluster Bringup · How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
         },
         {
           "height": 129,
           "leftInset": 12,
-          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "text": "Set PATH for login shellsCluster Bringup · How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
         },
         {
@@ -698,25 +698,25 @@
         {
           "height": 129,
           "leftInset": 12,
-          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "text": "Step 4: Create the slurm service accountCluster Bringup · Tutorial: Make a standalone host into a Slurm client… export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
         },
         {
           "height": 150,
           "leftInset": 12,
-          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup · Tutorial: Make a standalone host into a Slurm client… printf 'export PATH=/cm/local/apps/s",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
         },
         {
           "height": 129,
           "leftInset": 12,
-          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "text": "Symlink the config to the default pathCluster Bringup · How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
         },
         {
           "height": 129,
           "leftInset": 12,
-          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "text": "Set PATH for login shellsCluster Bringup · How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
         },
         {
@@ -749,25 +749,25 @@
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "text": "Step 4: Create the slurm service accountCluster Bringup · Tutorial: Make a standalone host into a Slurm client… export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup · Tutorial: Make a standalone host into a Slurm client… printf 'export PATH=/cm/local/apps/s",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "text": "Symlink the config to the default pathCluster Bringup · How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
         },
         {
           "height": 111,
           "leftInset": 12,
-          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "text": "Set PATH for login shellsCluster Bringup · How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
         },
         {
@@ -800,25 +800,25 @@
         {
           "height": 129,
           "leftInset": 12,
-          "text": "Step 4: Create the slurm service accountCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
+          "text": "Step 4: Create the slurm service accountCluster Bringup · Tutorial: Make a standalone host into a Slurm client… export PATH=/cm/local/apps/slurm/25.05/bin:$PATH",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-4-create-the-slurm-service-account"
         },
         {
           "height": 150,
           "leftInset": 12,
-          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup \u00b7 Tutorial: Make a standalone host into a Slurm client\u2026 printf 'export PATH=/cm/local/apps/s",
+          "text": "Step 7: Make it survive a reboot and work under sudoCluster Bringup · Tutorial: Make a standalone host into a Slurm client… printf 'export PATH=/cm/local/apps/s",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/tutorial.md#step-7-make-it-survive-a-reboot-and-work-under-sudo"
         },
         {
           "height": 129,
           "leftInset": 12,
-          "text": "Symlink the config to the default pathCluster Bringup \u00b7 How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
+          "text": "Symlink the config to the default pathCluster Bringup · How to make the Slurm client work permanentlySymlink the config to the default path Do this as well as t",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#symlink-the-config-to-the-default-path"
         },
         {
           "height": 129,
           "leftInset": 12,
-          "text": "Set PATH for login shellsCluster Bringup \u00b7 How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
+          "text": "Set PATH for login shellsCluster Bringup · How to make the Slurm client work permanentlySet PATH for login shells printf 'export PATH=/cm/local/apps/slurm/25.05",
           "href": "http://127.0.0.1:8000/projects/cluster-bringup/docs/docs/observability_server_setup/how-to/persist-environment.md#set-path-for-login-shells"
         },
         {
@@ -832,15 +832,5 @@
   ],
   "browser": "151.0.7922.34",
   "passed": 28,
-  "failed": 0,
-  "manualVisualReview": {
-    "status": "passed",
-    "inspected": "All nine route/viewport captures plus keyboard selection, loading, no-match, request error, short viewport above, and reachable phone footer.",
-    "findings": [],
-    "supplementalCapture": ".impeccable/review/live-search-no-match-complete.png",
-    "limitations": [
-      "Real publications currently have no topic/type facet values; active project scope is browser tested, while topic/type combinations require backend fixture coverage.",
-      "Phone touch and viewport reduction are browser emulation; an actual OS keyboard and screen reader were not exercised."
-    ]
-  }
+  "failed": 0
 }

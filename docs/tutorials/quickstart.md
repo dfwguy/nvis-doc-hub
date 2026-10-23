@@ -21,6 +21,11 @@ Up/Down and Enter to open it. Escape closes suggestions. Enter without a selecte
 suggestion opens ordinary full search. Project and metadata filters apply to both
 paths; full search remains available without JavaScript.
 
+Project indexes and navigation have collapsible document categories. Expand a
+section to see its pages; the category containing the current document opens
+automatically. Counts show actual pages, and uncategorized content stays under
+Other documentation. These controls also work without JavaScript.
+
 In a second terminal, inspect publication status:
 
 ```bash

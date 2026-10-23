@@ -16,6 +16,7 @@ import tinycss2
 import yaml
 from markdown_it import MarkdownIt
 from markdown_it.token import Token
+from yaml.events import AliasEvent, CollectionEndEvent, CollectionStartEvent
 
 from .models import HubError, Registration
 from .sources import AcquiredSource
@@ -291,7 +292,7 @@ def render_document(
         topics = [topics]
     if not isinstance(topics, list) or not all(isinstance(topic, str) for topic in topics):
         raise HubError(f"Document topics must be a list of text values: {path}")
-    kind = config.kind or metadata.get("type", metadata.get("kind"))
+    kind = config.kind or metadata.get("type", metadata.get("kind", metadata.get("diataxis")))
     if kind is not None and not isinstance(kind, str):
         raise HubError(f"Document type must be text: {path}")
     if not boundaries or boundaries[0][0] > 0:
@@ -540,10 +541,139 @@ def _svg(data: bytes) -> bytes:
         raise HubError("An SVG asset contains invalid XML.") from None
 
 
+def _yaml_navigation_spec(text: str) -> list[tuple[str | None, str | None, int]]:
+    """Read the external TOC data with bounded parsing and no alias construction."""
+    depth = 0
+    for count, event in enumerate(yaml.parse(text, Loader=yaml.SafeLoader), start=1):
+        if isinstance(event, AliasEvent):
+            raise HubError("Unsupported YAML navigation aliases.")
+        if isinstance(event, CollectionStartEvent):
+            depth += 1
+        elif isinstance(event, CollectionEndEvent):
+            depth -= 1
+        if depth > 64 or count > 8192:
+            raise HubError("YAML navigation exceeds supported complexity limits.")
+    data = yaml.safe_load(text)
+    invalid = "Unsupported YAML navigation structure."
+    if (
+        not isinstance(data, dict)
+        or set(data) - {"root", "subtrees"}
+        or not isinstance(data.get("root"), str)
+        or not data["root"].strip()
+        or not isinstance(data.get("subtrees", []), list)
+    ):
+        raise HubError(invalid)
+    authored: list[tuple[str | None, str | None, int]] = [(None, data["root"], 1)]
+    for subtree in data.get("subtrees", []):
+        if (
+            not isinstance(subtree, dict)
+            or set(subtree) != {"caption", "entries"}
+            or not isinstance(subtree["caption"], str)
+            or not subtree["caption"].strip()
+            or not isinstance(subtree["entries"], list)
+        ):
+            raise HubError(invalid)
+        authored.append((subtree["caption"], None, 0))
+        entries = [(entry, 1) for entry in reversed(subtree["entries"])]
+        while entries:
+            entry, level = entries.pop()
+            if (
+                not isinstance(entry, dict)
+                or set(entry) - {"file", "title", "entries"}
+                or not isinstance(entry.get("file"), str)
+                or not entry["file"].strip()
+                or ("title" in entry and (not isinstance(entry["title"], str) or not entry["title"].strip()))
+                or not isinstance(entry.get("entries", []), list)
+            ):
+                raise HubError(invalid)
+            authored.append((entry.get("title"), entry["file"], level))
+            entries.extend((child, level + 1) for child in reversed(entry.get("entries", [])))
+    return authored
+
+
+def _yaml_navigation_target(target: str, nav_path: str, documents: dict[str, Any]) -> str | None:
+    """Resolve repository-confined document names relative to the registered YAML file."""
+    target = unquote(target)
+    if "\\" in target or "\x00" in target or target.startswith("/"):
+        return None
+    try:
+        parsed = urlsplit(target)
+    except ValueError:
+        return None
+    if parsed.scheme or parsed.netloc or parsed.query or parsed.fragment:
+        return None
+    relative = posixpath.normpath(posixpath.join(posixpath.dirname(nav_path), target))
+    if relative == ".." or relative.startswith("../"):
+        return None
+    return next(
+        (
+            candidate
+            for candidate in [
+                relative,
+                relative + ".md",
+                relative.rstrip("/") + "/index.md",
+                relative.rstrip("/") + "/README.md",
+            ]
+            if candidate in documents
+        ),
+        None,
+    )
+
+
+def _yaml_navigation(
+    navfile: Path,
+    nav_path: str,
+    by_path: dict[str, Any],
+    generated: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], str, list[str]]:
+    """Preserve authored YAML groups and hierarchy without executing repository code."""
+    try:
+        with navfile.open("rb") as stream:
+            raw = stream.read(262145)
+        if len(raw) > 262144:
+            raise HubError("YAML navigation exceeds the supported size.")
+        authored = _yaml_navigation_spec(raw.decode("utf-8-sig"))
+    except HubError as error:
+        return generated, "generated", [f"{str(error).removesuffix('.')}; generated navigation used."]
+    except (yaml.YAMLError, UnicodeDecodeError, RecursionError, OSError, ValueError):
+        return generated, "generated", ["Malformed or unreadable YAML navigation; generated navigation used."]
+    rows: list[dict[str, Any]] = []
+    warnings: list[str] = []
+    used: set[str] = set()
+    for title, target, level in authored:
+        if target is None:
+            rows.append({"title": title, "path": None, "url": None, "level": level})
+            continue
+        resolved = _yaml_navigation_target(target, nav_path, by_path)
+        if resolved is None:
+            warnings.append(f"Unsupported or unpublished navigation entry: {target}")
+            continue
+        used.add(resolved)
+        rows.append(
+            {
+                "title": title or by_path[resolved]["title"],
+                "path": resolved,
+                "url": by_path[resolved]["url"],
+                "level": level,
+            }
+        )
+    if not used:
+        return (
+            generated,
+            "generated",
+            warnings + ["No supported YAML navigation entries; generated navigation used."],
+        )
+    remaining = [entry for entry in generated if entry["path"] not in used]
+    if remaining:
+        rows.append({"title": "Additional documentation", "path": None, "url": None, "level": 0})
+        rows.extend(remaining)
+    return rows, "curated", warnings
+
+
 def navigation(
     root: Path, config: Registration, documents: list[dict[str, Any]]
 ) -> tuple[list[dict[str, Any]], str, list[str]]:
-    """Preserve supported RST toctree captions/order and append an honest fallback."""
+    """Preserve registered YAML or RST navigation and append an honest fallback."""
     by_path = {doc["path"]: doc for doc in documents}
     generated = [
         {"title": doc["title"], "path": doc["path"], "level": 1, "url": doc["url"]} for doc in documents
@@ -557,6 +687,8 @@ def navigation(
             "generated",
             [f"Navigation file unavailable: {config.nav_path}; generated navigation used."],
         )
+    if navfile.suffix.lower() in {".yml", ".yaml"}:
+        return _yaml_navigation(navfile, config.nav_path, by_path, generated)
     rows: list[dict[str, Any]] = []
     warnings: list[str] = []
     active = False

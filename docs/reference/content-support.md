@@ -5,7 +5,7 @@ links, images, fenced code, lists, blockquotes and Markdown tables. Source HTML 
 escaped; this is not an executable Sphinx/repo_docs build. Sphinx extensions,
 arbitrary RST pages, notebooks and repository build scripts are not executed.
 
-Front matter may declare `title`, `type`/`kind` and `topics`. Registration metadata
+Front matter may declare `title`, `type`/`kind`/`diataxis` and `topics`. Registration metadata
 provides explicit defaults. Missing classifications remain unclassified. Directory
 names and document text are not used to invent topics or Diátaxis types.
 
@@ -32,6 +32,38 @@ ordered paths, and maxdepth/hidden/titlesonly options. Other options and unresol
 entries produce import notices. Documents omitted from a usable curated tree are
 appended under Additional documentation. Without a usable tree, navigation is
 explicitly labelled generated. Import notices appear under Source status.
+
+A registered `.yml` or `.yaml` TOC also supports the template's `root`, captioned
+`subtrees`, and nested `entries` with `file` and optional `title`. File paths are
+relative to the TOC and may omit the Markdown extension. Parent/child ordering and
+title overrides are preserved. For example, register `nav_path: docs/_toc.yml`:
+
+```yaml
+root: index
+subtrees:
+  - caption: How-to guides — getting something done
+    entries:
+      - file: how-to/configure
+        title: Configure a deployment
+  - caption: Reference — the machinery, described
+    entries:
+      - file: reference/identity/index
+        entries:
+          - file: reference/identity/policy
+```
+
+The TOC is parsed as data; Sphinx configuration and repository scripts are never
+executed. YAML aliases are unsupported; malformed, oversized, excessively nested,
+or unsupported TOCs produce notices and generated fallback navigation. YAML TOCs
+are limited to 256 KiB, 64 collection levels, and 8192 parse events.
+
+The UI groups published links into collapsible Diataxis sections from authored
+TOC category captions, explicit curated labels such as `How-to: Configure`, or
+document type metadata. Source-specific captions remain visible as entry context.
+This presentation does not reclassify stored documents. Unknown kinds remain in
+Other documentation; directories and arbitrary page text are not guessed into
+categories. Authored content, search, MCP navigation order, and provenance remain
+available even when an index group is collapsed.
 
 Limits: 128 MiB per repository response, extracted archive and prepared publication;
 16 MiB per document/attachment; 30,000 archive members. A failed import keeps the

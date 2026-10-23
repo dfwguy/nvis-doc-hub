@@ -1,5 +1,40 @@
 # Implementation progress
 
+23 October, collapsible categories: implementation and independent code/browser
+review are complete on `development`. Project indexes and desktop/mobile trees
+share native disclosure groups for Tutorials, How-to guides, Reference and
+Explanation, with Other documentation for unclassified pages. Counts match
+their links, empty groups are omitted, reader routes open the current category,
+and authored order, nested levels and source context remain available.
+
+Explicitly registered YAML TOCs now support root pages, captioned subtrees,
+extensionless files relative to the TOC, title overrides and recursive entries.
+Parsing is data only, bounded, and repository confined, with generated fallback
+notices for unsupported input. Existing RST navigation remains supported;
+explicit `diataxis` frontmatter supplements the existing metadata precedence.
+The actual reference TOC was inspected without importing that project or changing
+the two source snapshots.
+
+The Python suite passes 83 tests. The category browser suite passes 34 checks,
+including all 92 published URLs, both indexes/navigation variants, keyboard and
+JavaScript-disabled behavior, active groups, search and responsive containment.
+The review's custom-caption preservation defect is fixed with a regression test;
+no material code or visual finding remains. See
+[browser evidence](collapsible-navigation-browser.md),
+[code review](collapsible-navigation-code-review.md), and the
+[current checkpoint](../handoff/sessions/nvis-docs-hub/20261023T183032Z-collapsible-navigation.md).
+
+Final Ruff lint/formatting, mypy and diff checks pass; fresh existing-browser and
+live-search reruns pass 35 and 28 checks respectively in visible Chromium
+151.0.7922.34. The finished change is recorded on `development`; use Git's
+tracking status to confirm synchronization with the remote.
+The singular `nvis-ova/nvis-doc-hub` remote already
+exists; `main` retains the verified baseline and feature work stays on
+`development`. The publications remain 85 Cluster Bringup + 7 Documentation
+Pipeline pages. Reader access control, contributor publishing automation and
+production deployment remain deferred. Earlier dated progress below records the
+state before repository access and publication were completed.
+
 23 October: live search is implemented on `development`. All three search surfaces
 show clickable prefix-matched sections with project/filter scope, keyboard and
 touch support, asynchronous request cancellation, and full-search fallback.

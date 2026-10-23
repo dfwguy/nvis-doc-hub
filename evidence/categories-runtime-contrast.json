@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-23T18:32:38.470Z",
+  "browser": "151.0.7922.34",
+  "headless": true,
+  "checks": [
+    {
+      "name": "Category summary hover",
+      "hovered": true,
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgb(26, 26, 26)",
+      "contrast": 17.4
+    },
+    {
+      "name": "Document link hover",
+      "hovered": true,
+      "foreground": "rgb(118, 185, 0)",
+      "background": "rgb(17, 17, 17)",
+      "contrast": 7.83
+    },
+    {
+      "name": "Document context hover",
+      "hovered": true,
+      "foreground": "rgb(153, 153, 153)",
+      "background": "rgb(17, 17, 17)",
+      "contrast": 6.63
+    },
+    {
+      "name": "Search primary hover",
+      "hovered": true,
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgb(0, 72, 49)",
+      "contrast": 10.65
+    }
+  ]
+}

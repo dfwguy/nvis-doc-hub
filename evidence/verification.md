@@ -7,9 +7,19 @@ uses the exact NVIDIA reference palette. The reference became reachable over
 HTTP; see [palette evidence](brand-color-reference.md). Screenshots linked below
 have been recaptured with the corrected branding and colors.
 
-Verified 2026-10-22 on macOS, Python 3.12.15 and Chromium 151.0.7922.34.
-The application is a functional local prototype. No remote was created or pushed,
-and no production deployment was performed.
+Initial local verification was recorded 2026-10-22 on macOS, Python 3.12.15 and
+Chromium 151.0.7922.34. At that checkpoint, no remote had been created or pushed.
+The existing singular GitLab repository now has published `main` and
+`development` branches; see [repository setup](repository-setup.md). `main`
+retains the verified application baseline. No production deployment was performed.
+
+23 October update: collapsible documentation categories are implemented on
+`development`, alongside live search. The full Python suite passes 83 tests. The
+new category browser suite passes 34 checks and verifies all 92 published page
+URLs. Final regression checks pass; the finished feature belongs on `development`.
+See the [complete feature verification](collapsible-navigation-verification.md),
+[category browser review](collapsible-navigation-browser.md)
+and [independent code review](collapsible-navigation-code-review.md).
 
 ## Repeatable startup
 
@@ -54,12 +64,24 @@ Final integrated run:
 .venv/bin/mypy src/nvis_hub
 ```
 
-44 tests pass; lint, formatting and type checks pass. One upstream Starlette
-TestClient deprecation warning remains. Tests exercise imports/scopes, metadata,
+The current Python suite passes 83 tests. Final Ruff lint, formatting (16 Python
+files), mypy (10 source modules) and diff checks pass.
+One upstream Starlette TestClient deprecation
+warning remains. Tests exercise imports/scopes, metadata,
 hosted nested links/assets, safe content and paths, snapshot integrity, title and
 section ranking, filters, changes/deletions, failed-refresh retention, re-registration
 provenance, malformed configuration, source errors and persistent restarts.
 Regressions discovered during review were reproduced failing before their fixes.
+
+Navigation coverage now includes explicitly registered YAML TOCs with relative
+extensionless files, ordered captions, title overrides and nested entries;
+explicit `diataxis` frontmatter below the existing registration/type/kind
+precedence; malformed, oversized, deeply nested and aliased YAML fallback; and
+grouping authority, source context, nesting, complete document coverage and
+active-category state. YAML parsing reads data only and never executes repository
+configuration. Existing RST navigation remains supported. The source inspection
+is recorded in [TOC template reference](toc-template-reference.md); the reference
+project was not imported into the catalog.
 
 The MCP integration uses the official SDK's real stdio subprocess client. It
 discovers all three read-only tools, searches and retrieves authored sections with
@@ -111,6 +133,23 @@ Live search adds 28 browser checks for prefix suggestions, keyboard/click/touch,
 filter scope, request races, failure recovery, viewport constraints, and fallback.
 See [live-search verification](live-search-verification.md) for the exact coverage
 and reviewed captures.
+
+The [category browser suite](collapsible-navigation-browser.md) adds 34 checks at
+1440, 768 and 390 pixels for both project indexes, the desktop rail and mobile
+menu, reader active groups, counts, all 92 published URLs, keyboard disclosure
+operation, JavaScript-disabled navigation and scoped search, source-topic context,
+responsive containment, and live-search regression. No browser JavaScript errors
+or material layout findings remain in that review. Index groups start collapsed;
+reader routes open the current document's category. Unknown classifications stay
+under Other documentation, and empty groups are omitted. The existing 35-check
+browser suite and 28-check live-search suite also pass their fresh final reruns
+in visible Chromium 151.0.7922.34 before the category commit.
+
+To repeat the category checks:
+
+```bash
+NODE_PATH="$PWD/.browser-tools/node_modules" node scripts/navigation_verify.cjs
+```
 
 Tasteskill's browser inspector reports no findings for catalog, filtered search
 and reader at all three widths. Source lint has two justified warnings: monospace

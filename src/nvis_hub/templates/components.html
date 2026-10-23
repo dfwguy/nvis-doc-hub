@@ -20,7 +20,7 @@
 <span><strong>NVIS - OVA</strong><span class="brand-caption">Documentation hub</span></span></a>
 {%- endmacro %}
 
-{% macro navigation(projects, page, project, document) -%}
+{% macro navigation(projects, page, project, document, navigation_groups=[]) -%}
 <nav class="main-navigation" aria-label="Hub navigation">
 <a href="/" {% if page == 'catalog' %}aria-current="page"{% endif %}>{{ icon('grid') }}All documentation</a>
 <a href="/search" {% if page == 'search' %}aria-current="page"{% endif %}>{{ icon('search') }}Global search</a>
@@ -29,14 +29,21 @@
 <nav class="project-navigation" aria-label="Project documentation">
 <div class="nav-heading">Projects</div>
 {% for item in projects %}<a class="project-nav-link" href="/projects/{{ item.slug }}" {% if project and project.slug == item.slug %}aria-current="{{ 'true' if document else 'page' }}"{% endif %}>{{ item.title }}</a>
-{% if project and project.slug == item.slug and project.navigation %}
+{% if project and project.slug == item.slug and navigation_groups %}
 <div class="doc-tree">
-{% for entry in project.navigation %}
-{% if entry.path and entry.url %}<a href="{{ entry.url }}" class="tree-link {{ 'tree-child' if entry.level|default(0) > 0 else '' }}" {% if document and document.path == entry.path %}aria-current="page"{% endif %}>{{ entry.title }}</a>
-{% else %}<div class="tree-caption">{{ entry.title }}</div>{% endif %}
-{% endfor %}</div>{% endif %}
+{% for group in navigation_groups %}<details class="nav-category" {% if group.active %}open{% endif %}>
+<summary>{{ icon('chevron',14) }}<span class="category-title">{{ group.label }}</span><span class="category-count" aria-label="{{ group.entries|length }} {{ 'page' if group.entries|length == 1 else 'pages' }}">{{ group.entries|length }}</span></summary>
+{% for entry in group.entries %}<a href="{{ entry.url }}" class="tree-link category-depth-{{ entry.depth }}" {% if entry.active %}aria-current="page"{% endif %}><span>{{ entry.title }}</span>{% if entry.context %}<span class="tree-context">{{ entry.context }}</span>{% endif %}</a>{% endfor %}
+</details>{% endfor %}</div>{% endif %}
 {% else %}<p class="nav-empty">Registered projects appear here.</p>{% endfor %}
 </nav>
+{%- endmacro %}
+
+{% macro documentation_groups(groups) -%}
+<div class="document-list">{% for group in groups %}<details class="document-category" {% if group.active %}open{% endif %}>
+<summary><h3>{{ icon('chevron',18) }}<span class="category-title">{{ group.title }}</span><span class="category-count" aria-label="{{ group.entries|length }} {{ 'page' if group.entries|length == 1 else 'pages' }}">{{ group.entries|length }}</span></h3></summary>
+<div class="document-category-body">{% for entry in group.entries %}<a href="{{ entry.url }}" class="document-row category-depth-{{ entry.depth }}"><span><span class="category-entry-title">{{ entry.title }}</span>{% if entry.context %}<span class="document-context">{{ entry.context }}</span>{% endif %}</span><span class="document-row-path">{{ entry.path }}</span>{{ icon('arrow',16) }}</a>{% endfor %}</div>
+</details>{% endfor %}</div>
 {%- endmacro %}
 
 {% macro search_form(q='', compact=false, project='') -%}
