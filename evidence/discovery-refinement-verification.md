@@ -74,3 +74,7 @@ corrected runtime contrast passes in both modes.
 Access control, publishing automation, production deployment, automatic source
 updates and remote HTTP MCP remain deferred. Main retains the baseline; this
 refinement belongs on development.
+
+Feature commit `e6c961b` was pushed to `origin/development`, with a clean tree and
+zero commits ahead/behind after publication. The isolated QA server was stopped
+and its owned temporary database removed; the user app remains on port8000.

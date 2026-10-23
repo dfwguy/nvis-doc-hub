@@ -1,5 +1,9 @@
 # Latest NVIS documentation hub session
 
+Current refinement commit `e6c961b` is published on `origin/development`. The
+pre-edit checkpoint `4682c9d` remains in history. Git confirmed clean/zero-ahead-behind
+after publication. Local app port8000 is healthy; isolated QA8001 is stopped.
+
 Timestamp: 2026-10-23 19:38:23 UTC.
 
 Topic: Popular-only discovery, source-preserving display casing and light/dark choice.

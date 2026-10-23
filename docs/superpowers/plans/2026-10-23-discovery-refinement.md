@@ -23,7 +23,7 @@ with a clean worktree and zero commits ahead/behind, as explicitly requested.
   keyboard/contrast at320–1440px.
 - [x] Review/check implementation, update current design/use records and session
   checkpoint.
-- [ ] Commit/push the verified refinement on development and confirm Git tracking state.
+- [x] Commit/push the verified refinement on development and confirm Git tracking state.
 
 Keep API/CLI/MCP content and paths unchanged, preserve authentic snapshots and
 all imported skill packages, and retain existing deferred scope. Display casing
@@ -53,3 +53,6 @@ See [independent code review](../../../evidence/discovery-refinement-code-review
 [current checkpoint](../../../handoff/sessions/nvis-docs-hub/20261023T193823Z-discovery-refinement.md).
 The pre-edit `4682c9d` publication/clean-worktree checkpoint is preserved above;
 close final Git publication against its actual tracking state.
+
+Feature commit `e6c961b` was pushed to `origin/development`; Git confirmed a clean
+working tree and zero commits ahead/behind. This note records that publication.
