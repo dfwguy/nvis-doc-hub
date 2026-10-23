@@ -45,7 +45,11 @@ entry routes; progressively enhance native forms and shelf controls.
 - [x] Review final diff independently; run Python suite, lint, formatting, mypy,
   browser regressions, and finished UI design scan. Record KUI adaptation and
   limitations and update design/checkpoint docs.
-- [ ] Commit/push the verified feature on development and confirm Git tracking state.
+- [x] Commit/push the verified feature on development and confirm Git tracking state.
+
+Feature commit `58912f5` was pushed to `origin/development`; the working tree was
+clean with zero commits ahead or behind after publication. This documentation
+update records that verified result.
 
 ## Completion checkpoint — 23 October 2026
 

@@ -76,3 +76,8 @@ The dark NVIDIA palette, NVIS - OVA identity, sidebar-bottom Documentation label
 source documents, and reader category behavior remain intact. Access control,
 the publishing skill, automatic source updates, deployment, and remote HTTP MCP
 remain deferred. Main retains the application baseline.
+
+Feature commit `58912f5` was pushed to `origin/development`. Git reported a clean
+working tree and zero commits ahead/behind after that push. The local port-8000
+application is healthy; the temporary port-8001 QA instance has been stopped and
+its owned SQLite backup removed.

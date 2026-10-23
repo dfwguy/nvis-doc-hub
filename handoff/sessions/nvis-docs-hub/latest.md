@@ -16,6 +16,10 @@ accompanies the finished `development` feature; use Git's tracking status to
 confirm remote synchronization. `main` retains the verified application baseline.
 Reader access control and contributor publishing automation remain deferred.
 
+Feature commit `58912f5` is published to `origin/development`; Git tracking showed
+zero commits ahead or behind after the push. The local app is healthy on port
+8000. The temporary browser-QA server/database on port 8001 was stopped/removed.
+
 The earlier feature and repository notes below are retained as historical
 context; the linked current checkpoint gives the present source and branch state.
 
