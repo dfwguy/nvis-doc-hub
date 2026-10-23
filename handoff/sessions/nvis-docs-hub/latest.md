@@ -25,6 +25,12 @@ The singular remote name is the user's final destination and supersedes the
 planned plural name in the historical prompt below. Local directory names remain
 `nvis-docs-hub`.
 
+The singular repository is the only configured remote. Deleting the earlier
+plural GitLab project remains pending: the user requested removal, but GitLab
+rejected the CLI delete request as unauthorized. A signed-in account or authorized
+API session must complete that administrative action. The user clarified that
+webpage verification is unnecessary for commits/pushes.
+
 Read the [implemented application checkpoint](20261022T223459Z-implemented.md).
 
 The local application is now built. See [startup](../../../README.md) and

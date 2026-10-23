@@ -23,6 +23,16 @@ After group access was granted, `nvis-ova/nvis-docs-hub` was initially created a
 
 The user created the official repository following the requested **Private** setup; its exact visibility was not independently inspected through an authenticated API. Both `main` and `development` were successfully published there over SSH port 12051. The first published branch tips, before later documentation updates, were `d8d94b7` on `main` and `00b9a50` on `development`.
 
+Only the singular repository is configured as `origin`; the earlier `old-origin`
+remote was removed. The duplicate plural GitLab project still exists. The user
+explicitly requested its deletion, but `glab repo delete nvis-ova/nvis-docs-hub
+--yes` was rejected as unauthorized. SSH publishing access is working, while
+project-deletion API authorization is unavailable in this session. Delete that
+duplicate through a signed-in GitLab account with the required permissions, or
+supply an authorized API session before retrying. Do not delete the official
+singular `nvis-ova/nvis-doc-hub` project. No further webpage verification is needed
+for commits or pushes.
+
 `main` retains the verified application baseline. Live documentation search suggestions remain on `development`; that feature has not been merged into `main`.
 
 ## Git LFS and history migration
